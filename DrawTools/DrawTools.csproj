@@ -1,0 +1,1167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Extensions.Configuration.UserSecrets.2.2.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props" Condition="Exists('..\packages\Microsoft.Extensions.Configuration.UserSecrets.2.2.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props')" />
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{81A153EA-0605-4433-B769-BADDB980A701}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>DrawTools</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DrawTools</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publier\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\htmlAgilityPack\Net20\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="IdentityModel, Version=3.10.10.0, Culture=neutral, PublicKeyToken=e7877f4675df049f, processorArchitecture=MSIL">
+      <HintPath>..\packages\IdentityModel.3.10.10\lib\net452\IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="IdentityModel.OidcClient, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IdentityModel.OidcClient.2.9.0\lib\net452\IdentityModel.OidcClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authentication.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authentication.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authentication.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authentication.Core.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Connections.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Connections.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Connections.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Diagnostics, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Diagnostics.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Diagnostics.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Diagnostics.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Diagnostics.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.HostFiltering, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.HostFiltering.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.HostFiltering.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Server.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Extensions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Extensions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Features.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.HttpOverrides, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.HttpOverrides.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.HttpOverrides.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Routing, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Routing.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Routing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Routing.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Routing.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Routing.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Server.IIS, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Server.IIS.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Server.IIS.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Server.IISIntegration, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Server.IISIntegration.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Server.IISIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Server.Kestrel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Server.Kestrel.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Server.Kestrel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Server.Kestrel.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Server.Kestrel.Core.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Server.Kestrel.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Server.Kestrel.Https, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Server.Kestrel.Https.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.WebUtilities, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.WebUtilities.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.WebUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Configuration, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.2.2.4\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.CommandLine, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.CommandLine.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.EnvironmentVariables, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.EnvironmentVariables.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.FileExtensions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Json.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.UserSecrets, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.UserSecrets.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.2.2.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Physical.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileSystemGlobbing.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Hosting.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Configuration, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Configuration.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Console, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Console.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Debug, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Debug.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.EventSource, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.EventSource.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.EventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.ObjectPool, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.ObjectPool.2.2.0\lib\netstandard2.0\Microsoft.Extensions.ObjectPool.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options.ConfigurationExtensions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.ConfigurationExtensions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.5.5.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.5.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.5.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.2.2.0\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.PowerPoint.15.0.4420.1018\lib\net20\Microsoft.Office.Interop.PowerPoint.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Visio, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Visio2013.PrimaryInteropAssembly.1.0.0.4\lib\net20\Microsoft.Office.Interop.Visio.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OFFICE, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\office\OFFICE.DLL</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.2.8.0\lib\net46\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Extensions.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Extensions.Logging.2.0.4\lib\net461\Serilog.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.File.4.0.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Console, Version=4.0.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.1\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.5.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.4.5.2\lib\netstandard2.0\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=1.4.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.1.6.0\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Cng, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Cng.4.5.0\lib\net461\System.Security.Cryptography.Cng.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.5.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\DocToolkit\DocToolkit.csproj">
+      <Name>DocToolkit</Name>
+      <Project>{EF871417-414A-462F-9B30-6EEC3920499F}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.1\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bmp\about.bmp" />
+    <Content Include="App.ico" />
+    <Content Include="HtmlAgilityPack.dll" />
+    <EmbeddedResource Include="AECBForm.resx">
+      <DependentUpon>AECBForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormddmSubnet.resx">
+      <DependentUpon>FormddmSubnet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeployComposant.resx">
+      <DependentUpon>FormDeployComposant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFluxBoutenBout.resx">
+      <DependentUpon>FormFluxBoutenBout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLabelApp.resx">
+      <DependentUpon>FormLabelApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLabelEnv.resx">
+      <DependentUpon>FormLabelEnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLabelLocation.resx">
+      <DependentUpon>FormLabelLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLabelRole.resx">
+      <DependentUpon>FormLabelRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer.resx">
+      <DependentUpon>FormLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsgAndLinkOk.resx">
+      <DependentUpon>FormMsgAndLinkOk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPattern.resx">
+      <DependentUpon>FormPattern.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPropVue.resx">
+      <DependentUpon>FormPropVue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFluxApp.resx">
+      <DependentUpon>FormFluxApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProgress.resx">
+      <DependentUpon>FormProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAxe.resx">
+      <DependentUpon>FormAxe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCnxBase.resx">
+      <DependentUpon>FormCnxBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExplorObj.resx">
+      <DependentUpon>FormExplorObj.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExport.resx">
+      <DependentUpon>FormExport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFlowRule.resx">
+      <DependentUpon>FormFlowRule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGroupService.resx">
+      <DependentUpon>FormGroupService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIndicator.resx">
+      <DependentUpon>FormIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPropApp.resx">
+      <DependentUpon>FormPropApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPropWord.resx">
+      <DependentUpon>FormPropWord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFlux.resx">
+      <DependentUpon>FormFlux.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeleteObject.resx">
+      <DependentUpon>FormDeleteObject.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFlux1.resx">
+      <DependentUpon>FormFlux1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInfrastructure.resx">
+      <DependentUpon>FormInfrastructure.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProduct.resx">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPropriete.resx">
+      <DependentUpon>FormPropriete.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangeProp.resx">
+      <DependentUpon>FormChangeProp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAppServer.resx">
+      <DependentUpon>FormAppServer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRichText.resx">
+      <DependentUpon>FormRichText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRulesPremisse.resx">
+      <DependentUpon>FormRulesPremisse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRulesRule.resx">
+      <DependentUpon>FormRulesRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRules.resx">
+      <DependentUpon>FormRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormService.resx">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServiceLink.resx">
+      <DependentUpon>FormServiceLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSI.resx">
+      <DependentUpon>FormSI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTadUpdating.resx">
+      <DependentUpon>FormTadUpdating.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLabel.resx">
+      <DependentUpon>FormLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVarenv.resx">
+      <DependentUpon>FormVarenv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVisu.resx">
+      <DependentUpon>FormVisu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ModifField.resx">
+      <DependentUpon>Form_ModifField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="module.cur" />
+    <EmbeddedResource Include="Link.cur" />
+    <Content Include="bmp\Composant.bmp" />
+    <Content Include="bmp\Card.bmp" />
+    <Content Include="bmp\Base.bmp" />
+    <Content Include="bmp\Application.bmp" />
+    <Content Include="bmp\Cluster.bmp" />
+    <Content Include="bmp\Baie.bmp" />
+    <Content Include="bmp\pass.bmp" />
+    <Content Include="bmp\Drawer.bmp" />
+    <Content Include="bmp\Zone.bmp" />
+    <Content Include="bmp\Lun.bmp" />
+    <Content Include="bmp\Machine.bmp" />
+    <Content Include="bmp\EACB.bmp" />
+    <Content Include="bmp\Interface.bmp" />
+    <Content Include="bmp\user.bmp" />
+    <Content Include="bmp\Fichier.bmp" />
+    <Content Include="bmp\Router.bmp" />
+    <Content Include="bmp\Vlan.bmp" />
+    <Content Include="bmp\Techno.bmp" />
+    <Content Include="bmp\Server.bmp" />
+    <Content Include="bmp\Separator.bmp" />
+    <Content Include="bmp\link.bmp" />
+    <Content Include="bmp\Module.bmp" />
+    <Content Include="bmp\ellipse.bmp" />
+    <Content Include="bmp\line.bmp" />
+    <Content Include="bmp\new.bmp" />
+    <Content Include="bmp\open.bmp" />
+    <Content Include="bmp\pencil.bmp" />
+    <Content Include="bmp\pointer.bmp" />
+    <Content Include="bmp\rectangle.bmp" />
+    <Content Include="bmp\save.bmp" />
+    <Compile Include="AECBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AECBForm.Designer.cs">
+      <DependentUpon>AECBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clData.cs" />
+    <Compile Include="ConfDataBase.cs" />
+    <Compile Include="ControlWord.cs" />
+    <Compile Include="Draw\DrawGening.cs" />
+    <Compile Include="Draw\DrawContainer.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Draw\DrawInfInssas.cs" />
+    <Compile Include="Draw\DrawInssas.cs" />
+    <Compile Include="Draw\DrawInssvc.cs" />
+    <Compile Include="Draw\DrawInsing.cs" />
+    <Compile Include="Draw\DrawInspod.cs" />
+    <Compile Include="Draw\DrawInsns.cs" />
+    <Compile Include="Draw\DrawInsnd.cs" />
+    <Compile Include="Draw\DrawInsks.cs" />
+    <Compile Include="Draw\DrawGensvc.cs" />
+    <Compile Include="Draw\DrawGenpod.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Draw\DrawSeqFluxFonc.cs" />
+    <Compile Include="Draw\DrawQueue.cs" />
+    <Compile Include="Draw\DrawGenks.cs" />
+    <Compile Include="Draw\DrawManagedsvc.cs" />
+    <Compile Include="Draw\DrawGensas.cs" />
+    <Compile Include="FormddmSubnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormddmSubnet.Designer.cs">
+      <DependentUpon>FormddmSubnet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeployComposant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeployComposant.Designer.cs">
+      <DependentUpon>FormDeployComposant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\DrawLink3D.cs" />
+    <Compile Include="FormFluxBoutenBout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFluxBoutenBout.Designer.cs">
+      <DependentUpon>FormFluxBoutenBout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIPVlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIPVlan.Designer.cs">
+      <DependentUpon>FormIPVlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLabelApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLabelApp.Designer.cs">
+      <DependentUpon>FormLabelApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLabelEnv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLabelEnv.Designer.cs">
+      <DependentUpon>FormLabelEnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLabelLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLabelLocation.Designer.cs">
+      <DependentUpon>FormLabelLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLabelRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLabelRole.Designer.cs">
+      <DependentUpon>FormLabelRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer.Designer.cs">
+      <DependentUpon>FormLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsgAndLinkOk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsgAndLinkOk.Designer.cs">
+      <DependentUpon>FormMsgAndLinkOk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPattern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPattern.Designer.cs">
+      <DependentUpon>FormPattern.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPropVue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPropVue.Designer.cs">
+      <DependentUpon>FormPropVue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\DrawVlan3D.cs" />
+    <Compile Include="Draw\DrawServer3D.cs" />
+    <Compile Include="Draw\DrawGrid.cs" />
+    <Compile Include="Draw\DrawInfLink.cs" />
+    <Compile Include="Draw\DrawRoadmap.cs" />
+    <Compile Include="Draw\DrawPtNiveau.cs" />
+    <Compile Include="Draw\DrawAxes.cs" />
+    <Compile Include="Draw\DrawServerType.cs" />
+    <Compile Include="Enreg.cs" />
+    <Compile Include="Draw\DrawInterLink.cs" />
+    <Compile Include="FormPropApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPropApp.Designer.cs">
+      <DependentUpon>FormPropApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFluxApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFluxApp.Designer.cs">
+      <DependentUpon>FormFluxApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProgress.Designer.cs">
+      <DependentUpon>FormProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAxe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAxe.Designer.cs">
+      <DependentUpon>FormAxe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCnxBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCnxBase.Designer.cs">
+      <DependentUpon>FormCnxBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExplorObj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExplorObj.Designer.cs">
+      <DependentUpon>FormExplorObj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExport.Designer.cs">
+      <DependentUpon>FormExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFlowRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFlowRule.Designer.cs">
+      <DependentUpon>FormFlowRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGroupService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGroupService.Designer.cs">
+      <DependentUpon>FormGroupService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIndicator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIndicator.Designer.cs">
+      <DependentUpon>FormIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPropWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPropWord.Designer.cs">
+      <DependentUpon>FormPropWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\DrawProduit.cs" />
+    <Compile Include="Draw\DrawCadreRefEnd.cs" />
+    <Compile Include="Draw\DrawIndicator.cs" />
+    <Compile Include="Draw\DrawCadreRefN1.cs" />
+    <Compile Include="Draw\DrawCadreRefN.cs" />
+    <Compile Include="Draw\DrawTechUser.cs" />
+    <Compile Include="Draw\DrawInfNCard.cs" />
+    <Compile Include="Draw\DrawInfServer.cs" />
+    <Compile Include="Draw\DrawPtCnx.cs" />
+    <Compile Include="FormFlux.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFlux.Designer.cs">
+      <DependentUpon>FormFlux.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\DrawCnx.cs" />
+    <Compile Include="Draw\DrawServerSite.cs" />
+    <Compile Include="Draw\DrawLocation.cs" />
+    <Compile Include="Draw\DrawMCompServ.cs" />
+    <Compile Include="Draw\DrawBaieDPhy.cs" />
+    <Compile Include="Draw\DrawISL.cs" />
+    <Compile Include="Draw\DrawSanSwitch.cs" />
+    <Compile Include="Draw\DrawSanCard.cs" />
+    <Compile Include="Draw\DrawBaieCTI.cs" />
+    <Compile Include="Draw\DrawBaiePhy.cs" />
+    <Compile Include="Draw\DrawDrawer.cs" />
+    <Compile Include="Draw\DrawMachineCTI.cs" />
+    <Compile Include="Draw\DrawZone.cs" />
+    <Compile Include="Draw\DrawLun.cs" />
+    <Compile Include="Draw\DrawBaie.cs" />
+    <Compile Include="Draw\DrawVirtuel.cs" />
+    <Compile Include="Draw\DrawMachine.cs" />
+    <Compile Include="Draw\DrawCluster.cs" />
+    <Compile Include="Draw\DrawInterface.cs" />
+    <Compile Include="Draw\DrawApplication.cs" />
+    <Compile Include="Draw\DrawAppUser.cs" />
+    <Compile Include="Draw\DrawBase.cs" />
+    <Compile Include="Draw\DrawCompFonc.cs" />
+    <Compile Include="Draw\DrawComposant.cs" />
+    <Compile Include="Draw\DrawMainComposant.cs" />
+    <Compile Include="Draw\DrawFile.cs" />
+    <Compile Include="Draw\DrawNCard.cs" />
+    <Compile Include="Draw\DrawRouter.cs" />
+    <Compile Include="Draw\DrawServer.cs" />
+    <Compile Include="Draw\DrawServerPhy.cs" />
+    <Compile Include="Draw\DrawTechLink.cs" />
+    <Compile Include="Draw\DrawTechno.cs" />
+    <Compile Include="Draw\DrawVLan.cs" />
+    <Compile Include="FormDeleteObject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeleteObject.Designer.cs">
+      <DependentUpon>FormDeleteObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFlux1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFlux1.Designer.cs">
+      <DependentUpon>FormFlux1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInfrastructure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInfrastructure.Designer.cs">
+      <DependentUpon>FormInfrastructure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProduct.Designer.cs">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPropriete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPropriete.Designer.cs">
+      <DependentUpon>FormPropriete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangeProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangeProp.Designer.cs">
+      <DependentUpon>FormChangeProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAppServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAppServer.Designer.cs">
+      <DependentUpon>FormAppServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRichText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRichText.Designer.cs">
+      <DependentUpon>FormRichText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRulesPremisse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRulesPremisse.Designer.cs">
+      <DependentUpon>FormRulesPremisse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRulesRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRulesRule.Designer.cs">
+      <DependentUpon>FormRulesRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRules.Designer.cs">
+      <DependentUpon>FormRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormService.Designer.cs">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServiceLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServiceLink.Designer.cs">
+      <DependentUpon>FormServiceLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSI.Designer.cs">
+      <DependentUpon>FormSI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTadUpdating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTadUpdating.Designer.cs">
+      <DependentUpon>FormTadUpdating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLabel.Designer.cs">
+      <DependentUpon>FormLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVarenv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVarenv.Designer.cs">
+      <DependentUpon>FormVarenv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVisu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVisu.Designer.cs">
+      <DependentUpon>FormVisu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ModifField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ModifField.Designer.cs">
+      <DependentUpon>Form_ModifField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReadXsd.cs" />
+    <Compile Include="SystemBrowser.cs" />
+    <Compile Include="Tools\ToolGenIng.cs" />
+    <Compile Include="Tools\ToolContainer.cs" />
+    <Compile Include="Tools\ToolInfInssas.cs" />
+    <Compile Include="Tools\ToolInssas.cs" />
+    <Compile Include="Tools\ToolInssvc.cs" />
+    <Compile Include="Tools\ToolInsing.cs" />
+    <Compile Include="Tools\ToolInspod.cs" />
+    <Compile Include="Tools\ToolInsns.cs" />
+    <Compile Include="Tools\ToolInsnd.cs" />
+    <Compile Include="Tools\ToolInsks.cs" />
+    <Compile Include="Tools\ToolGensvc.cs" />
+    <Compile Include="Tools\ToolGenpod.cs" />
+    <Compile Include="Tools\ToolCadre.cs" />
+    <Compile Include="Tools\ToolQueue.cs" />
+    <Compile Include="Tools\ToolGenks.cs" />
+    <Compile Include="Tools\ToolGensas.cs" />
+    <Compile Include="Tools\ToolServer3D.cs" />
+    <Compile Include="Tools\ToolInfLink.cs" />
+    <Compile Include="Tools\ToolPtNiveau.cs" />
+    <Compile Include="Tools\ToolAxes.cs" />
+    <Compile Include="Tools\ToolManagedsvc.cs" />
+    <Compile Include="Tools\ToolServerType.cs" />
+    <Compile Include="Tools\ToolInterLink.cs" />
+    <Compile Include="Tools\ToolExplorObj.cs" />
+    <Compile Include="Tools\ToolProduit.cs" />
+    <Compile Include="Tools\ToolCadreRefEnd.cs" />
+    <Compile Include="Tools\ToolIndicator.cs" />
+    <Compile Include="Tools\ToolCadreRefN1.cs" />
+    <Compile Include="Tools\ToolCadreRefN.cs" />
+    <Compile Include="Tools\ToolTechUser.cs" />
+    <Compile Include="Tools\ToolInfNCard.cs" />
+    <Compile Include="Tools\ToolInfServer.cs" />
+    <Compile Include="Tools\ToolPtCnx.cs" />
+    <Compile Include="Tools\ToolCnx.cs" />
+    <Compile Include="Tools\ToolServerSite.cs" />
+    <Compile Include="Tools\ToolLocation.cs" />
+    <Compile Include="Tools\ToolMCompServ.cs" />
+    <Compile Include="Tools\ToolBaieDPhy.cs" />
+    <Compile Include="Tools\ToolISL.cs" />
+    <Compile Include="Tools\ToolSanSwitch.cs" />
+    <Compile Include="Tools\ToolSanCard.cs" />
+    <Compile Include="Tools\ToolBaieCTI.cs" />
+    <Compile Include="Tools\ToolBaiePhy.cs" />
+    <Compile Include="Tools\ToolDrawer.cs" />
+    <Compile Include="Tools\ToolMachineCTI.cs" />
+    <Compile Include="Tools\ToolZone.cs" />
+    <Compile Include="Tools\ToolLun.cs" />
+    <Compile Include="Tools\ToolBaie.cs" />
+    <Compile Include="Tools\ToolVirtuel.cs" />
+    <Compile Include="Tools\ToolMachine.cs" />
+    <Compile Include="Tools\ToolCluster.cs" />
+    <Compile Include="Tools\ToolInterface.cs" />
+    <Compile Include="Tools\ToolApplication.cs" />
+    <Compile Include="Tools\ToolAppUser.cs" />
+    <Compile Include="Tools\ToolBase.cs" />
+    <Compile Include="Tools\ToolCompFonc.cs" />
+    <Compile Include="Tools\ToolComposant.cs" />
+    <Compile Include="Tools\ToolMainComposant.cs" />
+    <Compile Include="Tools\ToolFile.cs" />
+    <Compile Include="Tools\ToolNCard.cs" />
+    <Compile Include="Tools\ToolRouter.cs" />
+    <Compile Include="Tools\ToolServer.cs" />
+    <Compile Include="DrawArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Draw\DrawEllipse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Draw\DrawLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Draw\DrawLink.cs" />
+    <Compile Include="Draw\DrawModule.cs" />
+    <Compile Include="Draw\DrawObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Draw\DrawPolygon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Draw\DrawRectangle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphicsList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphicsProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Tool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolEllipse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolLink.cs" />
+    <Compile Include="Tools\ToolModule.cs" />
+    <Compile Include="Tools\ToolObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolPointer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolPolygon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolRectangle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolServerPhy.cs" />
+    <Compile Include="Tools\ToolTechLink.cs" />
+    <Compile Include="Tools\ToolTechno.cs" />
+    <Compile Include="Tools\ToolVLan.cs" />
+    <EmbeddedResource Include="DrawArea.resx">
+      <DependentUpon>DrawArea.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ellipse.cur" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Line.cur" />
+    <EmbeddedResource Include="Pencil.cur" />
+    <EmbeddedResource Include="PolyHandle.cur" />
+    <EmbeddedResource Include="PropertiesDialog.resx">
+      <DependentUpon>PropertiesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rectangle.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="cur\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Extensions.Configuration.UserSecrets.2.2.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Extensions.Configuration.UserSecrets.2.2.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Extensions.Configuration.UserSecrets.2.2.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Extensions.Configuration.UserSecrets.2.2.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.AspNetCore.Server.IIS.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IIS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.AspNetCore.Server.IIS.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IIS.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.AspNetCore.Server.IISIntegration.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IISIntegration.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.AspNetCore.Server.IISIntegration.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IISIntegration.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Extensions.Configuration.UserSecrets.2.2.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets" Condition="Exists('..\packages\Microsoft.Extensions.Configuration.UserSecrets.2.2.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets')" />
+  <Import Project="..\packages\Microsoft.AspNetCore.Server.IIS.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IIS.targets" Condition="Exists('..\packages\Microsoft.AspNetCore.Server.IIS.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IIS.targets')" />
+  <Import Project="..\packages\Microsoft.AspNetCore.Server.IISIntegration.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IISIntegration.targets" Condition="Exists('..\packages\Microsoft.AspNetCore.Server.IISIntegration.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IISIntegration.targets')" />
+</Project>
