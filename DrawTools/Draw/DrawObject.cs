@@ -2040,11 +2040,11 @@ namespace DrawTools
                             }
                             break;
                         case 'i':
-                            if (dgv.Rows[i].Cells[1].Value == null) LstValue[i] = Convert.ToInt32(0);
+                            if (string.IsNullOrEmpty(dgv.Rows[i].Cells[1].Value.ToString())) LstValue[i] = Convert.ToInt32(0);
                             else LstValue[i] = Convert.ToInt32(dgv.Rows[i].Cells[1].Value);
                             break;
                         case 'd':
-                            if (dgv.Rows[i].Cells[1].Value == null) LstValue[i] = Convert.ToDouble(0);
+                            if (string.IsNullOrEmpty(dgv.Rows[i].Cells[1].Value.ToString())) LstValue[i] = Convert.ToDouble(0);
                             else LstValue[i] = Convert.ToDouble(dgv.Rows[i].Cells[1].Value);
                             break;
                         case 'a':

@@ -7,6 +7,7 @@ using System.Collections;
 using System.Runtime.Serialization;
 using System.Xml;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DrawTools
 {
@@ -528,8 +529,11 @@ namespace DrawTools
             else F.oCnxBase.UpdateObject(this); // Update de la Table Objet
         }
 
+
         public override void savetoDB()
         {
+            this.Texte = this.Texte.Replace("'", @"''");
+
             if (!savetoDBFait())
             {
                 if (LstValue[0].ToString() == "d0176102-c2ed-4447-b1a7-785d2e77fba2")
