@@ -21,6 +21,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Net.Http;
 using System.Security;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
@@ -1416,7 +1417,7 @@ namespace DrawTools
             this.toolBar1.Location = new System.Drawing.Point(0, 0);
             this.toolBar1.Name = "toolBar1";
             this.toolBar1.ShowToolTips = true;
-            this.toolBar1.Size = new System.Drawing.Size(918, 35);
+            this.toolBar1.Size = new System.Drawing.Size(918, 44);
             this.toolBar1.TabIndex = 0;
             this.toolBar1.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);
             // 
@@ -1972,14 +1973,7 @@ namespace DrawTools
             this.tbPatrimoine.ImageIndex = 23;
             this.tbPatrimoine.Name = "tbPatrimoine";
             this.tbPatrimoine.ToolTipText = "Rapport patrimoine";
-            this.tbPatrimoine.Visible = false;
-            // 
-            // tbVisio
-            // 
-            this.tbVisio.ImageIndex = 34;
-            this.tbVisio.Name = "tbVisio";
-            this.tbVisio.ToolTipText = "Conversion visio";
-            this.tbVisio.Visible = false;
+            this.tbPatrimoine.Visible = false;           
             // 
             // tbSi
             // 
@@ -2098,10 +2092,10 @@ namespace DrawTools
             // 
             this.bDescriptionVue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bDescriptionVue.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bDescriptionVue.Location = new System.Drawing.Point(274, 98);
+            this.bDescriptionVue.Location = new System.Drawing.Point(262, 124);
             this.bDescriptionVue.Margin = new System.Windows.Forms.Padding(0);
             this.bDescriptionVue.Name = "bDescriptionVue";
-            this.bDescriptionVue.Size = new System.Drawing.Size(29, 25);
+            this.bDescriptionVue.Size = new System.Drawing.Size(39, 32);
             this.bDescriptionVue.TabIndex = 35;
             this.bDescriptionVue.Text = "...";
             this.bDescriptionVue.UseVisualStyleBackColor = true;
@@ -2112,36 +2106,36 @@ namespace DrawTools
             this.tbFind.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbFind.Location = new System.Drawing.Point(37, 161);
+            this.tbFind.Location = new System.Drawing.Point(49, 204);
             this.tbFind.Name = "tbFind";
-            this.tbFind.Size = new System.Drawing.Size(268, 22);
+            this.tbFind.Size = new System.Drawing.Size(255, 26);
             this.tbFind.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 163);
+            this.label3.Location = new System.Drawing.Point(4, 206);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 17);
+            this.label3.Size = new System.Drawing.Size(40, 20);
             this.label3.TabIndex = 34;
             this.label3.Text = "Find";
             // 
             // tbTypeVue
             // 
-            this.tbTypeVue.Location = new System.Drawing.Point(37, 130);
+            this.tbTypeVue.Location = new System.Drawing.Point(49, 165);
             this.tbTypeVue.Name = "tbTypeVue";
             this.tbTypeVue.ReadOnly = true;
-            this.tbTypeVue.Size = new System.Drawing.Size(124, 22);
+            this.tbTypeVue.Size = new System.Drawing.Size(166, 26);
             this.tbTypeVue.TabIndex = 29;
             // 
             // bDescriptionApp
             // 
             this.bDescriptionApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bDescriptionApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bDescriptionApp.Location = new System.Drawing.Point(274, 36);
+            this.bDescriptionApp.Location = new System.Drawing.Point(262, 46);
             this.bDescriptionApp.Margin = new System.Windows.Forms.Padding(0);
             this.bDescriptionApp.Name = "bDescriptionApp";
-            this.bDescriptionApp.Size = new System.Drawing.Size(29, 25);
+            this.bDescriptionApp.Size = new System.Drawing.Size(39, 31);
             this.bDescriptionApp.TabIndex = 33;
             this.bDescriptionApp.Text = "...";
             this.bDescriptionApp.UseVisualStyleBackColor = true;
@@ -2150,18 +2144,18 @@ namespace DrawTools
             // Type
             // 
             this.Type.AutoSize = true;
-            this.Type.Location = new System.Drawing.Point(1, 134);
+            this.Type.Location = new System.Drawing.Point(1, 170);
             this.Type.Name = "Type";
-            this.Type.Size = new System.Drawing.Size(40, 17);
+            this.Type.Size = new System.Drawing.Size(43, 20);
             this.Type.TabIndex = 4;
             this.Type.Text = "Type";
             // 
             // Ver
             // 
             this.Ver.AutoSize = true;
-            this.Ver.Location = new System.Drawing.Point(1, 72);
+            this.Ver.Location = new System.Drawing.Point(1, 91);
             this.Ver.Name = "Ver";
-            this.Ver.Size = new System.Drawing.Size(30, 17);
+            this.Ver.Size = new System.Drawing.Size(34, 20);
             this.Ver.TabIndex = 32;
             this.Ver.Text = "Ver";
             // 
@@ -2170,19 +2164,19 @@ namespace DrawTools
             this.cbVersion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbVersion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbVersion.FormattingEnabled = true;
-            this.cbVersion.Location = new System.Drawing.Point(37, 68);
+            this.cbVersion.Location = new System.Drawing.Point(49, 86);
             this.cbVersion.Name = "cbVersion";
-            this.cbVersion.Size = new System.Drawing.Size(102, 24);
+            this.cbVersion.Size = new System.Drawing.Size(136, 28);
             this.cbVersion.TabIndex = 31;
             this.cbVersion.SelectedIndexChanged += new System.EventHandler(this.cbVersion_SelectedIndexChanged);
             // 
             // bLayer
             // 
             this.bLayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bLayer.Location = new System.Drawing.Point(139, 67);
+            this.bLayer.Location = new System.Drawing.Point(185, 85);
             this.bLayer.Margin = new System.Windows.Forms.Padding(0);
             this.bLayer.Name = "bLayer";
-            this.bLayer.Size = new System.Drawing.Size(24, 25);
+            this.bLayer.Size = new System.Drawing.Size(32, 32);
             this.bLayer.TabIndex = 30;
             this.bLayer.Text = "+";
             this.bLayer.UseVisualStyleBackColor = true;
@@ -2193,28 +2187,28 @@ namespace DrawTools
             this.tbVueInf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbVueInf.Location = new System.Drawing.Point(208, 67);
+            this.tbVueInf.Location = new System.Drawing.Point(277, 85);
             this.tbVueInf.Name = "tbVueInf";
             this.tbVueInf.ReadOnly = true;
-            this.tbVueInf.Size = new System.Drawing.Size(95, 22);
+            this.tbVueInf.Size = new System.Drawing.Size(24, 26);
             this.tbVueInf.TabIndex = 28;
             // 
             // tbEnv
             // 
-            this.tbEnv.Location = new System.Drawing.Point(206, 130);
+            this.tbEnv.Location = new System.Drawing.Point(275, 165);
             this.tbEnv.Name = "tbEnv";
             this.tbEnv.ReadOnly = true;
-            this.tbEnv.Size = new System.Drawing.Size(125, 22);
+            this.tbEnv.Size = new System.Drawing.Size(166, 26);
             this.tbEnv.TabIndex = 27;
             // 
             // bOpVue
             // 
             this.bOpVue.Enabled = false;
             this.bOpVue.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bOpVue.Location = new System.Drawing.Point(97, 5);
+            this.bOpVue.Location = new System.Drawing.Point(129, 6);
             this.bOpVue.Margin = new System.Windows.Forms.Padding(0);
             this.bOpVue.Name = "bOpVue";
-            this.bOpVue.Size = new System.Drawing.Size(66, 25);
+            this.bOpVue.Size = new System.Drawing.Size(88, 32);
             this.bOpVue.TabIndex = 23;
             this.bOpVue.Tag = "5fa9fa6e-2caa-42dc-975f-12f0aca7075d";
             this.bOpVue.Text = "Creat Vue";
@@ -2232,10 +2226,10 @@ namespace DrawTools
             "Updt Vue",
             "Copy Vue",
             "Del Vue"});
-            this.cbOpVue.Location = new System.Drawing.Point(97, 6);
+            this.cbOpVue.Location = new System.Drawing.Point(129, 8);
             this.cbOpVue.Margin = new System.Windows.Forms.Padding(0);
             this.cbOpVue.Name = "cbOpVue";
-            this.cbOpVue.Size = new System.Drawing.Size(83, 21);
+            this.cbOpVue.Size = new System.Drawing.Size(111, 24);
             this.cbOpVue.TabIndex = 26;
             this.cbOpVue.Tag = "6db2c391-c05e-4cde-aec3-d7ed7a773de7";
             this.cbOpVue.SelectedIndexChanged += new System.EventHandler(this.cbOpVue_SelectedIndexChanged);
@@ -2243,10 +2237,10 @@ namespace DrawTools
             // bOpApp
             // 
             this.bOpApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bOpApp.Location = new System.Drawing.Point(1, 6);
+            this.bOpApp.Location = new System.Drawing.Point(1, 8);
             this.bOpApp.Margin = new System.Windows.Forms.Padding(0);
             this.bOpApp.Name = "bOpApp";
-            this.bOpApp.Size = new System.Drawing.Size(66, 25);
+            this.bOpApp.Size = new System.Drawing.Size(88, 31);
             this.bOpApp.TabIndex = 24;
             this.bOpApp.Tag = "05915b4d-6eaf-4ed1-8c07-c31a4527a2b2";
             this.bOpApp.Text = "Creat App";
@@ -2265,20 +2259,20 @@ namespace DrawTools
             "Copy App",
             "Copy Ver",
             "Move Ver"});
-            this.cbOpApp.Location = new System.Drawing.Point(2, 7);
+            this.cbOpApp.Location = new System.Drawing.Point(3, 9);
             this.cbOpApp.Margin = new System.Windows.Forms.Padding(0);
             this.cbOpApp.Name = "cbOpApp";
-            this.cbOpApp.Size = new System.Drawing.Size(83, 21);
+            this.cbOpApp.Size = new System.Drawing.Size(110, 24);
             this.cbOpApp.TabIndex = 25;
             this.cbOpApp.Tag = "5416a957-e669-4403-be06-6f7a71f616ce";
             this.cbOpApp.SelectedIndexChanged += new System.EventHandler(this.cbOpApp_SelectedIndexChanged);
             // 
             // tbGuid
             // 
-            this.tbGuid.Location = new System.Drawing.Point(67, 451);
+            this.tbGuid.Location = new System.Drawing.Point(89, 571);
             this.tbGuid.Name = "tbGuid";
             this.tbGuid.ReadOnly = true;
-            this.tbGuid.Size = new System.Drawing.Size(229, 22);
+            this.tbGuid.Size = new System.Drawing.Size(306, 26);
             this.tbGuid.TabIndex = 7;
             this.tbGuid.Text = "Guid";
             this.tbGuid.Visible = false;
@@ -2286,36 +2280,36 @@ namespace DrawTools
             // cbGuidApplication
             // 
             this.cbGuidApplication.FormattingEnabled = true;
-            this.cbGuidApplication.Location = new System.Drawing.Point(120, 28);
+            this.cbGuidApplication.Location = new System.Drawing.Point(160, 35);
             this.cbGuidApplication.Name = "cbGuidApplication";
-            this.cbGuidApplication.Size = new System.Drawing.Size(79, 24);
+            this.cbGuidApplication.Size = new System.Drawing.Size(105, 28);
             this.cbGuidApplication.TabIndex = 22;
             this.cbGuidApplication.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(174, 135);
+            this.label2.Location = new System.Drawing.Point(232, 171);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 17);
+            this.label2.Size = new System.Drawing.Size(36, 20);
             this.label2.TabIndex = 19;
             this.label2.Text = "Env";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(167, 72);
+            this.label1.Location = new System.Drawing.Point(223, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 18;
             this.label1.Text = "Vue-1";
             // 
             // cbGuidVue
             // 
             this.cbGuidVue.FormattingEnabled = true;
-            this.cbGuidVue.Location = new System.Drawing.Point(121, 111);
+            this.cbGuidVue.Location = new System.Drawing.Point(161, 141);
             this.cbGuidVue.Name = "cbGuidVue";
-            this.cbGuidVue.Size = new System.Drawing.Size(79, 24);
+            this.cbGuidVue.Size = new System.Drawing.Size(106, 28);
             this.cbGuidVue.TabIndex = 17;
             this.cbGuidVue.Visible = false;
             // 
@@ -2324,9 +2318,9 @@ namespace DrawTools
             this.tvObjet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tvObjet.Location = new System.Drawing.Point(7, 190);
+            this.tvObjet.Location = new System.Drawing.Point(9, 241);
             this.tvObjet.Name = "tvObjet";
-            this.tvObjet.Size = new System.Drawing.Size(299, 106);
+            this.tvObjet.Size = new System.Drawing.Size(296, 55);
             this.tvObjet.TabIndex = 14;
             this.tvObjet.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvObjet_AfterSelect);
             // 
@@ -2334,10 +2328,10 @@ namespace DrawTools
             // 
             this.bAdd.Enabled = false;
             this.bAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAdd.Location = new System.Drawing.Point(266, 5);
+            this.bAdd.Location = new System.Drawing.Point(355, 6);
             this.bAdd.Margin = new System.Windows.Forms.Padding(0);
             this.bAdd.Name = "bAdd";
-            this.bAdd.Size = new System.Drawing.Size(66, 25);
+            this.bAdd.Size = new System.Drawing.Size(88, 32);
             this.bAdd.TabIndex = 13;
             this.bAdd.Text = "Add Obj";
             this.bAdd.UseVisualStyleBackColor = true;
@@ -2346,9 +2340,9 @@ namespace DrawTools
             // NomApplication
             // 
             this.NomApplication.AutoSize = true;
-            this.NomApplication.Location = new System.Drawing.Point(2, 40);
+            this.NomApplication.Location = new System.Drawing.Point(3, 51);
             this.NomApplication.Name = "NomApplication";
-            this.NomApplication.Size = new System.Drawing.Size(39, 17);
+            this.NomApplication.Size = new System.Drawing.Size(44, 20);
             this.NomApplication.TabIndex = 12;
             this.NomApplication.Text = "Appli";
             this.NomApplication.Click += new System.EventHandler(this.NomApplication_Click);
@@ -2358,11 +2352,12 @@ namespace DrawTools
             this.cbApplication.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbApplication.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbApplication.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbApplication.FormattingEnabled = true;
-            this.cbApplication.Location = new System.Drawing.Point(37, 37);
+            this.cbApplication.Location = new System.Drawing.Point(49, 47);
             this.cbApplication.Name = "cbApplication";
-            this.cbApplication.Size = new System.Drawing.Size(234, 24);
+            this.cbApplication.Size = new System.Drawing.Size(209, 28);
             this.cbApplication.TabIndex = 0;
             this.cbApplication.SelectedIndexChanged += new System.EventHandler(this.cbApplication_SelectedIndexChanged);
             this.cbApplication.Validated += new System.EventHandler(this.cbApplication_Validated);
@@ -2371,10 +2366,10 @@ namespace DrawTools
             // 
             this.bSave.Enabled = false;
             this.bSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bSave.Location = new System.Drawing.Point(190, 5);
+            this.bSave.Location = new System.Drawing.Point(253, 6);
             this.bSave.Margin = new System.Windows.Forms.Padding(0);
             this.bSave.Name = "bSave";
-            this.bSave.Size = new System.Drawing.Size(66, 25);
+            this.bSave.Size = new System.Drawing.Size(88, 32);
             this.bSave.TabIndex = 10;
             this.bSave.Tag = "78fc4a02-cfc6-44ae-a59a-4a75952b2604";
             this.bSave.Text = "Save Vue";
@@ -2384,9 +2379,9 @@ namespace DrawTools
             // Vue
             // 
             this.Vue.AutoSize = true;
-            this.Vue.Location = new System.Drawing.Point(4, 103);
+            this.Vue.Location = new System.Drawing.Point(5, 130);
             this.Vue.Name = "Vue";
-            this.Vue.Size = new System.Drawing.Size(33, 17);
+            this.Vue.Size = new System.Drawing.Size(38, 20);
             this.Vue.TabIndex = 3;
             this.Vue.Text = "Vue";
             // 
@@ -2398,9 +2393,9 @@ namespace DrawTools
             this.cbVue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbVue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbVue.FormattingEnabled = true;
-            this.cbVue.Location = new System.Drawing.Point(37, 99);
+            this.cbVue.Location = new System.Drawing.Point(49, 125);
             this.cbVue.Name = "cbVue";
-            this.cbVue.Size = new System.Drawing.Size(234, 24);
+            this.cbVue.Size = new System.Drawing.Size(209, 28);
             this.cbVue.TabIndex = 1;
             this.cbVue.SelectedIndexChanged += new System.EventHandler(this.cbVue_SelectedIndexChanged);
             this.cbVue.Validated += new System.EventHandler(this.cbVue_Validated);
@@ -2419,6 +2414,7 @@ namespace DrawTools
             this.dataGrid.Location = new System.Drawing.Point(0, 0);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersVisible = false;
+            this.dataGrid.RowHeadersWidth = 62;
             this.dataGrid.Size = new System.Drawing.Size(308, 29);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
@@ -2427,18 +2423,23 @@ namespace DrawTools
             // Propriete
             // 
             this.Propriete.HeaderText = "Propriete";
+            this.Propriete.MinimumWidth = 8;
             this.Propriete.Name = "Propriete";
             this.Propriete.ReadOnly = true;
+            this.Propriete.Width = 150;
             // 
             // Valeur
             // 
             this.Valeur.HeaderText = "Valeur";
+            this.Valeur.MinimumWidth = 8;
             this.Valeur.Name = "Valeur";
             this.Valeur.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Valeur.Width = 150;
             // 
             // Pls
             // 
             this.Pls.HeaderText = "";
+            this.Pls.MinimumWidth = 8;
             this.Pls.Name = "Pls";
             this.Pls.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Pls.Width = 15;
@@ -2446,9 +2447,11 @@ namespace DrawTools
             // NonVisible
             // 
             this.NonVisible.HeaderText = "NonVisible";
+            this.NonVisible.MinimumWidth = 8;
             this.NonVisible.Name = "NonVisible";
             this.NonVisible.ReadOnly = true;
             this.NonVisible.Visible = false;
+            this.NonVisible.Width = 150;
             // 
             // drawArea
             // 
@@ -2458,17 +2461,17 @@ namespace DrawTools
             this.drawArea.AutoSize = true;
             this.drawArea.DrawNetRectangle = false;
             this.drawArea.GraphicsList = null;
-            this.drawArea.Location = new System.Drawing.Point(14, 1);
+            this.drawArea.Location = new System.Drawing.Point(19, 1);
             this.drawArea.Name = "drawArea";
             this.drawArea.NetRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.drawArea.OSelected = null;
             this.drawArea.Owner = null;
-            this.drawArea.Size = new System.Drawing.Size(4808, 4581);
+            this.drawArea.Size = new System.Drawing.Size(6410, 5803);
             this.drawArea.TabIndex = 1;
             // 
             // Form1
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 15);
+            this.AutoScaleBaseSize = new System.Drawing.Size(8, 19);
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(918, 374);
             this.Controls.Add(this.toolBar1);
@@ -7470,7 +7473,7 @@ namespace DrawTools
             //throw new NotImplementedException();
         }
 
-        
+
 
 
         #endregion
@@ -7478,7 +7481,7 @@ namespace DrawTools
 
         #region Main
 
-
+        Thread newThread = null;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -7494,28 +7497,10 @@ namespace DrawTools
             Compte.lstRoles.Add("78201911-53be-4074-9d7a-6ff2cbf809aa"); // Roles lié au profil Architecte [Admin]
             Compte.lstRoles.Add("b3d2b96b-36ad-4114-8ff7-29109d8c0144"); // Roles lié au profil Architecte [Fonctionnel]
             Compte.id = propCompte[1];
-            //Compte.lstRoles.Add("00000000-53be-4074-9d7a-6ff2cbf809aa"); // Roles inconnu
-            /*
-            5416a957-e669-4403-be06-6f7a71f616ce // Opérations Application [cbOpApp]
-            6db2c391-c05e-4cde-aec3-d7ed7a773de7 // Opérations Vue [cbOpVue]
-            78fc4a02-cfc6-44ae-a59a-4a75952b2604 // Bouton Save Fonctionnel [bSave]
-            05915b4d-6eaf-4ed1-8c07-c31a4527a2b2 // Bouton Opérations Application [bOpApp]
-            5fa9fa6e-2caa-42dc-975f-12f0aca7075d // Bouton Opérations Vue [bOpVue]
-            bedef478-547e-47de-819b-4377a94e78c5 // Bouton Bar de Menu Module [tbModule]
-            37a0ca71-25a8-46e8-a605-aa14387c5b7c // Bouton Bar de Menu Lien [tbLink]
-            46883717-5f55-4789-a833-dc10f59385b8 // Bouton Bar de Menu Utilisateur [tbUserApp]
-            0f8458ca-0be1-466f-ae35-34d1652a6373
-            e8a14662-1161-4181-b8e5-be9f423ac197
-            2e9b3a41-002a-4ffa-9d75-bcb2fdfbb9b6
-            1aef8e24-88f9-4ff2-9b07-eb6bbc5882b0
-            cc7259e9-91ba-434b-86cc-cde2563b433e
-            6877b2d9-26d5-4976-ae55-36de1e099ec6
-            2310292e-c009-4f0a-a7dc-84019c61aa82
-            95fae4f9-0cd5-4e3e-b9f5-822ac1218e8c
-            8375a238-b73a-4a84-851c-2819320d2073
-            */
+
 #endif
             Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             Application.DoEvents();
 
             // Check command line
@@ -7525,7 +7510,8 @@ namespace DrawTools
             }
 
 
-
+            Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
+            
             // Load main form, taking command line into account
             Form1 form = new Form1();
             if (form.SelectedBase != null)
@@ -7536,6 +7522,87 @@ namespace DrawTools
                 form.cbApplication.Focus();
                 Application.Run(form);
             }
+        }
+
+        // The thread we start up to demonstrate non-UI exception handling.
+        void newThread_Execute()
+        {
+            throw new Exception("The method or operation is not implemented.");
+        }
+
+        // Handle the UI exceptions by showing a dialog box, and asking the user whether
+        // or not they wish to abort execution.
+        private static void Application_ThreadException(object sender, ThreadExceptionEventArgs t)
+        {
+            DialogResult result = DialogResult.Cancel;
+            try
+            {
+                result = ShowThreadExceptionDialog("Windows Forms Error", t.Exception);
+            }
+            catch
+            {
+                try
+                {
+                    MessageBox.Show("Fatal Windows Forms Error",
+                        "Fatal Windows Forms Error", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Stop);
+                }
+                finally
+                {
+                    Application.Exit();
+                }
+            }
+
+            // Exits the program when the user clicks Abort.
+            if (result == DialogResult.Abort)
+                Application.Exit();
+        }
+
+        // Handle the UI exceptions by showing a dialog box, and asking the user whether
+        // or not they wish to abort execution.
+        // NOTE: This exception cannot be kept from terminating the application - it can only
+        // log the event, and inform the user about it.
+        private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            try
+            {
+                Exception ex = (Exception)e.ExceptionObject;
+                string errorMsg = "An application error occurred. Please contact the adminstrator " +
+                    "with the following information:\n\n";
+
+                // Since we can't prevent the app from terminating, log this to the event log.
+                if (!EventLog.SourceExists("ThreadException"))
+                {
+                    EventLog.CreateEventSource("ThreadException", "Application");
+                }
+
+                // Create an EventLog instance and assign its source.
+                EventLog myLog = new EventLog();
+                myLog.Source = "ThreadException";
+                myLog.WriteEntry(errorMsg + ex.Message + "\n\nStack Trace:\n" + ex.StackTrace);
+            }
+            catch (Exception exc)
+            {
+                try
+                {
+                    MessageBox.Show("Fatal Non-UI Error",
+                        "Fatal Non-UI Error. Could not write the error to the event log. Reason: "
+                        + exc.Message, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+                finally
+                {
+                    Application.Exit();
+                }
+            }
+        }
+
+        // Creates the error message and displays it.
+        private static DialogResult ShowThreadExceptionDialog(string title, Exception e)
+        {
+            string errorMsg = "An application error occurred. Please contact the adminstrator " +
+                "with the following information:\n\n";
+            errorMsg = errorMsg + e.Message + "\n\nStack Trace:\n" + e.StackTrace;
+            return MessageBox.Show(errorMsg, title, MessageBoxButtons.AbortRetryIgnore,
+                MessageBoxIcon.Stop);
         }
 
         #endregion
@@ -12514,17 +12581,15 @@ namespace DrawTools
         {
             bAttribut = true;
 
-#if WRITE
+            //#if WRITE
 
             //F.SelectedBase = null;
-            Form fs = new FormCnxBase(F);
-            fs.ShowDialog(F);
+            //Form fs = new FormCnxBase(F);
+            //fs.ShowDialog(F);
+            F.SelectedBase = "cmdbRead";
             if (F.SelectedBase != null)
             {
                 connection = new OdbcConnection("DSN=" + F.SelectedBase);
-#else
-            connection = new OdbcConnection("DSN=cmdbRead");
-#endif
                 command = new OdbcCommand();
                 currentReader = 0;
                 command.Connection = connection;
@@ -13367,7 +13432,7 @@ namespace DrawTools
                                     if (InsFieldR) Set += " , ";
                                     InsFieldR = true;
                                     if ((string)o.LstValue[i] != "")
-                                        Set += ((Field)t.LstField[i]).Name + "='" + o.LstValue[i] + "'";
+                                        Set += ((Field)t.LstField[i]).Name + "='" + o.LstValue[i].ToString().Replace("'", "''") + "'";
                                     else
                                         Set += ((Field)t.LstField[i]).Name + "= null";
                                     break;
