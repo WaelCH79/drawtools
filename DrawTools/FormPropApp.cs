@@ -446,6 +446,15 @@ namespace DrawTools
 
                         }
                         Parent.InitCbApplication();
+
+                        // fill combobox
+                        Parent.cbApplication.SelectedItem = $"{tbNom.Text} [{ tbTrigramme.Text}]";
+
+                        if(lstVersion.Count != 0)
+                        {
+                            Parent.cbVersion.SelectedItem = cbVersion.SelectedItem;
+                        }
+
                         Close();
                     }
                     break;

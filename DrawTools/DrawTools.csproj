@@ -625,6 +625,7 @@
     <Compile Include="clData.cs" />
     <Compile Include="ConfDataBase.cs" />
     <Compile Include="ControlWord.cs" />
+    <Compile Include="DAL\CnxBase.cs" />
     <Compile Include="Draw\DrawGening.cs" />
     <Compile Include="Draw\DrawContainer.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -254,7 +254,17 @@ namespace DrawTools
                     }
                     break;
             }
+
+            var cbAppSelected = Parent.cbApplication.SelectedItem;
+            var cbAppVersion = Parent.cbVersion.SelectedItem;
+           //  = $"{tbNom.Text} [{ tbTrigramme.Text}]";          
+
             Parent.InitCbApplication();
+
+            Parent.cbApplication.SelectedItem = cbAppSelected;
+            Parent.cbVersion.SelectedItem = cbAppVersion;
+            parent.cbVue.SelectedItem = tbPrefixNom.Text + "_" + tbNom.Text;
+            Parent.cbVue_Validated(null, null);
             this.Close();
         }
     }
