@@ -1,0 +1,17 @@
+C:\GITREPO\DrawTools_SRC_20240201\DAL\bin\Debug\DAL.dll
+C:\GITREPO\DrawTools_SRC_20240201\DAL\bin\Debug\DAL.pdb
+C:\GITREPO\DrawTools_SRC_20240201\DAL\bin\Debug\MySql.Data.dll
+C:\GITREPO\DrawTools_SRC_20240201\DAL\bin\Debug\Google.Protobuf.dll
+C:\GITREPO\DrawTools_SRC_20240201\DAL\bin\Debug\ZstdNet.dll
+C:\GITREPO\DrawTools_SRC_20240201\DAL\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\GITREPO\DrawTools_SRC_20240201\DAL\bin\Debug\BouncyCastle.Crypto.dll
+C:\GITREPO\DrawTools_SRC_20240201\DAL\bin\Debug\System.Memory.dll
+C:\GITREPO\DrawTools_SRC_20240201\DAL\bin\Debug\System.Buffers.dll
+C:\GITREPO\DrawTools_SRC_20240201\DAL\bin\Debug\K4os.Compression.LZ4.dll
+C:\GITREPO\DrawTools_SRC_20240201\DAL\bin\Debug\K4os.Hash.xxHash.dll
+C:\GITREPO\DrawTools_SRC_20240201\DAL\bin\Debug\MySql.Data.xml
+C:\GITREPO\DrawTools_SRC_20240201\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\GITREPO\DrawTools_SRC_20240201\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\GITREPO\DrawTools_SRC_20240201\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\GITREPO\DrawTools_SRC_20240201\DAL\obj\Debug\DAL.dll
+C:\GITREPO\DrawTools_SRC_20240201\DAL\obj\Debug\DAL.pdb

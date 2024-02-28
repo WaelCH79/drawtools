@@ -419,6 +419,10 @@
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{6cd034c9-55eb-49da-9083-4080bd81439f}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DocToolkit\DocToolkit.csproj">
       <Name>DocToolkit</Name>
       <Project>{EF871417-414A-462F-9B30-6EEC3920499F}</Project>
@@ -434,10 +438,14 @@
   <ItemGroup>
     <Content Include="bmp\about.bmp" />
     <Content Include="App.ico" />
+    <Content Include="bmp\home.png" />
     <Content Include="HtmlAgilityPack.dll" />
     <EmbeddedResource Include="AECBForm.resx">
       <DependentUpon>AECBForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormApplicationList.resx">
+      <DependentUpon>FormApplicationList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormddmSubnet.resx">
       <DependentUpon>FormddmSubnet.cs</DependentUpon>
@@ -465,6 +473,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMsgAndLinkOk.resx">
       <DependentUpon>FormMsgAndLinkOk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormParent.resx">
+      <DependentUpon>FormParent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPattern.resx">
       <DependentUpon>FormPattern.cs</DependentUpon>
@@ -647,6 +658,12 @@
     <Compile Include="Draw\DrawGenks.cs" />
     <Compile Include="Draw\DrawManagedsvc.cs" />
     <Compile Include="Draw\DrawGensas.cs" />
+    <Compile Include="FormApplicationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormApplicationList.Designer.cs">
+      <DependentUpon>FormApplicationList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormddmSubnet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -707,6 +724,12 @@
     </Compile>
     <Compile Include="FormMsgAndLinkOk.Designer.cs">
       <DependentUpon>FormMsgAndLinkOk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormParent.Designer.cs">
+      <DependentUpon>FormParent.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPattern.cs">
       <SubType>Form</SubType>
@@ -958,6 +981,7 @@
     <Compile Include="Form_ModifField.Designer.cs">
       <DependentUpon>Form_ModifField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

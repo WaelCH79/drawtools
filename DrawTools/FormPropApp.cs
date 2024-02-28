@@ -34,6 +34,11 @@ namespace DrawTools
             }
         }
 
+        public FormPropApp(Form p, string sGuidApp, int iOp = 0)
+        {
+
+        }
+        
         public FormPropApp(Form1 p, string sGuidApp, int iOp=0)
         {
             Parent = p;
