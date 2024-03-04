@@ -28,28 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvApplications = new System.Windows.Forms.DataGridView();
             this.txt_ApplicationSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnNewApp = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvApplications)).BeginInit();
+            this.pDataGV = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // dgvApplications
-            // 
-            this.dgvApplications.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvApplications.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvApplications.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvApplications.Location = new System.Drawing.Point(26, 163);
-            this.dgvApplications.Name = "dgvApplications";
-            this.dgvApplications.RowHeadersWidth = 62;
-            this.dgvApplications.RowTemplate.Height = 28;
-            this.dgvApplications.Size = new System.Drawing.Size(587, 172);
-            this.dgvApplications.TabIndex = 0;
-            this.dgvApplications.DoubleClick += new System.EventHandler(this.dgvApplications_DoubleClick);
             // 
             // txt_ApplicationSearch
             // 
@@ -78,32 +61,40 @@
             this.BtnNewApp.UseVisualStyleBackColor = true;
             this.BtnNewApp.Click += new System.EventHandler(this.BtnNewApp_Click);
             // 
+            // pDataGV
+            // 
+            this.pDataGV.AutoSize = true;
+            this.pDataGV.Location = new System.Drawing.Point(26, 169);
+            this.pDataGV.Name = "pDataGV";
+            this.pDataGV.Size = new System.Drawing.Size(0, 0);
+            this.pDataGV.TabIndex = 4;
+            // 
             // FormApplicationList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 417);
+            this.ClientSize = new System.Drawing.Size(1276, 664);
             this.ControlBox = false;
+            this.Controls.Add(this.pDataGV);
             this.Controls.Add(this.BtnNewApp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_ApplicationSearch);
-            this.Controls.Add(this.dgvApplications);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormApplicationList";
             this.Text = "Liste des applications";
             this.Load += new System.EventHandler(this.FormApplicationList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvApplications)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvApplications;
         private System.Windows.Forms.TextBox txt_ApplicationSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnNewApp;
+        private System.Windows.Forms.Panel pDataGV;
     }
 }

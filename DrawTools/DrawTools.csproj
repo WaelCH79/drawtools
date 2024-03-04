@@ -438,7 +438,13 @@
   <ItemGroup>
     <Content Include="bmp\about.bmp" />
     <Content Include="App.ico" />
+    <Content Include="bmp\expand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="bmp\home.png" />
+    <Content Include="bmp\toggle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="HtmlAgilityPack.dll" />
     <EmbeddedResource Include="AECBForm.resx">
       <DependentUpon>AECBForm.cs</DependentUpon>
@@ -981,6 +987,7 @@
     <Compile Include="Form_ModifField.Designer.cs">
       <DependentUpon>Form_ModifField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\HierarchicalGridHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
