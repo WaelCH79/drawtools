@@ -223,7 +223,7 @@ namespace DrawTools.Helper
         private void detailDGVs_CellContentClick_Event(object sender, DataGridViewCellEventArgs e)
         {
 
-            var guidApp = DetailDGVs.Rows[DetailDGVs.CurrentRow.Index].Cells[0].Value.ToString();
+            var guidApp = DetailDGVs.Rows[DetailDGVs.CurrentRow.Index].Cells[2].Value.ToString();
             Form1 fm = new Form1(guidApp);
             fm.MdiParent = this.formApplication.MdiParent;
             fm.Show();

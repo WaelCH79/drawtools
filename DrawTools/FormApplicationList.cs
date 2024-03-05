@@ -117,6 +117,33 @@ namespace DrawTools
             Helper.HierarchicalGridHelper.Templatecolumn(Master_AppDGV, GridControlTypes.BoundColumn, "CodeAp", "Code application", "Code application", true, 120, DataGridViewTriState.True, DataGridViewContentAlignment.MiddleLeft, DataGridViewContentAlignment.MiddleCenter, System.Drawing.Color.Transparent, null, "", "", System.Drawing.Color.Black);
 
         }
+               
+        // to generate Detail Datagridview with your coding
+        public void DetailGrid_Initialize()
+        {
+
+            //First generate the grid Layout Design
+            HierarchicalGridHelper.Layouts(Detail_VersionDGV, System.Drawing.Color.White, System.Drawing.Color.AliceBlue,  System.Drawing.Color.WhiteSmoke, false, System.Drawing.Color.SteelBlue, false, false, false);
+
+            //Set Height,width and add panel to your selected control
+            HierarchicalGridHelper.Generategrid(Detail_VersionDGV, pDataGV, 150, 50, 5, 5);
+
+            // BoundColumn creation
+            Helper.HierarchicalGridHelper.Templatecolumn(Detail_VersionDGV, GridControlTypes.BoundColumn, "Version", "Version", "Version", true, 80, DataGridViewTriState.True, DataGridViewContentAlignment.MiddleLeft, DataGridViewContentAlignment.MiddleCenter, System.Drawing.Color.Transparent, null, "", "", System.Drawing.Color.Black);
+
+
+            // BoundColumn creation
+            Helper.HierarchicalGridHelper.Templatecolumn(Detail_VersionDGV, GridControlTypes.BoundColumn, "Statut", "Statut", "Statut", true, 320, DataGridViewTriState.True, DataGridViewContentAlignment.MiddleLeft, DataGridViewContentAlignment.MiddleCenter, System.Drawing.Color.Transparent, null, "", "", System.Drawing.Color.Black);
+
+
+            // BoundColumn creation
+            Helper.HierarchicalGridHelper.Templatecolumn(Detail_VersionDGV, GridControlTypes.BoundColumn, "GuidAppVersion", "GuidAppVersion", "GuidAppVersion", false, 1, DataGridViewTriState.True, DataGridViewContentAlignment.MiddleCenter, DataGridViewContentAlignment.MiddleCenter, System.Drawing.Color.Transparent, null, "", "", System.Drawing.Color.Black);
+
+
+            hierchicalGridHelper.DGVDetailGridClickEvents(Detail_VersionDGV, this);
+
+
+        }
 
         private void MasterGrid_Load()
         {
@@ -151,33 +178,6 @@ namespace DrawTools
             // Image Colum Click Event - In  this method we create an event for cell click and we will display the Detail grid with result.
 
             hierchicalGridHelper.DGVMasterGridClickEvents(Master_AppDGV, Detail_VersionDGV, Master_AppDGV.Columns[0].Index, ds.Tables[0], "GuidApplication");
-
-        }
-
-        // to generate Detail Datagridview with your coding
-        public void DetailGrid_Initialize()
-        {
-
-            //First generate the grid Layout Design
-            HierarchicalGridHelper.Layouts(Detail_VersionDGV, System.Drawing.Color.White, System.Drawing.Color.AliceBlue,  System.Drawing.Color.WhiteSmoke, false, System.Drawing.Color.SteelBlue, false, false, false);
-
-            //Set Height,width and add panel to your selected control
-            HierarchicalGridHelper.Generategrid(Detail_VersionDGV, pDataGV, 150, 50, 5, 5);
-
-            // BoundColumn creation
-            Helper.HierarchicalGridHelper.Templatecolumn(Detail_VersionDGV, GridControlTypes.BoundColumn, "Version", "Version", "Version", true, 80, DataGridViewTriState.True, DataGridViewContentAlignment.MiddleLeft, DataGridViewContentAlignment.MiddleCenter, System.Drawing.Color.Transparent, null, "", "", System.Drawing.Color.Black);
-
-
-            // BoundColumn creation
-            Helper.HierarchicalGridHelper.Templatecolumn(Detail_VersionDGV, GridControlTypes.BoundColumn, "Statut", "Statut", "Statut", true, 320, DataGridViewTriState.True, DataGridViewContentAlignment.MiddleLeft, DataGridViewContentAlignment.MiddleCenter, System.Drawing.Color.Transparent, null, "", "", System.Drawing.Color.Black);
-
-
-            // BoundColumn creation
-            Helper.HierarchicalGridHelper.Templatecolumn(Detail_VersionDGV, GridControlTypes.BoundColumn, "GuidAppVersion", "GuidAppVersion", "GuidAppVersion", false, 1, DataGridViewTriState.True, DataGridViewContentAlignment.MiddleCenter, DataGridViewContentAlignment.MiddleCenter, System.Drawing.Color.Transparent, null, "", "", System.Drawing.Color.Black);
-
-
-            hierchicalGridHelper.DGVDetailGridClickEvents(Detail_VersionDGV, this);
-
 
         }
 
