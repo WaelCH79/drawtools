@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DrawTools.Helper;
 
 namespace DrawTools
 {
@@ -27,6 +28,7 @@ namespace DrawTools
             }
 
 
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(GlobalExceptionHandler.UnhandledException);
             FormApplicationList form = new FormApplicationList();
             Application.Run(new FormParent(new FormApplicationList()));
 

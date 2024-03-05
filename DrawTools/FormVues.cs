@@ -55,7 +55,7 @@ namespace DrawTools
     /// 
 
 
-    public class Form1 : System.Windows.Forms.Form
+    public class FormVues : System.Windows.Forms.Form
     {
         //static string _authority = "http://127.0.0.1:8080/auth/realms/Test";
         //static string _api = "http://127.0.0.1:8080/auth/realms/Test/api";$
@@ -419,7 +419,7 @@ namespace DrawTools
 
         #region Constructor, Dispose
 
-        public Form1()
+        public FormVues()
         {
             closing = true;
             // Initialise Lst Nom User
@@ -442,11 +442,9 @@ namespace DrawTools
             }
         }
 
-        public Guid AppVersionGuid { get; set; }
-        public Form1(string appVersionGuid)
-        {
-            this.AppVersionGuid = new Guid(appVersionGuid);
 
+        public FormVues(string appVersionGuid)
+        {
             // Initialise Lst Nom User
             initKnownDTUserLst();
 
@@ -2120,8 +2118,8 @@ namespace DrawTools
             // 
             // tbFind
             // 
-            this.tbFind.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbFind.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbFind.Location = new System.Drawing.Point(50, 205);
             this.tbFind.Name = "tbFind";
@@ -2201,8 +2199,8 @@ namespace DrawTools
             // 
             // tbVueInf
             // 
-            this.tbVueInf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbVueInf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbVueInf.Location = new System.Drawing.Point(277, 85);
             this.tbVueInf.Name = "tbVueInf";
@@ -2332,8 +2330,8 @@ namespace DrawTools
             // 
             // tvObjet
             // 
-            this.tvObjet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tvObjet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tvObjet.Location = new System.Drawing.Point(10, 241);
             this.tvObjet.Name = "tvObjet";
@@ -2366,8 +2364,8 @@ namespace DrawTools
             // 
             // cbApplication
             // 
-            this.cbApplication.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.cbApplication.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbApplication.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbApplication.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -2404,8 +2402,8 @@ namespace DrawTools
             // 
             // cbVue
             // 
-            this.cbVue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.cbVue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbVue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbVue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -3187,8 +3185,8 @@ namespace DrawTools
 
         void DiscoveryReseaux_Click(object sender, EventArgs e)
         {
-            FormddmSubnet fs = new FormddmSubnet(this);
-            fs.ShowDialog(this);
+            //FormddmSubnet fs = new FormddmSubnet(this);
+            //fs.ShowDialog(this);
         }
 
         void DiscoveryServeurs_Click(object sender, EventArgs e)
@@ -3870,20 +3868,20 @@ namespace DrawTools
 
         void menuRefApp_Click(object sender, EventArgs e)
         {
-            FormProduct fp = new FormProduct(this, 'A');
-            fp.ShowDialog(this);
+            //FormProduct fp = new FormProduct(this, 'A');
+            //fp.ShowDialog(this);
         }
 
         void menuRefTechnique_Click(object sender, EventArgs e)
         {
-            FormProduct fp = new FormProduct(this, 'S');
-            fp.ShowDialog(this);
+            //FormProduct fp = new FormProduct(this, 'S');
+            //fp.ShowDialog(this);
         }
 
         private void menuItem21_Click(object sender, EventArgs e)
         {
-            FormProduct fp = new FormProduct(this, 'H');
-            fp.ShowDialog(this);
+            //FormProduct fp = new FormProduct(this, 'H');
+            //fp.ShowDialog(this);
         }
 
         void menuExtractIP_Click(object sender, EventArgs e)
@@ -4207,16 +4205,16 @@ namespace DrawTools
 
         public void CommandEACB()
         {
-            AECBForm faecb = new AECBForm(this);
-            faecb.init();
-            drawArea.ActiveTool = DrawArea.DrawToolType.Pointer;
-            drawArea.Owner.SetStateOfControls();
+            //AECBForm faecb = new AECBForm(this);
+            //faecb.init();
+            //drawArea.ActiveTool = DrawArea.DrawToolType.Pointer;
+            //drawArea.Owner.SetStateOfControls();
         }
 
         public void CommandReport()
         {
-            AECBForm faecb = new AECBForm(this);
-            faecb.init();
+            //AECBForm faecb = new AECBForm(this);
+            //faecb.init();
         }
 
         public void RapPatrimoine(ControlWord cw, string sBookPat, int Titre)
@@ -4477,8 +4475,8 @@ namespace DrawTools
 
         private void AfficheApp(AppList lstAppObj)
         {
-            StdFile sf = new StdFile(this, @"C:\DAT\neo4j.txt");
-            StdFile sfcsv = new StdFile(this, @"C:\DAT\appSI.csv");
+            StdFile sf = new StdFile(null, @"C:\DAT\neo4j.txt");
+            StdFile sfcsv = new StdFile(null, @"C:\DAT\appSI.csv");
             sf.SWwrite("create");
             sfcsv.SWwrite("GuidApplication;NomApplication;CriticiteI;Creticite;Impact");
             int nbr = 0;
@@ -4554,38 +4552,6 @@ namespace DrawTools
 
                 }
 
-                /*
-                GuidVue = new Guid(row[2]);
-                //if(olstApp.ExistApp(row[0])>-1) drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject('A', row[0]);
-                if (sTypeVue[0] == 'W')
-                {
-                    Select = drawArea.tools[(int)DrawArea.DrawToolType.TechLink].GetSelect(sType, "GVide");
-                    sCmd = Select + " FROM DansVue, TechLink, GTechLink, GroupService WHERE GuidObjet=GuidGTechLink AND GTechLink.GuidTechLink=TechLink.GuidTechLink AND TechLink.GuidGroupService=GroupService.GuidGroupService AND GuidVue='" + row[2] + "' AND NOT EXISTS (SELECT GuidAppUser FROM USER WHERE GuidAppUser=GuidServerIn)";
-                }
-                else
-                {
-                    Select = drawArea.tools[(int)DrawArea.DrawToolType.LinkA].GetSelect(sType, "GVide");
-                    sCmd = Select + " FROM DansVue, Link, GLink WHERE GuidObjet=GuidGLink AND GLink.GuidLink=Link.GuidLink AND GuidVue='" + row[2] + "' AND NOT EXISTS (SELECT GuidAppUser FROM USER WHERE GuidAppUser=GuidComposantL1In)";
-                }
-
-                if (oCnxBase.CBRecherche(sCmd))
-                {
-                    while (oCnxBase.Reader.Read())
-                    {
-                        ArrayList LstValue;
-                        int n = oCnxBase.ConfDB.FindTable(sType);
-                        if (n > -1)
-                        {
-                            Table t = (Table)oCnxBase.ConfDB.LstTable[n];
-                            LstValue = t.InitValueFieldFromBD(oCnxBase.Reader, ConfDataBase.FieldOption.Select);
-                            da.CreatAppLink(LstValue);
-                        }
-
-                    }
-                }
-                oCnxBase.CBReaderClose();
-
-            */
             }
             sf.SWclose();
             sfcsv.SWclose();
@@ -8909,823 +8875,823 @@ namespace DrawTools
         public void SetStateOfControls()
         {
             if (closing)
-            { 
-            // Select active tool
-            tbPointer.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Pointer);
-            tbRectangle.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Rectangle);
-            tbEllipse.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Ellipse);
-            tbLine.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Line);
-            tbPolygon.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Polygon);
-            tbModule.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Module);
-            tbLink.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Link);
-            tbServer.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Server);
-            tbBase.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Base);
-            tbQueue.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Queue);
-            tbFile.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.File);
-            tbLinkA.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.LinkA);
-            tbComposant.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Composant);
-            tbMainComposant.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.MainComposant);
-            //tbCompFonc.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.CompFonc);
-            //tbServer.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.ServMComp);
-            tbTechno.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Techno);
-            tbLinkI.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.TechLink);
-            tbServeurE.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.ServerPhy);
-            tbcard.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.NCard);
-            tbVlan.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.VLan);
-            tbRouter.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Router);
-            tbUser.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.AppUser);
-            tbApplication.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Application);
-            tbInterface.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Interface);
-            tbCluster.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Cluster);
-            tbMachine.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Machine);
-            tbBaie1.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Baie);
-            tbLun.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Lun);
-            tbZone.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Zone);
-            tbBaiePhy.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.BaiePhy);
-            tbDrawer.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Drawer);
-            tbSanCard.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.SanCard);
-            tbSanSwitch.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.SanSwitch);
-            tbISL.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.ISL);
-            tbBaieDPhy.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.BaieDPhy);
-            tbSite.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Location);
-            tbCnx.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Cnx);
-            tbPtCnx.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.PtCnx);
-            tbCadreRefN.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.CadreRefN);
-            tbCadreRefN1.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.CadreRefN1);
-            tbIndicator.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Indicator);
-            tbInterLink.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.InterLink);
-            tbAxes.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Axes);
-            tbGening.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Gening);
-            tbGenks.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Genks);
-            tbGenpod.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Genpod);
-            tbGensas.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Gensas);
-            tbGensvc.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Gensvc);
-            tbInsks.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Insks);
+            {
+                // Select active tool
+                tbPointer.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Pointer);
+                tbRectangle.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Rectangle);
+                tbEllipse.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Ellipse);
+                tbLine.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Line);
+                tbPolygon.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Polygon);
+                tbModule.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Module);
+                tbLink.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Link);
+                tbServer.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Server);
+                tbBase.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Base);
+                tbQueue.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Queue);
+                tbFile.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.File);
+                tbLinkA.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.LinkA);
+                tbComposant.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Composant);
+                tbMainComposant.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.MainComposant);
+                //tbCompFonc.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.CompFonc);
+                //tbServer.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.ServMComp);
+                tbTechno.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Techno);
+                tbLinkI.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.TechLink);
+                tbServeurE.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.ServerPhy);
+                tbcard.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.NCard);
+                tbVlan.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.VLan);
+                tbRouter.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Router);
+                tbUser.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.AppUser);
+                tbApplication.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Application);
+                tbInterface.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Interface);
+                tbCluster.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Cluster);
+                tbMachine.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Machine);
+                tbBaie1.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Baie);
+                tbLun.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Lun);
+                tbZone.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Zone);
+                tbBaiePhy.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.BaiePhy);
+                tbDrawer.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Drawer);
+                tbSanCard.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.SanCard);
+                tbSanSwitch.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.SanSwitch);
+                tbISL.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.ISL);
+                tbBaieDPhy.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.BaieDPhy);
+                tbSite.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Location);
+                tbCnx.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Cnx);
+                tbPtCnx.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.PtCnx);
+                tbCadreRefN.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.CadreRefN);
+                tbCadreRefN1.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.CadreRefN1);
+                tbIndicator.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Indicator);
+                tbInterLink.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.InterLink);
+                tbAxes.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Axes);
+                tbGening.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Gening);
+                tbGenks.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Genks);
+                tbGenpod.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Genpod);
+                tbGensas.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Gensas);
+                tbGensvc.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Gensvc);
+                tbInsks.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Insks);
 
-            tbFluxBoutEnBout.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.FluxBoutEnBout);
-            tbFluxBoutEnBoutFonc.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.FluxBoutEnBoutFonc);
-            tbFlux.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Flux);
-
-
-
-            menuDrawPointer.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Pointer);
-            menuDrawRectangle.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Rectangle);
-            menuDrawEllipse.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Ellipse);
-            menuDrawLine.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Line);
-            menuDrawPolygon.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Polygon);
+                tbFluxBoutEnBout.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.FluxBoutEnBout);
+                tbFluxBoutEnBoutFonc.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.FluxBoutEnBoutFonc);
+                tbFlux.Pushed = (drawArea.ActiveTool == DrawArea.DrawToolType.Flux);
 
 
-            bool objects = (drawArea.GraphicsList.Count > 0);
-            bool selectedObjects = (drawArea.GraphicsList.SelectionCount > 0);
-            bool selectedCadreRef = (drawArea.GraphicsList.SelectionCadreRefCount > 0);
 
-            // File operations
-            menuFileSave.Enabled = objects;
-            // menuFileSaveAs.Enabled = objects;
-            tbSave.Enabled = objects;
+                menuDrawPointer.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Pointer);
+                menuDrawRectangle.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Rectangle);
+                menuDrawEllipse.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Ellipse);
+                menuDrawLine.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Line);
+                menuDrawPolygon.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Polygon);
 
-            // Edit operations
-            menuEditDelete.Enabled = selectedObjects;
-            menuEditDeleteAll.Enabled = objects;
-            menuEditSelectAll.Enabled = objects;
-            menuEditUnselectAll.Enabled = objects;
-            menuEditMoveToFront.Enabled = selectedObjects;
-            menuEditMoveToBack.Enabled = selectedObjects;
-            menuEditProperties.Enabled = selectedObjects;
-            menuItem23.Enabled = selectedObjects;
-            menuItem27.Enabled = selectedObjects;
-            menuItem20.Enabled = selectedCadreRef;
+
+                bool objects = (drawArea.GraphicsList.Count > 0);
+                bool selectedObjects = (drawArea.GraphicsList.SelectionCount > 0);
+                bool selectedCadreRef = (drawArea.GraphicsList.SelectionCadreRefCount > 0);
+
+                // File operations
+                menuFileSave.Enabled = objects;
+                // menuFileSaveAs.Enabled = objects;
+                tbSave.Enabled = objects;
+
+                // Edit operations
+                menuEditDelete.Enabled = selectedObjects;
+                menuEditDeleteAll.Enabled = objects;
+                menuEditSelectAll.Enabled = objects;
+                menuEditUnselectAll.Enabled = objects;
+                menuEditMoveToFront.Enabled = selectedObjects;
+                menuEditMoveToBack.Enabled = selectedObjects;
+                menuEditProperties.Enabled = selectedObjects;
+                menuItem23.Enabled = selectedObjects;
+                menuItem27.Enabled = selectedObjects;
+                menuItem20.Enabled = selectedCadreRef;
+            }
         }
-    }
 
 
 
-    public string GetPath(string Guid)
-    {
-        string fullpath = "";
-        if (oCnxBase.CBRecherche("Select NomArborescence, GuidParent From Arborescence Where GuidArborescence='" + Guid + "'"))
+        public string GetPath(string Guid)
         {
-            string NomArborescence = oCnxBase.Reader.GetString(0);
-            if (oCnxBase.Reader.IsDBNull(1))
+            string fullpath = "";
+            if (oCnxBase.CBRecherche("Select NomArborescence, GuidParent From Arborescence Where GuidArborescence='" + Guid + "'"))
             {
-                fullpath = "\\" + NomArborescence;
-                oCnxBase.CBReaderClose();
+                string NomArborescence = oCnxBase.Reader.GetString(0);
+                if (oCnxBase.Reader.IsDBNull(1))
+                {
+                    fullpath = "\\" + NomArborescence;
+                    oCnxBase.CBReaderClose();
+                }
+                else
+                {
+                    string Parent = oCnxBase.Reader.GetString(1);
+                    oCnxBase.CBReaderClose();
+                    fullpath = GetPath(Parent) + "\\" + NomArborescence;
+                }
+                //else fullpath = path + GetPath(Parent) + NomArborescence + "\\test.jpg";
             }
-            else
-            {
-                string Parent = oCnxBase.Reader.GetString(1);
-                oCnxBase.CBReaderClose();
-                fullpath = GetPath(Parent) + "\\" + NomArborescence;
-            }
-            //else fullpath = path + GetPath(Parent) + NomArborescence + "\\test.jpg";
-        }
-        else oCnxBase.CBReaderClose();
-        return fullpath;
-    }
-
-    public string GetFullPath(WorkApplication wkApp)
-    {
-        string fullpath;
-
-        if (oCnxBase.CBRecherche("Select NomArborescence, GuidParent, NomApplication, Trigramme, Version From Arborescence, Application, AppVersion Where Application.GuidApplication='" + wkApp.Guid + "' AND Application.GuidArborescence=Arborescence.GuidArborescence And Application.GuidApplication=AppVersion.GuidApplication And AppVersion.GuidAppVersion='" + wkApp.GuidAppVersion + "'"))
-        {
-            string NomArborescence = oCnxBase.Reader.GetString(0);
-            if (oCnxBase.Reader.IsDBNull(1))
-            {
-                if (oCnxBase.Reader.IsDBNull(3) || oCnxBase.Reader.GetString(3) == "") fullpath = sPathRoot + "\\" + NomArborescence + "\\" + oCnxBase.Reader.GetString(2) + "\\" + oCnxBase.Reader.GetString(4);
-                else fullpath = sPathRoot + "\\" + NomArborescence + "\\" + oCnxBase.Reader.GetString(3) + "\\" + oCnxBase.Reader.GetString(4);
-                oCnxBase.CBReaderClose();
-            }
-            else
-            {
-                string Parent = oCnxBase.Reader.GetString(1);
-                string sVersion = oCnxBase.Reader.GetString(4);
-                string sApp = oCnxBase.Reader.GetString(2);
-                oCnxBase.CBReaderClose();
-                fullpath = sPathRoot + GetPath(Parent) + "\\" + NomArborescence + "\\" + sApp + "\\" + sVersion;
-            }
-
-            if (!Directory.Exists(fullpath))
-            {
-                Directory.CreateDirectory(fullpath);
-            }
+            else oCnxBase.CBReaderClose();
             return fullpath;
         }
-        else oCnxBase.CBReaderClose();
-        return null;
-    }
 
-
-    public string SaveDiagram(string sVue, WorkApplication wkApp, string sGuidObj)
-    {
-        string fullpath = GetFullPath(wkApp);
-
-        if (fullpath != null) return (SaveDiagramFromPath(sVue, fullpath, sGuidObj));
-        return null;
-    }
-
-    public string SaveDiagramFromPath(string sVue, string fullpath, string sGuidObj)
-    {
-
-        int nbrO = drawArea.GraphicsList.Count, xmax = 0, ymax = 0, xmin = 0, ymin = 0;
-        int iSupObj = 30;
-        DrawObject o = null;
-        //0629ddb4-9dab-43c6-b913-2a3f46e4f08c
-
-        int n = drawArea.GraphicsList.FindObjet(0, sGuidObj);
-        if (n > -1)
+        public string GetFullPath(WorkApplication wkApp)
         {
-            int xdelta = iSupObj, ydelta = iSupObj;
+            string fullpath;
 
-            o = (DrawObject)drawArea.GraphicsList[n];
-            xmin = o.XMin(); xmax = o.XMax() - xmin;
-            ymin = o.YMin(); ymax = o.YMax() - ymin;
-            if (xmin > iSupObj) xmin -= iSupObj; else { xdelta = xmin; xmin = 0; }
-            if (ymin > iSupObj) ymin -= iSupObj; else { ydelta = ymin; ymin = 0; }
-            xmax += xdelta + iSupObj;
-            ymax += ydelta + iSupObj;
-        }
-        else
-        {
-            for (int i = 0; i < nbrO; i++)
+            if (oCnxBase.CBRecherche("Select NomArborescence, GuidParent, NomApplication, Trigramme, Version From Arborescence, Application, AppVersion Where Application.GuidApplication='" + wkApp.Guid + "' AND Application.GuidArborescence=Arborescence.GuidArborescence And Application.GuidApplication=AppVersion.GuidApplication And AppVersion.GuidAppVersion='" + wkApp.GuidAppVersion + "'"))
             {
-                o = drawArea.GraphicsList[i];
-                int x = o.XMax(), y = o.YMax();
-                if (x > xmax) xmax = x;
-                if (y > ymax) ymax = y;
-            }
-        }
-
-        xmax += 10; ymax += 10;
-        Bitmap bmp = new Bitmap(xmax, ymax);
-
-        Graphics g = Graphics.FromImage(bmp);
-
-        g.SetClip(new Rectangle(0, 0, xmax, ymax));
-        g.TranslateTransform(-1 * xmin, -1 * ymin);
-
-        drawArea.GraphicsList.Draw(g);
-
-        DateTime dt = DateTime.Now;
-        if (!Directory.Exists(fullpath)) Directory.CreateDirectory(fullpath);
-        bmp.Save(fullpath + "\\" + sVue + "-" + dt.Year.ToString() + "-" + dt.Month.ToString() + "-" + dt.Day.ToString() + "-" + dt.GetHashCode().ToString() + ".png");
-        return fullpath + "\\" + sVue + "-" + dt.Year.ToString() + "-" + dt.Month.ToString() + "-" + dt.Day.ToString() + "-" + dt.GetHashCode().ToString() + ".png";
-    }
-
-    /// <summary>
-    /// Save file
-    /// </summary>
-    private void CommandSave()
-    {
-        string sPath = SaveDiagram((string)cbVue.SelectedItem, wkApp, "");
-        FormMsgAndLinkOk f = new FormMsgAndLinkOk(this, "Le diagramm a été enregistré sous le nom:", sPath);
-        f.init();
-        //docManager.SaveDocument(DocManager.SaveType.Save);
-    }
-
-    private void CommandOptions()
-    {
-        FormPropriete fp = new FormPropriete(this);
-        fp.CompleteField();
-        fp.ShowDialog(this);
-    }
-
-    private void CommandObjectExplorer()
-    {
-        FormExplorObj feo = new FormExplorObj(this);
-        feo.init(null);
-        oCureo = null;
-    }
-
-    private void CommandApplicationsExport()
-    {
-        oCnxBase.Genere_ListApp();
-
-    }
-
-    private void CommandMiseAJourLibelles()
-    {
-        if (oCnxBase.CBRecherche("SELECT GuidObjet, TypeObjet FROM DansTypeVue"))
-        {
-            XmlExcel xmlExcel = new XmlExcel(this, "ListObjet");
-
-            while (oCnxBase.Reader.Read())
-            {
-                xmlExcel.CreatXmlFromReader();
-            }
-            oCnxBase.CBReaderClose();
-
-            XmlElement root = xmlExcel.docXml.DocumentElement;
-            IEnumerator ienum = root.GetEnumerator();
-            XmlNode Node;
-
-            while (ienum.MoveNext())
-            {
-                Node = (XmlNode)ienum.Current;
-                switch (Node.NodeType)
+                string NomArborescence = oCnxBase.Reader.GetString(0);
+                if (oCnxBase.Reader.IsDBNull(1))
                 {
-                    case XmlNodeType.Element:
-                        if (Node.Name == "row")
-                        {
-                            IEnumerator ienumField = Node.GetEnumerator();
-                            XmlNode NodeField;
-                            string[] row = { null, null };
-                            int i = 0;
-                            while (ienumField.MoveNext())
-                            {
-                                NodeField = (XmlNode)ienumField.Current;
-                                switch (NodeField.NodeType)
-                                {
-                                    case XmlNodeType.Element:
-                                        row[i] = NodeField.InnerText;
-                                        i++;
-                                        break;
-                                }
-                            }
-                            string s = "SELECT Nom" + row[1] + " FROM " + row[1] + " WHERE Guid" + row[1] + "= '" + row[0] + "'";
-                            if (oCnxBase.CBRecherche("SELECT Nom" + row[1] + " FROM " + row[1] + " WHERE Guid" + row[1] + " = '" + row[0] + "'"))
-                            {
-                                string sNom = oCnxBase.Reader.GetString(0);
-                                oCnxBase.CBReaderClose();
-                                oCnxBase.CBWrite("UPDATE DansTypeVue SET NomObjet='" + sNom + "' WHERE GuidObjet = '" + row[0] + "'");
-
-                            }
-                            else
-                            {
-                                oCnxBase.CBReaderClose();
-                                oCnxBase.CBWrite("UPDATE DansTypeVue SET NomObjet='Non Reference' WHERE GuidObjet = '" + row[0] + "'");
-                            }
-                        }
-                        break;
+                    if (oCnxBase.Reader.IsDBNull(3) || oCnxBase.Reader.GetString(3) == "") fullpath = sPathRoot + "\\" + NomArborescence + "\\" + oCnxBase.Reader.GetString(2) + "\\" + oCnxBase.Reader.GetString(4);
+                    else fullpath = sPathRoot + "\\" + NomArborescence + "\\" + oCnxBase.Reader.GetString(3) + "\\" + oCnxBase.Reader.GetString(4);
+                    oCnxBase.CBReaderClose();
+                }
+                else
+                {
+                    string Parent = oCnxBase.Reader.GetString(1);
+                    string sVersion = oCnxBase.Reader.GetString(4);
+                    string sApp = oCnxBase.Reader.GetString(2);
+                    oCnxBase.CBReaderClose();
+                    fullpath = sPathRoot + GetPath(Parent) + "\\" + NomArborescence + "\\" + sApp + "\\" + sVersion;
                 }
 
-            }
-        }
-        oCnxBase.CBReaderClose();
-
-    }
-
-    private void CommandObsolescenceMap()
-    {
-        ArrayList lstCriteres = new ArrayList();
-        ArrayList lstEffectif = new ArrayList();
-
-        lstCriteres.Add(new Critere(this, "7bd86a23-ad30-4843-8e28-1220f5ef7224", "7-Criticité"));
-        lstCriteres.Add(new Critere(this, "590e5709-506e-4062-8281-69e7d765a3da", "4-Complexité"));
-        lstCriteres.Add(new Critere(this, "b00b12bd-a447-47e6-92f6-e3b76ad22830", "1-Fin Support"));
-        lstCriteres.Add(new Critere(this, "5f051eef-3016-4c68-a4f5-926e0ab6eb68", "9-Obsolescence"));
-        lstCriteres.Add(new Critere(this, "1e5421a8-457f-429a-99bd-d76e3cfa055a", "B-Obsolescence+1"));
-        lstCriteres.Add(new Critere(this, "82ddd17e-baff-47f3-95fd-89b7ca3588f1", "C-Obsolescence+2"));
-        lstCriteres.Add(new Critere(this, "13b8ede4-156d-49de-84e6-9d2e6b8ce3e0", "D-Obsolescence+3"));
-        lstCriteres.Add(new Critere(this, "e9b6a159-4b26-476c-99de-aa1878dc79ee", "E-Obsolescence+4"));
-
-        //if (oCnxBase.CBRecherche("SELECT GuidApplication, NomApplication FROM Application, IndicatorLink b WHERE b.GuidObjet=GuidApplication AND b.GuidIndicator='90aaebca-b358-45b0-9c84-81cd6c66bfdc' ORDER BY b.ValIndicator DESC"))
-        if (oCnxBase.CBRecherche("SELECT GuidApplication, NomApplication FROM Application ORDER BY NomApplication"))
-        {
-            while (oCnxBase.Reader.Read())
-            {
-                Effectif oEffApp = new Effectif(this, oCnxBase.Reader.GetString(0), oCnxBase.Reader.GetString(1), lstCriteres, 0);
-                lstEffectif.Add(oEffApp);
-            }
-        }
-        oCnxBase.CBReaderClose();
-        report(lstEffectif, lstCriteres, Form1.rbTypeRecherche.Application);
-
-        string[] aRowHead = { "Application", "Criticite", "Complexite", "support", "n+0", "n+1", "n+2", "n+3", "n+4" };
-        //string[] aRowHead = { "Application", "support", "n+0", "n+1", "n+2", "n+3", "n+4" };
-        HtmlFile htmlFile = new HtmlFile(this);
-        XmlElement el = htmlFile.XmlGetFirstElFromName(htmlFile.root, "body");
-        XmlElement elDiv = htmlFile.XmlCreatDivEl(el, "ListeApplication");
-        XmlElement elTab = htmlFile.XmlCreatTableEl(elDiv, "TableApp", aRowHead);
-        XmlElement elTB = htmlFile.XmlGetFirstElFromName(elTab, "tbody");
-        for (int i = 0; i < lstEffectif.Count; i++)
-        {
-            Effectif e = (Effectif)lstEffectif[i];
-            htmlFile.XmlCreatRowEl(elTB, e);
-        }
-        htmlFile.XmlSave("c:\\temp\\test.html");
-    }
-    private void CommandTadUpgating()
-    {
-        FormTadUpdating ftu = new FormTadUpdating(this);
-        ftu.init();
-    }
-
-    private void CommandProvisionServer()
-    {
-        ClearApp();
-        FormAppServer fps = new FormAppServer(this);
-        fps.ShowDialog(this);
-    }
-
-    private void CommandIPVlan()
-    {
-        FormFlux fflux = new FormFlux(this);
-        fflux.ShowDialog(this);
-    }
-
-    private void CommandFlux()
-    {
-        FormFlux fflux = new FormFlux(this);
-        fflux.ShowDialog(this);
-    }
-
-    private void CommandRules()
-    {
-        FormFlowRule ffr = new FormFlowRule(this);
-        ffr.ShowDialog(this);
-    }
-
-    private void CommandServiceLink()
-    {
-        FormServiceLink fs = new FormServiceLink(this);
-        fs.ShowDialog(this);
-    }
-
-    private void CommandGroupService()
-    {
-        FormGroupService fs = new FormGroupService(this);
-        fs.init();
-        //fs.ShowDialog(this);
-    }
-
-    private void CommandService()
-    {
-        Form fs = new FormService(this);
-        fs.ShowDialog(this);
-    }
-
-    private void CommandCopyField()
-    {
-        Form_ModifField ff = new Form_ModifField(this);
-        ff.ShowDialog(this);
-    }
-
-
-    private void CommandImport()
-    {
-        FormInfrastructure fp = new FormInfrastructure(this);
-        fp.ShowDialog(this);
-    }
-
-    private void CommandExport()
-    {
-        FormExport fe = new FormExport(this);
-        fe.ShowDialog(this);
-    }
-
-    private void CommandVisu()
-    {
-        FormVisu fv = new FormVisu(this);
-        fv.ShowDialog(this);
-    }
-
-    private void CommandImportObj()
-    {
-        string[] lines = File.ReadAllLines(@"c:\dat\tmp\impobj.txt");
-
-        oCnxBase.CBWrite("delete from ImportObj");
-        foreach (string line in lines)
-        {
-            oCnxBase.CBWrite("Insert Into ImportObj  (GuidImportObj) Value ('" + line + "')");
-        }
-    }
-
-    private void CommandExportDB()
-    {
-        drawArea.GraphicsList.Clear();
-        XmlDB xmlDB = new XmlDB(this, "Applications");
-        int iCourant = 0, iFichier = 0, iMax = 10;
-        ArrayList lstApp = new ArrayList();
-
-        if (oCnxBase.CBRecherche("SELECT GuidApplication FROM Application"))
-        {
-            while (oCnxBase.Reader.Read())
-            {
-                lstApp.Add(oCnxBase.Reader.GetString(0));
-            }
-        }
-        oCnxBase.CBReaderClose();
-
-        FormProgress fpg = new FormProgress(this, false);
-        fpg.Show(this);
-        fpg.initbar(lstApp.Count);
-
-
-        for (int i = 0; i < lstApp.Count; i++, iCourant++)
-        {
-            fpg.stepbar((string)lstApp[i], 0);
-            XmlCreatXmldb(xmlDB, (string)lstApp[i]);
-            if (iCourant > iMax)
-            {
-                xmlDB.docXml.Save(sPathRoot + "\\Apps" + iFichier + "-" + iCourant + ".xml");
-                xmlDB.docXml.RemoveAll();
-                iFichier++; iCourant = 0;
-                xmlDB = new XmlDB(this, "Applications");
-            }
-        }
-        xmlDB.docXml.Save(sPathRoot + "\\Apps" + iFichier + "-" + iCourant + ".xml");
-        xmlDB.docXml.RemoveAll();
-        fpg.Close();
-    }
-
-    private void CommandEtatDB()
-    {
-        using (StreamWriter sfile = File.CreateText(sPathRoot + @"\EtatDB.csv"))
-        {
-            ArrayList lstTables = new ArrayList();
-            if (oCnxBase.CBRecherche("Show tables from cmdb"))
-            {
-                while (oCnxBase.Reader.Read())
+                if (!Directory.Exists(fullpath))
                 {
-                    lstTables.Add(oCnxBase.Reader.GetString(0));
+                    Directory.CreateDirectory(fullpath);
                 }
+                return fullpath;
             }
-            oCnxBase.CBReaderClose();
-            sfile.WriteLine("tablel;nbr_enreg");
-            for (int i = 0; i < lstTables.Count; i++)
-            {
-                if (oCnxBase.CBRecherche("SELECT count(*) FROM " + lstTables[i]))
-                    sfile.WriteLine(lstTables[i] + ";" + oCnxBase.Reader.GetString(0));
-                oCnxBase.CBReaderClose();
-            }
-        }
-    }
-
-    private void CommandExportRefData()
-    {
-
-        using (StreamWriter sfile = File.CreateText(sPathRoot + @"\RefData.sql"))
-        {
-            //ApplicationClass
-            drawArea.tools[(int)DrawArea.DrawToolType.ApplicationClass].LoadObjectSansGraph();
-
-            //ApplicationType
-            drawArea.tools[(int)DrawArea.DrawToolType.ApplicationType].LoadObjectSansGraph();
-
-            //Arborescence
-            //oCnxBase.ConfDB.AddArborescence();
-            drawArea.tools[(int)DrawArea.DrawToolType.Arborescence].LoadObjectSansGraph();
-
-            //BackupClass
-            oCnxBase.ConfDB.AddBackupClass();
-            drawArea.tools[(int)DrawArea.DrawToolType.BackupClass].LoadObjectSansGraph();
-
-            //CadreRef
-            drawArea.tools[(int)DrawArea.DrawToolType.CadreRef].LoadObjectSansGraph();
-
-            //CadreRefApp
-            oCnxBase.ConfDB.AddCadreRefApp();
-            drawArea.tools[(int)DrawArea.DrawToolType.CadreRefApp].LoadObjectSansGraph();
-
-            //CadreRefFonc
-            drawArea.tools[(int)DrawArea.DrawToolType.CadreRefFonc].LoadObjectSansGraph();
-
-            //DiskClass
-            //oCnxBase.ConfDB.AddDiskClass();
-            drawArea.tools[(int)DrawArea.DrawToolType.DiskClass].LoadObjectSansGraph();
-
-            //TypeVue
-            //oCnxBase.ConfDB.AddTypeVue();
-            drawArea.tools[(int)DrawArea.DrawToolType.TypeVue].LoadObjectSansGraph();
-
-            // Environnement
-            //oCnxBase.ConfDB.AddEnvironnement();
-            drawArea.tools[(int)DrawArea.DrawToolType.Environnement].LoadObjectSansGraph();
-
-            //ExploitClass
-            oCnxBase.ConfDB.AddExploitClass();
-            drawArea.tools[(int)DrawArea.DrawToolType.ExploitClass].LoadObjectSansGraph();
-
-            //Fonction
-            //oCnxBase.ConfDB.AddFonction();
-            drawArea.tools[(int)DrawArea.DrawToolType.Fonction].LoadObjectSansGraph();
-
-            //FonctionService
-            drawArea.tools[(int)DrawArea.DrawToolType.FonctionService].LoadObjectSansGraph();
-
-            //GroupService
-            drawArea.tools[(int)DrawArea.DrawToolType.GroupService].LoadObjectSansGraph();
-
-            //Indicator
-            //oCnxBase.ConfDB.AddIndicator();
-            drawArea.tools[(int)DrawArea.DrawToolType.Indicator].LoadObjectSansGraph();
-
-            //Location
-            drawArea.tools[(int)DrawArea.DrawToolType.Location].LoadObjectSansGraph();
-
-            //OptionDraw
-            oCnxBase.ConfDB.AddOptionsDraw();
-            drawArea.tools[(int)DrawArea.DrawToolType.OptionsDraw].LoadObjectSansGraph();
-
-            //ProduitApp
-            //drawArea.tools[(int)DrawArea.DrawToolType.ProduitApp].LoadObjectSansGraph();
-
-            //Service
-            drawArea.tools[(int)DrawArea.DrawToolType.Service].LoadObjectSansGraph();
-
-            //ServiceLink
-            //oCnxBase.ConfDB.AddServiceLink();
-            drawArea.tools[(int)DrawArea.DrawToolType.ServiceLink].LoadObjectSansGraph();
-
-            //Template
-            oCnxBase.ConfDB.AddTemplate();
-            drawArea.tools[(int)DrawArea.DrawToolType.Template].LoadObjectSansGraph();
-
-            //StaticTable
-            oCnxBase.ConfDB.AddStaticTable();
-            drawArea.tools[(int)DrawArea.DrawToolType.StaticTable].LoadObjectSansGraph();
-
-            //Statut
-            drawArea.tools[(int)DrawArea.DrawToolType.Statut].LoadObjectSansGraph();
-
-            //TechnoArea
-            oCnxBase.ConfDB.AddTechnoArea();
-            drawArea.tools[(int)DrawArea.DrawToolType.TechnoArea].LoadObjectSansGraph();
-
-
-            //VlanClass
-            oCnxBase.ConfDB.AddVlanClass();
-            drawArea.tools[(int)DrawArea.DrawToolType.VlanClass].LoadObjectSansGraph();
-
-            //VLan
-            drawArea.tools[(int)DrawArea.DrawToolType.VLan].LoadObjectSansGraph();
-
-            sfile.WriteLine("use cmdb");
-            for (int i = drawArea.GraphicsList.Count - 1; i >= 0; i--)
-            {
-                DrawObject o = (DrawObject)drawArea.GraphicsList[i];
-                sfile.WriteLine(oCnxBase.CreatObjectString(o) + ";");
-            }
-            sfile.WriteLine("Insert Into Application  (GuidApplication, NomApplication, GuidArborescence) Value ('00613319-a3c1-420e-b12b-ebcc3e7b9b9e', 'Temp', '764079ad-621b-4c57-92be-9d1530fb20cb');");
-        }
-    }
-
-    private void CommandStatut()
-    {
-        FormInfrastructure fp = new FormInfrastructure(this);
-        fp.ShowDialog(this);
-    }
-
-    private void CommandStatutApp()
-    {
-        FormInfrastructure fp = new FormInfrastructure(this, wkApp);
-        fp.ShowDialog(this);
-    }
-
-    #endregion
-
-
-    void dataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
-    {
-        DrawObject o = drawArea.GraphicsList.GetSelectedObject(0);
-
-        //if (odgv.CurrentCell.ColumnIndex==2) { // bouton Pls
-        if (e.ColumnIndex == 2) //Bouton Pls
-        {
-            o.dataGrid_CellClick((DataGridView)sender, e);
-
-            //if (odgv.CurrentCell.RowIndex == 2) // Ligne Link Applicatif
-            //if (e.RowIndex == 2) // Ligne Link Applicatif
-            //{
-            //    FormChangeProp fcp = new FormChangeProp(this);
-            //    fcp.ShowDialog(this);
-            //}               
+            else oCnxBase.CBReaderClose();
+            return null;
         }
 
-        //throw new NotImplementedException();
-    }
 
-
-    private void dataGrid_CellValidated(object sender, DataGridViewCellEventArgs e)
-    {
-        DataGridView odgv;
-
-        odgv = (DataGridView)sender;
-
-        if (odgv.CurrentCell.RowIndex == 1 && odgv.CurrentCell.ColumnIndex == 1)
+        public string SaveDiagram(string sVue, WorkApplication wkApp, string sGuidObj)
         {
-            if (drawArea.OSelected != null) drawArea.OSelected.ChangeName((string)odgv.CurrentCell.Value);
+            string fullpath = GetFullPath(wkApp);
+
+            if (fullpath != null) return (SaveDiagramFromPath(sVue, fullpath, sGuidObj));
+            return null;
         }
-        //throw new NotImplementedException();
-    }
 
-
-
-    private void bSave_Click(object sender, EventArgs e)
-    {
-        string sGuidOldGVue, sGuidEnvironnement = null;
-        if (!wkApp.ChgLayers)
+        public string SaveDiagramFromPath(string sVue, string fullpath, string sGuidObj)
         {
-            /*
-            if (drawArea.GraphicsList.SelectionCount == 1)
+
+            int nbrO = drawArea.GraphicsList.Count, xmax = 0, ymax = 0, xmin = 0, ymin = 0;
+            int iSupObj = 30;
+            DrawObject o = null;
+            //0629ddb4-9dab-43c6-b913-2a3f46e4f08c
+
+            int n = drawArea.GraphicsList.FindObjet(0, sGuidObj);
+            if (n > -1)
             {
-                DrawObject o = drawArea.GraphicsList.GetSelectedObject(0);
-                o.SaveProp(dataGrid);
-                drawArea.GraphicsList.Owner.ClearPropObjet();
+                int xdelta = iSupObj, ydelta = iSupObj;
+
+                o = (DrawObject)drawArea.GraphicsList[n];
+                xmin = o.XMin(); xmax = o.XMax() - xmin;
+                ymin = o.YMin(); ymax = o.YMax() - ymin;
+                if (xmin > iSupObj) xmin -= iSupObj; else { xdelta = xmin; xmin = 0; }
+                if (ymin > iSupObj) ymin -= iSupObj; else { ydelta = ymin; ymin = 0; }
+                xmax += xdelta + iSupObj;
+                ymax += ydelta + iSupObj;
             }
-            */
-            lstSaveObj.Clear();
-            drawArea.GraphicsList.UnselectAll();
-            if (oCnxBase.CBRecherche("Select GuidEnvironnement From Environnement Where NomEnvironnement='" + tbEnv.Text + "'"))
-                sGuidEnvironnement = oCnxBase.Reader.GetString(0);
-            oCnxBase.CBReaderClose();
-
-            if (this.cbVue.Text.Length != 0 && this.cbApplication.Text.Length != 0 && tbTypeVue.Text != null && tbTypeVue.Text != "") // cbTypeVue.SelectedItem!=null)
+            else
             {
-
-                //Recherche Guid de la Table TypeVue (GuidTypeVue)
-                GuidTypeVue = new Guid(oCnxBase.FindGuidFromNom("TypeVue", tbTypeVue.Text)); // (string)cbTypeVue.SelectedItem));
-
-
-                //Création de la vue (GuidGVue) avec mémorisation de l'ancienne Vue (sGuidOldGVue)
-                sGuidOldGVue = GuidGVue.ToString();
-                GuidGVue = Guid.NewGuid();
-                //oCnxBase.CBWrite("INSERT INTO Vue (GuidVue, NomVue, GuidGVue, GuidTypeVue, GuidAppVersion) VALUES ('" + GuidGVue + "','tmp_" + cbVue.Text + "','" + GuidGVue + "','" + GuidTypeVue + "','" + wkApp.GuidAppVersion + "')");
-
-                int nbrO = drawArea.GraphicsList.Count;
-                DrawObject o = null;
-
-                // suppression des liens objets avec la vue
-                oCnxBase.DeleteObjetsLink(GuidVue);
-                //DeleteServerLink("User");
-                //oCnxBase.DeleteNCardLink(sGuidOldVue, "In", sGuidVueInf);
-                //oCnxBase.DeleteNCardLink(sGuidOldVue, "Out", sGuidVueInf);
                 for (int i = 0; i < nbrO; i++)
                 {
                     o = drawArea.GraphicsList[i];
-                    //string ss = o.GetType().Name.Substring("Draw".Length);
-                    //if (ss == "ServerPhy") { int d = 1; }
-                    o.savetoDB();
+                    int x = o.XMax(), y = o.YMax();
+                    if (x > xmax) xmax = x;
+                    if (y > ymax) ymax = y;
                 }
-                if (sGuidOldGVue.Length != 0)
-                {
-                    // Suppression des references de l'ancienne Vue
-                    oCnxBase.DeleteVue(sGuidOldGVue);
-                    oCnxBase.CBWrite("DELETE FROM DansVue Where GuidGVue = '" + sGuidOldGVue + "'");
-                }
-
-                //Mise à jour de la nouvelle référence
-                //string sGuidGVueTemp = Guid.NewGuid().ToString();
-                oCnxBase.CBWrite("UPDATE Vue SET GuidGVue='" + GuidGVue + "' WHERE GuidVue = '" + GuidVue + "'");
-                //oCnxBase.CBWrite("UPDATE DansVue SET GuidGVue='" + sGuidGVueTemp + "' WHERE GuidGVue = '" + GuidGVue + "'");                        
-                setCtrlEnabled(bSave, false);
-                drawArea.GraphicsList.Clear();
-                drawArea.Refresh();
-                cbGuidVue.SelectedItem = null;
-                cbVue.SelectedItem = null;
-                //string sGuidApplication = GetGuidApplication();
-                //InitCbApplication();
-                //oCnxBase.CBAddComboBox("SELECT NomVue FROM Vue Where GuidApplication='" + GuidApplication + "' ORDER BY NomVue", this.cbVue1);
-                oCnxBase.CBAddComboBox("SELECT GuidVue, NomVue FROM Vue Where GuidAppVersion='" + wkApp.GuidAppVersion + "' ORDER BY NomVue", this.cbGuidVue, this.cbVue);
-
-
-                /*drawArea.GraphicsList.Clear();
-                ChangeTreeViewObjet();
-                LoadVue(); */
-
             }
-            else
+
+            xmax += 10; ymax += 10;
+            Bitmap bmp = new Bitmap(xmax, ymax);
+
+            Graphics g = Graphics.FromImage(bmp);
+
+            g.SetClip(new Rectangle(0, 0, xmax, ymax));
+            g.TranslateTransform(-1 * xmin, -1 * ymin);
+
+            drawArea.GraphicsList.Draw(g);
+
+            DateTime dt = DateTime.Now;
+            if (!Directory.Exists(fullpath)) Directory.CreateDirectory(fullpath);
+            bmp.Save(fullpath + "\\" + sVue + "-" + dt.Year.ToString() + "-" + dt.Month.ToString() + "-" + dt.Day.ToString() + "-" + dt.GetHashCode().ToString() + ".png");
+            return fullpath + "\\" + sVue + "-" + dt.Year.ToString() + "-" + dt.Month.ToString() + "-" + dt.Day.ToString() + "-" + dt.GetHashCode().ToString() + ".png";
+        }
+
+        /// <summary>
+        /// Save file
+        /// </summary>
+        private void CommandSave()
+        {
+            string sPath = SaveDiagram((string)cbVue.SelectedItem, wkApp, "");
+            FormMsgAndLinkOk f = new FormMsgAndLinkOk(this, "Le diagramm a été enregistré sous le nom:", sPath);
+            f.init();
+            //docManager.SaveDocument(DocManager.SaveType.Save);
+        }
+
+        private void CommandOptions()
+        {
+            FormPropriete fp = new FormPropriete(this);
+            fp.CompleteField();
+            fp.ShowDialog(this);
+        }
+
+        private void CommandObjectExplorer()
+        {
+            FormExplorObj feo = new FormExplorObj(this);
+            feo.init(null);
+            oCureo = null;
+        }
+
+        private void CommandApplicationsExport()
+        {
+            oCnxBase.Genere_ListApp();
+
+        }
+
+        private void CommandMiseAJourLibelles()
+        {
+            if (oCnxBase.CBRecherche("SELECT GuidObjet, TypeObjet FROM DansTypeVue"))
             {
-                MessageBox.Show("Le nom de l'application ou/et le nom de la Vue n'ont pas été renseignés");
+                XmlExcel xmlExcel = new XmlExcel(this, "ListObjet");
+
+                while (oCnxBase.Reader.Read())
+                {
+                    xmlExcel.CreatXmlFromReader();
+                }
+                oCnxBase.CBReaderClose();
+
+                XmlElement root = xmlExcel.docXml.DocumentElement;
+                IEnumerator ienum = root.GetEnumerator();
+                XmlNode Node;
+
+                while (ienum.MoveNext())
+                {
+                    Node = (XmlNode)ienum.Current;
+                    switch (Node.NodeType)
+                    {
+                        case XmlNodeType.Element:
+                            if (Node.Name == "row")
+                            {
+                                IEnumerator ienumField = Node.GetEnumerator();
+                                XmlNode NodeField;
+                                string[] row = { null, null };
+                                int i = 0;
+                                while (ienumField.MoveNext())
+                                {
+                                    NodeField = (XmlNode)ienumField.Current;
+                                    switch (NodeField.NodeType)
+                                    {
+                                        case XmlNodeType.Element:
+                                            row[i] = NodeField.InnerText;
+                                            i++;
+                                            break;
+                                    }
+                                }
+                                string s = "SELECT Nom" + row[1] + " FROM " + row[1] + " WHERE Guid" + row[1] + "= '" + row[0] + "'";
+                                if (oCnxBase.CBRecherche("SELECT Nom" + row[1] + " FROM " + row[1] + " WHERE Guid" + row[1] + " = '" + row[0] + "'"))
+                                {
+                                    string sNom = oCnxBase.Reader.GetString(0);
+                                    oCnxBase.CBReaderClose();
+                                    oCnxBase.CBWrite("UPDATE DansTypeVue SET NomObjet='" + sNom + "' WHERE GuidObjet = '" + row[0] + "'");
+
+                                }
+                                else
+                                {
+                                    oCnxBase.CBReaderClose();
+                                    oCnxBase.CBWrite("UPDATE DansTypeVue SET NomObjet='Non Reference' WHERE GuidObjet = '" + row[0] + "'");
+                                }
+                            }
+                            break;
+                    }
+
+                }
+            }
+            oCnxBase.CBReaderClose();
+
+        }
+
+        private void CommandObsolescenceMap()
+        {
+            ArrayList lstCriteres = new ArrayList();
+            ArrayList lstEffectif = new ArrayList();
+
+            lstCriteres.Add(new Critere(this, "7bd86a23-ad30-4843-8e28-1220f5ef7224", "7-Criticité"));
+            lstCriteres.Add(new Critere(this, "590e5709-506e-4062-8281-69e7d765a3da", "4-Complexité"));
+            lstCriteres.Add(new Critere(this, "b00b12bd-a447-47e6-92f6-e3b76ad22830", "1-Fin Support"));
+            lstCriteres.Add(new Critere(this, "5f051eef-3016-4c68-a4f5-926e0ab6eb68", "9-Obsolescence"));
+            lstCriteres.Add(new Critere(this, "1e5421a8-457f-429a-99bd-d76e3cfa055a", "B-Obsolescence+1"));
+            lstCriteres.Add(new Critere(this, "82ddd17e-baff-47f3-95fd-89b7ca3588f1", "C-Obsolescence+2"));
+            lstCriteres.Add(new Critere(this, "13b8ede4-156d-49de-84e6-9d2e6b8ce3e0", "D-Obsolescence+3"));
+            lstCriteres.Add(new Critere(this, "e9b6a159-4b26-476c-99de-aa1878dc79ee", "E-Obsolescence+4"));
+
+            //if (oCnxBase.CBRecherche("SELECT GuidApplication, NomApplication FROM Application, IndicatorLink b WHERE b.GuidObjet=GuidApplication AND b.GuidIndicator='90aaebca-b358-45b0-9c84-81cd6c66bfdc' ORDER BY b.ValIndicator DESC"))
+            if (oCnxBase.CBRecherche("SELECT GuidApplication, NomApplication FROM Application ORDER BY NomApplication"))
+            {
+                while (oCnxBase.Reader.Read())
+                {
+                    Effectif oEffApp = new Effectif(this, oCnxBase.Reader.GetString(0), oCnxBase.Reader.GetString(1), lstCriteres, 0);
+                    lstEffectif.Add(oEffApp);
+                }
+            }
+            oCnxBase.CBReaderClose();
+            report(lstEffectif, lstCriteres, Form1.rbTypeRecherche.Application);
+
+            string[] aRowHead = { "Application", "Criticite", "Complexite", "support", "n+0", "n+1", "n+2", "n+3", "n+4" };
+            //string[] aRowHead = { "Application", "support", "n+0", "n+1", "n+2", "n+3", "n+4" };
+            HtmlFile htmlFile = new HtmlFile(this);
+            XmlElement el = htmlFile.XmlGetFirstElFromName(htmlFile.root, "body");
+            XmlElement elDiv = htmlFile.XmlCreatDivEl(el, "ListeApplication");
+            XmlElement elTab = htmlFile.XmlCreatTableEl(elDiv, "TableApp", aRowHead);
+            XmlElement elTB = htmlFile.XmlGetFirstElFromName(elTab, "tbody");
+            for (int i = 0; i < lstEffectif.Count; i++)
+            {
+                Effectif e = (Effectif)lstEffectif[i];
+                htmlFile.XmlCreatRowEl(elTB, e);
+            }
+            htmlFile.XmlSave("c:\\temp\\test.html");
+        }
+        private void CommandTadUpgating()
+        {
+            FormTadUpdating ftu = new FormTadUpdating(this);
+            ftu.init();
+        }
+
+        private void CommandProvisionServer()
+        {
+            ClearApp();
+            FormAppServer fps = new FormAppServer(this);
+            fps.ShowDialog(this);
+        }
+
+        private void CommandIPVlan()
+        {
+            FormFlux fflux = new FormFlux(this);
+            fflux.ShowDialog(this);
+        }
+
+        private void CommandFlux()
+        {
+            FormFlux fflux = new FormFlux(this);
+            fflux.ShowDialog(this);
+        }
+
+        private void CommandRules()
+        {
+            FormFlowRule ffr = new FormFlowRule(this);
+            ffr.ShowDialog(this);
+        }
+
+        private void CommandServiceLink()
+        {
+            FormServiceLink fs = new FormServiceLink(this);
+            fs.ShowDialog(this);
+        }
+
+        private void CommandGroupService()
+        {
+            FormGroupService fs = new FormGroupService(this);
+            fs.init();
+            //fs.ShowDialog(this);
+        }
+
+        private void CommandService()
+        {
+            Form fs = new FormService(this);
+            fs.ShowDialog(this);
+        }
+
+        private void CommandCopyField()
+        {
+            Form_ModifField ff = new Form_ModifField(this);
+            ff.ShowDialog(this);
+        }
+
+
+        private void CommandImport()
+        {
+            FormInfrastructure fp = new FormInfrastructure(this);
+            fp.ShowDialog(this);
+        }
+
+        private void CommandExport()
+        {
+            FormExport fe = new FormExport(this);
+            fe.ShowDialog(this);
+        }
+
+        private void CommandVisu()
+        {
+            FormVisu fv = new FormVisu(this);
+            fv.ShowDialog(this);
+        }
+
+        private void CommandImportObj()
+        {
+            string[] lines = File.ReadAllLines(@"c:\dat\tmp\impobj.txt");
+
+            oCnxBase.CBWrite("delete from ImportObj");
+            foreach (string line in lines)
+            {
+                oCnxBase.CBWrite("Insert Into ImportObj  (GuidImportObj) Value ('" + line + "')");
             }
         }
-        else MessageBox.Show("Sauvegarde impossible lorsque la configuration des layers n'est pas par défaut");
-    }
 
-    public void propLoadDefault()
-    {
-        xRatio = 1; yRatio = 1;
-        pTranslate.X = 0; pTranslate.Y = 0;
-        bTemporaire = false;
-    }
-
-    public void LoadVue()
-    {
-
-        propLoadDefault();
-        XmlDocument xmlDoc = new XmlDocument();
-        xmlDoc.LoadXml("<vue></vue>");
-        XmlElement root = xmlDoc.DocumentElement;
-
-        XmlElement elAtts = xmlDoc.CreateElement("Attributs");
-        XmlSetAttFromEl(xmlDoc, elAtts, "GuidVue", "s", GuidVue.ToString());
-        XmlSetAttFromEl(xmlDoc, elAtts, "GuidGVue", "s", GuidGVue.ToString());
-        XmlSetAttFromEl(xmlDoc, elAtts, "NomTypeVue", "s", sTypeVue);
-        root.AppendChild(elAtts);
-
-        drawArea.Switch(false);
-        //ClearVue();
-
-        ChangeTreeViewObjet(xmlDoc);
-
-        //Chargement des templates de chaque Layer liés à l'application
-        ArrayList lstGuidLayer = new ArrayList();
-        if (oCnxBase.CBRecherche("SELECT GuidLayer, GuidTemplate From Layer WHERE GuidAppVersion='" + GetGuidAppVersion() + "'"))
+        private void CommandExportDB()
         {
-            while (oCnxBase.Reader.Read()) lstGuidLayer.Add(oCnxBase.Reader.GetString(0) + ";" + oCnxBase.Reader.GetString(1));
+            drawArea.GraphicsList.Clear();
+            XmlDB xmlDB = new XmlDB(this, "Applications");
+            int iCourant = 0, iFichier = 0, iMax = 10;
+            ArrayList lstApp = new ArrayList();
+
+            if (oCnxBase.CBRecherche("SELECT GuidApplication FROM Application"))
+            {
+                while (oCnxBase.Reader.Read())
+                {
+                    lstApp.Add(oCnxBase.Reader.GetString(0));
+                }
+            }
+            oCnxBase.CBReaderClose();
+
+            FormProgress fpg = new FormProgress(this, false);
+            fpg.Show(this);
+            fpg.initbar(lstApp.Count);
+
+
+            for (int i = 0; i < lstApp.Count; i++, iCourant++)
+            {
+                fpg.stepbar((string)lstApp[i], 0);
+                XmlCreatXmldb(xmlDB, (string)lstApp[i]);
+                if (iCourant > iMax)
+                {
+                    xmlDB.docXml.Save(sPathRoot + "\\Apps" + iFichier + "-" + iCourant + ".xml");
+                    xmlDB.docXml.RemoveAll();
+                    iFichier++; iCourant = 0;
+                    xmlDB = new XmlDB(this, "Applications");
+                }
+            }
+            xmlDB.docXml.Save(sPathRoot + "\\Apps" + iFichier + "-" + iCourant + ".xml");
+            xmlDB.docXml.RemoveAll();
+            fpg.Close();
         }
-        oCnxBase.CBReaderClose();
-        tbTypeVue.Text = sTypeVue;
 
-        LoadVue(xmlDoc, lstGuidLayer);
-        drawArea.Switch(true);
-        drawArea.MajObjets();
-    }
-
-    public void LoadVue(string sguidvue, string sguidgvue, Point pTrans, double xratio, double yratio) // XRec/XVue
-    {
-        xRatio = xratio; yRatio = yratio;
-        pTranslate = pTrans;
-        bTemporaire = true;
-
-        XmlDocument xmlDoc = new XmlDocument();
-        xmlDoc.LoadXml("<vue></vue>");
-        XmlElement root = xmlDoc.DocumentElement;
-
-        XmlElement elAtts = xmlDoc.CreateElement("Attributs");
-        XmlSetAttFromEl(xmlDoc, elAtts, "GuidVue", "s", sguidvue);
-        XmlSetAttFromEl(xmlDoc, elAtts, "GuidGVue", "s", sguidgvue);
-        XmlSetAttFromEl(xmlDoc, elAtts, "NomTypeVue", "s", sTypeVue);
-        root.AppendChild(elAtts);
-
-        ArrayList lstGuidLayer = new ArrayList();
-
-        LoadVue(xmlDoc, lstGuidLayer);
-        drawArea.GraphicsList.PutObjetDefinif();
-        drawArea.MajObjets();
-        propLoadDefault();
-    }
-
-    public void SaveTest(String sGuidVue, LstApplications lstVues)
-    {
-
-
-        using (var webClient = new System.Net.WebClient())
+        private void CommandEtatDB()
         {
-            //webClient.Headers.Add("Content-Type", "application/json; charset=utf-8");
-            webClient.Headers.Add("Content-Type", "application/json");
-            webClient.Encoding = System.Text.UTF8Encoding.UTF8;
-            String listvue = JsonConvert.SerializeObject(AppData);
-            byte[] data = System.Text.Encoding.UTF8.GetBytes(listvue);
-            webClient.UploadDataCompleted += webClient_PutVue;
-            Uri urlToRequest = new Uri(@"http://localhost:8080/Vues/" + sGuidVue + "/Update");
-            webClient.UploadDataAsync(urlToRequest, "put", data);
+            using (StreamWriter sfile = File.CreateText(sPathRoot + @"\EtatDB.csv"))
+            {
+                ArrayList lstTables = new ArrayList();
+                if (oCnxBase.CBRecherche("Show tables from cmdb"))
+                {
+                    while (oCnxBase.Reader.Read())
+                    {
+                        lstTables.Add(oCnxBase.Reader.GetString(0));
+                    }
+                }
+                oCnxBase.CBReaderClose();
+                sfile.WriteLine("tablel;nbr_enreg");
+                for (int i = 0; i < lstTables.Count; i++)
+                {
+                    if (oCnxBase.CBRecherche("SELECT count(*) FROM " + lstTables[i]))
+                        sfile.WriteLine(lstTables[i] + ";" + oCnxBase.Reader.GetString(0));
+                    oCnxBase.CBReaderClose();
+                }
+            }
         }
-    }
 
-
-    public void LoadVue(XmlDocument xmlDoc, ArrayList lstGuidLayer)
-    {
-        XmlElement root = xmlDoc.DocumentElement;
-
-        string sGuidVue = XmlGetAttValueAFromAttValueB(root, "Value", "Nom", "GuidVue");
-        string sGuidGVue = XmlGetAttValueAFromAttValueB(root, "Value", "Nom", "GuidGVue");
-        string sTypeVue = XmlGetAttValueAFromAttValueB(root, "Value", "Nom", "NomTypeVue");
-
-        switch (sTypeVue[0])
+        private void CommandExportRefData()
         {
-            case '0': //0-Fonctionnelle
+
+            using (StreamWriter sfile = File.CreateText(sPathRoot + @"\RefData.sql"))
+            {
+                //ApplicationClass
+                drawArea.tools[(int)DrawArea.DrawToolType.ApplicationClass].LoadObjectSansGraph();
+
+                //ApplicationType
+                drawArea.tools[(int)DrawArea.DrawToolType.ApplicationType].LoadObjectSansGraph();
+
+                //Arborescence
+                //oCnxBase.ConfDB.AddArborescence();
+                drawArea.tools[(int)DrawArea.DrawToolType.Arborescence].LoadObjectSansGraph();
+
+                //BackupClass
+                oCnxBase.ConfDB.AddBackupClass();
+                drawArea.tools[(int)DrawArea.DrawToolType.BackupClass].LoadObjectSansGraph();
+
+                //CadreRef
+                drawArea.tools[(int)DrawArea.DrawToolType.CadreRef].LoadObjectSansGraph();
+
+                //CadreRefApp
+                oCnxBase.ConfDB.AddCadreRefApp();
+                drawArea.tools[(int)DrawArea.DrawToolType.CadreRefApp].LoadObjectSansGraph();
+
+                //CadreRefFonc
+                drawArea.tools[(int)DrawArea.DrawToolType.CadreRefFonc].LoadObjectSansGraph();
+
+                //DiskClass
+                //oCnxBase.ConfDB.AddDiskClass();
+                drawArea.tools[(int)DrawArea.DrawToolType.DiskClass].LoadObjectSansGraph();
+
+                //TypeVue
+                //oCnxBase.ConfDB.AddTypeVue();
+                drawArea.tools[(int)DrawArea.DrawToolType.TypeVue].LoadObjectSansGraph();
+
+                // Environnement
+                //oCnxBase.ConfDB.AddEnvironnement();
+                drawArea.tools[(int)DrawArea.DrawToolType.Environnement].LoadObjectSansGraph();
+
+                //ExploitClass
+                oCnxBase.ConfDB.AddExploitClass();
+                drawArea.tools[(int)DrawArea.DrawToolType.ExploitClass].LoadObjectSansGraph();
+
+                //Fonction
+                //oCnxBase.ConfDB.AddFonction();
+                drawArea.tools[(int)DrawArea.DrawToolType.Fonction].LoadObjectSansGraph();
+
+                //FonctionService
+                drawArea.tools[(int)DrawArea.DrawToolType.FonctionService].LoadObjectSansGraph();
+
+                //GroupService
+                drawArea.tools[(int)DrawArea.DrawToolType.GroupService].LoadObjectSansGraph();
+
+                //Indicator
+                //oCnxBase.ConfDB.AddIndicator();
+                drawArea.tools[(int)DrawArea.DrawToolType.Indicator].LoadObjectSansGraph();
+
+                //Location
+                drawArea.tools[(int)DrawArea.DrawToolType.Location].LoadObjectSansGraph();
+
+                //OptionDraw
+                oCnxBase.ConfDB.AddOptionsDraw();
+                drawArea.tools[(int)DrawArea.DrawToolType.OptionsDraw].LoadObjectSansGraph();
+
+                //ProduitApp
+                //drawArea.tools[(int)DrawArea.DrawToolType.ProduitApp].LoadObjectSansGraph();
+
+                //Service
+                drawArea.tools[(int)DrawArea.DrawToolType.Service].LoadObjectSansGraph();
+
+                //ServiceLink
+                //oCnxBase.ConfDB.AddServiceLink();
+                drawArea.tools[(int)DrawArea.DrawToolType.ServiceLink].LoadObjectSansGraph();
+
+                //Template
+                oCnxBase.ConfDB.AddTemplate();
+                drawArea.tools[(int)DrawArea.DrawToolType.Template].LoadObjectSansGraph();
+
+                //StaticTable
+                oCnxBase.ConfDB.AddStaticTable();
+                drawArea.tools[(int)DrawArea.DrawToolType.StaticTable].LoadObjectSansGraph();
+
+                //Statut
+                drawArea.tools[(int)DrawArea.DrawToolType.Statut].LoadObjectSansGraph();
+
+                //TechnoArea
+                oCnxBase.ConfDB.AddTechnoArea();
+                drawArea.tools[(int)DrawArea.DrawToolType.TechnoArea].LoadObjectSansGraph();
+
+
+                //VlanClass
+                oCnxBase.ConfDB.AddVlanClass();
+                drawArea.tools[(int)DrawArea.DrawToolType.VlanClass].LoadObjectSansGraph();
+
+                //VLan
+                drawArea.tools[(int)DrawArea.DrawToolType.VLan].LoadObjectSansGraph();
+
+                sfile.WriteLine("use cmdb");
+                for (int i = drawArea.GraphicsList.Count - 1; i >= 0; i--)
+                {
+                    DrawObject o = (DrawObject)drawArea.GraphicsList[i];
+                    sfile.WriteLine(oCnxBase.CreatObjectString(o) + ";");
+                }
+                sfile.WriteLine("Insert Into Application  (GuidApplication, NomApplication, GuidArborescence) Value ('00613319-a3c1-420e-b12b-ebcc3e7b9b9e', 'Temp', '764079ad-621b-4c57-92be-9d1530fb20cb');");
+            }
+        }
+
+        private void CommandStatut()
+        {
+            FormInfrastructure fp = new FormInfrastructure(this);
+            fp.ShowDialog(this);
+        }
+
+        private void CommandStatutApp()
+        {
+            FormInfrastructure fp = new FormInfrastructure(this, wkApp);
+            fp.ShowDialog(this);
+        }
+
+        #endregion
+
+
+        void dataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DrawObject o = drawArea.GraphicsList.GetSelectedObject(0);
+
+            //if (odgv.CurrentCell.ColumnIndex==2) { // bouton Pls
+            if (e.ColumnIndex == 2) //Bouton Pls
+            {
+                o.dataGrid_CellClick((DataGridView)sender, e);
+
+                //if (odgv.CurrentCell.RowIndex == 2) // Ligne Link Applicatif
+                //if (e.RowIndex == 2) // Ligne Link Applicatif
+                //{
+                //    FormChangeProp fcp = new FormChangeProp(this);
+                //    fcp.ShowDialog(this);
+                //}               
+            }
+
+            //throw new NotImplementedException();
+        }
+
+
+        private void dataGrid_CellValidated(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView odgv;
+
+            odgv = (DataGridView)sender;
+
+            if (odgv.CurrentCell.RowIndex == 1 && odgv.CurrentCell.ColumnIndex == 1)
+            {
+                if (drawArea.OSelected != null) drawArea.OSelected.ChangeName((string)odgv.CurrentCell.Value);
+            }
+            //throw new NotImplementedException();
+        }
+
+
+
+        private void bSave_Click(object sender, EventArgs e)
+        {
+            string sGuidOldGVue, sGuidEnvironnement = null;
+            if (!wkApp.ChgLayers)
+            {
+                /*
+                if (drawArea.GraphicsList.SelectionCount == 1)
+                {
+                    DrawObject o = drawArea.GraphicsList.GetSelectedObject(0);
+                    o.SaveProp(dataGrid);
+                    drawArea.GraphicsList.Owner.ClearPropObjet();
+                }
+                */
+                lstSaveObj.Clear();
+                drawArea.GraphicsList.UnselectAll();
+                if (oCnxBase.CBRecherche("Select GuidEnvironnement From Environnement Where NomEnvironnement='" + tbEnv.Text + "'"))
+                    sGuidEnvironnement = oCnxBase.Reader.GetString(0);
+                oCnxBase.CBReaderClose();
+
+                if (this.cbVue.Text.Length != 0 && this.cbApplication.Text.Length != 0 && tbTypeVue.Text != null && tbTypeVue.Text != "") // cbTypeVue.SelectedItem!=null)
+                {
+
+                    //Recherche Guid de la Table TypeVue (GuidTypeVue)
+                    GuidTypeVue = new Guid(oCnxBase.FindGuidFromNom("TypeVue", tbTypeVue.Text)); // (string)cbTypeVue.SelectedItem));
+
+
+                    //Création de la vue (GuidGVue) avec mémorisation de l'ancienne Vue (sGuidOldGVue)
+                    sGuidOldGVue = GuidGVue.ToString();
+                    GuidGVue = Guid.NewGuid();
+                    //oCnxBase.CBWrite("INSERT INTO Vue (GuidVue, NomVue, GuidGVue, GuidTypeVue, GuidAppVersion) VALUES ('" + GuidGVue + "','tmp_" + cbVue.Text + "','" + GuidGVue + "','" + GuidTypeVue + "','" + wkApp.GuidAppVersion + "')");
+
+                    int nbrO = drawArea.GraphicsList.Count;
+                    DrawObject o = null;
+
+                    // suppression des liens objets avec la vue
+                    oCnxBase.DeleteObjetsLink(GuidVue);
+                    //DeleteServerLink("User");
+                    //oCnxBase.DeleteNCardLink(sGuidOldVue, "In", sGuidVueInf);
+                    //oCnxBase.DeleteNCardLink(sGuidOldVue, "Out", sGuidVueInf);
+                    for (int i = 0; i < nbrO; i++)
+                    {
+                        o = drawArea.GraphicsList[i];
+                        //string ss = o.GetType().Name.Substring("Draw".Length);
+                        //if (ss == "ServerPhy") { int d = 1; }
+                        o.savetoDB();
+                    }
+                    if (sGuidOldGVue.Length != 0)
+                    {
+                        // Suppression des references de l'ancienne Vue
+                        oCnxBase.DeleteVue(sGuidOldGVue);
+                        oCnxBase.CBWrite("DELETE FROM DansVue Where GuidGVue = '" + sGuidOldGVue + "'");
+                    }
+
+                    //Mise à jour de la nouvelle référence
+                    //string sGuidGVueTemp = Guid.NewGuid().ToString();
+                    oCnxBase.CBWrite("UPDATE Vue SET GuidGVue='" + GuidGVue + "' WHERE GuidVue = '" + GuidVue + "'");
+                    //oCnxBase.CBWrite("UPDATE DansVue SET GuidGVue='" + sGuidGVueTemp + "' WHERE GuidGVue = '" + GuidGVue + "'");                        
+                    setCtrlEnabled(bSave, false);
+                    drawArea.GraphicsList.Clear();
+                    drawArea.Refresh();
+                    cbGuidVue.SelectedItem = null;
+                    cbVue.SelectedItem = null;
+                    //string sGuidApplication = GetGuidApplication();
+                    //InitCbApplication();
+                    //oCnxBase.CBAddComboBox("SELECT NomVue FROM Vue Where GuidApplication='" + GuidApplication + "' ORDER BY NomVue", this.cbVue1);
+                    oCnxBase.CBAddComboBox("SELECT GuidVue, NomVue FROM Vue Where GuidAppVersion='" + wkApp.GuidAppVersion + "' ORDER BY NomVue", this.cbGuidVue, this.cbVue);
+
+
+                    /*drawArea.GraphicsList.Clear();
+                    ChangeTreeViewObjet();
+                    LoadVue(); */
+
+                }
+                else
+                {
+                    MessageBox.Show("Le nom de l'application ou/et le nom de la Vue n'ont pas été renseignés");
+                }
+            }
+            else MessageBox.Show("Sauvegarde impossible lorsque la configuration des layers n'est pas par défaut");
+        }
+
+        public void propLoadDefault()
+        {
+            xRatio = 1; yRatio = 1;
+            pTranslate.X = 0; pTranslate.Y = 0;
+            bTemporaire = false;
+        }
+
+        public void LoadVue()
+        {
+
+            propLoadDefault();
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.LoadXml("<vue></vue>");
+            XmlElement root = xmlDoc.DocumentElement;
+
+            XmlElement elAtts = xmlDoc.CreateElement("Attributs");
+            XmlSetAttFromEl(xmlDoc, elAtts, "GuidVue", "s", GuidVue.ToString());
+            XmlSetAttFromEl(xmlDoc, elAtts, "GuidGVue", "s", GuidGVue.ToString());
+            XmlSetAttFromEl(xmlDoc, elAtts, "NomTypeVue", "s", sTypeVue);
+            root.AppendChild(elAtts);
+
+            drawArea.Switch(false);
+            //ClearVue();
+
+            ChangeTreeViewObjet(xmlDoc);
+
+            //Chargement des templates de chaque Layer liés à l'application
+            ArrayList lstGuidLayer = new ArrayList();
+            if (oCnxBase.CBRecherche("SELECT GuidLayer, GuidTemplate From Layer WHERE GuidAppVersion='" + GetGuidAppVersion() + "'"))
+            {
+                while (oCnxBase.Reader.Read()) lstGuidLayer.Add(oCnxBase.Reader.GetString(0) + ";" + oCnxBase.Reader.GetString(1));
+            }
+            oCnxBase.CBReaderClose();
+            tbTypeVue.Text = sTypeVue;
+
+            LoadVue(xmlDoc, lstGuidLayer);
+            drawArea.Switch(true);
+            drawArea.MajObjets();
+        }
+
+        public void LoadVue(string sguidvue, string sguidgvue, Point pTrans, double xratio, double yratio) // XRec/XVue
+        {
+            xRatio = xratio; yRatio = yratio;
+            pTranslate = pTrans;
+            bTemporaire = true;
+
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.LoadXml("<vue></vue>");
+            XmlElement root = xmlDoc.DocumentElement;
+
+            XmlElement elAtts = xmlDoc.CreateElement("Attributs");
+            XmlSetAttFromEl(xmlDoc, elAtts, "GuidVue", "s", sguidvue);
+            XmlSetAttFromEl(xmlDoc, elAtts, "GuidGVue", "s", sguidgvue);
+            XmlSetAttFromEl(xmlDoc, elAtts, "NomTypeVue", "s", sTypeVue);
+            root.AppendChild(elAtts);
+
+            ArrayList lstGuidLayer = new ArrayList();
+
+            LoadVue(xmlDoc, lstGuidLayer);
+            drawArea.GraphicsList.PutObjetDefinif();
+            drawArea.MajObjets();
+            propLoadDefault();
+        }
+
+        public void SaveTest(String sGuidVue, LstApplications lstVues)
+        {
+
+
+            using (var webClient = new System.Net.WebClient())
+            {
+                //webClient.Headers.Add("Content-Type", "application/json; charset=utf-8");
+                webClient.Headers.Add("Content-Type", "application/json");
+                webClient.Encoding = System.Text.UTF8Encoding.UTF8;
+                String listvue = JsonConvert.SerializeObject(AppData);
+                byte[] data = System.Text.Encoding.UTF8.GetBytes(listvue);
+                webClient.UploadDataCompleted += webClient_PutVue;
+                Uri urlToRequest = new Uri(@"http://localhost:8080/Vues/" + sGuidVue + "/Update");
+                webClient.UploadDataAsync(urlToRequest, "put", data);
+            }
+        }
+
+
+        public void LoadVue(XmlDocument xmlDoc, ArrayList lstGuidLayer)
+        {
+            XmlElement root = xmlDoc.DocumentElement;
+
+            string sGuidVue = XmlGetAttValueAFromAttValueB(root, "Value", "Nom", "GuidVue");
+            string sGuidGVue = XmlGetAttValueAFromAttValueB(root, "Value", "Nom", "GuidGVue");
+            string sTypeVue = XmlGetAttValueAFromAttValueB(root, "Value", "Nom", "NomTypeVue");
+
+            switch (sTypeVue[0])
+            {
+                case '0': //0-Fonctionnelle
 
 #if APIREADY
                     using (var webClient = new System.Net.WebClient())
@@ -9739,24 +9705,24 @@ namespace DrawTools
                     }
 #else
 
-                //Vérification de l'existance de Modules dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Module].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.Module].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Modules dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Module].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Module].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Users dans la Vue
-                drawArea.tools[(int)DrawArea.DrawToolType.AppUser].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.AppUser].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Users dans la Vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.AppUser].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.AppUser].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance d'Applications Externes dans la Vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance d'Applications Externes dans la Vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Link dans la Vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Link].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Link dans la Vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Link].LoadObject(' ', sGuidGVue, null);
 
 #endif
-                break;
-            case '1': // 1-Applicative
+                    break;
+                case '1': // 1-Applicative
 #if APIREADY
                     using (var webClient = new System.Net.WebClient())
                     {
@@ -9769,50 +9735,50 @@ namespace DrawTools
                     }
 
 #else
-                //Vérification de l'existance de Application dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Application dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de MainComposant dans la vue
-                //oCnxBase.LoadMainComposant();
-                drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].LoadObject(' ', sGuidGVue, null);
-                //oCnxBase.LoadObject(drawArea.tools[(int)DrawArea.DrawToolType.MainComposant]);
+                    //Vérification de l'existance de MainComposant dans la vue
+                    //oCnxBase.LoadMainComposant();
+                    drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].LoadObject(' ', sGuidGVue, null);
+                    //oCnxBase.LoadObject(drawArea.tools[(int)DrawArea.DrawToolType.MainComposant]);
 
-                //Vérification de l'existance de User dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.AppUser].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.AppUser].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de User dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.AppUser].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.AppUser].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Fonction (CompFonc) dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.CompFonc].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.CompFonc].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Fonction (CompFonc) dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.CompFonc].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.CompFonc].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Composant dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Composant].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.Composant].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Composant dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Composant].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Composant].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Interface dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Interface].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.Interface].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Interface dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Interface].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Interface].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Base dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Base].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.Base].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Base dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Base].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Base].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Base dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.File].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.File].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Base dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.File].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.File].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Base dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Queue].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.Queue].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Base dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Queue].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Queue].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Link dans la Vue
-                drawArea.tools[(int)DrawArea.DrawToolType.LinkA].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Link dans la Vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.LinkA].LoadObject(' ', sGuidGVue, null);
 #endif
 
-                break;
-            case '2': // 2-Infrastructure
+                    break;
+                case '2': // 2-Infrastructure
 #if APIREADY
                     using (var webClient = new System.Net.WebClient())
                     {
@@ -9825,121 +9791,121 @@ namespace DrawTools
                     }
 #else
 
-                //Vérification de l'existance de User dans la vue
-                //drawArea.tools[(int)DrawArea.DrawToolType.User].LoadObject(null);
-                //drawArea.tools[(int)DrawArea.DrawToolType.TechUser].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.TechUser].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.TechUser);
+                    //Vérification de l'existance de User dans la vue
+                    //drawArea.tools[(int)DrawArea.DrawToolType.User].LoadObject(null);
+                    //drawArea.tools[(int)DrawArea.DrawToolType.TechUser].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.TechUser].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.TechUser);
 
-                //Vérification de l'existance de Application dans la vue
-                //drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadTemplate(lstGuidLayer);
-                drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Application dans la vue
+                    //drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadTemplate(lstGuidLayer);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Server dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Server].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.Server);
+                    //Vérification de l'existance de Server dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Server].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.Server);
 
-                //Vérification de l'existance de Composant dans un server (MainComposant) dans la vue
-                //drawArea.tools[(int)DrawArea.DrawToolType.MCompApp].LoadObject(' ', null);
+                    //Vérification de l'existance de Composant dans un server (MainComposant) dans la vue
+                    //drawArea.tools[(int)DrawArea.DrawToolType.MCompApp].LoadObject(' ', null);
 
-                //Vérification de l'existance de Package applicatif dans un server dans la vue
-                //drawArea.tools[(int)DrawArea.DrawToolType.ServMComp].LoadObject(' ', null);
+                    //Vérification de l'existance de Package applicatif dans un server dans la vue
+                    //drawArea.tools[(int)DrawArea.DrawToolType.ServMComp].LoadObject(' ', null);
 
-                //Vérification de l'existance de ServerType dans un server dans la vue
-                //drawArea.tools[(int)DrawArea.DrawToolType.ServerType].LoadObject(null);
+                    //Vérification de l'existance de ServerType dans un server dans la vue
+                    //drawArea.tools[(int)DrawArea.DrawToolType.ServerType].LoadObject(null);
 
-                //Vérification de l'existance de Techno dans un serverType (Techno) dans la vue
-                //drawArea.tools[(int)DrawArea.DrawToolType.Techno].LoadObject(null);
+                    //Vérification de l'existance de Techno dans un serverType (Techno) dans la vue
+                    //drawArea.tools[(int)DrawArea.DrawToolType.Techno].LoadObject(null);
 
-                //Vérification de l'existance de Genks dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Genks].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Genks dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Genks].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Genks dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Genpod].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.Genpod);
+                    //Vérification de l'existance de Genks dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Genpod].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.Genpod);
 
-                //Vérification de l'existance de Genks dans la vue
-                //drawArea.tools[(int)DrawArea.DrawToolType.Container].LoadObject(' ', null);
+                    //Vérification de l'existance de Genks dans la vue
+                    //drawArea.tools[(int)DrawArea.DrawToolType.Container].LoadObject(' ', null);
 
-                //Vérification de l'existance de Genks dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Gensvc].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Genks dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Gensvc].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Genks dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Gening].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Genks dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Gening].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Genks dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Gensas].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.Gensas);
+                    //Vérification de l'existance de Genks dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Gensas].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.Gensas);
 
-                //Charger les ServerTypes gérés par les PlateformPatterns
-                GetServerTypeFormPlateformPattern();
+                    //Charger les ServerTypes gérés par les PlateformPatterns
+                    GetServerTypeFormPlateformPattern();
 
-                //Charger les labels liés aux objects
-                GetLabelLinks();
+                    //Charger les labels liés aux objects
+                    GetLabelLinks();
 
-                //Vérification de l'existance de Link dans la Vue
-                drawArea.tools[(int)DrawArea.DrawToolType.TechLink].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadTechLinkApp();
+                    //Vérification de l'existance de Link dans la Vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.TechLink].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadTechLinkApp();
 
-                oCnxBase.LoadExtention();
+                    oCnxBase.LoadExtention();
 
 #endif
-                break;
-            case '6': // 6-Sites
-                drawArea.tools[(int)DrawArea.DrawToolType.Cnx].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadCnxPoint();
+                    break;
+                case '6': // 6-Sites
+                    drawArea.tools[(int)DrawArea.DrawToolType.Cnx].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadCnxPoint();
 
-                //Vérification de l'existance de Location dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Location].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Location dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Location].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de SiteSite (ServerPhy) dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.ServerSite].LoadObject(' ', sGuidGVue, null);
-                GetServerLinks();
+                    //Vérification de l'existance de SiteSite (ServerPhy) dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.ServerSite].LoadObject(' ', sGuidGVue, null);
+                    GetServerLinks();
 
-                //Vérification de l'existance de SiteSite (ServerPhy) dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.InterLink].LoadObject(' ', sGuidGVue, null);
-                GetInterLinks();
+                    //Vérification de l'existance de SiteSite (ServerPhy) dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.InterLink].LoadObject(' ', sGuidGVue, null);
+                    GetInterLinks();
 
-                //Vérification de l'existance de PointDeConnexion (ServerPhy) dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.PtCnx].LoadObject(' ', sGuidGVue, null);
-                //oCnxBase.LoadCnxPoint();
+                    //Vérification de l'existance de PointDeConnexion (ServerPhy) dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.PtCnx].LoadObject(' ', sGuidGVue, null);
+                    //oCnxBase.LoadCnxPoint();
 
-                break;
-            case '3': // 3-Production
-            case '5': // 5-Pre-Production
-            case '4': // 4-Hors Production
-            case 'F': // F-Service Infra
-                drawArea.tools[(int)DrawArea.DrawToolType.Cluster].LoadObject(' ', sGuidGVue, null);
+                    break;
+                case '3': // 3-Production
+                case '5': // 5-Pre-Production
+                case '4': // 4-Hors Production
+                case 'F': // F-Service Infra
+                    drawArea.tools[(int)DrawArea.DrawToolType.Cluster].LoadObject(' ', sGuidGVue, null);
 #if CLUSTERREADY
-                oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.Cluster);
+                    oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.Cluster);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.ServerPhy].LoadObject(' ', sGuidGVue, null);
-                GetServerLinks();
-                oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.ServerPhy);
+                    drawArea.tools[(int)DrawArea.DrawToolType.ServerPhy].LoadObject(' ', sGuidGVue, null);
+                    GetServerLinks();
+                    oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.ServerPhy);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.Insks].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.Insks);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Insks].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.Insks);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.Inssas].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Inssas].LoadObject(' ', sGuidGVue, null);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.VLan].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadVLanPoint();
+                    drawArea.tools[(int)DrawArea.DrawToolType.VLan].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadVLanPoint();
 
-                drawArea.tools[(int)DrawArea.DrawToolType.NCard].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.NCard].LoadObject(' ', sGuidGVue, null);
 
-                oCnxBase.LinkNCardWithVLan();
+                    oCnxBase.LinkNCardWithVLan();
 
-                drawArea.tools[(int)DrawArea.DrawToolType.Router].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadRouterLink();
+                    drawArea.tools[(int)DrawArea.DrawToolType.Router].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadRouterLink();
 
-                //Charger les labels liés aux objects
-                GetLabelLinks();
+                    //Charger les labels liés aux objects
+                    GetLabelLinks();
 
-                oCnxBase.LoadAlias();
-                oCnxBase.LoadNCardLinkIn();
-                oCnxBase.LoadNCardLink("Out");
+                    oCnxBase.LoadAlias();
+                    oCnxBase.LoadNCardLinkIn();
+                    oCnxBase.LoadNCardLink("Out");
 
-                oCnxBase.LoadExtention();
+                    oCnxBase.LoadExtention();
 #else
                     drawArea.tools[(int)DrawArea.DrawToolType.ServerPhy].LoadObject(' ', null);
                     GetServerLinks();
@@ -9956,1125 +9922,1053 @@ namespace DrawTools
                     oCnxBase.LoadNCardLink("Out");
                     
 #endif
-                break;
-            case '8': // 8-ZoningProd
-            case '7': // 7-ZoningHorsProd
-                drawArea.tools[(int)DrawArea.DrawToolType.Cluster].LoadObject(' ', sGuidGVue, null);
+                    break;
+                case '8': // 8-ZoningProd
+                case '7': // 7-ZoningHorsProd
+                    drawArea.tools[(int)DrawArea.DrawToolType.Cluster].LoadObject(' ', sGuidGVue, null);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.Baie].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Baie].LoadObject(' ', sGuidGVue, null);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.Machine].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Machine].LoadObject(' ', sGuidGVue, null);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.Virtuel].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Virtuel].LoadObject(' ', sGuidGVue, null);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.Lun].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Lun].LoadObject(' ', sGuidGVue, null);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.Zone].LoadObject(' ', sGuidGVue, null);
-                //oCnxBase.LoadZonePoint();
+                    drawArea.tools[(int)DrawArea.DrawToolType.Zone].LoadObject(' ', sGuidGVue, null);
+                    //oCnxBase.LoadZonePoint();
 
-                break;
-            case 'A': // A-SanProd
-            case '9': // 9-SanHorsProd
-                drawArea.tools[(int)DrawArea.DrawToolType.ServerPhy].LoadObject(' ', sGuidGVue, null);
+                    break;
+                case 'A': // A-SanProd
+                case '9': // 9-SanHorsProd
+                    drawArea.tools[(int)DrawArea.DrawToolType.ServerPhy].LoadObject(' ', sGuidGVue, null);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.BaieCTI].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.BaieCTI].LoadObject(' ', sGuidGVue, null);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.ISL].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.ISL].LoadObject(' ', sGuidGVue, null);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.SanSwitch].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadSanSwitchPoint();
+                    drawArea.tools[(int)DrawArea.DrawToolType.SanSwitch].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadSanSwitchPoint();
 
-                drawArea.tools[(int)DrawArea.DrawToolType.SanCard].LoadObject(' ', sGuidGVue, null);
-                GetSanCardLinks();
+                    drawArea.tools[(int)DrawArea.DrawToolType.SanCard].LoadObject(' ', sGuidGVue, null);
+                    GetSanCardLinks();
 
-                break;
-            case 'C': // C-CTIProd
-            case 'B': // B-CTIHorsProd
-                drawArea.tools[(int)DrawArea.DrawToolType.BaieDPhy].LoadObject(' ', sGuidGVue, null);
+                    break;
+                case 'C': // C-CTIProd
+                case 'B': // B-CTIHorsProd
+                    drawArea.tools[(int)DrawArea.DrawToolType.BaieDPhy].LoadObject(' ', sGuidGVue, null);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.BaiePhy].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.BaiePhy].LoadObject(' ', sGuidGVue, null);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.Drawer].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Drawer].LoadObject(' ', sGuidGVue, null);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.MachineCTI].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.MachineCTI].LoadObject(' ', sGuidGVue, null);
 
-                break;
-            case 'D': // D-InfProd
-                break;
-            case 'U':
-                drawArea.tools[(int)DrawArea.DrawToolType.Module].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.AppUser].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', sGuidGVue, null);
-                //drawArea.tools[(int)DrawArea.DrawToolType.Link].LoadObject(' ', null);
+                    break;
+                case 'D': // D-InfProd
+                    break;
+                case 'U':
+                    drawArea.tools[(int)DrawArea.DrawToolType.Module].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.AppUser].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', sGuidGVue, null);
+                    //drawArea.tools[(int)DrawArea.DrawToolType.Link].LoadObject(' ', null);
 
 
-                //Vérification de l'existance de MainComposant dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.Composant].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.Interface].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.Base].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.File].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.LinkA].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de MainComposant dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Composant].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Interface].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Base].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.File].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.LinkA].LoadObject(' ', sGuidGVue, null);
 
-                //drawArea.tools[(int)DrawArea.DrawToolType.User].LoadObject(null);
-                drawArea.tools[(int)DrawArea.DrawToolType.TechUser].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.TechUser);
-                drawArea.tools[(int)DrawArea.DrawToolType.Server].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.Server);
-                drawArea.tools[(int)DrawArea.DrawToolType.TechLink].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadTechLinkApp();
+                    //drawArea.tools[(int)DrawArea.DrawToolType.User].LoadObject(null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.TechUser].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.TechUser);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Server].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadSousObjets((int)DrawArea.DrawToolType.Server);
+                    drawArea.tools[(int)DrawArea.DrawToolType.TechLink].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadTechLinkApp();
 
-                //Vérification de l'existance de Location dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Cnx].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadCnxPoint();
-                drawArea.tools[(int)DrawArea.DrawToolType.Location].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.ServerSite].LoadObject(' ', sGuidGVue, null);
-                GetServerLinks();
-                drawArea.tools[(int)DrawArea.DrawToolType.InterLink].LoadObject(' ', sGuidGVue, null);
-                GetInterLinks();
-                drawArea.tools[(int)DrawArea.DrawToolType.PtCnx].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Location dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Cnx].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadCnxPoint();
+                    drawArea.tools[(int)DrawArea.DrawToolType.Location].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.ServerSite].LoadObject(' ', sGuidGVue, null);
+                    GetServerLinks();
+                    drawArea.tools[(int)DrawArea.DrawToolType.InterLink].LoadObject(' ', sGuidGVue, null);
+                    GetInterLinks();
+                    drawArea.tools[(int)DrawArea.DrawToolType.PtCnx].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de PointDeConnexion (ServerPhy) dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Cluster].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.ServerPhy].LoadObject(' ', sGuidGVue, null);
-                GetServerLinks();
-                drawArea.tools[(int)DrawArea.DrawToolType.VLan].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadVLanPoint();
-                drawArea.tools[(int)DrawArea.DrawToolType.Router].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadRouterLink();
-                drawArea.tools[(int)DrawArea.DrawToolType.NCard].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadNCardLink("In");
-                oCnxBase.LoadNCardLink("Out");
+                    //Vérification de l'existance de PointDeConnexion (ServerPhy) dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Cluster].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.ServerPhy].LoadObject(' ', sGuidGVue, null);
+                    GetServerLinks();
+                    drawArea.tools[(int)DrawArea.DrawToolType.VLan].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadVLanPoint();
+                    drawArea.tools[(int)DrawArea.DrawToolType.Router].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadRouterLink();
+                    drawArea.tools[(int)DrawArea.DrawToolType.NCard].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadNCardLink("In");
+                    oCnxBase.LoadNCardLink("Out");
 
-                //Vérification de l'existance de PointDeConnexion (ServerPhy) dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Baie].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.Machine].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.Virtuel].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.Lun].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.Zone].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de PointDeConnexion (ServerPhy) dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Baie].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Machine].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Virtuel].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Lun].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Zone].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de PointDeConnexion (ServerPhy) dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.BaieCTI].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.ISL].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.SanSwitch].LoadObject(' ', sGuidGVue, null);
-                oCnxBase.LoadSanSwitchPoint();
-                drawArea.tools[(int)DrawArea.DrawToolType.SanCard].LoadObject(' ', sGuidGVue, null);
-                GetSanCardLinks();
+                    //Vérification de l'existance de PointDeConnexion (ServerPhy) dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.BaieCTI].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.ISL].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.SanSwitch].LoadObject(' ', sGuidGVue, null);
+                    oCnxBase.LoadSanSwitchPoint();
+                    drawArea.tools[(int)DrawArea.DrawToolType.SanCard].LoadObject(' ', sGuidGVue, null);
+                    GetSanCardLinks();
 
-                //Vérification de l'existance de PointDeConnexion (ServerPhy) dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.BaieDPhy].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.BaiePhy].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.Drawer].LoadObject(' ', sGuidGVue, null);
-                drawArea.tools[(int)DrawArea.DrawToolType.MachineCTI].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de PointDeConnexion (ServerPhy) dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.BaieDPhy].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.BaiePhy].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.Drawer].LoadObject(' ', sGuidGVue, null);
+                    drawArea.tools[(int)DrawArea.DrawToolType.MachineCTI].LoadObject(' ', sGuidGVue, null);
 
-                break;
-            case 'V': // V-Si App
-                      //Vérification de l'existance de Application dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', sGuidGVue, null);
+                    break;
+                case 'V': // V-Si App
+                          //Vérification de l'existance de Application dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Link dans la Vue
-                drawArea.tools[(int)DrawArea.DrawToolType.LinkA].LoadObject(' ', sGuidGVue, null);
-                break;
-            case 'W': // W-Si Inf
-                      //Vérification de l'existance de Application dans la vue
-                drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Link dans la Vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.LinkA].LoadObject(' ', sGuidGVue, null);
+                    break;
+                case 'W': // W-Si Inf
+                          //Vérification de l'existance de Application dans la vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', sGuidGVue, null);
 
-                //Vérification de l'existance de Link dans la Vue
-                drawArea.tools[(int)DrawArea.DrawToolType.TechLink].LoadObject(' ', sGuidGVue, null);
-                break;
-            case 'Y': // Y-Cadre Ref
-                drawArea.tools[(int)DrawArea.DrawToolType.CadreRefN].LoadObject(' ', sGuidGVue, null);
+                    //Vérification de l'existance de Link dans la Vue
+                    drawArea.tools[(int)DrawArea.DrawToolType.TechLink].LoadObject(' ', sGuidGVue, null);
+                    break;
+                case 'Y': // Y-Cadre Ref
+                    drawArea.tools[(int)DrawArea.DrawToolType.CadreRefN].LoadObject(' ', sGuidGVue, null);
 
-                drawArea.tools[(int)DrawArea.DrawToolType.CadreRefEnd].LoadObject(' ', sGuidGVue, null);
-                break;
+                    drawArea.tools[(int)DrawArea.DrawToolType.CadreRefEnd].LoadObject(' ', sGuidGVue, null);
+                    break;
+            }
+            //Recfresh drawArea
+            drawArea.Capture = true;
+            drawArea.GraphicsList.UnselectAll();
         }
-        //Recfresh drawArea
-        drawArea.Capture = true;
-        drawArea.GraphicsList.UnselectAll();
-    }
 
-    public void CreatGridObjet()
-    {
-        DrawGrid dg = new DrawGrid(drawArea.Owner);
-        drawArea.GraphicsList.Add(dg);
-    }
-
-    public void Xml3dCreatServer(XmlFile xmlFlux, XmlFile xmlF, XmlElement elXmlSource, string NomServer, string NomServerLinked, string sIdFlux, string sNomFlux)
-    {
-        XmlElement elClusters = xmlFlux.XmlGetFirstElFromName(xmlFlux.docXml.DocumentElement, "Clusters");
-        XmlElement elServer = xmlF.XmlCreatEl(xmlF.root, "Server");
-        elServer.SetAttribute("Nom", NomServer);
-
-        IEnumerator ienum = elXmlSource.GetEnumerator();
-        XmlNode Node;
-
-        while (ienum.MoveNext())
+        public void CreatGridObjet()
         {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element)
-            {
-                if (((XmlElement)Node).GetAttribute("Selected") == "Yes")
-                {
-                    if (((XmlElement)Node).GetAttribute("Cluster") == "Yes")
-                    {
-                        XmlElement elCluster = xmlFlux.XmlFindElFromAtt(elClusters, "Guid", ((XmlElement)Node).GetAttribute("Guid"));
+            DrawGrid dg = new DrawGrid(drawArea.Owner);
+            drawArea.GraphicsList.Add(dg);
+        }
 
-                        IEnumerator ienumSrv = elCluster.GetEnumerator();
-                        XmlNode NodeSrv;
-                        while (ienumSrv.MoveNext())
+        public void Xml3dCreatServer(XmlFile xmlFlux, XmlFile xmlF, XmlElement elXmlSource, string NomServer, string NomServerLinked, string sIdFlux, string sNomFlux)
+        {
+            XmlElement elClusters = xmlFlux.XmlGetFirstElFromName(xmlFlux.docXml.DocumentElement, "Clusters");
+            XmlElement elServer = xmlF.XmlCreatEl(xmlF.root, "Server");
+            elServer.SetAttribute("Nom", NomServer);
+
+            IEnumerator ienum = elXmlSource.GetEnumerator();
+            XmlNode Node;
+
+            while (ienum.MoveNext())
+            {
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element)
+                {
+                    if (((XmlElement)Node).GetAttribute("Selected") == "Yes")
+                    {
+                        if (((XmlElement)Node).GetAttribute("Cluster") == "Yes")
                         {
-                            NodeSrv = (XmlNode)ienumSrv.Current;
-                            if (NodeSrv.NodeType == XmlNodeType.Element)
+                            XmlElement elCluster = xmlFlux.XmlFindElFromAtt(elClusters, "Guid", ((XmlElement)Node).GetAttribute("Guid"));
+
+                            IEnumerator ienumSrv = elCluster.GetEnumerator();
+                            XmlNode NodeSrv;
+                            while (ienumSrv.MoveNext())
                             {
-                                XmlElement elCur = (XmlElement)NodeSrv;
-                                if (elCur.Name == "Server")
+                                NodeSrv = (XmlNode)ienumSrv.Current;
+                                if (NodeSrv.NodeType == XmlNodeType.Element)
                                 {
-                                    XmlElement elSrvPhy = xmlF.XmlCreatEl(elServer, "ServerPhy");
-                                    elSrvPhy.SetAttribute("Guid", ((XmlElement)NodeSrv).GetAttribute("Guid"));
-                                    elSrvPhy.SetAttribute("Nom", ((XmlElement)NodeSrv).GetAttribute("Nom"));
+                                    XmlElement elCur = (XmlElement)NodeSrv;
+                                    if (elCur.Name == "Server")
+                                    {
+                                        XmlElement elSrvPhy = xmlF.XmlCreatEl(elServer, "ServerPhy");
+                                        elSrvPhy.SetAttribute("Guid", ((XmlElement)NodeSrv).GetAttribute("Guid"));
+                                        elSrvPhy.SetAttribute("Nom", ((XmlElement)NodeSrv).GetAttribute("Nom"));
+                                    }
                                 }
                             }
                         }
-                    }
-                    else
-                    {
-                        XmlElement elSrvPhy = xmlF.XmlCreatEl(elServer, "ServerPhy");
-                        elSrvPhy.SetAttribute("Guid", ((XmlElement)Node).GetAttribute("Guid"));
-                        elSrvPhy.SetAttribute("Nom", ((XmlElement)Node).GetAttribute("Nom"));
-                    }
-                }
-            }
-        }
-        XmlElement elLink = xmlF.XmlCreatEl(elServer, "Link");
-        elLink.SetAttribute("Nom", NomServerLinked);
-        elLink.SetAttribute("IdFlux", sIdFlux);
-        elLink.SetAttribute("NomFlux", sNomFlux);
-    }
-    public XmlExcel Xml3dCreatLink(XmlExcel xmlFlux)
-    {
-        XmlExcel xmlLink = new XmlExcel(this, "Links");
-
-        IEnumerator ienum = xmlFlux.root.GetEnumerator();
-        XmlNode Node;
-
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element && Node.Name == "Flux")
-            {
-
-                if (((XmlElement)Node).GetAttribute("Selected") == "Yes")
-                {
-                    string sIdFlux = ((XmlElement)Node).GetAttribute("Id");
-                    string sNomFlux = ((XmlElement)Node).GetAttribute("Nom");
-
-                    XmlElement elOrigine = xmlFlux.XmlGetFirstElFromName((XmlElement)Node, "Origine");
-                    XmlElement elCible = xmlFlux.XmlGetFirstElFromName((XmlElement)Node, "Cible");
-                    if (elOrigine != null && elCible != null)
-                    {
-                        string sFirstNomServerOrigine = xmlFlux.XmlGetAttValueAFromAttValueB(elOrigine, "Nom", "Selected", "Yes", 0);
-                        string sFirstNomServerCible = xmlFlux.XmlGetAttValueAFromAttValueB(elCible, "Nom", "Selected", "Yes", 0);
-
-                        if (sFirstNomServerOrigine != "" && sFirstNomServerCible != "")
+                        else
                         {
-                            XmlElement elServer = xmlLink.XmlFindElFromAtt(xmlLink.root, "Nom", elOrigine.GetAttribute("NomObjInfra") + "_" + sFirstNomServerOrigine, 0);
-                            if (elServer == null)
-                                Xml3dCreatServer(xmlFlux, xmlLink, elOrigine, elOrigine.GetAttribute("NomObjInfra") + "_" + sFirstNomServerOrigine, elCible.GetAttribute("NomObjInfra") + "_" + sFirstNomServerCible, sIdFlux, sNomFlux);
-                            else
-                            {
-                                XmlElement elLink = xmlLink.XmlFindElFromAtt(elServer, "Nom", elCible.GetAttribute("NomObjInfra") + "_" + sFirstNomServerCible);
-                                if (elLink == null)
-                                {
-                                    elLink = xmlLink.XmlCreatEl(elServer, "Link");
-                                    elLink.SetAttribute("Nom", elCible.GetAttribute("NomObjInfra") + "_" + sFirstNomServerCible);
-                                    elLink.SetAttribute("IdFlux", sIdFlux);
-                                    elLink.SetAttribute("NomFlux", sNomFlux);
-                                }
-
-                            }
-                            elServer = xmlLink.XmlFindElFromAtt(xmlLink.root, "Nom", elCible.GetAttribute("NomObjInfra") + "_" + sFirstNomServerCible, 0);
-                            if (elServer == null)
-                                Xml3dCreatServer(xmlFlux, xmlLink, elCible, elCible.GetAttribute("NomObjInfra") + "_" + sFirstNomServerCible, elOrigine.GetAttribute("NomObjInfra") + "_" + sFirstNomServerOrigine, sIdFlux, sNomFlux);
-                            else
-                            {
-                                XmlElement elLink = xmlLink.XmlFindElFromAtt(elServer, "Nom", elOrigine.GetAttribute("NomObjInfra") + "_" + sFirstNomServerOrigine);
-                                if (elLink == null)
-                                {
-                                    elLink = xmlLink.XmlCreatEl(elServer, "Link");
-                                    elLink.SetAttribute("Nom", elOrigine.GetAttribute("NomObjInfra") + "_" + sFirstNomServerOrigine);
-                                    elLink.SetAttribute("IdFlux", sIdFlux);
-                                    elLink.SetAttribute("NomFlux", sNomFlux);
-                                }
-                            }
+                            XmlElement elSrvPhy = xmlF.XmlCreatEl(elServer, "ServerPhy");
+                            elSrvPhy.SetAttribute("Guid", ((XmlElement)Node).GetAttribute("Guid"));
+                            elSrvPhy.SetAttribute("Nom", ((XmlElement)Node).GetAttribute("Nom"));
                         }
                     }
                 }
             }
+            XmlElement elLink = xmlF.XmlCreatEl(elServer, "Link");
+            elLink.SetAttribute("Nom", NomServerLinked);
+            elLink.SetAttribute("IdFlux", sIdFlux);
+            elLink.SetAttribute("NomFlux", sNomFlux);
         }
-        xmlLink.docXml.Save("\\dat\\FluxTest1.xml");
-        //Supprimer les links des Clusters
-        ienum = xmlLink.root.GetEnumerator();
-
-        while (ienum.MoveNext())
+        public XmlExcel Xml3dCreatLink(XmlExcel xmlFlux)
         {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element && Node.Name == "Server" && ((XmlElement)Node).GetAttribute("Cluster") == "Yes")
-            {
-                XmlElement elCluster = (XmlElement)Node;
-                string sNom = elCluster.GetAttribute("Nom");
-                string sNomApp = sNom.Substring(0, sNom.LastIndexOf('_'));
-                ArrayList lstServerPhy = Xml3dGetLstServerPhyFromAtt(elCluster, "Nom");
-                XmlElement el = null;
-                for (int i = 0; i < lstServerPhy.Count; i++)
-                {
-                    el = xmlLink.XmlFindElFromContaintAtt(xmlLink.root, "Nom", "_" + lstServerPhy[i], 0);
-                    if (el != null)
-                    {
-                        IEnumerator ienumLink = elCluster.GetEnumerator();
+            XmlExcel xmlLink = new XmlExcel(this, "Links");
 
-                        ArrayList lstElLink = xmlLink.XmlGetLstElFromName(elCluster, "Link");
-                        for (int j = 0; j < lstElLink.Count; j++)
+            IEnumerator ienum = xmlFlux.root.GetEnumerator();
+            XmlNode Node;
+
+            while (ienum.MoveNext())
+            {
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element && Node.Name == "Flux")
+                {
+
+                    if (((XmlElement)Node).GetAttribute("Selected") == "Yes")
+                    {
+                        string sIdFlux = ((XmlElement)Node).GetAttribute("Id");
+                        string sNomFlux = ((XmlElement)Node).GetAttribute("Nom");
+
+                        XmlElement elOrigine = xmlFlux.XmlGetFirstElFromName((XmlElement)Node, "Origine");
+                        XmlElement elCible = xmlFlux.XmlGetFirstElFromName((XmlElement)Node, "Cible");
+                        if (elOrigine != null && elCible != null)
                         {
-                            XmlElement elLink;
-                            elLink = (XmlElement)lstElLink[j];
+                            string sFirstNomServerOrigine = xmlFlux.XmlGetAttValueAFromAttValueB(elOrigine, "Nom", "Selected", "Yes", 0);
+                            string sFirstNomServerCible = xmlFlux.XmlGetAttValueAFromAttValueB(elCible, "Nom", "Selected", "Yes", 0);
+
+                            if (sFirstNomServerOrigine != "" && sFirstNomServerCible != "")
                             {
-                                if (xmlLink.XmlFindElFromAtt(el, "Nom", elLink.GetAttribute("Nom")) == null)
-                                {
-                                    //transfert de l'élément
-                                    el.AppendChild(elLink);
-                                    // Maj à jour du partenaire
-                                    XmlElement elPart = xmlLink.XmlFindElFromAtt(xmlLink.root, "Nom", elLink.GetAttribute("Nom"), 0);
-                                    XmlElement elPLink = xmlLink.XmlFindElFromAtt(elPart, "Nom", elCluster.GetAttribute("Nom"), 0);
-                                    //elPLink.SetAttribute("Nom", sNomApp + "_" + lstServerPhy[i]);
-                                    elPLink.SetAttribute("Nom", el.GetAttribute("Nom"));
-                                }
+                                XmlElement elServer = xmlLink.XmlFindElFromAtt(xmlLink.root, "Nom", elOrigine.GetAttribute("NomObjInfra") + "_" + sFirstNomServerOrigine, 0);
+                                if (elServer == null)
+                                    Xml3dCreatServer(xmlFlux, xmlLink, elOrigine, elOrigine.GetAttribute("NomObjInfra") + "_" + sFirstNomServerOrigine, elCible.GetAttribute("NomObjInfra") + "_" + sFirstNomServerCible, sIdFlux, sNomFlux);
                                 else
                                 {
-                                    elCluster.RemoveChild(elLink);
-                                    // Maj à jour du partenaire
-                                    XmlElement elPart = xmlLink.XmlFindElFromAtt(xmlLink.root, "Nom", elLink.GetAttribute("Nom"), 0);
-                                    XmlElement elPLink = xmlLink.XmlFindElFromAtt(elPart, "Nom", elCluster.GetAttribute("Nom"), 0);
-                                    elPart.RemoveChild(elPLink);
+                                    XmlElement elLink = xmlLink.XmlFindElFromAtt(elServer, "Nom", elCible.GetAttribute("NomObjInfra") + "_" + sFirstNomServerCible);
+                                    if (elLink == null)
+                                    {
+                                        elLink = xmlLink.XmlCreatEl(elServer, "Link");
+                                        elLink.SetAttribute("Nom", elCible.GetAttribute("NomObjInfra") + "_" + sFirstNomServerCible);
+                                        elLink.SetAttribute("IdFlux", sIdFlux);
+                                        elLink.SetAttribute("NomFlux", sNomFlux);
+                                    }
+
+                                }
+                                elServer = xmlLink.XmlFindElFromAtt(xmlLink.root, "Nom", elCible.GetAttribute("NomObjInfra") + "_" + sFirstNomServerCible, 0);
+                                if (elServer == null)
+                                    Xml3dCreatServer(xmlFlux, xmlLink, elCible, elCible.GetAttribute("NomObjInfra") + "_" + sFirstNomServerCible, elOrigine.GetAttribute("NomObjInfra") + "_" + sFirstNomServerOrigine, sIdFlux, sNomFlux);
+                                else
+                                {
+                                    XmlElement elLink = xmlLink.XmlFindElFromAtt(elServer, "Nom", elOrigine.GetAttribute("NomObjInfra") + "_" + sFirstNomServerOrigine);
+                                    if (elLink == null)
+                                    {
+                                        elLink = xmlLink.XmlCreatEl(elServer, "Link");
+                                        elLink.SetAttribute("Nom", elOrigine.GetAttribute("NomObjInfra") + "_" + sFirstNomServerOrigine);
+                                        elLink.SetAttribute("IdFlux", sIdFlux);
+                                        elLink.SetAttribute("NomFlux", sNomFlux);
+                                    }
                                 }
                             }
                         }
-
                     }
-                    break;
                 }
             }
-        }
-        xmlLink.docXml.Save("\\dat\\FluxTest2.xml");
+            xmlLink.docXml.Save("\\dat\\FluxTest1.xml");
+            //Supprimer les links des Clusters
+            ienum = xmlLink.root.GetEnumerator();
 
-        return xmlLink;
-    }
-
-    public ArrayList Xml3dGetLstServerPhyFromAtt(XmlElement el, string sAtt)
-    {
-        ArrayList lstServerPhyGuids = new ArrayList();
-
-        IEnumerator ienum = el.GetEnumerator();
-        XmlNode Node;
-
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element && Node.Name == "ServerPhy")
+            while (ienum.MoveNext())
             {
-                lstServerPhyGuids.Add(((XmlElement)Node).GetAttribute(sAtt));
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element && Node.Name == "Server" && ((XmlElement)Node).GetAttribute("Cluster") == "Yes")
+                {
+                    XmlElement elCluster = (XmlElement)Node;
+                    string sNom = elCluster.GetAttribute("Nom");
+                    string sNomApp = sNom.Substring(0, sNom.LastIndexOf('_'));
+                    ArrayList lstServerPhy = Xml3dGetLstServerPhyFromAtt(elCluster, "Nom");
+                    XmlElement el = null;
+                    for (int i = 0; i < lstServerPhy.Count; i++)
+                    {
+                        el = xmlLink.XmlFindElFromContaintAtt(xmlLink.root, "Nom", "_" + lstServerPhy[i], 0);
+                        if (el != null)
+                        {
+                            IEnumerator ienumLink = elCluster.GetEnumerator();
+
+                            ArrayList lstElLink = xmlLink.XmlGetLstElFromName(elCluster, "Link");
+                            for (int j = 0; j < lstElLink.Count; j++)
+                            {
+                                XmlElement elLink;
+                                elLink = (XmlElement)lstElLink[j];
+                                {
+                                    if (xmlLink.XmlFindElFromAtt(el, "Nom", elLink.GetAttribute("Nom")) == null)
+                                    {
+                                        //transfert de l'élément
+                                        el.AppendChild(elLink);
+                                        // Maj à jour du partenaire
+                                        XmlElement elPart = xmlLink.XmlFindElFromAtt(xmlLink.root, "Nom", elLink.GetAttribute("Nom"), 0);
+                                        XmlElement elPLink = xmlLink.XmlFindElFromAtt(elPart, "Nom", elCluster.GetAttribute("Nom"), 0);
+                                        //elPLink.SetAttribute("Nom", sNomApp + "_" + lstServerPhy[i]);
+                                        elPLink.SetAttribute("Nom", el.GetAttribute("Nom"));
+                                    }
+                                    else
+                                    {
+                                        elCluster.RemoveChild(elLink);
+                                        // Maj à jour du partenaire
+                                        XmlElement elPart = xmlLink.XmlFindElFromAtt(xmlLink.root, "Nom", elLink.GetAttribute("Nom"), 0);
+                                        XmlElement elPLink = xmlLink.XmlFindElFromAtt(elPart, "Nom", elCluster.GetAttribute("Nom"), 0);
+                                        elPart.RemoveChild(elPLink);
+                                    }
+                                }
+                            }
+
+                        }
+                        break;
+                    }
+                }
             }
+            xmlLink.docXml.Save("\\dat\\FluxTest2.xml");
+
+            return xmlLink;
         }
 
-        return lstServerPhyGuids;
-    }
-
-    public int MakeSequenceFluxOneFonc(XmlElement elFluxFonc, XmlExcel xmlFluxFoncApp, XmlExcel xmlFluxAppTech, XmlExcel xmlFluxTech, int yRelatif)
-    {
-        List<xmlFlux> lstxmlFlux = new List<xmlFlux>();
-        List<String[]> lstServer = new List<string[]>();
-        ArrayList lstFluxTech = null;
-        int yHeight = 0;
-
-        xmlFlux oFlux = new xmlFlux
+        public ArrayList Xml3dGetLstServerPhyFromAtt(XmlElement el, string sAtt)
         {
-            elFlux = elFluxFonc,
-            lstElChild = new List<xmlFlux>()
-        };
-        lstxmlFlux.Add(oFlux);
+            ArrayList lstServerPhyGuids = new ArrayList();
 
-        ArrayList lstFluxApp = xmlFluxFoncApp.XmlGetLstElFromName(lstxmlFlux[0].elFlux, "FluxApp");
-        for (int j = 0; j < lstFluxApp.Count; j++)
-        {
-            XmlElement nodeFluxApp = (XmlElement)lstFluxApp[j];
-            oFlux = new xmlFlux
+            IEnumerator ienum = el.GetEnumerator();
+            XmlNode Node;
+
+            while (ienum.MoveNext())
             {
-                elFlux = xmlFluxAppTech.XmlFindElFromAtt(xmlFluxAppTech.root, "Guid", nodeFluxApp.GetAttribute("Guid")),
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element && Node.Name == "ServerPhy")
+                {
+                    lstServerPhyGuids.Add(((XmlElement)Node).GetAttribute(sAtt));
+                }
+            }
+
+            return lstServerPhyGuids;
+        }
+
+        public int MakeSequenceFluxOneFonc(XmlElement elFluxFonc, XmlExcel xmlFluxFoncApp, XmlExcel xmlFluxAppTech, XmlExcel xmlFluxTech, int yRelatif)
+        {
+            List<xmlFlux> lstxmlFlux = new List<xmlFlux>();
+            List<String[]> lstServer = new List<string[]>();
+            ArrayList lstFluxTech = null;
+            int yHeight = 0;
+
+            xmlFlux oFlux = new xmlFlux
+            {
+                elFlux = elFluxFonc,
                 lstElChild = new List<xmlFlux>()
             };
-            lstxmlFlux[0].lstElChild.Add(oFlux);
+            lstxmlFlux.Add(oFlux);
 
-            lstFluxTech = xmlFluxAppTech.XmlGetLstElFromName(lstxmlFlux[0].lstElChild[j].elFlux, "FluxTech");
-            for (int k = 0; k < lstFluxTech.Count; k++)
+            ArrayList lstFluxApp = xmlFluxFoncApp.XmlGetLstElFromName(lstxmlFlux[0].elFlux, "FluxApp");
+            for (int j = 0; j < lstFluxApp.Count; j++)
             {
-                XmlElement nodeFluxTech = (XmlElement)lstFluxTech[k];
+                XmlElement nodeFluxApp = (XmlElement)lstFluxApp[j];
                 oFlux = new xmlFlux
                 {
-                    elFlux = xmlFluxTech.XmlFindElFromAtt(xmlFluxTech.root, "Guid", nodeFluxTech.GetAttribute("Guid")),
+                    elFlux = xmlFluxAppTech.XmlFindElFromAtt(xmlFluxAppTech.root, "Guid", nodeFluxApp.GetAttribute("Guid")),
                     lstElChild = new List<xmlFlux>()
                 };
+                lstxmlFlux[0].lstElChild.Add(oFlux);
 
-                if (oFlux.elFlux.GetAttribute("Selected") == "Yes")
+                lstFluxTech = xmlFluxAppTech.XmlGetLstElFromName(lstxmlFlux[0].lstElChild[j].elFlux, "FluxTech");
+                for (int k = 0; k < lstFluxTech.Count; k++)
                 {
-                    XmlElement nodeOrigine = xmlFluxTech.XmlGetFirstElFromName(oFlux.elFlux, "Origine");
-                    XmlElement nodeCible = xmlFluxTech.XmlGetFirstElFromName(oFlux.elFlux, "Cible");
-                    if (nodeOrigine.GetAttribute("Selected") == "Yes" && nodeCible.GetAttribute("Selected") == "Yes")
+                    XmlElement nodeFluxTech = (XmlElement)lstFluxTech[k];
+                    oFlux = new xmlFlux
                     {
-                        string[] elS = lstServer.Find(el => el[0] == nodeOrigine.GetAttribute("Guid"));
-                        if (elS == null)
-                        {
-                            string[] aServer = new string[2];
-                            aServer[0] = nodeOrigine.GetAttribute("Guid");
-                            aServer[1] = nodeOrigine.GetAttribute("NomObjInfra");
-                            lstServer.Add(aServer);
-                        }
-                        elS = lstServer.Find(el => el[0] == nodeCible.GetAttribute("Guid"));
-                        if (elS == null)
-                        {
-                            string[] aServer = new string[2];
-                            aServer[0] = nodeCible.GetAttribute("Guid");
-                            aServer[1] = nodeCible.GetAttribute("NomObjInfra");
-                            lstServer.Add(aServer);
-                        }
+                        elFlux = xmlFluxTech.XmlFindElFromAtt(xmlFluxTech.root, "Guid", nodeFluxTech.GetAttribute("Guid")),
+                        lstElChild = new List<xmlFlux>()
+                    };
 
-                        lstxmlFlux[0].lstElChild[j].lstElChild.Add(oFlux);
-                        yHeight += DrawObject.HeightFlux;
+                    if (oFlux.elFlux.GetAttribute("Selected") == "Yes")
+                    {
+                        XmlElement nodeOrigine = xmlFluxTech.XmlGetFirstElFromName(oFlux.elFlux, "Origine");
+                        XmlElement nodeCible = xmlFluxTech.XmlGetFirstElFromName(oFlux.elFlux, "Cible");
+                        if (nodeOrigine.GetAttribute("Selected") == "Yes" && nodeCible.GetAttribute("Selected") == "Yes")
+                        {
+                            string[] elS = lstServer.Find(el => el[0] == nodeOrigine.GetAttribute("Guid"));
+                            if (elS == null)
+                            {
+                                string[] aServer = new string[2];
+                                aServer[0] = nodeOrigine.GetAttribute("Guid");
+                                aServer[1] = nodeOrigine.GetAttribute("NomObjInfra");
+                                lstServer.Add(aServer);
+                            }
+                            elS = lstServer.Find(el => el[0] == nodeCible.GetAttribute("Guid"));
+                            if (elS == null)
+                            {
+                                string[] aServer = new string[2];
+                                aServer[0] = nodeCible.GetAttribute("Guid");
+                                aServer[1] = nodeCible.GetAttribute("NomObjInfra");
+                                lstServer.Add(aServer);
+                            }
+
+                            lstxmlFlux[0].lstElChild[j].lstElChild.Add(oFlux);
+                            yHeight += DrawObject.HeightFlux;
+                        }
                     }
                 }
             }
-        }
-        if (yHeight > 0)
-        {
-            DrawSeqFluxFonc dsff = new DrawSeqFluxFonc(drawArea.Owner, lstxmlFlux, yRelatif, xmlFluxTech, lstServer);
-            drawArea.GraphicsList.Add(dsff);
-        }
-        return yHeight;
-    }
-
-
-    public ArrayList MakeSequenceFluxFonc(string sGuidVueDeploy, string sGuidVueInf, ControlDoc cw)
-    {
-        ArrayList lstImg = new ArrayList();
-        XmlExcel xmlFluxFoncApp = null, xmlFluxAppTech = null, xmlFluxTech = null;
-        string sGuidVueFonc = null, sGuidVueApp = null;
-        ArrayList lstFluxFonc = null, lstFluxTech = null;
-
-        if (oCnxBase.CBRecherche("select vapp.GuidVueInf, vapp.GuidVue from Vue vapp, Vue vinf where vinf.GuidVueInf=vapp.GuidVue and vinf.GuidVue='" + sGuidVueInf + "'"))
-        {
-            if (!oCnxBase.Reader.IsDBNull(0)) sGuidVueFonc = oCnxBase.Reader.GetString(0);
-            if (!oCnxBase.Reader.IsDBNull(1)) sGuidVueApp = oCnxBase.Reader.GetString(1);
-        }
-        oCnxBase.CBReaderClose();
-
-        if (sGuidVueFonc != null)
-        {
-            xmlFluxFoncApp = xmlCreatFluxFonc(sGuidVueFonc, sGuidVueApp);
-            lstFluxFonc = xmlFluxFoncApp.XmlGetLstElFromName(xmlFluxFoncApp.root, "FluxFonc");
-            if (lstFluxFonc.Count == 0)
+            if (yHeight > 0)
             {
-                if (cw == null) MessageBox.Show("Aucun flux fonctionnel est rattaché aux flux applicatifs");
-                return lstImg;
+                DrawSeqFluxFonc dsff = new DrawSeqFluxFonc(drawArea.Owner, lstxmlFlux, yRelatif, xmlFluxTech, lstServer);
+                drawArea.GraphicsList.Add(dsff);
             }
-            xmlFluxAppTech = xmlCreatFluxApp(sGuidVueApp, sGuidVueInf);
-            lstFluxTech = xmlFluxAppTech.XmlGetLstElFromName(xmlFluxAppTech.root, "FluxTech");
-            if (lstFluxTech.Count == 0)
-            {
-                if (cw == null) MessageBox.Show("Aucun flux Applicatif est rattaché aux flux techniquess");
-                return lstImg;
-            }
-            xmlFluxTech = XmlCreatFlux(sGuidVueInf, sGuidVueDeploy);
+            return yHeight;
         }
-        else return lstImg;
-        //xmlFluxFoncApp.docXml.Save("c:\\dat\\tmp\\xmlfoncapp.xml");
-        //xmlFluxAppTech.docXml.Save("c:\\dat\\tmp\\xmlapptech.xml");
-        //xmlFluxTech.docXml.Save("c:\\dat\\tmp\\xmltech.xml");
 
-        int yRelatif = DrawObject.Axe + DrawObject.HeightFluxServer;
-        for (int i = 0; i < lstFluxFonc.Count; i++)
+
+        public ArrayList MakeSequenceFluxFonc(string sGuidVueDeploy, string sGuidVueInf, ControlDoc cw)
         {
-            if (cw == null)
+            ArrayList lstImg = new ArrayList();
+            XmlExcel xmlFluxFoncApp = null, xmlFluxAppTech = null, xmlFluxTech = null;
+            string sGuidVueFonc = null, sGuidVueApp = null;
+            ArrayList lstFluxFonc = null, lstFluxTech = null;
+
+            if (oCnxBase.CBRecherche("select vapp.GuidVueInf, vapp.GuidVue from Vue vapp, Vue vinf where vinf.GuidVueInf=vapp.GuidVue and vinf.GuidVue='" + sGuidVueInf + "'"))
             {
-                yRelatif += MakeSequenceFluxOneFonc((XmlElement)lstFluxFonc[i], xmlFluxFoncApp, xmlFluxAppTech, xmlFluxTech, yRelatif) + DrawObject.Axe + DrawObject.HeightFluxServer;
+                if (!oCnxBase.Reader.IsDBNull(0)) sGuidVueFonc = oCnxBase.Reader.GetString(0);
+                if (!oCnxBase.Reader.IsDBNull(1)) sGuidVueApp = oCnxBase.Reader.GetString(1);
+            }
+            oCnxBase.CBReaderClose();
+
+            if (sGuidVueFonc != null)
+            {
+                xmlFluxFoncApp = xmlCreatFluxFonc(sGuidVueFonc, sGuidVueApp);
+                lstFluxFonc = xmlFluxFoncApp.XmlGetLstElFromName(xmlFluxFoncApp.root, "FluxFonc");
+                if (lstFluxFonc.Count == 0)
+                {
+                    if (cw == null) MessageBox.Show("Aucun flux fonctionnel est rattaché aux flux applicatifs");
+                    return lstImg;
+                }
+                xmlFluxAppTech = xmlCreatFluxApp(sGuidVueApp, sGuidVueInf);
+                lstFluxTech = xmlFluxAppTech.XmlGetLstElFromName(xmlFluxAppTech.root, "FluxTech");
+                if (lstFluxTech.Count == 0)
+                {
+                    if (cw == null) MessageBox.Show("Aucun flux Applicatif est rattaché aux flux techniquess");
+                    return lstImg;
+                }
+                xmlFluxTech = XmlCreatFlux(sGuidVueInf, sGuidVueDeploy);
+            }
+            else return lstImg;
+            //xmlFluxFoncApp.docXml.Save("c:\\dat\\tmp\\xmlfoncapp.xml");
+            //xmlFluxAppTech.docXml.Save("c:\\dat\\tmp\\xmlapptech.xml");
+            //xmlFluxTech.docXml.Save("c:\\dat\\tmp\\xmltech.xml");
+
+            int yRelatif = DrawObject.Axe + DrawObject.HeightFluxServer;
+            for (int i = 0; i < lstFluxFonc.Count; i++)
+            {
+                if (cw == null)
+                {
+                    yRelatif += MakeSequenceFluxOneFonc((XmlElement)lstFluxFonc[i], xmlFluxFoncApp, xmlFluxAppTech, xmlFluxTech, yRelatif) + DrawObject.Axe + DrawObject.HeightFluxServer;
+                }
+                else
+                {
+                    drawArea.GraphicsList.Clear();
+                    yRelatif = DrawObject.Axe + DrawObject.HeightFluxServer;
+                    drawArea.Switch(false);
+                    yRelatif = MakeSequenceFluxOneFonc((XmlElement)lstFluxFonc[i], xmlFluxFoncApp, xmlFluxAppTech, xmlFluxTech, yRelatif) + DrawObject.Axe + DrawObject.HeightFluxServer;
+                    drawArea.Switch(true);
+                    drawArea.MajObjets();
+                    string sDiagram = SaveDiagramFromPath("Seq" + i + sGuidVueDeploy, cw.getImagePath(), "");
+                    if (yRelatif != DrawObject.Axe + DrawObject.HeightFluxServer)
+                        lstImg.Add(sDiagram);
+                }
+            }
+            return lstImg;
+        }
+
+        public void MakeVueInf3D(string sGuidVueSrvPhy)
+        {
+            XmlExcel xmlFlux = XmlCreatFlux(sGuidVueInf, sGuidVueSrvPhy);
+            ToolServer3D t3d = (ToolServer3D)drawArea.tools[(int)DrawArea.DrawToolType.Server3D];
+            t3d.xmlLink = Xml3dCreatLink(xmlFlux);
+
+            CreatGridObjet();
+
+            //drawArea.tools[(int)DrawArea.DrawToolType.Server3D].LoadObject(' ', GuidGVue.ToString(), sGuidVueSrvPhy);
+            drawArea.tools[(int)DrawArea.DrawToolType.Server3D].LoadObject(' ', sGuidVueSrvPhy, sGuidVueSrvPhy);
+            DrawGrid dg = (DrawGrid)drawArea.GraphicsList[drawArea.GraphicsList.Count - 1];
+            dg.CreatVlan3D();
+
+
+            IEnumerator ienum = t3d.xmlLink.root.GetEnumerator();
+            XmlNode Node1;
+            int iCont = 9;
+
+            while (ienum.MoveNext() && iCont > 0)
+            {
+                Node1 = (XmlNode)ienum.Current;
+                if (Node1.NodeType == XmlNodeType.Element && Node1.Name == "Server")
+                {
+                    ArrayList lstServerPhy1 = Xml3dGetLstServerPhyFromAtt((XmlElement)Node1, "Guid");
+                    if (lstServerPhy1.Count > 0)
+                    {
+                        int idxObj1 = drawArea.GraphicsList.FindObjet(0, (string)lstServerPhy1[0]);
+                        int iNbrLink1 = t3d.xmlLink.XmlGetNbrElFromName((XmlElement)Node1, "Link", 0);
+                        int idxLink1 = t3d.xmlLink.XmlGetNbrElFromNameAndAtt((XmlElement)Node1, "Link", "Done", "1", 0);
+
+                        IEnumerator ienuml = ((XmlElement)Node1).GetEnumerator();
+                        XmlNode NodeLink1;
+
+                        while (ienuml.MoveNext() && iCont > 0)
+                        {
+                            NodeLink1 = (XmlNode)ienuml.Current;
+                            if (NodeLink1.NodeType == XmlNodeType.Element && NodeLink1.Name == "Link")
+                            {
+                                if (((XmlElement)NodeLink1).GetAttribute("Done") != "1")
+                                {
+                                    XmlElement Node2 = t3d.xmlLink.XmlFindElFromAtt(t3d.xmlLink.root, "Nom", ((XmlElement)NodeLink1).GetAttribute("Nom"), 0);
+                                    ArrayList lstServerPhy2 = Xml3dGetLstServerPhyFromAtt(Node2, "Guid");
+                                    int idxObj2 = drawArea.GraphicsList.FindObjet(0, (string)lstServerPhy2[0]);
+                                    int iNbrLink2 = t3d.xmlLink.XmlGetNbrElFromName(Node2, "Link", 0);
+                                    int idxLink2 = t3d.xmlLink.XmlGetNbrElFromNameAndAtt(Node2, "Link", "Done", "1", 0);
+                                    XmlElement NodeLink2 = t3d.xmlLink.XmlFindElFromAtt(Node2, "Nom", ((XmlElement)Node1).GetAttribute("Nom"), 0);
+
+                                    if (idxObj1 > -1 && idxObj2 > -1)
+                                    {
+                                        bool bCreat = true;
+                                        for (int i = 0; i < lstServerPhy1.Count; i++)
+                                            if (lstServerPhy2.Contains(lstServerPhy1[i])) bCreat = false;
+                                        if (bCreat)
+                                        {
+                                            DrawLink3D dl = new DrawLink3D(this, ((XmlElement)NodeLink1).GetAttribute("IdFlux"), ((XmlElement)NodeLink1).GetAttribute("NomFlux"), lstServerPhy1, idxLink1, iNbrLink1, lstServerPhy2, idxLink2, iNbrLink2);
+                                            drawArea.GraphicsList.Add(dl);
+                                            drawArea.GraphicsList.MoveLastToBack();
+                                        }
+                                        ((XmlElement)NodeLink1).SetAttribute("Done", "1");
+                                        ((XmlElement)NodeLink2).SetAttribute("Done", "1");
+                                    }
+                                }
+                                //}
+                                //iCont--;
+                            }
+                        }
+
+                        // idxObj=-1 si c'est une VIP (lb). Ce test doit être enleve, et les vips doivent être traitees
+                        // est-ce encore d'actualite?
+                        /*
+                        if (idxObj1 > -1)
+                        {
+                            //DrawServer3D dServerPhy = (DrawServer3D)drawArea.GraphicsList[idxObj];
+                            //DrawLink3D dl = new DrawLink3D(this, "Link", dServerPhy.rectangle.X, dServerPhy.rectangle.Y, 20, 20);
+                            //drawArea.GraphicsList.Add(dl);
+                        }
+                        */
+                    }
+                }
+            }
+
+
+
+            //Vérification de l'existance de User dans la vue
+            //drawArea.tools[(int)DrawArea.DrawToolType.TechUser].LoadObject(' ', null);
+
+            //Vérification de l'existance de Application dans la vue
+            //drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', null);
+        }
+
+        public void MakeVueInf(string sGuiVueSrvPhy)
+        {
+
+            //Vérification de l'existance de User dans la vue
+            drawArea.tools[(int)DrawArea.DrawToolType.TechUser].LoadObject(' ', GuidGVue.ToString(), null);
+
+            //Vérification de l'existance de Application dans la vue
+            drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', GuidGVue.ToString(), null);
+
+            drawArea.tools[(int)DrawArea.DrawToolType.Server].LoadObject(' ', GuidGVue.ToString(), null);
+            oCnxBase.LoadSousObjetsInf(sGuiVueSrvPhy, (int)DrawArea.DrawToolType.Server);
+
+            drawArea.tools[(int)DrawArea.DrawToolType.Genks].LoadObject(' ', GuidGVue.ToString(), null);
+            oCnxBase.LoadSousObjetsInf(sGuiVueSrvPhy, (int)DrawArea.DrawToolType.Genks);
+
+            drawArea.tools[(int)DrawArea.DrawToolType.Genpod].LoadObject(' ', GuidGVue.ToString(), null);
+            oCnxBase.LoadSousObjetsInf(sGuiVueSrvPhy, (int)DrawArea.DrawToolType.Genpod);
+
+            drawArea.tools[(int)DrawArea.DrawToolType.Gensas].LoadObject(' ', GuidGVue.ToString(), null);
+            oCnxBase.LoadSousObjetsInf(sGuiVueSrvPhy, (int)DrawArea.DrawToolType.Gensas);
+
+
+            drawArea.tools[(int)DrawArea.DrawToolType.InfLink].LoadObject(' ', GuidGVue.ToString(), null);
+
+            oCnxBase.LoadService_AliasInf(sGuiVueSrvPhy);
+
+        }
+
+        public void GetInterLinks()
+        {
+            int n = drawArea.GraphicsList.Count;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (drawArea.GraphicsList[i].GetType() == typeof(DrawInterLink))
+                {
+                    DrawInterLink dil = (DrawInterLink)drawArea.GraphicsList[i];
+                    dil.GetInterLinks();
+                }
+
+            }
+        }
+
+        public void GetServerLinks()
+        {
+            int n = drawArea.GraphicsList.Count;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (drawArea.GraphicsList[i].GetType() == typeof(DrawServerPhy))
+                {
+                    DrawServerPhy dsp = (DrawServerPhy)drawArea.GraphicsList[i];
+                    dsp.GetServerLinks("AppUser");
+                    //dsp.GetServerLinks("Application");
+                    dsp.GetServerLinksApp();
+                    dsp.GetServerLinksApp("Server");
+                }
+                else if (drawArea.GraphicsList[i].GetType() == typeof(DrawServerSite))
+                {
+                    DrawServerSite dsp = (DrawServerSite)drawArea.GraphicsList[i];
+                    dsp.GetServerLinksU("AppUser");
+                    //dsp.GetServerLinks("Application");
+                    dsp.GetServerLinksApp();
+                    dsp.GetServerLinksApp("Server");
+                }
+            }
+        }
+
+        public void GetServerTypeFormPlateformPattern()
+        {
+            List<string[]> lstServerType = new List<string[]>();
+
+            if (oCnxBase.CBRecherche("select GuidApplication, GuidServerType from PlateformPatternLink where GuidVue='" + GuidVue.ToString() + "'"))
+            {
+                while (oCnxBase.Reader.Read())
+                {
+                    string[] aEng;
+                    aEng = new string[2];
+                    aEng[0] = oCnxBase.Reader.GetString(0); aEng[1] = oCnxBase.Reader.GetString(1);
+                    lstServerType.Add(aEng);
+                }
+            }
+            oCnxBase.CBReaderClose();
+            foreach (var el in lstServerType)
+            {
+                int i = drawArea.GraphicsList.FindObjet(0, el[0]);
+                if (i > -1)
+                {
+                    DrawApplication da = (DrawApplication)drawArea.GraphicsList[i];
+                    da.LoadServerType(el[1]);
+                    da.AligneObjet();
+                }
+            }
+        }
+
+        public void GetLabelLinks()
+        {
+            int n = drawArea.GraphicsList.Count;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (drawArea.GraphicsList[i].GetType() == typeof(DrawGenpod))
+                {
+                    DrawGenpod dgp = (DrawGenpod)drawArea.GraphicsList[i];
+                    dgp.GetLabelLinks();
+                }
+                else if (drawArea.GraphicsList[i].GetType() == typeof(DrawGening))
+                {
+                    DrawGening dgi = (DrawGening)drawArea.GraphicsList[i];
+                    dgi.GetLabelLinks();
+                }
+                else if (drawArea.GraphicsList[i].GetType() == typeof(DrawGensas))
+                {
+                    DrawGensas dgs = (DrawGensas)drawArea.GraphicsList[i];
+                    dgs.GetLabelLinks();
+                }
+                else if (drawArea.GraphicsList[i].GetType() == typeof(DrawGensvc))
+                {
+                    DrawGensvc dgs = (DrawGensvc)drawArea.GraphicsList[i];
+                    dgs.GetLabelLinks();
+                }
+                else if (drawArea.GraphicsList[i].GetType() == typeof(DrawInspod))
+                {
+                    DrawInspod dip = (DrawInspod)drawArea.GraphicsList[i];
+                    dip.GetLabelLinks();
+                }
+                else if (drawArea.GraphicsList[i].GetType() == typeof(DrawInsing))
+                {
+                    DrawInsing dii = (DrawInsing)drawArea.GraphicsList[i];
+                    dii.GetLabelLinks();
+                }
+                else if (drawArea.GraphicsList[i].GetType() == typeof(DrawInssas))
+                {
+                    DrawInssas dis = (DrawInssas)drawArea.GraphicsList[i];
+                    dis.GetLabelLinks();
+                }
+                else if (drawArea.GraphicsList[i].GetType() == typeof(DrawInssvc))
+                {
+                    DrawInssvc dis = (DrawInssvc)drawArea.GraphicsList[i];
+                    dis.GetLabelLinks();
+                }
+                else if (drawArea.GraphicsList[i].GetType() == typeof(DrawVue))
+                {
+                    DrawVue dv = (DrawVue)drawArea.GraphicsList[i];
+                    dv.GetLabelLinks();
+                }
+                else if (drawArea.GraphicsList[i].GetType() == typeof(DrawApplication))
+                {
+                    DrawApplication da = (DrawApplication)drawArea.GraphicsList[i];
+                    da.GetLabelLinks();
+                }
+                else if (drawArea.GraphicsList[i].GetType() == typeof(DrawServer))
+                {
+                    DrawServer ds = (DrawServer)drawArea.GraphicsList[i];
+                    ds.GetLabelLinks();
+                }
+                else if (drawArea.GraphicsList[i].GetType() == typeof(DrawServerPhy))
+                {
+                    DrawServerPhy dsp = (DrawServerPhy)drawArea.GraphicsList[i];
+                    dsp.GetLabelLinks();
+                }
+            }
+        }
+
+        public void GetSanCardLinks()
+        {
+            int n = drawArea.GraphicsList.Count;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (drawArea.GraphicsList[i].GetType() == typeof(DrawSanCard))
+                {
+                    DrawSanCard dsc = (DrawSanCard)drawArea.GraphicsList[i];
+                    dsc.GetSanCardLinks("SanCardA");
+                }
+            }
+        }
+
+        public void ClearPropObjet()
+        {
+            tbGuid.Text = "";
+
+            // Initialize the properties
+            for (int i = dataGrid.Rows.Count - 1; i >= 0; i--)
+            {
+                dataGrid.Rows.RemoveAt(i);
+            }
+        }
+
+        public DrawObject RechercheObjet(string sGuidKey)
+        {
+            DrawObject o;
+
+            for (int i = 0; i < drawArea.GraphicsList.Count; i++)
+            {
+                o = drawArea.GraphicsList[i];
+                if (o.GuidkeyObjet == new Guid(sGuidKey)) return o;
+            }
+            return null;
+        }
+
+
+
+        private void menuItem40_Click(object sender, EventArgs e)
+        {
+            CommandVisu();
+        }
+
+        //*****************************************************************************************
+        //*****************************************************************************************
+        //*****************************************************************************************
+        //
+        //         Methodes utilisees par les autres forms
+        //
+        //*****************************************************************************************
+        //*****************************************************************************************
+        //*****************************************************************************************
+
+
+        // Il y a d'autres fonction Xml à regrouper dans un objet ex: GetElFromInnerXml ("DELETE FROM DansVue Where GuidObjet = '" + obj + "'");
+
+
+
+
+        public int XmlAnalyseFluxNode(string sSeparator, XmlExcel xmlFlux, XmlElement Node, DrawTab oTab)
+        {
+            // sFormat ex: "," ou "<br>", ou ....
+            IEnumerator ienum;
+            XmlNode nOrigine, nCible;
+            string OrigineLocation = "", OrigineNom = "", OrigineNCard = "", OrigineIP = "", OrigineIPNat = "", OrigineVlan = "", OrigineVlanClass = "";
+            string CibleLocation = "", CibleNom = "", CibleNCard = "", CibleIP = "", CibleIPNat = "", CibleVlan = "", CibleVlanClass = "";
+            string ServiceNom = "", ServiceProtocol = "", ServicePort = "";
+            XmlElement elOrigine, elCible, elGroupService;
+            string sautLigne = sSeparator;
+            int preFix = sautLigne.Length;
+            int nbrLigne = 0;
+
+            bool bNext = false;
+
+            if (Node.GetAttribute("Selected") != "Yes") return nbrLigne;
+            oTab.LstValue.Add(Node.GetAttribute("Id"));
+            oTab.LstValue.Add(Node.GetAttribute("Nom"));
+
+            elOrigine = xmlFlux.XmlGetFirstElFromName(Node, "Origine");
+            if (elOrigine.GetAttribute("Selected") != "Yes") return nbrLigne;
+            ienum = elOrigine.GetEnumerator();
+            while (ienum.MoveNext())
+            {
+                nOrigine = (XmlNode)ienum.Current;
+                if (nOrigine.NodeType == XmlNodeType.Element && ((XmlElement)nOrigine).GetAttribute("Selected") == "Yes")
+                {
+                    XmlElement elCur = (XmlElement)nOrigine;
+
+                    ArrayList lstNCard = xmlFlux.XmlGetLstElFromName(elCur, "NCard");
+                    ArrayList lstLabelClass = xmlFlux.XmlGetLstElFromName(elCur, "LabelClass");
+                    for (int i = 0; i < lstNCard.Count; i++)
+                    {
+                        XmlElement elNCard = (XmlElement)lstNCard[i];
+                        if (elNCard.GetAttribute("Selected") == "Yes")
+                        {
+                            bNext = true;
+                            xmlFlux.XmlGetAttValueFromElName(elNCard, "Guild", "Vlan");
+                            OrigineLocation += sautLigne + elCur.GetAttribute("Location");
+                            OrigineNom += sautLigne + elCur.GetAttribute("Nom");
+                            OrigineNCard += sautLigne + elNCard.GetAttribute("Guid");
+                            OrigineIP += sautLigne + elNCard.GetAttribute("IP");
+                            OrigineIPNat += sautLigne + elNCard.GetAttribute("Nat");
+                            OrigineVlan += sautLigne + xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "Vlan");
+                            OrigineVlanClass += sautLigne + xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "VlanClass");
+                        }
+                    }
+                    for (int i = 0; i < lstLabelClass.Count; i++)
+                    {
+                        XmlElement elLabelClass = (XmlElement)lstLabelClass[i];
+                        if (elLabelClass.GetAttribute("Selected") == "Yes")
+                        {
+                            ArrayList lstLabelValue = xmlFlux.XmlGetLstElFromName(elLabelClass, "LabelValue");
+                            for (int j = 0; j < lstLabelValue.Count; j++)
+                            {
+                                XmlElement elLabelValue = (XmlElement)lstLabelValue[j];
+                                if (elLabelValue.GetAttribute("Selected") == "Yes")
+                                {
+                                    bNext = true;
+                                    OrigineLocation += sautLigne + elCur.GetAttribute("Location");
+                                    OrigineNom += sautLigne + elCur.GetAttribute("Nom");
+                                    OrigineNCard += sautLigne + elLabelValue.GetAttribute("Guid"); //elNCard.GetAttribute("Guid");
+                                                                                                   //OrigineIP += sautLigne + elLabelClass.GetAttribute("Nom") + "=" + elLabelValue.GetAttribute("Nom");
+                                    OrigineIP += sautLigne + elLabelValue.GetAttribute("Nom");
+                                    OrigineIPNat += sautLigne + ""; // elNCard.GetAttribute("Nat");
+                                    OrigineVlan += sautLigne + ""; // xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "Vlan");
+                                    OrigineVlanClass += sautLigne + ""; // xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "VlanClass");
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            if (!bNext) return nbrLigne;
+            oTab.LstValue.Add(OrigineLocation.Substring(preFix));
+            oTab.LstValue.Add(OrigineNom.Substring(preFix));
+            oTab.LstValue.Add(OrigineNCard.Substring(preFix));
+            oTab.LstValue.Add(OrigineIP.Substring(preFix));
+            oTab.LstValue.Add(OrigineIPNat.Substring(preFix));
+            oTab.LstValue.Add(OrigineVlan.Substring(preFix));
+            oTab.LstValue.Add(OrigineVlanClass.Substring(preFix));
+
+            bNext = false;
+            elCible = xmlFlux.XmlGetFirstElFromName(Node, "Cible");
+            if (elCible.GetAttribute("Selected") != "Yes") return nbrLigne;
+            ienum = elCible.GetEnumerator();
+            while (ienum.MoveNext())
+            {
+                nCible = (XmlNode)ienum.Current;
+                if (nCible.NodeType == XmlNodeType.Element && ((XmlElement)nCible).GetAttribute("Selected") == "Yes")
+                {
+                    XmlElement elCur = (XmlElement)nCible;
+
+                    ArrayList lstNCard = xmlFlux.XmlGetLstElFromName(elCur, "NCard");
+                    ArrayList lstLabelClass = xmlFlux.XmlGetLstElFromName(elCur, "LabelClass");
+                    for (int i = 0; i < lstNCard.Count; i++)
+                    {
+                        XmlElement elNCard = (XmlElement)lstNCard[i];
+                        if (elNCard.GetAttribute("Selected") == "Yes")
+                        {
+                            bNext = true;
+                            CibleLocation += sautLigne + elCur.GetAttribute("Location");
+                            CibleNom += sautLigne + elCur.GetAttribute("Nom");
+                            CibleNCard += sautLigne + elNCard.GetAttribute("Guid");
+                            CibleIP += sautLigne + elNCard.GetAttribute("IP");
+                            CibleIPNat += sautLigne + elNCard.GetAttribute("Nat");
+                            CibleVlan += sautLigne + xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "Vlan");
+                            CibleVlanClass += sautLigne + xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "VlanClass");
+                        }
+                    }
+                    for (int i = 0; i < lstLabelClass.Count; i++)
+                    {
+                        XmlElement elLabelClass = (XmlElement)lstLabelClass[i];
+                        if (elLabelClass.GetAttribute("Selected") == "Yes")
+                        {
+                            ArrayList lstLabelValue = xmlFlux.XmlGetLstElFromName(elLabelClass, "LabelValue");
+                            for (int j = 0; j < lstLabelValue.Count; j++)
+                            {
+                                XmlElement elLabelValue = (XmlElement)lstLabelValue[j];
+                                if (elLabelValue.GetAttribute("Selected") == "Yes")
+                                {
+                                    bNext = true;
+                                    CibleLocation += sautLigne + elCur.GetAttribute("Location");
+                                    CibleNom += sautLigne + elCur.GetAttribute("Nom");
+                                    CibleNCard += sautLigne + elLabelValue.GetAttribute("Guid");  //elNCard.GetAttribute("Guid");
+                                                                                                  //CibleIP += sautLigne + elLabelClass.GetAttribute("Nom") + "=" + elLabelValue.GetAttribute("Nom");
+                                    CibleIP += sautLigne + elLabelValue.GetAttribute("Nom");
+                                    CibleIPNat += sautLigne + ""; // elNCard.GetAttribute("Nat");
+                                    CibleVlan += sautLigne + ""; // xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "Vlan");
+                                    CibleVlanClass += sautLigne + ""; // xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "VlanClass");
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
+            if (!bNext) return nbrLigne;
+            oTab.LstValue.Add(CibleLocation.Substring(preFix));
+            oTab.LstValue.Add(CibleNom.Substring(preFix));
+            oTab.LstValue.Add(CibleNCard.Substring(preFix));
+            oTab.LstValue.Add(CibleIP.Substring(preFix));
+            oTab.LstValue.Add(CibleIPNat.Substring(preFix));
+            oTab.LstValue.Add(CibleVlan.Substring(preFix));
+            oTab.LstValue.Add(CibleVlanClass.Substring(preFix));
+
+            elGroupService = xmlFlux.XmlGetFirstElFromName(Node, "GroupService");
+            oTab.LstValue.Add(elGroupService.GetAttribute("Guid"));
+            ArrayList lstService = xmlFlux.XmlGetLstElFromName(elGroupService, "Service");
+            nbrLigne = lstService.Count;
+            for (int i = 0; i < nbrLigne; i++)
+            {
+                XmlElement elService = (XmlElement)lstService[i];
+                ServiceNom += sautLigne + elService.GetAttribute("Nom");
+                ServiceProtocol += sautLigne + elService.GetAttribute("Protocol");
+                ServicePort += sautLigne + elService.GetAttribute("Ports");
+            }
+            if (ServiceNom.Length != 0)
+            {
+                oTab.LstValue.Add(ServiceNom.Substring(preFix));
+                oTab.LstValue.Add(ServiceProtocol.Substring(preFix));
+                oTab.LstValue.Add(ServicePort.Substring(preFix));
             }
             else
             {
-                drawArea.GraphicsList.Clear();
-                yRelatif = DrawObject.Axe + DrawObject.HeightFluxServer;
-                drawArea.Switch(false);
-                yRelatif = MakeSequenceFluxOneFonc((XmlElement)lstFluxFonc[i], xmlFluxFoncApp, xmlFluxAppTech, xmlFluxTech, yRelatif) + DrawObject.Axe + DrawObject.HeightFluxServer;
-                drawArea.Switch(true);
-                drawArea.MajObjets();
-                string sDiagram = SaveDiagramFromPath("Seq" + i + sGuidVueDeploy, cw.getImagePath(), "");
-                if (yRelatif != DrawObject.Axe + DrawObject.HeightFluxServer)
-                    lstImg.Add(sDiagram);
+                nbrLigne = 1;
+                oTab.LstValue.Add("Not Defined");
+                oTab.LstValue.Add("Not Defined");
+                oTab.LstValue.Add("Not Defined");
+            }
+            return nbrLigne;
+        }
+
+
+
+        public XmlElement XmlCopyEl(XmlDocument xmlDoc, XmlElement elOri)
+        {
+            XmlElement el = xmlDoc.CreateElement(elOri.Name);
+            for (int i = 0; i < elOri.Attributes.Count; i++)
+                el.SetAttribute(elOri.Attributes[i].Name, elOri.Attributes[i].Value);
+            return el;
+        }
+
+
+        public void XmldeleteBaseFromXml(XmlElement elCur)
+        {
+            IEnumerator ienum = elCur.GetEnumerator();
+            XmlNode Node;
+
+            while (ienum.MoveNext())
+            {
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element)
+                {
+                    XmlElement el = (XmlElement)Node;
+                    XmlAttributeCollection lstAtt = el.Attributes;
+                    string sSql = "delete from " + el.Name + " where ";
+                    for (int i = 0; i < lstAtt.Count; i++) sSql += lstAtt[i].Name + "='" + lstAtt[i].Value + "' and ";
+                    oCnxBase.CBWrite(sSql.Substring(0, sSql.Length - 5));
+                }
             }
         }
-        return lstImg;
-    }
-
-    public void MakeVueInf3D(string sGuidVueSrvPhy)
-    {
-        XmlExcel xmlFlux = XmlCreatFlux(sGuidVueInf, sGuidVueSrvPhy);
-        ToolServer3D t3d = (ToolServer3D)drawArea.tools[(int)DrawArea.DrawToolType.Server3D];
-        t3d.xmlLink = Xml3dCreatLink(xmlFlux);
-
-        CreatGridObjet();
-
-        //drawArea.tools[(int)DrawArea.DrawToolType.Server3D].LoadObject(' ', GuidGVue.ToString(), sGuidVueSrvPhy);
-        drawArea.tools[(int)DrawArea.DrawToolType.Server3D].LoadObject(' ', sGuidVueSrvPhy, sGuidVueSrvPhy);
-        DrawGrid dg = (DrawGrid)drawArea.GraphicsList[drawArea.GraphicsList.Count - 1];
-        dg.CreatVlan3D();
 
 
-        IEnumerator ienum = t3d.xmlLink.root.GetEnumerator();
-        XmlNode Node1;
-        int iCont = 9;
 
-        while (ienum.MoveNext() && iCont > 0)
+        public void XmlinsertBaseFromXml(XmlElement elCur)
         {
-            Node1 = (XmlNode)ienum.Current;
-            if (Node1.NodeType == XmlNodeType.Element && Node1.Name == "Server")
+            IEnumerator ienum = elCur.GetEnumerator();
+            XmlNode Node;
+
+            while (ienum.MoveNext())
             {
-                ArrayList lstServerPhy1 = Xml3dGetLstServerPhyFromAtt((XmlElement)Node1, "Guid");
-                if (lstServerPhy1.Count > 0)
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element)
                 {
-                    int idxObj1 = drawArea.GraphicsList.FindObjet(0, (string)lstServerPhy1[0]);
-                    int iNbrLink1 = t3d.xmlLink.XmlGetNbrElFromName((XmlElement)Node1, "Link", 0);
-                    int idxLink1 = t3d.xmlLink.XmlGetNbrElFromNameAndAtt((XmlElement)Node1, "Link", "Done", "1", 0);
+                    int iAction = 0;
+                    XmlElement el = (XmlElement)Node;
+                    XmlAttributeCollection lstAtt = el.Attributes;
+                    string sSql1 = "Insert into " + el.Name + " (", sSql2 = "Values (";
+                    string[] Keys = null;
 
-                    IEnumerator ienuml = ((XmlElement)Node1).GetEnumerator();
-                    XmlNode NodeLink1;
-
-                    while (ienuml.MoveNext() && iCont > 0)
+                    if (lstAtt[0].Name == "SearchKey")
                     {
-                        NodeLink1 = (XmlNode)ienuml.Current;
-                        if (NodeLink1.NodeType == XmlNodeType.Element && NodeLink1.Name == "Link")
-                        {
-                            if (((XmlElement)NodeLink1).GetAttribute("Done") != "1")
+                        iAction = 2;
+                        Keys = lstAtt[0].Value.Split(',');
+                        if (oCnxBase.CBRecherche("SELECT " + oCnxBase.GetSelectSearchKey(Keys) + " FROM " + el.Name + " WHERE " + oCnxBase.XmlGetWhereSearchKey(el, Keys))) iAction++;
+                        oCnxBase.CBReaderClose();
+                    }
+
+                    switch (iAction)
+                    {
+                        case 0: // creation sans confDataBase
+                            for (int i = 0; i < lstAtt.Count; i++)
                             {
-                                XmlElement Node2 = t3d.xmlLink.XmlFindElFromAtt(t3d.xmlLink.root, "Nom", ((XmlElement)NodeLink1).GetAttribute("Nom"), 0);
-                                ArrayList lstServerPhy2 = Xml3dGetLstServerPhyFromAtt(Node2, "Guid");
-                                int idxObj2 = drawArea.GraphicsList.FindObjet(0, (string)lstServerPhy2[0]);
-                                int iNbrLink2 = t3d.xmlLink.XmlGetNbrElFromName(Node2, "Link", 0);
-                                int idxLink2 = t3d.xmlLink.XmlGetNbrElFromNameAndAtt(Node2, "Link", "Done", "1", 0);
-                                XmlElement NodeLink2 = t3d.xmlLink.XmlFindElFromAtt(Node2, "Nom", ((XmlElement)Node1).GetAttribute("Nom"), 0);
-
-                                if (idxObj1 > -1 && idxObj2 > -1)
-                                {
-                                    bool bCreat = true;
-                                    for (int i = 0; i < lstServerPhy1.Count; i++)
-                                        if (lstServerPhy2.Contains(lstServerPhy1[i])) bCreat = false;
-                                    if (bCreat)
-                                    {
-                                        DrawLink3D dl = new DrawLink3D(this, ((XmlElement)NodeLink1).GetAttribute("IdFlux"), ((XmlElement)NodeLink1).GetAttribute("NomFlux"), lstServerPhy1, idxLink1, iNbrLink1, lstServerPhy2, idxLink2, iNbrLink2);
-                                        drawArea.GraphicsList.Add(dl);
-                                        drawArea.GraphicsList.MoveLastToBack();
-                                    }
-                                    ((XmlElement)NodeLink1).SetAttribute("Done", "1");
-                                    ((XmlElement)NodeLink2).SetAttribute("Done", "1");
-                                }
+                                sSql1 += lstAtt[i].Name + ",";
+                                sSql2 += "'" + lstAtt[i].Value + "',";
                             }
-                            //}
-                            //iCont--;
-                        }
-                    }
+                            sSql1 = sSql1.Substring(0, sSql1.Length - 1) + ") ";
+                            sSql2 = sSql2.Substring(0, sSql2.Length - 1) + ") ";
+                            oCnxBase.CBWrite(sSql1 + " " + sSql2);
+                            break;
+                        case 1: //update sans confDataBase (att SearchKey existant & present en base)
+                            break;
+                        case 2: //creation conforme avec oCnxBase (att SearchKey et atts with caractère type au début)
+                            oCnxBase.XmlCreateFromXml(el);
+                            break;
+                        case 3: //update conforme avec oCnxBase (att SearchKey et atts with caractère type au début)
+                            oCnxBase.XmlUpdateFromXml(el, Keys);
+                            break;
 
-                    // idxObj=-1 si c'est une VIP (lb). Ce test doit être enleve, et les vips doivent être traitees
-                    // est-ce encore d'actualite?
-                    /*
-                    if (idxObj1 > -1)
-                    {
-                        //DrawServer3D dServerPhy = (DrawServer3D)drawArea.GraphicsList[idxObj];
-                        //DrawLink3D dl = new DrawLink3D(this, "Link", dServerPhy.rectangle.X, dServerPhy.rectangle.Y, 20, 20);
-                        //drawArea.GraphicsList.Add(dl);
-                    }
-                    */
-                }
-            }
-        }
-
-
-
-        //Vérification de l'existance de User dans la vue
-        //drawArea.tools[(int)DrawArea.DrawToolType.TechUser].LoadObject(' ', null);
-
-        //Vérification de l'existance de Application dans la vue
-        //drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', null);
-    }
-
-    public void MakeVueInf(string sGuiVueSrvPhy)
-    {
-
-        //Vérification de l'existance de User dans la vue
-        drawArea.tools[(int)DrawArea.DrawToolType.TechUser].LoadObject(' ', GuidGVue.ToString(), null);
-
-        //Vérification de l'existance de Application dans la vue
-        drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadObject(' ', GuidGVue.ToString(), null);
-
-        drawArea.tools[(int)DrawArea.DrawToolType.Server].LoadObject(' ', GuidGVue.ToString(), null);
-        oCnxBase.LoadSousObjetsInf(sGuiVueSrvPhy, (int)DrawArea.DrawToolType.Server);
-
-        drawArea.tools[(int)DrawArea.DrawToolType.Genks].LoadObject(' ', GuidGVue.ToString(), null);
-        oCnxBase.LoadSousObjetsInf(sGuiVueSrvPhy, (int)DrawArea.DrawToolType.Genks);
-
-        drawArea.tools[(int)DrawArea.DrawToolType.Genpod].LoadObject(' ', GuidGVue.ToString(), null);
-        oCnxBase.LoadSousObjetsInf(sGuiVueSrvPhy, (int)DrawArea.DrawToolType.Genpod);
-
-        drawArea.tools[(int)DrawArea.DrawToolType.Gensas].LoadObject(' ', GuidGVue.ToString(), null);
-        oCnxBase.LoadSousObjetsInf(sGuiVueSrvPhy, (int)DrawArea.DrawToolType.Gensas);
-
-
-        drawArea.tools[(int)DrawArea.DrawToolType.InfLink].LoadObject(' ', GuidGVue.ToString(), null);
-
-        oCnxBase.LoadService_AliasInf(sGuiVueSrvPhy);
-
-    }
-
-    public void GetInterLinks()
-    {
-        int n = drawArea.GraphicsList.Count;
-
-        for (int i = 0; i < n; i++)
-        {
-            if (drawArea.GraphicsList[i].GetType() == typeof(DrawInterLink))
-            {
-                DrawInterLink dil = (DrawInterLink)drawArea.GraphicsList[i];
-                dil.GetInterLinks();
-            }
-
-        }
-    }
-
-    public void GetServerLinks()
-    {
-        int n = drawArea.GraphicsList.Count;
-
-        for (int i = 0; i < n; i++)
-        {
-            if (drawArea.GraphicsList[i].GetType() == typeof(DrawServerPhy))
-            {
-                DrawServerPhy dsp = (DrawServerPhy)drawArea.GraphicsList[i];
-                dsp.GetServerLinks("AppUser");
-                //dsp.GetServerLinks("Application");
-                dsp.GetServerLinksApp();
-                dsp.GetServerLinksApp("Server");
-            }
-            else if (drawArea.GraphicsList[i].GetType() == typeof(DrawServerSite))
-            {
-                DrawServerSite dsp = (DrawServerSite)drawArea.GraphicsList[i];
-                dsp.GetServerLinksU("AppUser");
-                //dsp.GetServerLinks("Application");
-                dsp.GetServerLinksApp();
-                dsp.GetServerLinksApp("Server");
-            }
-        }
-    }
-
-    public void GetServerTypeFormPlateformPattern()
-    {
-        List<string[]> lstServerType = new List<string[]>();
-
-        if (oCnxBase.CBRecherche("select GuidApplication, GuidServerType from PlateformPatternLink where GuidVue='" + GuidVue.ToString() + "'"))
-        {
-            while (oCnxBase.Reader.Read())
-            {
-                string[] aEng;
-                aEng = new string[2];
-                aEng[0] = oCnxBase.Reader.GetString(0); aEng[1] = oCnxBase.Reader.GetString(1);
-                lstServerType.Add(aEng);
-            }
-        }
-        oCnxBase.CBReaderClose();
-        foreach (var el in lstServerType)
-        {
-            int i = drawArea.GraphicsList.FindObjet(0, el[0]);
-            if (i > -1)
-            {
-                DrawApplication da = (DrawApplication)drawArea.GraphicsList[i];
-                da.LoadServerType(el[1]);
-                da.AligneObjet();
-            }
-        }
-    }
-
-    public void GetLabelLinks()
-    {
-        int n = drawArea.GraphicsList.Count;
-
-        for (int i = 0; i < n; i++)
-        {
-            if (drawArea.GraphicsList[i].GetType() == typeof(DrawGenpod))
-            {
-                DrawGenpod dgp = (DrawGenpod)drawArea.GraphicsList[i];
-                dgp.GetLabelLinks();
-            }
-            else if (drawArea.GraphicsList[i].GetType() == typeof(DrawGening))
-            {
-                DrawGening dgi = (DrawGening)drawArea.GraphicsList[i];
-                dgi.GetLabelLinks();
-            }
-            else if (drawArea.GraphicsList[i].GetType() == typeof(DrawGensas))
-            {
-                DrawGensas dgs = (DrawGensas)drawArea.GraphicsList[i];
-                dgs.GetLabelLinks();
-            }
-            else if (drawArea.GraphicsList[i].GetType() == typeof(DrawGensvc))
-            {
-                DrawGensvc dgs = (DrawGensvc)drawArea.GraphicsList[i];
-                dgs.GetLabelLinks();
-            }
-            else if (drawArea.GraphicsList[i].GetType() == typeof(DrawInspod))
-            {
-                DrawInspod dip = (DrawInspod)drawArea.GraphicsList[i];
-                dip.GetLabelLinks();
-            }
-            else if (drawArea.GraphicsList[i].GetType() == typeof(DrawInsing))
-            {
-                DrawInsing dii = (DrawInsing)drawArea.GraphicsList[i];
-                dii.GetLabelLinks();
-            }
-            else if (drawArea.GraphicsList[i].GetType() == typeof(DrawInssas))
-            {
-                DrawInssas dis = (DrawInssas)drawArea.GraphicsList[i];
-                dis.GetLabelLinks();
-            }
-            else if (drawArea.GraphicsList[i].GetType() == typeof(DrawInssvc))
-            {
-                DrawInssvc dis = (DrawInssvc)drawArea.GraphicsList[i];
-                dis.GetLabelLinks();
-            }
-            else if (drawArea.GraphicsList[i].GetType() == typeof(DrawVue))
-            {
-                DrawVue dv = (DrawVue)drawArea.GraphicsList[i];
-                dv.GetLabelLinks();
-            }
-            else if (drawArea.GraphicsList[i].GetType() == typeof(DrawApplication))
-            {
-                DrawApplication da = (DrawApplication)drawArea.GraphicsList[i];
-                da.GetLabelLinks();
-            }
-            else if (drawArea.GraphicsList[i].GetType() == typeof(DrawServer))
-            {
-                DrawServer ds = (DrawServer)drawArea.GraphicsList[i];
-                ds.GetLabelLinks();
-            }
-            else if (drawArea.GraphicsList[i].GetType() == typeof(DrawServerPhy))
-            {
-                DrawServerPhy dsp = (DrawServerPhy)drawArea.GraphicsList[i];
-                dsp.GetLabelLinks();
-            }
-        }
-    }
-
-    public void GetSanCardLinks()
-    {
-        int n = drawArea.GraphicsList.Count;
-
-        for (int i = 0; i < n; i++)
-        {
-            if (drawArea.GraphicsList[i].GetType() == typeof(DrawSanCard))
-            {
-                DrawSanCard dsc = (DrawSanCard)drawArea.GraphicsList[i];
-                dsc.GetSanCardLinks("SanCardA");
-            }
-        }
-    }
-
-    public void ClearPropObjet()
-    {
-        tbGuid.Text = "";
-
-        // Initialize the properties
-        for (int i = dataGrid.Rows.Count - 1; i >= 0; i--)
-        {
-            dataGrid.Rows.RemoveAt(i);
-        }
-    }
-
-    public DrawObject RechercheObjet(string sGuidKey)
-    {
-        DrawObject o;
-
-        for (int i = 0; i < drawArea.GraphicsList.Count; i++)
-        {
-            o = drawArea.GraphicsList[i];
-            if (o.GuidkeyObjet == new Guid(sGuidKey)) return o;
-        }
-        return null;
-    }
-
-
-
-    private void menuItem40_Click(object sender, EventArgs e)
-    {
-        CommandVisu();
-    }
-
-    //*****************************************************************************************
-    //*****************************************************************************************
-    //*****************************************************************************************
-    //
-    //         Methodes utilisees par les autres forms
-    //
-    //*****************************************************************************************
-    //*****************************************************************************************
-    //*****************************************************************************************
-
-
-    // Il y a d'autres fonction Xml à regrouper dans un objet ex: GetElFromInnerXml ("DELETE FROM DansVue Where GuidObjet = '" + obj + "'");
-
-
-
-
-    public int XmlAnalyseFluxNode(string sSeparator, XmlExcel xmlFlux, XmlElement Node, DrawTab oTab)
-    {
-        // sFormat ex: "," ou "<br>", ou ....
-        IEnumerator ienum;
-        XmlNode nOrigine, nCible;
-        string OrigineLocation = "", OrigineNom = "", OrigineNCard = "", OrigineIP = "", OrigineIPNat = "", OrigineVlan = "", OrigineVlanClass = "";
-        string CibleLocation = "", CibleNom = "", CibleNCard = "", CibleIP = "", CibleIPNat = "", CibleVlan = "", CibleVlanClass = "";
-        string ServiceNom = "", ServiceProtocol = "", ServicePort = "";
-        XmlElement elOrigine, elCible, elGroupService;
-        string sautLigne = sSeparator;
-        int preFix = sautLigne.Length;
-        int nbrLigne = 0;
-
-        bool bNext = false;
-
-        if (Node.GetAttribute("Selected") != "Yes") return nbrLigne;
-        oTab.LstValue.Add(Node.GetAttribute("Id"));
-        oTab.LstValue.Add(Node.GetAttribute("Nom"));
-
-        elOrigine = xmlFlux.XmlGetFirstElFromName(Node, "Origine");
-        if (elOrigine.GetAttribute("Selected") != "Yes") return nbrLigne;
-        ienum = elOrigine.GetEnumerator();
-        while (ienum.MoveNext())
-        {
-            nOrigine = (XmlNode)ienum.Current;
-            if (nOrigine.NodeType == XmlNodeType.Element && ((XmlElement)nOrigine).GetAttribute("Selected") == "Yes")
-            {
-                XmlElement elCur = (XmlElement)nOrigine;
-
-                ArrayList lstNCard = xmlFlux.XmlGetLstElFromName(elCur, "NCard");
-                ArrayList lstLabelClass = xmlFlux.XmlGetLstElFromName(elCur, "LabelClass");
-                for (int i = 0; i < lstNCard.Count; i++)
-                {
-                    XmlElement elNCard = (XmlElement)lstNCard[i];
-                    if (elNCard.GetAttribute("Selected") == "Yes")
-                    {
-                        bNext = true;
-                        xmlFlux.XmlGetAttValueFromElName(elNCard, "Guild", "Vlan");
-                        OrigineLocation += sautLigne + elCur.GetAttribute("Location");
-                        OrigineNom += sautLigne + elCur.GetAttribute("Nom");
-                        OrigineNCard += sautLigne + elNCard.GetAttribute("Guid");
-                        OrigineIP += sautLigne + elNCard.GetAttribute("IP");
-                        OrigineIPNat += sautLigne + elNCard.GetAttribute("Nat");
-                        OrigineVlan += sautLigne + xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "Vlan");
-                        OrigineVlanClass += sautLigne + xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "VlanClass");
                     }
                 }
-                for (int i = 0; i < lstLabelClass.Count; i++)
-                {
-                    XmlElement elLabelClass = (XmlElement)lstLabelClass[i];
-                    if (elLabelClass.GetAttribute("Selected") == "Yes")
-                    {
-                        ArrayList lstLabelValue = xmlFlux.XmlGetLstElFromName(elLabelClass, "LabelValue");
-                        for (int j = 0; j < lstLabelValue.Count; j++)
-                        {
-                            XmlElement elLabelValue = (XmlElement)lstLabelValue[j];
-                            if (elLabelValue.GetAttribute("Selected") == "Yes")
-                            {
-                                bNext = true;
-                                OrigineLocation += sautLigne + elCur.GetAttribute("Location");
-                                OrigineNom += sautLigne + elCur.GetAttribute("Nom");
-                                OrigineNCard += sautLigne + elLabelValue.GetAttribute("Guid"); //elNCard.GetAttribute("Guid");
-                                                                                               //OrigineIP += sautLigne + elLabelClass.GetAttribute("Nom") + "=" + elLabelValue.GetAttribute("Nom");
-                                OrigineIP += sautLigne + elLabelValue.GetAttribute("Nom");
-                                OrigineIPNat += sautLigne + ""; // elNCard.GetAttribute("Nat");
-                                OrigineVlan += sautLigne + ""; // xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "Vlan");
-                                OrigineVlanClass += sautLigne + ""; // xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "VlanClass");
-                            }
-                        }
-                    }
-                }
-
             }
         }
 
-        if (!bNext) return nbrLigne;
-        oTab.LstValue.Add(OrigineLocation.Substring(preFix));
-        oTab.LstValue.Add(OrigineNom.Substring(preFix));
-        oTab.LstValue.Add(OrigineNCard.Substring(preFix));
-        oTab.LstValue.Add(OrigineIP.Substring(preFix));
-        oTab.LstValue.Add(OrigineIPNat.Substring(preFix));
-        oTab.LstValue.Add(OrigineVlan.Substring(preFix));
-        oTab.LstValue.Add(OrigineVlanClass.Substring(preFix));
-
-        bNext = false;
-        elCible = xmlFlux.XmlGetFirstElFromName(Node, "Cible");
-        if (elCible.GetAttribute("Selected") != "Yes") return nbrLigne;
-        ienum = elCible.GetEnumerator();
-        while (ienum.MoveNext())
+        public void XmlAllSetParentAttributValueFromEl(XmlElement el, string sAtt, string sValue)
         {
-            nCible = (XmlNode)ienum.Current;
-            if (nCible.NodeType == XmlNodeType.Element && ((XmlElement)nCible).GetAttribute("Selected") == "Yes")
-            {
-                XmlElement elCur = (XmlElement)nCible;
-
-                ArrayList lstNCard = xmlFlux.XmlGetLstElFromName(elCur, "NCard");
-                ArrayList lstLabelClass = xmlFlux.XmlGetLstElFromName(elCur, "LabelClass");
-                for (int i = 0; i < lstNCard.Count; i++)
-                {
-                    XmlElement elNCard = (XmlElement)lstNCard[i];
-                    if (elNCard.GetAttribute("Selected") == "Yes")
-                    {
-                        bNext = true;
-                        CibleLocation += sautLigne + elCur.GetAttribute("Location");
-                        CibleNom += sautLigne + elCur.GetAttribute("Nom");
-                        CibleNCard += sautLigne + elNCard.GetAttribute("Guid");
-                        CibleIP += sautLigne + elNCard.GetAttribute("IP");
-                        CibleIPNat += sautLigne + elNCard.GetAttribute("Nat");
-                        CibleVlan += sautLigne + xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "Vlan");
-                        CibleVlanClass += sautLigne + xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "VlanClass");
-                    }
-                }
-                for (int i = 0; i < lstLabelClass.Count; i++)
-                {
-                    XmlElement elLabelClass = (XmlElement)lstLabelClass[i];
-                    if (elLabelClass.GetAttribute("Selected") == "Yes")
-                    {
-                        ArrayList lstLabelValue = xmlFlux.XmlGetLstElFromName(elLabelClass, "LabelValue");
-                        for (int j = 0; j < lstLabelValue.Count; j++)
-                        {
-                            XmlElement elLabelValue = (XmlElement)lstLabelValue[j];
-                            if (elLabelValue.GetAttribute("Selected") == "Yes")
-                            {
-                                bNext = true;
-                                CibleLocation += sautLigne + elCur.GetAttribute("Location");
-                                CibleNom += sautLigne + elCur.GetAttribute("Nom");
-                                CibleNCard += sautLigne + elLabelValue.GetAttribute("Guid");  //elNCard.GetAttribute("Guid");
-                                                                                              //CibleIP += sautLigne + elLabelClass.GetAttribute("Nom") + "=" + elLabelValue.GetAttribute("Nom");
-                                CibleIP += sautLigne + elLabelValue.GetAttribute("Nom");
-                                CibleIPNat += sautLigne + ""; // elNCard.GetAttribute("Nat");
-                                CibleVlan += sautLigne + ""; // xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "Vlan");
-                                CibleVlanClass += sautLigne + ""; // xmlFlux.XmlGetAttValueFromElName(elNCard, "Guid", "VlanClass");
-                            }
-                        }
-                    }
-                }
-
-            }
+            if (el.GetAttribute(sAtt, sValue) != null) el.SetAttribute(sAtt, sValue);
+            if (el.ParentNode != null && el.ParentNode.NodeType == XmlNodeType.Element) XmlAllSetParentAttributValueFromEl((XmlElement)el.ParentNode, sAtt, sValue);
         }
 
-
-        if (!bNext) return nbrLigne;
-        oTab.LstValue.Add(CibleLocation.Substring(preFix));
-        oTab.LstValue.Add(CibleNom.Substring(preFix));
-        oTab.LstValue.Add(CibleNCard.Substring(preFix));
-        oTab.LstValue.Add(CibleIP.Substring(preFix));
-        oTab.LstValue.Add(CibleIPNat.Substring(preFix));
-        oTab.LstValue.Add(CibleVlan.Substring(preFix));
-        oTab.LstValue.Add(CibleVlanClass.Substring(preFix));
-
-        elGroupService = xmlFlux.XmlGetFirstElFromName(Node, "GroupService");
-        oTab.LstValue.Add(elGroupService.GetAttribute("Guid"));
-        ArrayList lstService = xmlFlux.XmlGetLstElFromName(elGroupService, "Service");
-        nbrLigne = lstService.Count;
-        for (int i = 0; i < nbrLigne; i++)
+        public void XmlAllSetAttributValueFromEl(XmlElement el, string sAtt, string sValue, string sFiltre = null)
         {
-            XmlElement elService = (XmlElement)lstService[i];
-            ServiceNom += sautLigne + elService.GetAttribute("Nom");
-            ServiceProtocol += sautLigne + elService.GetAttribute("Protocol");
-            ServicePort += sautLigne + elService.GetAttribute("Ports");
-        }
-        if (ServiceNom.Length != 0)
-        {
-            oTab.LstValue.Add(ServiceNom.Substring(preFix));
-            oTab.LstValue.Add(ServiceProtocol.Substring(preFix));
-            oTab.LstValue.Add(ServicePort.Substring(preFix));
-        }
-        else
-        {
-            nbrLigne = 1;
-            oTab.LstValue.Add("Not Defined");
-            oTab.LstValue.Add("Not Defined");
-            oTab.LstValue.Add("Not Defined");
-        }
-        return nbrLigne;
-    }
-
-
-
-    public XmlElement XmlCopyEl(XmlDocument xmlDoc, XmlElement elOri)
-    {
-        XmlElement el = xmlDoc.CreateElement(elOri.Name);
-        for (int i = 0; i < elOri.Attributes.Count; i++)
-            el.SetAttribute(elOri.Attributes[i].Name, elOri.Attributes[i].Value);
-        return el;
-    }
-
-
-    public void XmldeleteBaseFromXml(XmlElement elCur)
-    {
-        IEnumerator ienum = elCur.GetEnumerator();
-        XmlNode Node;
-
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element)
-            {
-                XmlElement el = (XmlElement)Node;
-                XmlAttributeCollection lstAtt = el.Attributes;
-                string sSql = "delete from " + el.Name + " where ";
-                for (int i = 0; i < lstAtt.Count; i++) sSql += lstAtt[i].Name + "='" + lstAtt[i].Value + "' and ";
-                oCnxBase.CBWrite(sSql.Substring(0, sSql.Length - 5));
-            }
-        }
-    }
-
-
-
-    public void XmlinsertBaseFromXml(XmlElement elCur)
-    {
-        IEnumerator ienum = elCur.GetEnumerator();
-        XmlNode Node;
-
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element)
-            {
-                int iAction = 0;
-                XmlElement el = (XmlElement)Node;
-                XmlAttributeCollection lstAtt = el.Attributes;
-                string sSql1 = "Insert into " + el.Name + " (", sSql2 = "Values (";
-                string[] Keys = null;
-
-                if (lstAtt[0].Name == "SearchKey")
-                {
-                    iAction = 2;
-                    Keys = lstAtt[0].Value.Split(',');
-                    if (oCnxBase.CBRecherche("SELECT " + oCnxBase.GetSelectSearchKey(Keys) + " FROM " + el.Name + " WHERE " + oCnxBase.XmlGetWhereSearchKey(el, Keys))) iAction++;
-                    oCnxBase.CBReaderClose();
-                }
-
-                switch (iAction)
-                {
-                    case 0: // creation sans confDataBase
-                        for (int i = 0; i < lstAtt.Count; i++)
-                        {
-                            sSql1 += lstAtt[i].Name + ",";
-                            sSql2 += "'" + lstAtt[i].Value + "',";
-                        }
-                        sSql1 = sSql1.Substring(0, sSql1.Length - 1) + ") ";
-                        sSql2 = sSql2.Substring(0, sSql2.Length - 1) + ") ";
-                        oCnxBase.CBWrite(sSql1 + " " + sSql2);
-                        break;
-                    case 1: //update sans confDataBase (att SearchKey existant & present en base)
-                        break;
-                    case 2: //creation conforme avec oCnxBase (att SearchKey et atts with caractère type au début)
-                        oCnxBase.XmlCreateFromXml(el);
-                        break;
-                    case 3: //update conforme avec oCnxBase (att SearchKey et atts with caractère type au début)
-                        oCnxBase.XmlUpdateFromXml(el, Keys);
-                        break;
-
-                }
-            }
-        }
-    }
-
-    public void XmlAllSetParentAttributValueFromEl(XmlElement el, string sAtt, string sValue)
-    {
-        if (el.GetAttribute(sAtt, sValue) != null) el.SetAttribute(sAtt, sValue);
-        if (el.ParentNode != null && el.ParentNode.NodeType == XmlNodeType.Element) XmlAllSetParentAttributValueFromEl((XmlElement)el.ParentNode, sAtt, sValue);
-    }
-
-    public void XmlAllSetAttributValueFromEl(XmlElement el, string sAtt, string sValue, string sFiltre = null)
-    {
-        IEnumerator ienum = el.GetEnumerator();
-        XmlNode Node;
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element)
-            {
-                XmlElement elCur = (XmlElement)Node;
-                if (sFiltre == null || sFiltre.Contains(elCur.Name))
-                {
-                    if (elCur.GetAttribute(sAtt) != null) elCur.SetAttribute(sAtt, sValue);
-                    XmlAllSetAttributValueFromEl(elCur, sAtt, sValue);
-                }
-            }
-        }
-    }
-
-    public XmlElement XmlFindFirstElFromName(XmlElement parent, string sName)
-    {
-        IEnumerator ienum = parent.GetEnumerator();
-        XmlNode Node;
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element)
-            {
-                XmlElement elCur = (XmlElement)Node;
-                if (elCur.Name == sName) return elCur;
-                elCur = XmlFindFirstElFromName((XmlElement)Node, sName);
-                if (elCur != null) return elCur;
-            }
-        }
-        return null;
-    }
-
-    public string XmlGetTextEl(XmlElement el)
-    {
-
-        IEnumerator ienum = el.GetEnumerator();
-        XmlNode Node;
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Text)
-            {
-                XmlText elT = (XmlText)Node;
-                return elT.Value;
-            }
-        }
-        return null;
-    }
-
-    public int xmlExistElFromLst(XmlElement elFind, ArrayList lstEl, string sComparaison)
-    {
-        string sValelFind = XmlGetAttValueAFromAttValueB(elFind, "Value", "Nom", sComparaison);
-        if (sValelFind != "")
-        {
-            for (int i = 0; i < lstEl.Count; i++)
-            {
-                XmlElement el = (XmlElement)lstEl[i];
-                if (sValelFind == XmlGetAttValueAFromAttValueB(el, "Value", "Nom", sComparaison)) return i;
-            }
-            return -1; // El non trouvé
-        }
-        return -2; // Att de comparaison son trouvé
-    }
-
-    public ArrayList XmlGetLstElFromName(XmlElement parent, string sName, int Profondeur)
-    {
-        ArrayList lstEl = new ArrayList();
-        if (--Profondeur >= 0)
-        {
-            IEnumerator ienum = parent.GetEnumerator();
+            IEnumerator ienum = el.GetEnumerator();
             XmlNode Node;
             while (ienum.MoveNext())
             {
@@ -11082,21 +10976,16 @@ namespace DrawTools
                 if (Node.NodeType == XmlNodeType.Element)
                 {
                     XmlElement elCur = (XmlElement)Node;
-                    if (elCur.Name == sName && xmlExistElFromLst(elCur, lstEl, "Guid" + sName) <= -1) lstEl.Add(elCur);
-                    ArrayList lstElfils = XmlGetLstElFromName((XmlElement)Node, sName, Profondeur);
-                    for (int i = 0; i < lstElfils.Count; i++)
+                    if (sFiltre == null || sFiltre.Contains(elCur.Name))
                     {
-                        if (xmlExistElFromLst(elCur, lstEl, "Guid" + sName) <= -1) lstEl.Add(lstElfils[i]);
+                        if (elCur.GetAttribute(sAtt) != null) elCur.SetAttribute(sAtt, sValue);
+                        XmlAllSetAttributValueFromEl(elCur, sAtt, sValue);
                     }
                 }
             }
         }
-        return lstEl;
-    }
 
-    public XmlElement XmlFindFirstElFromName(XmlElement parent, string sName, int Profondeur)
-    {
-        if (--Profondeur >= 0)
+        public XmlElement XmlFindFirstElFromName(XmlElement parent, string sName)
         {
             IEnumerator ienum = parent.GetEnumerator();
             XmlNode Node;
@@ -11107,53 +10996,204 @@ namespace DrawTools
                 {
                     XmlElement elCur = (XmlElement)Node;
                     if (elCur.Name == sName) return elCur;
-                    elCur = XmlFindFirstElFromName((XmlElement)Node, sName, Profondeur);
+                    elCur = XmlFindFirstElFromName((XmlElement)Node, sName);
                     if (elCur != null) return elCur;
                 }
             }
+            return null;
         }
-        return null;
-    }
 
-    public void XmlCreatXmldb(XmlDB xmlDB, string sGuidApplication, string sGuidAppVersion = "")
-    {
-        if (sGuidAppVersion != "")
+        public string XmlGetTextEl(XmlElement el)
         {
-            drawArea.GraphicsList.Clear();
-            oCureo = new ExpObj(new Guid(sGuidApplication), "", DrawArea.DrawToolType.Application);
-            drawArea.tools[(int)oCureo.ObjTool].LoadSimpleObjectSansGraph(oCureo);
 
-            if (oCureo.oDraw != null)
+            IEnumerator ienum = el.GetEnumerator();
+            XmlNode Node;
+            while (ienum.MoveNext())
             {
-                XmlElement el = null;
-                DrawObject o = oCureo.oDraw;
-                if (xmlDB.SetCursor("root"))
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Text)
                 {
-                    //el = o.XmlCreatObject(xmlDB);
-                    el = o.xmlCreatObjetFromCursor(xmlDB);
-                    xmlDB.CursorClose();
+                    XmlText elT = (XmlText)Node;
+                    return elT.Value;
+                }
+            }
+            return null;
+        }
 
-                    oCureo = new ExpObj(new Guid(sGuidAppVersion), "", DrawArea.DrawToolType.AppVersion);
-                    drawArea.tools[(int)oCureo.ObjTool].LoadSimpleObjectSansGraph(oCureo);
+        public int xmlExistElFromLst(XmlElement elFind, ArrayList lstEl, string sComparaison)
+        {
+            string sValelFind = XmlGetAttValueAFromAttValueB(elFind, "Value", "Nom", sComparaison);
+            if (sValelFind != "")
+            {
+                for (int i = 0; i < lstEl.Count; i++)
+                {
+                    XmlElement el = (XmlElement)lstEl[i];
+                    if (sValelFind == XmlGetAttValueAFromAttValueB(el, "Value", "Nom", sComparaison)) return i;
+                }
+                return -1; // El non trouvé
+            }
+            return -2; // Att de comparaison son trouvé
+        }
 
-                    if (oCureo.oDraw != null)
+        public ArrayList XmlGetLstElFromName(XmlElement parent, string sName, int Profondeur)
+        {
+            ArrayList lstEl = new ArrayList();
+            if (--Profondeur >= 0)
+            {
+                IEnumerator ienum = parent.GetEnumerator();
+                XmlNode Node;
+                while (ienum.MoveNext())
+                {
+                    Node = (XmlNode)ienum.Current;
+                    if (Node.NodeType == XmlNodeType.Element)
                     {
-                        if (xmlDB.SetCursor(xmlDB.XmlGetFirstElFromParent(el, "After")))
+                        XmlElement elCur = (XmlElement)Node;
+                        if (elCur.Name == sName && xmlExistElFromLst(elCur, lstEl, "Guid" + sName) <= -1) lstEl.Add(elCur);
+                        ArrayList lstElfils = XmlGetLstElFromName((XmlElement)Node, sName, Profondeur);
+                        for (int i = 0; i < lstElfils.Count; i++)
                         {
-                            o = oCureo.oDraw;
-                            el = o.xmlCreatObjetFromCursor(xmlDB);
-                            xmlDB.CursorClose();
+                            if (xmlExistElFromLst(elCur, lstEl, "Guid" + sName) <= -1) lstEl.Add(lstElfils[i]);
+                        }
+                    }
+                }
+            }
+            return lstEl;
+        }
 
-                            List<string[]> lstVue = new List<string[]>();
-                            ArrayList lstLayer = null;
+        public XmlElement XmlFindFirstElFromName(XmlElement parent, string sName, int Profondeur)
+        {
+            if (--Profondeur >= 0)
+            {
+                IEnumerator ienum = parent.GetEnumerator();
+                XmlNode Node;
+                while (ienum.MoveNext())
+                {
+                    Node = (XmlNode)ienum.Current;
+                    if (Node.NodeType == XmlNodeType.Element)
+                    {
+                        XmlElement elCur = (XmlElement)Node;
+                        if (elCur.Name == sName) return elCur;
+                        elCur = XmlFindFirstElFromName((XmlElement)Node, sName, Profondeur);
+                        if (elCur != null) return elCur;
+                    }
+                }
+            }
+            return null;
+        }
 
-                            if (oCnxBase.CBRecherche("SELECT GuidVue, NomVue, GuidGVue, GuidEnvironnement, GuidVueInf, TypeVue.GuidTypeVue, NomTypeVue FROM Vue, TypeVue WHERE Vue.GuidTypeVue=TypeVue.GuidTypeVue AND GuidAppVersion='" + sGuidAppVersion + "' ORDER BY NomTypeVue"))
-                                while (oCnxBase.Reader.Read())
-                                {
-                                    string sGuidTypeVue = oCnxBase.Reader.GetString(5);
-                                    if (sGuidTypeVue != "c4e818ea-5e91-4ede-8038-9e19efb9d3bd" && sGuidTypeVue != "1532eac8-4ae4-4c09-9d2c-7532f3b303db")
+        public void XmlCreatXmldb(XmlDB xmlDB, string sGuidApplication, string sGuidAppVersion = "")
+        {
+            if (sGuidAppVersion != "")
+            {
+                drawArea.GraphicsList.Clear();
+                oCureo = new ExpObj(new Guid(sGuidApplication), "", DrawArea.DrawToolType.Application);
+                drawArea.tools[(int)oCureo.ObjTool].LoadSimpleObjectSansGraph(oCureo);
+
+                if (oCureo.oDraw != null)
+                {
+                    XmlElement el = null;
+                    DrawObject o = oCureo.oDraw;
+                    if (xmlDB.SetCursor("root"))
+                    {
+                        //el = o.XmlCreatObject(xmlDB);
+                        el = o.xmlCreatObjetFromCursor(xmlDB);
+                        xmlDB.CursorClose();
+
+                        oCureo = new ExpObj(new Guid(sGuidAppVersion), "", DrawArea.DrawToolType.AppVersion);
+                        drawArea.tools[(int)oCureo.ObjTool].LoadSimpleObjectSansGraph(oCureo);
+
+                        if (oCureo.oDraw != null)
+                        {
+                            if (xmlDB.SetCursor(xmlDB.XmlGetFirstElFromParent(el, "After")))
+                            {
+                                o = oCureo.oDraw;
+                                el = o.xmlCreatObjetFromCursor(xmlDB);
+                                xmlDB.CursorClose();
+
+                                List<string[]> lstVue = new List<string[]>();
+                                ArrayList lstLayer = null;
+
+                                if (oCnxBase.CBRecherche("SELECT GuidVue, NomVue, GuidGVue, GuidEnvironnement, GuidVueInf, TypeVue.GuidTypeVue, NomTypeVue FROM Vue, TypeVue WHERE Vue.GuidTypeVue=TypeVue.GuidTypeVue AND GuidAppVersion='" + sGuidAppVersion + "' ORDER BY NomTypeVue"))
+                                    while (oCnxBase.Reader.Read())
                                     {
-                                        //vue info server ou info server 3d
+                                        string sGuidTypeVue = oCnxBase.Reader.GetString(5);
+                                        if (sGuidTypeVue != "c4e818ea-5e91-4ede-8038-9e19efb9d3bd" && sGuidTypeVue != "1532eac8-4ae4-4c09-9d2c-7532f3b303db")
+                                        {
+                                            //vue info server ou info server 3d
+                                            string sEnv = "", sGuidVueInf = "";
+                                            if (!oCnxBase.Reader.IsDBNull(3)) sEnv = oCnxBase.Reader.GetString(3);
+                                            if (!oCnxBase.Reader.IsDBNull(4)) sGuidVueInf = oCnxBase.Reader.GetString(4);
+
+                                            string[] aEnreg = new string[7];
+                                            aEnreg[0] = oCnxBase.Reader.GetString(0);   // GuidVue
+                                            aEnreg[1] = oCnxBase.Reader.GetString(1);   // NomVue
+                                            aEnreg[2] = oCnxBase.Reader.GetString(2);   // GuidGVue
+                                            aEnreg[3] = sEnv;                           // GuidEnvironnement
+                                            aEnreg[4] = sGuidVueInf;                    // GuidVueInf
+                                            aEnreg[5] = oCnxBase.Reader.GetString(5);   // GuidTypeVue
+                                            aEnreg[6] = oCnxBase.Reader.GetString(6);   // NomTypeVue
+
+                                            lstVue.Add(aEnreg);
+                                            //lstVue.Add(oCnxBase.Reader.GetString(0) + "," + oCnxBase.Reader.GetString(1) + "," + sEnv + "," + sGuidVueInf + "," + oCnxBase.Reader.GetString(4) + "," + oCnxBase.Reader.GetString(5));
+                                        }
+                                    }
+                                oCnxBase.CBReaderClose();
+
+                                if (oCnxBase.CBRecherche("SELECT GuidLayer, NomLayer FROM Layer WHERE GuidAppVersion='" + sGuidAppVersion + "'"))
+                                {
+                                    lstLayer = new ArrayList();
+                                    while (oCnxBase.Reader.Read()) lstLayer.Add(oCnxBase.Reader.GetString(0) + "," + oCnxBase.Reader.GetString(1));
+                                }
+                                oCnxBase.CBReaderClose();
+
+                                xmlDB.CursorClose();
+                                oCnxBase.CreaXmlApplication(xmlDB, el, sGuidApplication, sGuidAppVersion, lstVue, lstLayer);
+
+                                //xmlDB.docXml.Save(Parent.GetFullPath((string)cbGuidApplication.Items[cbApplication.SelectedIndex]) + "\\" + (string)cbApplication.Items[cbApplication.SelectedIndex] + "Serveur.xml");
+                            }
+                            xmlDB.CursorClose();
+                        }
+                    }
+                    xmlDB.CursorClose();
+                }
+            }
+
+        }
+
+        public void XmlCreatXmlVue(XmlDB xmlDB, WorkApplication wkApp, string sGuidVue)
+        {
+            if (wkApp.GuidAppVersion != null)
+            {
+                oCureo = new ExpObj(wkApp.Guid, "", DrawArea.DrawToolType.Application);
+                drawArea.tools[(int)oCureo.ObjTool].LoadSimpleObjectSansGraph(oCureo);
+
+                if (oCureo.oDraw != null)
+                {
+                    XmlElement el = null;
+                    DrawObject o = oCureo.oDraw;
+                    if (xmlDB.SetCursor("root"))
+                    {
+                        //el = o.XmlCreatObject(xmlDB);
+                        el = o.xmlCreatObjetFromCursor(xmlDB);
+                        xmlDB.CursorClose();
+
+                        oCureo = new ExpObj(wkApp.GuidAppVersion, "", DrawArea.DrawToolType.AppVersion);
+                        drawArea.tools[(int)oCureo.ObjTool].LoadSimpleObjectSansGraph(oCureo);
+
+                        if (oCureo.oDraw != null)
+                        {
+                            if (xmlDB.SetCursor(xmlDB.XmlGetFirstElFromParent(el, "After")))
+                            {
+                                o = oCureo.oDraw;
+                                el = o.xmlCreatObjetFromCursor(xmlDB);
+                                xmlDB.CursorClose();
+
+                                List<string[]> lstVue = new List<string[]>();
+                                ArrayList lstLayer = null;
+
+                                if (oCnxBase.CBRecherche("SELECT GuidVue, NomVue, GuidGVue, GuidEnvironnement, GuidVueInf, TypeVue.GuidTypeVue, NomTypeVue FROM Vue, TypeVue WHERE Vue.GuidTypeVue=TypeVue.GuidTypeVue AND GuidAppVersion='" + wkApp.GuidAppVersion + "' AND Vue.GuidVue='" + sGuidVue + "' ORDER BY NomTypeVue"))
+                                    while (oCnxBase.Reader.Read())
+                                    {
                                         string sEnv = "", sGuidVueInf = "";
                                         if (!oCnxBase.Reader.IsDBNull(3)) sEnv = oCnxBase.Reader.GetString(3);
                                         if (!oCnxBase.Reader.IsDBNull(4)) sGuidVueInf = oCnxBase.Reader.GetString(4);
@@ -11170,1587 +11210,1153 @@ namespace DrawTools
                                         lstVue.Add(aEnreg);
                                         //lstVue.Add(oCnxBase.Reader.GetString(0) + "," + oCnxBase.Reader.GetString(1) + "," + sEnv + "," + sGuidVueInf + "," + oCnxBase.Reader.GetString(4) + "," + oCnxBase.Reader.GetString(5));
                                     }
+                                oCnxBase.CBReaderClose();
+
+                                if (oCnxBase.CBRecherche("SELECT GuidLayer, NomLayer FROM Layer WHERE GuidAppVersion='" + wkApp.GuidAppVersion + "'"))
+                                {
+                                    lstLayer = new ArrayList();
+                                    while (oCnxBase.Reader.Read()) lstLayer.Add(oCnxBase.Reader.GetString(0) + "," + oCnxBase.Reader.GetString(1));
                                 }
-                            oCnxBase.CBReaderClose();
+                                oCnxBase.CBReaderClose();
 
-                            if (oCnxBase.CBRecherche("SELECT GuidLayer, NomLayer FROM Layer WHERE GuidAppVersion='" + sGuidAppVersion + "'"))
-                            {
-                                lstLayer = new ArrayList();
-                                while (oCnxBase.Reader.Read()) lstLayer.Add(oCnxBase.Reader.GetString(0) + "," + oCnxBase.Reader.GetString(1));
+                                xmlDB.CursorClose();
+                                oCnxBase.CreaXmlApplication(xmlDB, el, wkApp.Guid.ToString(), wkApp.GuidAppVersion.ToString(), lstVue, lstLayer);
+
+                                xmlDB.docXml.Save(GetFullPath(wkApp) + "\\Vue.xml");
                             }
-                            oCnxBase.CBReaderClose();
-
                             xmlDB.CursorClose();
-                            oCnxBase.CreaXmlApplication(xmlDB, el, sGuidApplication, sGuidAppVersion, lstVue, lstLayer);
-
-                            //xmlDB.docXml.Save(Parent.GetFullPath((string)cbGuidApplication.Items[cbApplication.SelectedIndex]) + "\\" + (string)cbApplication.Items[cbApplication.SelectedIndex] + "Serveur.xml");
                         }
-                        xmlDB.CursorClose();
                     }
+                    xmlDB.CursorClose();
                 }
-                xmlDB.CursorClose();
             }
+
         }
 
-    }
-
-    public void XmlCreatXmlVue(XmlDB xmlDB, WorkApplication wkApp, string sGuidVue)
-    {
-        if (wkApp.GuidAppVersion != null)
+        /*public XmlDB XmlCreatXmldb(string sGuidApplication)
         {
-            oCureo = new ExpObj(wkApp.Guid, "", DrawArea.DrawToolType.Application);
-            drawArea.tools[(int)oCureo.ObjTool].LoadSimpleObjectSansGraph(oCureo);
+            drawArea.GraphicsList.Clear();
+            oCureo = new ExpObj(new Guid(sGuidApplication), "", DrawArea.DrawToolType.Application);
+            drawArea.tools[(int)oCureo.ObjTool].LoadSimpleObjectSansGraph(oCureo.GuidObj.ToString());
 
             if (oCureo.oDraw != null)
             {
+                XmlDB xmlDB = new XmlDB(this, "Applications");
                 XmlElement el = null;
+
+                drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadSimpleObject(sGuidApplication);
+                int i = drawArea.GraphicsList.FindObjet(0, sGuidApplication);
                 DrawObject o = oCureo.oDraw;
+                //DrawApplication da = (DrawApplication)drawArea.GraphicsList[i];
                 if (xmlDB.SetCursor("root"))
                 {
-                    //el = o.XmlCreatObject(xmlDB);
-                    el = o.xmlCreatObjetFromCursor(xmlDB);
+                    el = o.XmlCreatObject(xmlDB);
                     xmlDB.CursorClose();
+                    ArrayList lstVue = new ArrayList();
+                    ArrayList lstLayer = null;
 
-                    oCureo = new ExpObj(wkApp.GuidAppVersion, "", DrawArea.DrawToolType.AppVersion);
-                    drawArea.tools[(int)oCureo.ObjTool].LoadSimpleObjectSansGraph(oCureo);
-
-                    if (oCureo.oDraw != null)
-                    {
-                        if (xmlDB.SetCursor(xmlDB.XmlGetFirstElFromParent(el, "After")))
+                    if (oCnxBase.CBRecherche("SELECT GuidVue, NomVue, GuidEnvironnement, GuidVueInf, TypeVue.GuidTypeVue, NomTypeVue FROM Vue, TypeVue WHERE Vue.GuidTypeVue=TypeVue.GuidTypeVue AND GuidApplication='" + sGuidApplication + "' ORDER BY NomTypeVue"))
+                        while (oCnxBase.Reader.Read())
                         {
-                            o = oCureo.oDraw;
-                            el = o.xmlCreatObjetFromCursor(xmlDB);
-                            xmlDB.CursorClose();
-
-                            List<string[]> lstVue = new List<string[]>();
-                            ArrayList lstLayer = null;
-
-                            if (oCnxBase.CBRecherche("SELECT GuidVue, NomVue, GuidGVue, GuidEnvironnement, GuidVueInf, TypeVue.GuidTypeVue, NomTypeVue FROM Vue, TypeVue WHERE Vue.GuidTypeVue=TypeVue.GuidTypeVue AND GuidAppVersion='" + wkApp.GuidAppVersion + "' AND Vue.GuidVue='" + sGuidVue + "' ORDER BY NomTypeVue"))
-                                while (oCnxBase.Reader.Read())
-                                {
-                                    string sEnv = "", sGuidVueInf = "";
-                                    if (!oCnxBase.Reader.IsDBNull(3)) sEnv = oCnxBase.Reader.GetString(3);
-                                    if (!oCnxBase.Reader.IsDBNull(4)) sGuidVueInf = oCnxBase.Reader.GetString(4);
-
-                                    string[] aEnreg = new string[7];
-                                    aEnreg[0] = oCnxBase.Reader.GetString(0);   // GuidVue
-                                    aEnreg[1] = oCnxBase.Reader.GetString(1);   // NomVue
-                                    aEnreg[2] = oCnxBase.Reader.GetString(2);   // GuidGVue
-                                    aEnreg[3] = sEnv;                           // GuidEnvironnement
-                                    aEnreg[4] = sGuidVueInf;                    // GuidVueInf
-                                    aEnreg[5] = oCnxBase.Reader.GetString(5);   // GuidTypeVue
-                                    aEnreg[6] = oCnxBase.Reader.GetString(6);   // NomTypeVue
-
-                                    lstVue.Add(aEnreg);
-                                    //lstVue.Add(oCnxBase.Reader.GetString(0) + "," + oCnxBase.Reader.GetString(1) + "," + sEnv + "," + sGuidVueInf + "," + oCnxBase.Reader.GetString(4) + "," + oCnxBase.Reader.GetString(5));
-                                }
-                            oCnxBase.CBReaderClose();
-
-                            if (oCnxBase.CBRecherche("SELECT GuidLayer, NomLayer FROM Layer WHERE GuidAppVersion='" + wkApp.GuidAppVersion + "'"))
-                            {
-                                lstLayer = new ArrayList();
-                                while (oCnxBase.Reader.Read()) lstLayer.Add(oCnxBase.Reader.GetString(0) + "," + oCnxBase.Reader.GetString(1));
-                            }
-                            oCnxBase.CBReaderClose();
-
-                            xmlDB.CursorClose();
-                            oCnxBase.CreaXmlApplication(xmlDB, el, wkApp.Guid.ToString(), wkApp.GuidAppVersion.ToString(), lstVue, lstLayer);
-
-                            xmlDB.docXml.Save(GetFullPath(wkApp) + "\\Vue.xml");
+                            string sEnv = "", sGuidVueInf = "";
+                            if (!oCnxBase.Reader.IsDBNull(2)) sEnv = oCnxBase.Reader.GetString(2);
+                            if (!oCnxBase.Reader.IsDBNull(3)) sGuidVueInf = oCnxBase.Reader.GetString(3);
+                            lstVue.Add(oCnxBase.Reader.GetString(0) + "," + oCnxBase.Reader.GetString(1) + "," + sEnv + "," + sGuidVueInf + "," + oCnxBase.Reader.GetString(4) + "," + oCnxBase.Reader.GetString(5));
                         }
-                        xmlDB.CursorClose();
+                    oCnxBase.CBReaderClose();
+
+                    if (oCnxBase.CBRecherche("SELECT GuidLayer, NomLayer FROM Layer WHERE GuidApplication='" + sGuidApplication + "'"))
+                    {
+                        lstLayer = new ArrayList();
+                        while (oCnxBase.Reader.Read()) lstLayer.Add(oCnxBase.Reader.GetString(0) + "," + oCnxBase.Reader.GetString(1));
                     }
+                    oCnxBase.CBReaderClose();
+
+                    xmlDB.CursorClose();
+                    oCnxBase.CreaXmlApplication(xmlDB, sGuidApplication, lstVue, lstLayer);
+
+                    return xmlDB;
+                    //xmlDB.docXml.Save(Parent.GetFullPath((string)cbGuidApplication.Items[cbApplication.SelectedIndex]) + "\\" + (string)cbApplication.Items[cbApplication.SelectedIndex] + "Serveur.xml");
                 }
                 xmlDB.CursorClose();
             }
-        }
 
-    }
+            return null;
+        }*/
 
-    /*public XmlDB XmlCreatXmldb(string sGuidApplication)
-    {
-        drawArea.GraphicsList.Clear();
-        oCureo = new ExpObj(new Guid(sGuidApplication), "", DrawArea.DrawToolType.Application);
-        drawArea.tools[(int)oCureo.ObjTool].LoadSimpleObjectSansGraph(oCureo.GuidObj.ToString());
-
-        if (oCureo.oDraw != null)
+        public delegate void XMLEXECACTIONELFROMATT(XmlElement parent, XmlElement el1, XmlElement el2);
+        public void XmlExecActionElFromAtt(XmlElement parent, string sAtt, string sValue, XmlElement el, XMLEXECACTIONELFROMATT fonc)
         {
-            XmlDB xmlDB = new XmlDB(this, "Applications");
-            XmlElement el = null;
-
-            drawArea.tools[(int)DrawArea.DrawToolType.Application].LoadSimpleObject(sGuidApplication);
-            int i = drawArea.GraphicsList.FindObjet(0, sGuidApplication);
-            DrawObject o = oCureo.oDraw;
-            //DrawApplication da = (DrawApplication)drawArea.GraphicsList[i];
-            if (xmlDB.SetCursor("root"))
+            IEnumerator ienum = parent.GetEnumerator();
+            XmlNode Node;
+            while (ienum.MoveNext())
             {
-                el = o.XmlCreatObject(xmlDB);
-                xmlDB.CursorClose();
-                ArrayList lstVue = new ArrayList();
-                ArrayList lstLayer = null;
-
-                if (oCnxBase.CBRecherche("SELECT GuidVue, NomVue, GuidEnvironnement, GuidVueInf, TypeVue.GuidTypeVue, NomTypeVue FROM Vue, TypeVue WHERE Vue.GuidTypeVue=TypeVue.GuidTypeVue AND GuidApplication='" + sGuidApplication + "' ORDER BY NomTypeVue"))
-                    while (oCnxBase.Reader.Read())
-                    {
-                        string sEnv = "", sGuidVueInf = "";
-                        if (!oCnxBase.Reader.IsDBNull(2)) sEnv = oCnxBase.Reader.GetString(2);
-                        if (!oCnxBase.Reader.IsDBNull(3)) sGuidVueInf = oCnxBase.Reader.GetString(3);
-                        lstVue.Add(oCnxBase.Reader.GetString(0) + "," + oCnxBase.Reader.GetString(1) + "," + sEnv + "," + sGuidVueInf + "," + oCnxBase.Reader.GetString(4) + "," + oCnxBase.Reader.GetString(5));
-                    }
-                oCnxBase.CBReaderClose();
-
-                if (oCnxBase.CBRecherche("SELECT GuidLayer, NomLayer FROM Layer WHERE GuidApplication='" + sGuidApplication + "'"))
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element)
                 {
-                    lstLayer = new ArrayList();
-                    while (oCnxBase.Reader.Read()) lstLayer.Add(oCnxBase.Reader.GetString(0) + "," + oCnxBase.Reader.GetString(1));
-                }
-                oCnxBase.CBReaderClose();
-
-                xmlDB.CursorClose();
-                oCnxBase.CreaXmlApplication(xmlDB, sGuidApplication, lstVue, lstLayer);
-
-                return xmlDB;
-                //xmlDB.docXml.Save(Parent.GetFullPath((string)cbGuidApplication.Items[cbApplication.SelectedIndex]) + "\\" + (string)cbApplication.Items[cbApplication.SelectedIndex] + "Serveur.xml");
-            }
-            xmlDB.CursorClose();
-        }
-
-        return null;
-    }*/
-
-    public delegate void XMLEXECACTIONELFROMATT(XmlElement parent, XmlElement el1, XmlElement el2);
-    public void XmlExecActionElFromAtt(XmlElement parent, string sAtt, string sValue, XmlElement el, XMLEXECACTIONELFROMATT fonc)
-    {
-        IEnumerator ienum = parent.GetEnumerator();
-        XmlNode Node;
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element)
-            {
-                XmlElement elCur = (XmlElement)Node;
-                XmlExecActionElFromAtt((XmlElement)Node, sAtt, sValue, el, fonc);
-                if (elCur.GetAttribute(sAtt) == sValue)
-                    fonc(parent, elCur, el);
-                //if (elCur.GetAttribute(sAtt) == el.GetAttribute(sAtt)) fonc(parent, elCur);
-                //MessageBox.Show(elCur.ToString());
-            }
-        }
-    }
-
-
-
-    public delegate void XMLEXECACTIONELFROMNAME(XmlElement parent, XmlElement el1, XmlElement el2);
-    public void XmlExecActionElFromName(XmlElement parent, string sValue, XmlElement el, XMLEXECACTIONELFROMNAME fonc)
-    {
-        IEnumerator ienum = parent.GetEnumerator();
-        XmlNode Node;
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element)
-            {
-                XmlElement elCur = (XmlElement)Node;
-                XmlExecActionElFromName((XmlElement)Node, sValue, el, fonc);
-                if (elCur.Name == sValue)
-                    fonc(parent, elCur, el);
-            }
-        }
-    }
-
-    public void XmlCreatElKeyNode(XmlDocument xmlDoc, XmlElement elParent, string sKey, string sNom)
-    {
-        XmlElement el = XmlCreatEl(xmlDoc, elParent, sKey);
-        XmlElement elAtts = XmlGetFirstElFromParent(el, "Attributs");
-        XmlSetAttFromEl(xmlDoc, elAtts, "KeyNode", "s", sKey);
-        XmlSetAttFromEl(xmlDoc, elAtts, "NomNode", "s", sNom);
-
-    }
-
-    public XmlElement XmlCreatEl(XmlDocument xmlDoc, XmlElement elParent, string sNom)
-    {
-        XmlElement el = xmlDoc.CreateElement(sNom);
-        XmlElement elAtts = xmlDoc.CreateElement("Attributs");
-        el.AppendChild(elAtts); elParent.AppendChild(el);
-        return el;
-    }
-
-    public string XmlGetAttValueAFromAttValueB(XmlElement parent, string sAttA, string sAttB, string sValue)
-    {
-        XmlElement el = XmlFindElFromAtt(parent, sAttB, sValue);
-        if (el != null)
-        {
-            return el.GetAttribute(sAttA);
-        }
-        return "";
-    }
-
-    public XmlElement XmlFindElFromAtt(XmlElement parent, string sAtt, string sValue)
-    {
-        IEnumerator ienum = parent.GetEnumerator();
-        XmlNode Node;
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element)
-            {
-                XmlElement elCur = (XmlElement)Node;
-                if (elCur.GetAttribute(sAtt) == sValue) return elCur;
-                elCur = XmlFindElFromAtt((XmlElement)Node, sAtt, sValue);
-                if (elCur != null) return elCur;
-            }
-        }
-        return null;
-    }
-
-    /*public XmlElement XmlFindElFromAttValue(XmlElement elCur, string sAtt, string sValue)
-    {
-        IEnumerator ienum = elCur.GetEnumerator();
-        XmlNode Node;
-
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element)
-            {
-                XmlElement el = (XmlElement)Node;
-                XmlAttributeCollection lstAtt = el.Attributes;
-                if (lstAtt[sAtt] != null && lstAtt[sAtt].Value == sValue) return el;
-            }
-        }
-        return null;
-    }*/
-
-    public XmlElement XmlGetFirstElFromParent(XmlElement Parent, string sLibNode)
-    {
-        IEnumerator ienum = Parent.GetEnumerator();
-        XmlNode Node;
-
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element)
-            {
-                if (Node.Name == sLibNode)
-                    return (XmlElement)Node;
-            }
-        }
-
-        return null;
-    }
-
-    public XmlElement XmlGetFirstElFromParent(XmlElement Parent, string sLibNode, string sPropertyNode, string sValue)
-    {
-        IEnumerator ienum = Parent.GetEnumerator();
-        XmlNode Node;
-
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element)
-            {
-                if (Node.Name == sLibNode && ((XmlElement)Node).GetAttribute(sPropertyNode) == sValue)
-                    return (XmlElement)Node;
-                XmlElement el = XmlGetFirstElFromParent((XmlElement)Node, sLibNode, sPropertyNode, sValue);
-                if (el != null) return el;
-            }
-        }
-
-        return null;
-    }
-
-    public string XmlGetProppertyValueFirstElFromParent(XmlElement Parent, string sLibNode, string sPropertyNode)
-    {
-        IEnumerator ienum = Parent.GetEnumerator();
-        XmlNode Node;
-
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element)
-            {
-                if (Node.Name == sLibNode)
-                    return ((XmlElement)Node).GetAttribute(sPropertyNode);
-            }
-        }
-
-        return "";
-    }
-
-    public void XmlSetAttFromEl(XmlDocument xmlDoc, XmlElement Parent, string sAtt, string sType, string sValue)
-    {
-        XmlElement el = xmlDoc.CreateElement("Attribut");
-        el.SetAttribute("Nom", sAtt);
-        el.SetAttribute("Type", sType);
-        el.SetAttribute("Value", sValue);
-        Parent.AppendChild(el);
-    }
-
-    public ArrayList GetNode(XmlNode NodeRoot, string SearchName)
-    {
-        IEnumerator ienum = NodeRoot.GetEnumerator();
-        XmlNode Node;
-        ArrayList aNode = new ArrayList();
-        while (ienum.MoveNext())
-        {
-            Node = (XmlNode)ienum.Current;
-            if (Node.NodeType == XmlNodeType.Element)
-                if (Node.Name == SearchName) aNode.Add(Node);
-        }
-
-        return aNode;
-    }
-
-    public void InitCadreRef1(TreeNodeCollection tn, string guidParent)
-    {
-        ArrayList guidCadreRef = new ArrayList();
-        ArrayList NomCadreRef = new ArrayList();
-        string sSelect = "";
-
-        //sSelect = "Select GuidCadreRef, NomCadreRef FROM CadreRef WHERE GuidParent='" + guidParent + "' AND (TypeCadreRef='" + switchTechFonc + "' OR TypeCadreRef IS NULL)";
-        sSelect = "Select GuidCadreRefFonc, NomCadreRefFonc FROM CadreRefFonc WHERE GuidParentFonc='" + guidParent + "'";
-
-        if (oCnxBase.CBRecherche(sSelect))
-        {
-            while (oCnxBase.Reader.Read())
-            {
-                guidCadreRef.Add((object)oCnxBase.Reader.GetString(0));
-                NomCadreRef.Add((object)oCnxBase.Reader.GetString(1));
-            }
-        }
-        oCnxBase.CBReaderClose();
-        for (int i = 0; i < guidCadreRef.Count; i++)
-        {
-            tn.Add((string)guidCadreRef[i], (string)NomCadreRef[i]);
-            sSelect = "Select GuidApplication, NomApplication FROM Application WHERE GuidCadreRef='" + (string)guidCadreRef[i] + "'";
-            oCnxBase.CBRecherche(sSelect);
-            while (oCnxBase.Reader.Read())
-            {
-                tn[tn.Count - 1].Nodes.Add(oCnxBase.Reader.GetString(0) + "," + (int)DrawArea.DrawToolType.Application, oCnxBase.Reader.GetString(1));
-                Font fontpro = new Font("arial", 8);
-                tn[tn.Count - 1].Nodes[tn[tn.Count - 1].Nodes.Count - 1].NodeFont = new Font(fontpro, FontStyle.Bold);
-                tn[tn.Count - 1].Nodes[tn[tn.Count - 1].Nodes.Count - 1].ForeColor = Color.Blue;
-            }
-            oCnxBase.CBReaderClose();
-            InitCadreRef1(tn[tn.Count - 1].Nodes, (string)guidCadreRef[i]);
-        }
-    }
-
-    private void NomApplication_Click(object sender, EventArgs e)
-    {
-        if (NomApplication.Text == "Appli")
-        {
-            NomApplication.Text = "Trig";
-            InitCbApplication();
-        }
-        else
-        {
-            NomApplication.Text = "Appli";
-            InitCbApplication();
-        }
-    }
-
-    private void bOpVue_Click(object sender, EventArgs e)
-    {
-        if (bOpVue.Text == "Creat Vue")
-        {
-            FormPropVue fpv = new FormPropVue(this, null, wkApp, cbOpVue.SelectedIndex);
-            fpv.ShowDialog(this);
-        }
-        else if (bOpVue.Text == "Del Vue")
-        {
-            string msg = "Voulez-vous supprimer la vue : " + cbVue.Items[cbVue.SelectedIndex].ToString() + " (" + cbGuidVue.Items[cbVue.SelectedIndex].ToString() + ")\n";
-            msg += "Voulez-vous continuer?";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result;
-
-            result = MessageBox.Show(msg, "suppression", buttons);
-
-            if (result == System.Windows.Forms.DialogResult.Yes)
-            {
-                oCnxBase.CBWrite("DELETE FROM Vue Where GuidVue = '" + cbGuidVue.Items[cbVue.SelectedIndex].ToString() + "'");
-                InitCbApplication();
-            }
-        }
-        else
-        {
-            FormPropVue fpv = new FormPropVue(this, cbGuidVue.Items[cbVue.SelectedIndex].ToString(), wkApp, cbOpVue.SelectedIndex);
-            fpv.ShowDialog(this);
-        }
-    }
-
-    private void bOpApp_Click(object sender, EventArgs e)
-    {
-        if (bOpApp.Text == "Creat App")
-        {
-            FormPropApp fpa = new FormPropApp(this, null);
-            fpa.ShowDialog(this);
-        }
-        else
-        {
-            if (cbApplication.SelectedIndex != -1)
-            {
-                FormPropApp fpa = new FormPropApp(this, (string)cbGuidApplication.Items[cbApplication.SelectedIndex], cbOpApp.SelectedIndex);
-                fpa.ShowDialog(this);
-            }
-        }
-    }
-
-    private void bLayer_Click(object sender, EventArgs e)
-    {
-        if (wkApp != null) wkApp.SetLayers();
-    }
-
-    private ArrayList GetLstEffectifServerByCadre(string sGuidNode, ArrayList lstCriteres)
-    {
-        ArrayList LstEffectif = new ArrayList();
-        if (oCnxBase.CBRecherche("Select Distinct ServerPhy.GuidServerPhy, NomServerPhy From Vue, DansVue, ServerPhy, GServerPhy, Application Where DansVue.GuidGVue=Vue.GuidGVue and GuidObjet=GuidGServerPhy and GServerPhy.GuidServerPhy=ServerPhy.GuidServerPhy and  Vue.GuidAppVersion=Application.GuidAppVersion and Application.GuidCadreRef = '" + sGuidNode + "'"))
-        {
-            while (oCnxBase.Reader.Read())
-            {
-                LstEffectif.Add(new Effectif(this, oCnxBase.Reader.GetString(0), oCnxBase.Reader.GetString(1), lstCriteres, 0));
-            }
-        }
-        oCnxBase.CBReaderClose();
-
-        return LstEffectif;
-    }
-    private ArrayList GetLstEffectifAppByCadre(string sGuidNode, ArrayList lstCriteres)
-    {
-        ArrayList LstEffectif = new ArrayList();
-
-        if (oCnxBase.CBRecherche("Select GuidApplication, NomApplication FROM Application WHERE GuidCadreRef = '" + sGuidNode + "'"))
-        {
-            while (oCnxBase.Reader.Read())
-            {
-                LstEffectif.Add(new Effectif(this, oCnxBase.Reader.GetString(0), oCnxBase.Reader.GetString(1), lstCriteres, 0));
-            }
-        }
-        oCnxBase.CBReaderClose();
-
-        return LstEffectif;
-    }
-
-    private ArrayList GetLstEffectifTechnoByProduct(string sGuidNode, ArrayList lstCriteres)
-    {
-        //double dDay = DateTime.Now.ToOADate();
-        ArrayList LstEffectif = new ArrayList();
-
-        if (oCnxBase.CBRecherche("Select GuidTechnoRef, NomTechnoRef FROM Produit, TechnoRef WHERE TechnoRef.GuidProduit = Produit.GuidProduit and GuidCadreRef='" + sGuidNode + "'"))
-        //if (oCnxBase.CBRecherche("Select GuidTechnoRef, NomTechnoRef FROM Produit, TechnoRef, IndicatorLink WHERE TechnoRef.GuidProduit = Produit.GuidProduit and TechnoRef.GuidTechnoRef = IndicatorLink.GuidObjet and IndicatorLink.GuidIndicator='b00b12bd-a447-47e6-92f6-e3b76ad22830' and ValIndicator <= '" + dDay + "' and GuidCadreRef='" + sGuidNode + "'"))
-        {
-            while (oCnxBase.Reader.Read())
-            {
-                LstEffectif.Add(new Effectif(this, oCnxBase.Reader.GetString(0), oCnxBase.Reader.GetString(1), lstCriteres, 0));
-            }
-        }
-        oCnxBase.CBReaderClose();
-
-        return LstEffectif;
-    }
-
-    private ArrayList GetLstEffectif(TreeNode tNode, Form1.rbTypeRecherche rbTypeRech, ArrayList lstCriteres)
-    {
-        ArrayList LstEffectif = new ArrayList();
-
-        for (int i = 0; i < tNode.Nodes.Count; i++)
-        {
-            ArrayList LstEffectifChild = new ArrayList();
-            LstEffectifChild = GetLstEffectif(tNode.Nodes[i], rbTypeRech, lstCriteres);
-            for (int j = 0; j < LstEffectifChild.Count; j++) LstEffectif.Add(LstEffectifChild[j]);
-        }
-        if (tNode.Nodes.Count == 0) LstEffectif.Add(new Effectif(this, tNode.Name, tNode.Text, lstCriteres, 0));
-        return LstEffectif;
-    }
-
-    private ArrayList GetLstEffectif(string sGuidNode, Form1.rbTypeRecherche rbTypeRech, ArrayList lstCriteres)
-    {
-        ArrayList LstEffectif = new ArrayList();
-        ArrayList LstCadreRef = new ArrayList();
-        string sSelect = null;
-
-        {
-            ArrayList lstEffectifTemp = null;
-            if ((rbTypeRech & Form1.rbTypeRecherche.Application) != 0)
-            {
-                sSelect = "Select GuidCadreRefFonc FROM CadreRefFonc WHERE GuidParentFonc='" + sGuidNode + "'";
-                lstEffectifTemp = GetLstEffectifAppByCadre(sGuidNode, lstCriteres);
-            }
-            /* else if ((rbTypeRech & Form1.rbTypeRecherche.Server) != 0)
-            {
-                sSelect = "Select GuidCadreRefFonc FROM CadreRefFonc WHERE GuidParentFonc='" + sGuidNode + "'";
-                lstEffectifTemp = GetLstEffectifServerByCadre(sGuidNode, lstCriteres);
-            }*/
-            else if ((rbTypeRech & Form1.rbTypeRecherche.Techno) != 0)
-            {
-                sSelect = "Select GuidCadreRef FROM CadreRef WHERE GuidParent='" + sGuidNode + "'"; //software et hard  AND (TypeCadreRef='" + switchTechFonc + "' OR TypeCadreRef IS NULL)";
-                                                                                                    //"Select GuidCadreRefApp, NomCadreRefApp FROM CadreRefApp WHERE GuidParentApp='" + guidParent + "'";
-                                                                                                    //"Select GuidCadreRefFonc, NomCadreRefFonc FROM CadreRefFonc WHERE GuidParentFonc='" + guidParent + "'";
-                lstEffectifTemp = GetLstEffectifTechnoByProduct(sGuidNode, lstCriteres);
-            }
-            for (int j = 0; j < lstEffectifTemp.Count; j++) LstEffectif.Add(lstEffectifTemp[j]);
-        }
-
-        if (oCnxBase.CBRecherche(sSelect))
-        {
-            while (oCnxBase.Reader.Read())
-                LstCadreRef.Add((object)oCnxBase.Reader.GetString(0));
-        }
-        oCnxBase.CBReaderClose();
-        for (int i = 0; i < LstCadreRef.Count; i++)
-        {
-            ArrayList lstEffectifTemp = GetLstEffectif((string)LstCadreRef[i], rbTypeRech, lstCriteres);
-            for (int j = 0; j < lstEffectifTemp.Count; j++) LstEffectif.Add(lstEffectifTemp[j]);
-        }
-
-        return LstEffectif;
-    }
-
-    public void CreatLstNiveau(FormProgress fp, Tool[] aTool, ArrayList lstEffectifs, ArrayList lstCriteres, bool bOption)
-    {
-        oCnxBase.SWwriteLog(2, "Les calculs des " + lstEffectifs.Count + " Effectifs", true);
-
-
-        fp.initbar(lstEffectifs.Count);
-        for (int i = 0; i < lstEffectifs.Count; i++)
-        {
-            Effectif oEffectif = (Effectif)lstEffectifs[i];
-            oCnxBase.SWwriteLog(4, "calcul de l'éffectif  " + oEffectif.NomEffectif, true);
-            fp.stepbar(oEffectif.NomEffectif, 0);
-            for (int k = 0; k < aTool.Length; k++)
-            {
-                if (aTool[k] != null) ((Tool)aTool[k]).EvalCriteres(oEffectif, bOption);
-            }
-            for (int j = 0; j < lstCriteres.Count; j++)
-            {
-                Critere oCritere = (Critere)lstCriteres[j];
-                Niveau oNiv = (Niveau)oEffectif.lstNivEffectif[j];
-                if (oNiv != null)
-                {
-                    if (i == 0)
-                    {
-                        oCritere.dMax = oNiv.Val;
-                        oCritere.dMin = oNiv.Val;
-                    }
-                    else
-                    {
-                        if (oCritere.dMax < oNiv.Val) oCritere.dMax = oNiv.Val;
-                        if (oCritere.dMin > oNiv.Val) oCritere.dMin = oNiv.Val;
-                    }
-                }
-            }
-
-            /*
-                            if ((rn & RetourNiveau.Absisse) != 0 && (rn & RetourNiveau.Ordonnee) != 0)
-                            {
-                                DrawPtNiveau dpn;
-                                dpn = (DrawPtNiveau)LstPtNiveau[i];
-
-                                Owner.Owner.oCnxBase.SWwriteLog(6, "le point Niveau : " + ((DrawPtNiveau)LstPtNiveau[i]).Texte + " possede une abscisse : " + dpn.NivAbs[0].Val + " et une ordonnée : " + dpn.NivOrd[0].Val, true);
-
-                                if (dpn.NivAbs[1] != null)
-                                {
-                                    dpn.SetValueFromName("NivAbs", dpn.NivAbs[0].CalculWithRef(dpn.NivAbs[1].Val));
-                                    dpn.SetValueFromName("IconStatusX", dpn.NivAbs[0].IconStatus(dpn.NivAbs[1].Val));
-                                }
-                                else dpn.SetValueFromName("NivAbs", dpn.NivAbs[0].Val);
-                                if (dpn.NivOrd[1] != null)
-                                {
-                                    dpn.SetValueFromName("NivOrd", dpn.NivOrd[0].CalculWithRef(dpn.NivOrd[1].Val));
-                                    dpn.SetValueFromName("IconStatusY", dpn.NivOrd[0].IconStatus(dpn.NivOrd[1].Val));
-                                }
-                                else dpn.SetValueFromName("NivOrd", dpn.NivOrd[0].Val);
-                                lstPtNiveauOK.Add(LstPtNiveau[i]);
-                            }*/
-        }
-        oCnxBase.SWwriteLog(2, "", true);
-    }
-
-    public void CalcAgregaEffectif(ArrayList lstEffectif, ArrayList lstCriteres)
-    {
-        for (int i = 0; i < lstEffectif.Count; i++)
-        {
-            Effectif oEff = (Effectif)lstEffectif[i];
-            oEff.Val = 0;
-            for (int j = 0; j < lstCriteres.Count; j++)
-            {
-                Critere oCri = (Critere)lstCriteres[j];
-                if (oCri.Calc)
-                {
-                    Niveau oNiv = (Niveau)oEff.lstNivEffectif[j];
-                    double dRef = 0;
-                    if (oNiv.GetAlertMin() == "ValMin") dRef = oCri.dMin; else dRef = oCri.dMax;
-                    oEff.Val += Math.Pow((dRef - oNiv.Val), 2);
+                    XmlElement elCur = (XmlElement)Node;
+                    XmlExecActionElFromAtt((XmlElement)Node, sAtt, sValue, el, fonc);
+                    if (elCur.GetAttribute(sAtt) == sValue)
+                        fonc(parent, elCur, el);
+                    //if (elCur.GetAttribute(sAtt) == el.GetAttribute(sAtt)) fonc(parent, elCur);
+                    //MessageBox.Show(elCur.ToString());
                 }
             }
         }
-        IComparer Comp = new SortEffectif();
-        lstEffectif.Sort(Comp);
-    }
 
-    public ArrayList GetApplications(ArrayList lstGuids, ArrayList lstCriteres)
-    {
-        ArrayList lstEffectifsApp = new ArrayList();
-        for (int i = 0; i < lstGuids.Count; i++)
+
+
+        public delegate void XMLEXECACTIONELFROMNAME(XmlElement parent, XmlElement el1, XmlElement el2);
+        public void XmlExecActionElFromName(XmlElement parent, string sValue, XmlElement el, XMLEXECACTIONELFROMNAME fonc)
         {
-            if (oCnxBase.CBRecherche("SELECT DISTINCT Application.GuidApplication, NomApplication FROM Application, Vue, DansVue, GServer, Server, ServerTypeLink, ServerType, Techno WHERE Application.GuidAppVersion=Vue.GuidAppVersion AND Vue.GuidGVue=DansVue.GuidGVue AND DansVue.GuidObjet=GServer.GuidGServer AND GServer.GuidServer=Server.GuidServer AND Server.GuidServer=ServerTypeLink.GuidServer AND ServerTypeLink.GuidServerType=ServerType.GuidServerType AND ServerType.GuidServerType=Techno.GuidTechnoHost AND Techno.GuidTechnoRef='" + (string)lstGuids[i] + "'"))
+            IEnumerator ienum = parent.GetEnumerator();
+            XmlNode Node;
+            while (ienum.MoveNext())
+            {
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element)
+                {
+                    XmlElement elCur = (XmlElement)Node;
+                    XmlExecActionElFromName((XmlElement)Node, sValue, el, fonc);
+                    if (elCur.Name == sValue)
+                        fonc(parent, elCur, el);
+                }
+            }
+        }
+
+        public void XmlCreatElKeyNode(XmlDocument xmlDoc, XmlElement elParent, string sKey, string sNom)
+        {
+            XmlElement el = XmlCreatEl(xmlDoc, elParent, sKey);
+            XmlElement elAtts = XmlGetFirstElFromParent(el, "Attributs");
+            XmlSetAttFromEl(xmlDoc, elAtts, "KeyNode", "s", sKey);
+            XmlSetAttFromEl(xmlDoc, elAtts, "NomNode", "s", sNom);
+
+        }
+
+        public XmlElement XmlCreatEl(XmlDocument xmlDoc, XmlElement elParent, string sNom)
+        {
+            XmlElement el = xmlDoc.CreateElement(sNom);
+            XmlElement elAtts = xmlDoc.CreateElement("Attributs");
+            el.AppendChild(elAtts); elParent.AppendChild(el);
+            return el;
+        }
+
+        public string XmlGetAttValueAFromAttValueB(XmlElement parent, string sAttA, string sAttB, string sValue)
+        {
+            XmlElement el = XmlFindElFromAtt(parent, sAttB, sValue);
+            if (el != null)
+            {
+                return el.GetAttribute(sAttA);
+            }
+            return "";
+        }
+
+        public XmlElement XmlFindElFromAtt(XmlElement parent, string sAtt, string sValue)
+        {
+            IEnumerator ienum = parent.GetEnumerator();
+            XmlNode Node;
+            while (ienum.MoveNext())
+            {
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element)
+                {
+                    XmlElement elCur = (XmlElement)Node;
+                    if (elCur.GetAttribute(sAtt) == sValue) return elCur;
+                    elCur = XmlFindElFromAtt((XmlElement)Node, sAtt, sValue);
+                    if (elCur != null) return elCur;
+                }
+            }
+            return null;
+        }
+
+        /*public XmlElement XmlFindElFromAttValue(XmlElement elCur, string sAtt, string sValue)
+        {
+            IEnumerator ienum = elCur.GetEnumerator();
+            XmlNode Node;
+
+            while (ienum.MoveNext())
+            {
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element)
+                {
+                    XmlElement el = (XmlElement)Node;
+                    XmlAttributeCollection lstAtt = el.Attributes;
+                    if (lstAtt[sAtt] != null && lstAtt[sAtt].Value == sValue) return el;
+                }
+            }
+            return null;
+        }*/
+
+        public XmlElement XmlGetFirstElFromParent(XmlElement Parent, string sLibNode)
+        {
+            IEnumerator ienum = Parent.GetEnumerator();
+            XmlNode Node;
+
+            while (ienum.MoveNext())
+            {
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element)
+                {
+                    if (Node.Name == sLibNode)
+                        return (XmlElement)Node;
+                }
+            }
+
+            return null;
+        }
+
+        public XmlElement XmlGetFirstElFromParent(XmlElement Parent, string sLibNode, string sPropertyNode, string sValue)
+        {
+            IEnumerator ienum = Parent.GetEnumerator();
+            XmlNode Node;
+
+            while (ienum.MoveNext())
+            {
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element)
+                {
+                    if (Node.Name == sLibNode && ((XmlElement)Node).GetAttribute(sPropertyNode) == sValue)
+                        return (XmlElement)Node;
+                    XmlElement el = XmlGetFirstElFromParent((XmlElement)Node, sLibNode, sPropertyNode, sValue);
+                    if (el != null) return el;
+                }
+            }
+
+            return null;
+        }
+
+        public string XmlGetProppertyValueFirstElFromParent(XmlElement Parent, string sLibNode, string sPropertyNode)
+        {
+            IEnumerator ienum = Parent.GetEnumerator();
+            XmlNode Node;
+
+            while (ienum.MoveNext())
+            {
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element)
+                {
+                    if (Node.Name == sLibNode)
+                        return ((XmlElement)Node).GetAttribute(sPropertyNode);
+                }
+            }
+
+            return "";
+        }
+
+        public void XmlSetAttFromEl(XmlDocument xmlDoc, XmlElement Parent, string sAtt, string sType, string sValue)
+        {
+            XmlElement el = xmlDoc.CreateElement("Attribut");
+            el.SetAttribute("Nom", sAtt);
+            el.SetAttribute("Type", sType);
+            el.SetAttribute("Value", sValue);
+            Parent.AppendChild(el);
+        }
+
+        public ArrayList GetNode(XmlNode NodeRoot, string SearchName)
+        {
+            IEnumerator ienum = NodeRoot.GetEnumerator();
+            XmlNode Node;
+            ArrayList aNode = new ArrayList();
+            while (ienum.MoveNext())
+            {
+                Node = (XmlNode)ienum.Current;
+                if (Node.NodeType == XmlNodeType.Element)
+                    if (Node.Name == SearchName) aNode.Add(Node);
+            }
+
+            return aNode;
+        }
+
+        public void InitCadreRef1(TreeNodeCollection tn, string guidParent)
+        {
+            ArrayList guidCadreRef = new ArrayList();
+            ArrayList NomCadreRef = new ArrayList();
+            string sSelect = "";
+
+            //sSelect = "Select GuidCadreRef, NomCadreRef FROM CadreRef WHERE GuidParent='" + guidParent + "' AND (TypeCadreRef='" + switchTechFonc + "' OR TypeCadreRef IS NULL)";
+            sSelect = "Select GuidCadreRefFonc, NomCadreRefFonc FROM CadreRefFonc WHERE GuidParentFonc='" + guidParent + "'";
+
+            if (oCnxBase.CBRecherche(sSelect))
             {
                 while (oCnxBase.Reader.Read())
                 {
-                    Effectif oEffApp = new Effectif(this, oCnxBase.Reader.GetString(0), oCnxBase.Reader.GetString(1), lstCriteres, 0);
-                    if (oEffApp.FindEffectifFromLST(lstEffectifsApp) == -1) lstEffectifsApp.Add(oEffApp);
+                    guidCadreRef.Add((object)oCnxBase.Reader.GetString(0));
+                    NomCadreRef.Add((object)oCnxBase.Reader.GetString(1));
                 }
             }
             oCnxBase.CBReaderClose();
-        }
-        return lstEffectifsApp;
-    }
-
-    public void report(ArrayList lstEffectif, ArrayList lstCriteres, Form1.rbTypeRecherche rbTypeRech)
-    {
-        FormProgress fp = new FormProgress(this, false);
-        fp.Show(this);
-        oCnxBase.SWopen(@"C:\_logfiles\test.txt");
-        oCnxBase.SWwriteLog(0, "debut calcul Niveau", true);
-        for (int i = 0; i < lstCriteres.Count; i++)
-        {
-            Critere oCritere = (Critere)lstCriteres[i];
-            oCnxBase.SWwriteLog(0, "Critere " + i + " : " + oCritere.NomCritere, false);
-        }
-        oCnxBase.SWwriteLog(0, "", true);
-
-        if (lstEffectif != null && lstEffectif.Count >= 1)
-        {
-
-            if ((rbTypeRech & Form1.rbTypeRecherche.Application) != 0)
+            for (int i = 0; i < guidCadreRef.Count; i++)
             {
-                if (lstEffectif.Count == 0)
+                tn.Add((string)guidCadreRef[i], (string)NomCadreRef[i]);
+                sSelect = "Select GuidApplication, NomApplication FROM Application WHERE GuidCadreRef='" + (string)guidCadreRef[i] + "'";
+                oCnxBase.CBRecherche(sSelect);
+                while (oCnxBase.Reader.Read())
                 {
-                    //CreatLstNiveauApp(drawArea.tools, lstPtNiveauOK);
+                    tn[tn.Count - 1].Nodes.Add(oCnxBase.Reader.GetString(0) + "," + (int)DrawArea.DrawToolType.Application, oCnxBase.Reader.GetString(1));
+                    Font fontpro = new Font("arial", 8);
+                    tn[tn.Count - 1].Nodes[tn[tn.Count - 1].Nodes.Count - 1].NodeFont = new Font(fontpro, FontStyle.Bold);
+                    tn[tn.Count - 1].Nodes[tn[tn.Count - 1].Nodes.Count - 1].ForeColor = Color.Blue;
                 }
-                else
+                oCnxBase.CBReaderClose();
+                InitCadreRef1(tn[tn.Count - 1].Nodes, (string)guidCadreRef[i]);
+            }
+        }
+
+        private void NomApplication_Click(object sender, EventArgs e)
+        {
+            if (NomApplication.Text == "Appli")
+            {
+                NomApplication.Text = "Trig";
+                InitCbApplication();
+            }
+            else
+            {
+                NomApplication.Text = "Appli";
+                InitCbApplication();
+            }
+        }
+
+        private void bOpVue_Click(object sender, EventArgs e)
+        {
+            if (bOpVue.Text == "Creat Vue")
+            {
+                FormPropVue fpv = new FormPropVue(this, null, wkApp, cbOpVue.SelectedIndex);
+                fpv.ShowDialog(this);
+            }
+            else if (bOpVue.Text == "Del Vue")
+            {
+                string msg = "Voulez-vous supprimer la vue : " + cbVue.Items[cbVue.SelectedIndex].ToString() + " (" + cbGuidVue.Items[cbVue.SelectedIndex].ToString() + ")\n";
+                msg += "Voulez-vous continuer?";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                result = MessageBox.Show(msg, "suppression", buttons);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    oCnxBase.CBWrite("DELETE FROM Vue Where GuidVue = '" + cbGuidVue.Items[cbVue.SelectedIndex].ToString() + "'");
+                    InitCbApplication();
+                }
+            }
+            else
+            {
+                FormPropVue fpv = new FormPropVue(this, cbGuidVue.Items[cbVue.SelectedIndex].ToString(), wkApp, cbOpVue.SelectedIndex);
+                fpv.ShowDialog(this);
+            }
+        }
+
+        private void bOpApp_Click(object sender, EventArgs e)
+        {
+            if (bOpApp.Text == "Creat App")
+            {
+                FormPropApp fpa = new FormPropApp(this, null);
+                fpa.ShowDialog(this);
+            }
+            else
+            {
+                if (cbApplication.SelectedIndex != -1)
+                {
+                    FormPropApp fpa = new FormPropApp(this, (string)cbGuidApplication.Items[cbApplication.SelectedIndex], cbOpApp.SelectedIndex);
+                    fpa.ShowDialog(this);
+                }
+            }
+        }
+
+        private void bLayer_Click(object sender, EventArgs e)
+        {
+            if (wkApp != null) wkApp.SetLayers();
+        }
+
+        private ArrayList GetLstEffectifServerByCadre(string sGuidNode, ArrayList lstCriteres)
+        {
+            ArrayList LstEffectif = new ArrayList();
+            if (oCnxBase.CBRecherche("Select Distinct ServerPhy.GuidServerPhy, NomServerPhy From Vue, DansVue, ServerPhy, GServerPhy, Application Where DansVue.GuidGVue=Vue.GuidGVue and GuidObjet=GuidGServerPhy and GServerPhy.GuidServerPhy=ServerPhy.GuidServerPhy and  Vue.GuidAppVersion=Application.GuidAppVersion and Application.GuidCadreRef = '" + sGuidNode + "'"))
+            {
+                while (oCnxBase.Reader.Read())
+                {
+                    LstEffectif.Add(new Effectif(this, oCnxBase.Reader.GetString(0), oCnxBase.Reader.GetString(1), lstCriteres, 0));
+                }
+            }
+            oCnxBase.CBReaderClose();
+
+            return LstEffectif;
+        }
+        private ArrayList GetLstEffectifAppByCadre(string sGuidNode, ArrayList lstCriteres)
+        {
+            ArrayList LstEffectif = new ArrayList();
+
+            if (oCnxBase.CBRecherche("Select GuidApplication, NomApplication FROM Application WHERE GuidCadreRef = '" + sGuidNode + "'"))
+            {
+                while (oCnxBase.Reader.Read())
+                {
+                    LstEffectif.Add(new Effectif(this, oCnxBase.Reader.GetString(0), oCnxBase.Reader.GetString(1), lstCriteres, 0));
+                }
+            }
+            oCnxBase.CBReaderClose();
+
+            return LstEffectif;
+        }
+
+        private ArrayList GetLstEffectifTechnoByProduct(string sGuidNode, ArrayList lstCriteres)
+        {
+            //double dDay = DateTime.Now.ToOADate();
+            ArrayList LstEffectif = new ArrayList();
+
+            if (oCnxBase.CBRecherche("Select GuidTechnoRef, NomTechnoRef FROM Produit, TechnoRef WHERE TechnoRef.GuidProduit = Produit.GuidProduit and GuidCadreRef='" + sGuidNode + "'"))
+            //if (oCnxBase.CBRecherche("Select GuidTechnoRef, NomTechnoRef FROM Produit, TechnoRef, IndicatorLink WHERE TechnoRef.GuidProduit = Produit.GuidProduit and TechnoRef.GuidTechnoRef = IndicatorLink.GuidObjet and IndicatorLink.GuidIndicator='b00b12bd-a447-47e6-92f6-e3b76ad22830' and ValIndicator <= '" + dDay + "' and GuidCadreRef='" + sGuidNode + "'"))
+            {
+                while (oCnxBase.Reader.Read())
+                {
+                    LstEffectif.Add(new Effectif(this, oCnxBase.Reader.GetString(0), oCnxBase.Reader.GetString(1), lstCriteres, 0));
+                }
+            }
+            oCnxBase.CBReaderClose();
+
+            return LstEffectif;
+        }
+
+        private ArrayList GetLstEffectif(TreeNode tNode, Form1.rbTypeRecherche rbTypeRech, ArrayList lstCriteres)
+        {
+            ArrayList LstEffectif = new ArrayList();
+
+            for (int i = 0; i < tNode.Nodes.Count; i++)
+            {
+                ArrayList LstEffectifChild = new ArrayList();
+                LstEffectifChild = GetLstEffectif(tNode.Nodes[i], rbTypeRech, lstCriteres);
+                for (int j = 0; j < LstEffectifChild.Count; j++) LstEffectif.Add(LstEffectifChild[j]);
+            }
+            if (tNode.Nodes.Count == 0) LstEffectif.Add(new Effectif(this, tNode.Name, tNode.Text, lstCriteres, 0));
+            return LstEffectif;
+        }
+
+        private ArrayList GetLstEffectif(string sGuidNode, Form1.rbTypeRecherche rbTypeRech, ArrayList lstCriteres)
+        {
+            ArrayList LstEffectif = new ArrayList();
+            ArrayList LstCadreRef = new ArrayList();
+            string sSelect = null;
+
+            {
+                ArrayList lstEffectifTemp = null;
+                if ((rbTypeRech & Form1.rbTypeRecherche.Application) != 0)
+                {
+                    sSelect = "Select GuidCadreRefFonc FROM CadreRefFonc WHERE GuidParentFonc='" + sGuidNode + "'";
+                    lstEffectifTemp = GetLstEffectifAppByCadre(sGuidNode, lstCriteres);
+                }
+                /* else if ((rbTypeRech & Form1.rbTypeRecherche.Server) != 0)
+                {
+                    sSelect = "Select GuidCadreRefFonc FROM CadreRefFonc WHERE GuidParentFonc='" + sGuidNode + "'";
+                    lstEffectifTemp = GetLstEffectifServerByCadre(sGuidNode, lstCriteres);
+                }*/
+                else if ((rbTypeRech & Form1.rbTypeRecherche.Techno) != 0)
+                {
+                    sSelect = "Select GuidCadreRef FROM CadreRef WHERE GuidParent='" + sGuidNode + "'"; //software et hard  AND (TypeCadreRef='" + switchTechFonc + "' OR TypeCadreRef IS NULL)";
+                                                                                                        //"Select GuidCadreRefApp, NomCadreRefApp FROM CadreRefApp WHERE GuidParentApp='" + guidParent + "'";
+                                                                                                        //"Select GuidCadreRefFonc, NomCadreRefFonc FROM CadreRefFonc WHERE GuidParentFonc='" + guidParent + "'";
+                    lstEffectifTemp = GetLstEffectifTechnoByProduct(sGuidNode, lstCriteres);
+                }
+                for (int j = 0; j < lstEffectifTemp.Count; j++) LstEffectif.Add(lstEffectifTemp[j]);
+            }
+
+            if (oCnxBase.CBRecherche(sSelect))
+            {
+                while (oCnxBase.Reader.Read())
+                    LstCadreRef.Add((object)oCnxBase.Reader.GetString(0));
+            }
+            oCnxBase.CBReaderClose();
+            for (int i = 0; i < LstCadreRef.Count; i++)
+            {
+                ArrayList lstEffectifTemp = GetLstEffectif((string)LstCadreRef[i], rbTypeRech, lstCriteres);
+                for (int j = 0; j < lstEffectifTemp.Count; j++) LstEffectif.Add(lstEffectifTemp[j]);
+            }
+
+            return LstEffectif;
+        }
+
+        public void CreatLstNiveau(FormProgress fp, Tool[] aTool, ArrayList lstEffectifs, ArrayList lstCriteres, bool bOption)
+        {
+            oCnxBase.SWwriteLog(2, "Les calculs des " + lstEffectifs.Count + " Effectifs", true);
+
+
+            fp.initbar(lstEffectifs.Count);
+            for (int i = 0; i < lstEffectifs.Count; i++)
+            {
+                Effectif oEffectif = (Effectif)lstEffectifs[i];
+                oCnxBase.SWwriteLog(4, "calcul de l'éffectif  " + oEffectif.NomEffectif, true);
+                fp.stepbar(oEffectif.NomEffectif, 0);
+                for (int k = 0; k < aTool.Length; k++)
+                {
+                    if (aTool[k] != null) ((Tool)aTool[k]).EvalCriteres(oEffectif, bOption);
+                }
+                for (int j = 0; j < lstCriteres.Count; j++)
+                {
+                    Critere oCritere = (Critere)lstCriteres[j];
+                    Niveau oNiv = (Niveau)oEffectif.lstNivEffectif[j];
+                    if (oNiv != null)
+                    {
+                        if (i == 0)
+                        {
+                            oCritere.dMax = oNiv.Val;
+                            oCritere.dMin = oNiv.Val;
+                        }
+                        else
+                        {
+                            if (oCritere.dMax < oNiv.Val) oCritere.dMax = oNiv.Val;
+                            if (oCritere.dMin > oNiv.Val) oCritere.dMin = oNiv.Val;
+                        }
+                    }
+                }
+
+                /*
+                                if ((rn & RetourNiveau.Absisse) != 0 && (rn & RetourNiveau.Ordonnee) != 0)
+                                {
+                                    DrawPtNiveau dpn;
+                                    dpn = (DrawPtNiveau)LstPtNiveau[i];
+
+                                    Owner.Owner.oCnxBase.SWwriteLog(6, "le point Niveau : " + ((DrawPtNiveau)LstPtNiveau[i]).Texte + " possede une abscisse : " + dpn.NivAbs[0].Val + " et une ordonnée : " + dpn.NivOrd[0].Val, true);
+
+                                    if (dpn.NivAbs[1] != null)
+                                    {
+                                        dpn.SetValueFromName("NivAbs", dpn.NivAbs[0].CalculWithRef(dpn.NivAbs[1].Val));
+                                        dpn.SetValueFromName("IconStatusX", dpn.NivAbs[0].IconStatus(dpn.NivAbs[1].Val));
+                                    }
+                                    else dpn.SetValueFromName("NivAbs", dpn.NivAbs[0].Val);
+                                    if (dpn.NivOrd[1] != null)
+                                    {
+                                        dpn.SetValueFromName("NivOrd", dpn.NivOrd[0].CalculWithRef(dpn.NivOrd[1].Val));
+                                        dpn.SetValueFromName("IconStatusY", dpn.NivOrd[0].IconStatus(dpn.NivOrd[1].Val));
+                                    }
+                                    else dpn.SetValueFromName("NivOrd", dpn.NivOrd[0].Val);
+                                    lstPtNiveauOK.Add(LstPtNiveau[i]);
+                                }*/
+            }
+            oCnxBase.SWwriteLog(2, "", true);
+        }
+
+        public void CalcAgregaEffectif(ArrayList lstEffectif, ArrayList lstCriteres)
+        {
+            for (int i = 0; i < lstEffectif.Count; i++)
+            {
+                Effectif oEff = (Effectif)lstEffectif[i];
+                oEff.Val = 0;
+                for (int j = 0; j < lstCriteres.Count; j++)
+                {
+                    Critere oCri = (Critere)lstCriteres[j];
+                    if (oCri.Calc)
+                    {
+                        Niveau oNiv = (Niveau)oEff.lstNivEffectif[j];
+                        double dRef = 0;
+                        if (oNiv.GetAlertMin() == "ValMin") dRef = oCri.dMin; else dRef = oCri.dMax;
+                        oEff.Val += Math.Pow((dRef - oNiv.Val), 2);
+                    }
+                }
+            }
+            IComparer Comp = new SortEffectif();
+            lstEffectif.Sort(Comp);
+        }
+
+        public ArrayList GetApplications(ArrayList lstGuids, ArrayList lstCriteres)
+        {
+            ArrayList lstEffectifsApp = new ArrayList();
+            for (int i = 0; i < lstGuids.Count; i++)
+            {
+                if (oCnxBase.CBRecherche("SELECT DISTINCT Application.GuidApplication, NomApplication FROM Application, Vue, DansVue, GServer, Server, ServerTypeLink, ServerType, Techno WHERE Application.GuidAppVersion=Vue.GuidAppVersion AND Vue.GuidGVue=DansVue.GuidGVue AND DansVue.GuidObjet=GServer.GuidGServer AND GServer.GuidServer=Server.GuidServer AND Server.GuidServer=ServerTypeLink.GuidServer AND ServerTypeLink.GuidServerType=ServerType.GuidServerType AND ServerType.GuidServerType=Techno.GuidTechnoHost AND Techno.GuidTechnoRef='" + (string)lstGuids[i] + "'"))
+                {
+                    while (oCnxBase.Reader.Read())
+                    {
+                        Effectif oEffApp = new Effectif(this, oCnxBase.Reader.GetString(0), oCnxBase.Reader.GetString(1), lstCriteres, 0);
+                        if (oEffApp.FindEffectifFromLST(lstEffectifsApp) == -1) lstEffectifsApp.Add(oEffApp);
+                    }
+                }
+                oCnxBase.CBReaderClose();
+            }
+            return lstEffectifsApp;
+        }
+
+        public void report(ArrayList lstEffectif, ArrayList lstCriteres, Form1.rbTypeRecherche rbTypeRech)
+        {
+            FormProgress fp = new FormProgress(this, false);
+            fp.Show(this);
+            oCnxBase.SWopen(@"C:\_logfiles\test.txt");
+            oCnxBase.SWwriteLog(0, "debut calcul Niveau", true);
+            for (int i = 0; i < lstCriteres.Count; i++)
+            {
+                Critere oCritere = (Critere)lstCriteres[i];
+                oCnxBase.SWwriteLog(0, "Critere " + i + " : " + oCritere.NomCritere, false);
+            }
+            oCnxBase.SWwriteLog(0, "", true);
+
+            if (lstEffectif != null && lstEffectif.Count >= 1)
+            {
+
+                if ((rbTypeRech & Form1.rbTypeRecherche.Application) != 0)
+                {
+                    if (lstEffectif.Count == 0)
+                    {
+                        //CreatLstNiveauApp(drawArea.tools, lstPtNiveauOK);
+                    }
+                    else
+                    {
+                        oCnxBase.SWwriteLog(0, "Initialisation des deleges sur chacun des objets", true);
+                        for (int i = 0; i < drawArea.tools.Length; i++)
+                        {
+                            if (drawArea.tools[i] != null) ((Tool)drawArea.tools[i]).EvalCriteres = new Tool.EVALCRITERES(((Tool)drawArea.tools[i]).CreatNiveauForApp);
+                        }
+                        oCnxBase.SWwriteLog(0, "", true);
+                        CreatLstNiveau(fp, drawArea.tools, lstEffectif, lstCriteres, false);
+                    }
+                }
+                else if ((rbTypeRech & Form1.rbTypeRecherche.Server) != 0)
                 {
                     oCnxBase.SWwriteLog(0, "Initialisation des deleges sur chacun des objets", true);
                     for (int i = 0; i < drawArea.tools.Length; i++)
                     {
-                        if (drawArea.tools[i] != null) ((Tool)drawArea.tools[i]).EvalCriteres = new Tool.EVALCRITERES(((Tool)drawArea.tools[i]).CreatNiveauForApp);
+                        if (drawArea.tools[i] != null) ((Tool)drawArea.tools[i]).EvalCriteres = new Tool.EVALCRITERES(((Tool)drawArea.tools[i]).CreatNiveauForServer);
+                    }
+                    oCnxBase.SWwriteLog(0, "", true);
+                    CreatLstNiveau(fp, drawArea.tools, lstEffectif, lstCriteres, false);
+                }
+                else if ((rbTypeRech & Form1.rbTypeRecherche.Techno) != 0)
+                {
+                    oCnxBase.SWwriteLog(0, "Initialisation des deleges sur chacun des objets", true);
+                    for (int i = 0; i < drawArea.tools.Length; i++)
+                    {
+                        if (drawArea.tools[i] != null)
+                            ((Tool)drawArea.tools[i]).EvalCriteres = new Tool.EVALCRITERES(((Tool)drawArea.tools[i]).CreatNiveauForTechno);
                     }
                     oCnxBase.SWwriteLog(0, "", true);
                     CreatLstNiveau(fp, drawArea.tools, lstEffectif, lstCriteres, false);
                 }
             }
-            else if ((rbTypeRech & Form1.rbTypeRecherche.Server) != 0)
-            {
-                oCnxBase.SWwriteLog(0, "Initialisation des deleges sur chacun des objets", true);
-                for (int i = 0; i < drawArea.tools.Length; i++)
-                {
-                    if (drawArea.tools[i] != null) ((Tool)drawArea.tools[i]).EvalCriteres = new Tool.EVALCRITERES(((Tool)drawArea.tools[i]).CreatNiveauForServer);
-                }
-                oCnxBase.SWwriteLog(0, "", true);
-                CreatLstNiveau(fp, drawArea.tools, lstEffectif, lstCriteres, false);
-            }
-            else if ((rbTypeRech & Form1.rbTypeRecherche.Techno) != 0)
-            {
-                oCnxBase.SWwriteLog(0, "Initialisation des deleges sur chacun des objets", true);
-                for (int i = 0; i < drawArea.tools.Length; i++)
-                {
-                    if (drawArea.tools[i] != null)
-                        ((Tool)drawArea.tools[i]).EvalCriteres = new Tool.EVALCRITERES(((Tool)drawArea.tools[i]).CreatNiveauForTechno);
-                }
-                oCnxBase.SWwriteLog(0, "", true);
-                CreatLstNiveau(fp, drawArea.tools, lstEffectif, lstCriteres, false);
-            }
-        }
 
-        //check des indicateurs
-        if (lstEffectif != null && lstEffectif.Count >= 1)
-        {
-            for (int i = 0; i < lstEffectif.Count; i++)
+            //check des indicateurs
+            if (lstEffectif != null && lstEffectif.Count >= 1)
             {
-                Effectif e = (Effectif)lstEffectif[i];
-                for (int j = 0; j < e.lstNivEffectif.Count; j++)
+                for (int i = 0; i < lstEffectif.Count; i++)
                 {
-                    Niveau n = (Niveau)e.lstNivEffectif[j];
-                    if (n != null)
+                    Effectif e = (Effectif)lstEffectif[i];
+                    for (int j = 0; j < e.lstNivEffectif.Count; j++)
                     {
-                        if (!n.CheckValidite())
+                        Niveau n = (Niveau)e.lstNivEffectif[j];
+                        if (n != null)
                         {
-                            lstEffectif.RemoveAt(i);
-                            i -= 1;
-                            j = e.lstNivEffectif.Count;
-                        }
-                    }
-                }
-            }
-        }
-
-        oCnxBase.SWclose();
-        fp.Close();
-
-    }
-
-    public ArrayList report(TreeNode tNode, string sGuidNode, ArrayList lstCriteres, Form1.rbTypeRecherche rbTypeRech)
-    {
-        ArrayList lstEffectif = null;
-
-        if ((rbTypeRech & Form1.rbTypeRecherche.Server) != 0)
-        {
-            lstEffectif = GetLstEffectif(tNode, rbTypeRech, lstCriteres);
-
-        }
-        else lstEffectif = GetLstEffectif(sGuidNode, rbTypeRech, lstCriteres);
-
-
-
-        report(lstEffectif, lstCriteres, rbTypeRech);
-
-        return lstEffectif;
-    }
-
-    private void bDescriptionApp_Click(object sender, EventArgs e)
-    {
-        if (cbApplication.SelectedIndex != -1 && oCureo == null)
-        {
-            ExpObj eo = new ExpObj(new Guid((string)cbGuidApplication.Items[cbApplication.SelectedIndex]), cbApplication.SelectedItem.ToString(), DrawArea.DrawToolType.Application);
-            FormExplorObj feo = new FormExplorObj(this);
-            feo.init(eo);
-            oCureo = null;
-        }
-    }
-
-    private void bDescriptionVue_Click(object sender, EventArgs e)
-    {
-        if (cbVue.SelectedIndex != -1 && oCureo == null)
-        {
-            ExpObj eo = new ExpObj(new Guid((string)cbGuidVue.Items[cbVue.SelectedIndex]), cbVue.SelectedItem.ToString(), DrawArea.DrawToolType.Vue);
-            FormExplorObj feo = new FormExplorObj(this);
-            feo.init(eo);
-            oCureo = null;
-        }
-    }
-
-
-    //--------------------------------------------------------------------------------------
-    //--------------------------------------------------------------------------------------
-    //--------------------------------------------------------------------------------------
-    //                                         - Fonctions Transverses-
-    //--------------------------------------------------------------------------------------
-    //--------------------------------------------------------------------------------------
-    //--------------------------------------------------------------------------------------
-    public bool isNum(char c)
-    {
-        try
-        {
-            int i = Convert.ToInt32(new string(c, 1));
-            return true;
-        }
-        catch
-        {
-            return false;
-        }
-    }
-
-
-    //--------------------------------------------------------------------------------------
-    //--------------------------------------------------------------------------------------
-    //--------------------------------------------------------------------------------------
-    //                                         - API CallBack-
-    //--------------------------------------------------------------------------------------
-    //--------------------------------------------------------------------------------------
-    //--------------------------------------------------------------------------------------
-
-    public void TVAddNodeFromJson(string sTVName, byte[] d)
-    {
-        tvObjet.Nodes.Add(sTVName, sTVName);
-        TreeNodeCollection tn = tvObjet.Nodes[tvObjet.Nodes.Count - 1].Nodes;
-
-        string data = System.Text.Encoding.UTF8.GetString(d);
-
-        LstNodes lstNodes = JsonConvert.DeserializeObject<LstNodes>(data);
-
-        for (int i = 0; i < lstNodes.nodes.Count; i++)
-        {
-            string[] aValue = new string[2];
-            int j = 0;
-            foreach (KeyValuePair<string, object> o in lstNodes.nodes[i].free)
-                aValue[j++] = (string)o.Value;
-            tn.Add(aValue[0], aValue[1]);
-        }
-    }
-
-    public void TVAddLinkFromJson(string sTVName, byte[] d)
-    {
-        tvObjet.Nodes.Add(sTVName, sTVName);
-        TreeNodeCollection tn = tvObjet.Nodes[tvObjet.Nodes.Count - 1].Nodes;
-
-        string data = System.Text.Encoding.UTF8.GetString(d);
-
-        LstLinks lstLinks = JsonConvert.DeserializeObject<LstLinks>(data);
-
-        for (int i = 0; i < lstLinks.links.Count; i++)
-        {
-            string[] aValue = new string[2];
-            int j = 0;
-            foreach (KeyValuePair<string, object> o in lstLinks.links[i].free)
-                aValue[j++] = (string)o.Value;
-            tn.Add(aValue[0], aValue[1]);
-        }
-    }
-
-    public void webClient_GetApp(object sender, System.Net.DownloadDataCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            MessageBox.Show(e.Error.Message);
-            return;
-        }
-
-        if (e.Result != null && e.Result.Length > 0)
-        {
-            //string data = System.Text.Encoding.Default.GetString(e.Result);
-            string data = System.Text.Encoding.UTF8.GetString(e.Result);
-            // do things with data here
-            ApplicationResp resp = JsonConvert.DeserializeObject<ApplicationResp>(data);
-            lstApps = resp.content;
-            for (int i = 0; i < lstApps.applications.Count; i++)
-            {
-                cbGuidApplication.Items.Add(lstApps.applications[i].guidApplication);
-                cbApplication.Items.Add(lstApps.applications[i].nomApplication);
-            }
-        }
-        else
-        {
-            MessageBox.Show("No data was downloaded.");
-        }
-    }
-
-    public void webClient_PutVue(object sender, System.Net.UploadDataCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            MessageBox.Show(e.Error.Message);
-            return;
-        }
-
-        if (e.Result != null && e.Result.Length > 0)
-        {
-            string data = System.Text.Encoding.UTF8.GetString(e.Result);
-            // do things with data here
-            AppData = JsonConvert.DeserializeObject<ApplicationResp>(data);
-
-            lstVues = AppData.content;
-
-            if (lstVues.applications.Count > 0)
-            {
-                if (lstVues.applications[0].appVersions.Count > 0)
-                {
-                    if (lstVues.applications[0].appVersions[0].vues.Count > 0)
-                    {
-                        clVue clVue = lstVues.applications[0].appVersions[0].vues[0];
-                        for (int i = 0; i < clVue.nodes.Count; i++)
-                        {
-                            clNode node = clVue.nodes[i];
-                            //Dictionary<string, object> free = node.free;
-                            switch (node.typeNode)
+                            if (!n.CheckValidite())
                             {
-                                case "module":
-                                    drawArea.tools[(int)DrawArea.DrawToolType.Module].CreatObjetFromJson(node.free);
-                                    break;
-                                case "appuser":
-                                    drawArea.tools[(int)DrawArea.DrawToolType.AppUser].CreatObjetFromJson(node.free);
-                                    break;
-                                case "application":
-                                    drawArea.tools[(int)DrawArea.DrawToolType.Application].CreatObjetFromJson(node.free);
-                                    break;
-                                case "maincomposant":
-                                    drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].CreatObjetFromJson(node.free);
-                                    for (int j = 0; j < node.nodes.Count; j++)
-                                    {
-                                        clNode childNode = node.nodes[j];
-                                        switch (childNode.typeNode)
-                                        {
-                                            case "compfonc":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.CompFonc].CreatObjetFromJson(childNode.free);
-                                                break;
-                                            case "composant":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.Composant].CreatObjetFromJson(childNode.free);
-                                                break;
-                                            case "base":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.Base].CreatObjetFromJson(childNode.free);
-                                                break;
-                                            case "interface":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.Interface].CreatObjetFromJson(childNode.free);
-                                                break;
-                                            case "file":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.File].CreatObjetFromJson(childNode.free);
-                                                break;
-                                        }
-                                    }
-                                    break;
-                                case "server":
-                                    DrawServer ds = (DrawServer)drawArea.tools[(int)DrawArea.DrawToolType.Server].CreatObjetFromJson(node.free);
-                                    for (int j = 0; j < node.nodes.Count; j++)
-                                    {
-                                        clNode childNode = node.nodes[j];
-                                        switch (childNode.typeNode)
-                                        {
-                                            case "servertype":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.ServerType].CreatObjetFromJson(childNode.free);
-                                                for (int k = 0; k < childNode.nodes.Count; k++)
-                                                {
-                                                    clNode sschildNode = childNode.nodes[k];
-                                                    switch (sschildNode.typeNode)
-                                                    {
-                                                        case "techno":
-                                                            drawArea.tools[(int)DrawArea.DrawToolType.Techno].CreatObjetFromJson(sschildNode.free);
-                                                            break;
-                                                    }
-                                                }
-                                                break;
-                                            case "maincomposant":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].CreatObjetFromJson(childNode.free);
-                                                for (int k = 0; k < childNode.nodes.Count; k++)
-                                                {
-                                                    clNode sschildNode = childNode.nodes[k];
-                                                    switch (sschildNode.typeNode)
-                                                    {
-                                                        case "servmcomp":
-                                                            drawArea.tools[(int)DrawArea.DrawToolType.ServMComp].CreatObjetFromJson(sschildNode.free);
-                                                            break;
-                                                    }
-                                                }
-                                                break;
-                                        }
-                                    }
-                                    ds.AligneObjet();
-
-                                    break;
-                            }
-                        }
-                        for (int i = 0; i < clVue.links.Count; i++)
-                        {
-                            clLink link = clVue.links[i];
-
-                            switch (link.typeLink)
-                            {
-                                case "link":
-                                    drawArea.tools[(int)DrawArea.DrawToolType.Link].CreatObjetFromJson(link.free);
-                                    break;
-                                case "techlink":
-                                    drawArea.tools[(int)DrawArea.DrawToolType.TechLink].CreatObjetFromJson(link.free);
-                                    break;
+                                lstEffectif.RemoveAt(i);
+                                i -= 1;
+                                j = e.lstNivEffectif.Count;
                             }
                         }
                     }
                 }
             }
-            drawArea.Refresh();
-        }
-        else
-        {
-            MessageBox.Show("No data was downloaded.");
-        }
-    }
 
-    public void webClient_GetVue(object sender, System.Net.DownloadDataCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            MessageBox.Show(e.Error.Message);
-            return;
+            oCnxBase.SWclose();
+            fp.Close();
+
         }
 
-        if (e.Result != null && e.Result.Length > 0)
+        public ArrayList report(TreeNode tNode, string sGuidNode, ArrayList lstCriteres, Form1.rbTypeRecherche rbTypeRech)
         {
-            //string data = System.Text.Encoding.Default.GetString(e.Result);
-            string data = System.Text.Encoding.UTF8.GetString(e.Result);
-            // do things with data here
-            AppData = JsonConvert.DeserializeObject<ApplicationResp>(data);
+            ArrayList lstEffectif = null;
 
-            lstVues = AppData.content;
-
-            SaveTest("2cd09ef2-285e-4122-bb67-91aad6535cc0", lstVues);
-            if (lstVues.applications.Count > 0)
+            if ((rbTypeRech & Form1.rbTypeRecherche.Server) != 0)
             {
-                if (lstVues.applications[0].appVersions.Count > 0)
+                lstEffectif = GetLstEffectif(tNode, rbTypeRech, lstCriteres);
+
+            }
+            else lstEffectif = GetLstEffectif(sGuidNode, rbTypeRech, lstCriteres);
+
+
+
+            report(lstEffectif, lstCriteres, rbTypeRech);
+
+            return lstEffectif;
+        }
+
+        private void bDescriptionApp_Click(object sender, EventArgs e)
+        {
+            if (cbApplication.SelectedIndex != -1 && oCureo == null)
+            {
+                ExpObj eo = new ExpObj(new Guid((string)cbGuidApplication.Items[cbApplication.SelectedIndex]), cbApplication.SelectedItem.ToString(), DrawArea.DrawToolType.Application);
+                FormExplorObj feo = new FormExplorObj(this);
+                feo.init(eo);
+                oCureo = null;
+            }
+        }
+
+        private void bDescriptionVue_Click(object sender, EventArgs e)
+        {
+            if (cbVue.SelectedIndex != -1 && oCureo == null)
+            {
+                ExpObj eo = new ExpObj(new Guid((string)cbGuidVue.Items[cbVue.SelectedIndex]), cbVue.SelectedItem.ToString(), DrawArea.DrawToolType.Vue);
+                FormExplorObj feo = new FormExplorObj(this);
+                feo.init(eo);
+                oCureo = null;
+            }
+        }
+
+
+        //--------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------
+        //                                         - Fonctions Transverses-
+        //--------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------
+        public bool isNum(char c)
+        {
+            try
+            {
+                int i = Convert.ToInt32(new string(c, 1));
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
+        //--------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------
+        //                                         - API CallBack-
+        //--------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------
+
+        public void TVAddNodeFromJson(string sTVName, byte[] d)
+        {
+            tvObjet.Nodes.Add(sTVName, sTVName);
+            TreeNodeCollection tn = tvObjet.Nodes[tvObjet.Nodes.Count - 1].Nodes;
+
+            string data = System.Text.Encoding.UTF8.GetString(d);
+
+            LstNodes lstNodes = JsonConvert.DeserializeObject<LstNodes>(data);
+
+            for (int i = 0; i < lstNodes.nodes.Count; i++)
+            {
+                string[] aValue = new string[2];
+                int j = 0;
+                foreach (KeyValuePair<string, object> o in lstNodes.nodes[i].free)
+                    aValue[j++] = (string)o.Value;
+                tn.Add(aValue[0], aValue[1]);
+            }
+        }
+
+        public void TVAddLinkFromJson(string sTVName, byte[] d)
+        {
+            tvObjet.Nodes.Add(sTVName, sTVName);
+            TreeNodeCollection tn = tvObjet.Nodes[tvObjet.Nodes.Count - 1].Nodes;
+
+            string data = System.Text.Encoding.UTF8.GetString(d);
+
+            LstLinks lstLinks = JsonConvert.DeserializeObject<LstLinks>(data);
+
+            for (int i = 0; i < lstLinks.links.Count; i++)
+            {
+                string[] aValue = new string[2];
+                int j = 0;
+                foreach (KeyValuePair<string, object> o in lstLinks.links[i].free)
+                    aValue[j++] = (string)o.Value;
+                tn.Add(aValue[0], aValue[1]);
+            }
+        }
+
+        public void webClient_GetApp(object sender, System.Net.DownloadDataCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message);
+                return;
+            }
+
+            if (e.Result != null && e.Result.Length > 0)
+            {
+                //string data = System.Text.Encoding.Default.GetString(e.Result);
+                string data = System.Text.Encoding.UTF8.GetString(e.Result);
+                // do things with data here
+                ApplicationResp resp = JsonConvert.DeserializeObject<ApplicationResp>(data);
+                lstApps = resp.content;
+                for (int i = 0; i < lstApps.applications.Count; i++)
                 {
-                    if (lstVues.applications[0].appVersions[0].vues.Count > 0)
+                    cbGuidApplication.Items.Add(lstApps.applications[i].guidApplication);
+                    cbApplication.Items.Add(lstApps.applications[i].nomApplication);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No data was downloaded.");
+            }
+        }
+
+        public void webClient_PutVue(object sender, System.Net.UploadDataCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message);
+                return;
+            }
+
+            if (e.Result != null && e.Result.Length > 0)
+            {
+                string data = System.Text.Encoding.UTF8.GetString(e.Result);
+                // do things with data here
+                AppData = JsonConvert.DeserializeObject<ApplicationResp>(data);
+
+                lstVues = AppData.content;
+
+                if (lstVues.applications.Count > 0)
+                {
+                    if (lstVues.applications[0].appVersions.Count > 0)
                     {
-                        clVue clVue = lstVues.applications[0].appVersions[0].vues[0];
-                        for (int i = 0; i < clVue.nodes.Count; i++)
+                        if (lstVues.applications[0].appVersions[0].vues.Count > 0)
                         {
-                            clNode node = clVue.nodes[i];
-                            //Dictionary<string, object> free = node.free;
-                            switch (node.typeNode)
+                            clVue clVue = lstVues.applications[0].appVersions[0].vues[0];
+                            for (int i = 0; i < clVue.nodes.Count; i++)
                             {
-                                case "module":
-                                    drawArea.tools[(int)DrawArea.DrawToolType.Module].CreatObjetFromJson(node.free);
-                                    break;
-                                case "appuser":
-                                    drawArea.tools[(int)DrawArea.DrawToolType.AppUser].CreatObjetFromJson(node.free);
-                                    break;
-                                case "application":
-                                    drawArea.tools[(int)DrawArea.DrawToolType.Application].CreatObjetFromJson(node.free);
-                                    break;
-                                case "maincomposant":
-                                    drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].CreatObjetFromJson(node.free);
-                                    for (int j = 0; j < node.nodes.Count; j++)
-                                    {
-                                        clNode childNode = node.nodes[j];
-                                        switch (childNode.typeNode)
+                                clNode node = clVue.nodes[i];
+                                //Dictionary<string, object> free = node.free;
+                                switch (node.typeNode)
+                                {
+                                    case "module":
+                                        drawArea.tools[(int)DrawArea.DrawToolType.Module].CreatObjetFromJson(node.free);
+                                        break;
+                                    case "appuser":
+                                        drawArea.tools[(int)DrawArea.DrawToolType.AppUser].CreatObjetFromJson(node.free);
+                                        break;
+                                    case "application":
+                                        drawArea.tools[(int)DrawArea.DrawToolType.Application].CreatObjetFromJson(node.free);
+                                        break;
+                                    case "maincomposant":
+                                        drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].CreatObjetFromJson(node.free);
+                                        for (int j = 0; j < node.nodes.Count; j++)
                                         {
-                                            case "compfonc":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.CompFonc].CreatObjetFromJson(childNode.free);
-                                                break;
-                                            case "composant":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.Composant].CreatObjetFromJson(childNode.free);
-                                                break;
-                                            case "base":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.Base].CreatObjetFromJson(childNode.free);
-                                                break;
-                                            case "interface":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.Interface].CreatObjetFromJson(childNode.free);
-                                                break;
-                                            case "file":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.File].CreatObjetFromJson(childNode.free);
-                                                break;
+                                            clNode childNode = node.nodes[j];
+                                            switch (childNode.typeNode)
+                                            {
+                                                case "compfonc":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.CompFonc].CreatObjetFromJson(childNode.free);
+                                                    break;
+                                                case "composant":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.Composant].CreatObjetFromJson(childNode.free);
+                                                    break;
+                                                case "base":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.Base].CreatObjetFromJson(childNode.free);
+                                                    break;
+                                                case "interface":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.Interface].CreatObjetFromJson(childNode.free);
+                                                    break;
+                                                case "file":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.File].CreatObjetFromJson(childNode.free);
+                                                    break;
+                                            }
                                         }
-                                    }
-                                    break;
-                                case "server":
-                                    DrawServer ds = (DrawServer)drawArea.tools[(int)DrawArea.DrawToolType.Server].CreatObjetFromJson(node.free);
-                                    for (int j = 0; j < node.nodes.Count; j++)
-                                    {
-                                        clNode childNode = node.nodes[j];
-                                        switch (childNode.typeNode)
+                                        break;
+                                    case "server":
+                                        DrawServer ds = (DrawServer)drawArea.tools[(int)DrawArea.DrawToolType.Server].CreatObjetFromJson(node.free);
+                                        for (int j = 0; j < node.nodes.Count; j++)
                                         {
-                                            case "servertype":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.ServerType].CreatObjetFromJson(childNode.free);
-                                                for (int k = 0; k < childNode.nodes.Count; k++)
-                                                {
-                                                    clNode sschildNode = childNode.nodes[k];
-                                                    switch (sschildNode.typeNode)
+                                            clNode childNode = node.nodes[j];
+                                            switch (childNode.typeNode)
+                                            {
+                                                case "servertype":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.ServerType].CreatObjetFromJson(childNode.free);
+                                                    for (int k = 0; k < childNode.nodes.Count; k++)
                                                     {
-                                                        case "techno":
-                                                            drawArea.tools[(int)DrawArea.DrawToolType.Techno].CreatObjetFromJson(sschildNode.free);
-                                                            break;
+                                                        clNode sschildNode = childNode.nodes[k];
+                                                        switch (sschildNode.typeNode)
+                                                        {
+                                                            case "techno":
+                                                                drawArea.tools[(int)DrawArea.DrawToolType.Techno].CreatObjetFromJson(sschildNode.free);
+                                                                break;
+                                                        }
                                                     }
-                                                }
-                                                break;
-                                            case "maincomposant":
-                                                drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].CreatObjetFromJson(childNode.free);
-                                                for (int k = 0; k < childNode.nodes.Count; k++)
-                                                {
-                                                    clNode sschildNode = childNode.nodes[k];
-                                                    switch (sschildNode.typeNode)
+                                                    break;
+                                                case "maincomposant":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].CreatObjetFromJson(childNode.free);
+                                                    for (int k = 0; k < childNode.nodes.Count; k++)
                                                     {
-                                                        case "servmcomp":
-                                                            drawArea.tools[(int)DrawArea.DrawToolType.ServMComp].CreatObjetFromJson(sschildNode.free);
-                                                            break;
+                                                        clNode sschildNode = childNode.nodes[k];
+                                                        switch (sschildNode.typeNode)
+                                                        {
+                                                            case "servmcomp":
+                                                                drawArea.tools[(int)DrawArea.DrawToolType.ServMComp].CreatObjetFromJson(sschildNode.free);
+                                                                break;
+                                                        }
                                                     }
-                                                }
-                                                break;
+                                                    break;
+                                            }
                                         }
-                                    }
-                                    ds.AligneObjet();
+                                        ds.AligneObjet();
 
-                                    break;
+                                        break;
+                                }
                             }
-                        }
-                        for (int i = 0; i < clVue.links.Count; i++)
-                        {
-                            clLink link = clVue.links[i];
-
-                            switch (link.typeLink)
+                            for (int i = 0; i < clVue.links.Count; i++)
                             {
-                                case "link":
-                                    drawArea.tools[(int)DrawArea.DrawToolType.Link].CreatObjetFromJson(link.free);
-                                    break;
-                                case "techlink":
-                                    drawArea.tools[(int)DrawArea.DrawToolType.TechLink].CreatObjetFromJson(link.free);
-                                    break;
+                                clLink link = clVue.links[i];
+
+                                switch (link.typeLink)
+                                {
+                                    case "link":
+                                        drawArea.tools[(int)DrawArea.DrawToolType.Link].CreatObjetFromJson(link.free);
+                                        break;
+                                    case "techlink":
+                                        drawArea.tools[(int)DrawArea.DrawToolType.TechLink].CreatObjetFromJson(link.free);
+                                        break;
+                                }
                             }
                         }
                     }
                 }
+                drawArea.Refresh();
             }
-            drawArea.Refresh();
-        }
-        else
-        {
-            MessageBox.Show("No data was downloaded.");
-        }
-    }
-
-    public void webClient_TVAddNodeLSApps(object sender, System.Net.DownloadDataCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            MessageBox.Show(e.Error.Message);
-            return;
-        }
-
-        if (e.Result != null && e.Result.Length > 0) TVAddNodeFromJson("LSApplication", e.Result);
-    }
-
-    public void webClient_TVAddNodeApps(object sender, System.Net.DownloadDataCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            MessageBox.Show(e.Error.Message);
-            return;
-        }
-
-        if (e.Result != null && e.Result.Length > 0) TVAddNodeFromJson("Application", e.Result);
-    }
-
-    public void webClient_TVAddNodeMainComposants(object sender, System.Net.DownloadDataCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            MessageBox.Show(e.Error.Message);
-            return;
-        }
-
-        if (e.Result != null && e.Result.Length > 0) TVAddNodeFromJson("MainComposant", e.Result);
-    }
-
-    public void webClient_TVAddNodeUsers(object sender, System.Net.DownloadDataCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            MessageBox.Show(e.Error.Message);
-            return;
-        }
-
-        if (e.Result != null && e.Result.Length > 0) TVAddNodeFromJson("AppUser", e.Result);
-    }
-
-    public void webClient_TVAddNodeModules(object sender, System.Net.DownloadDataCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            MessageBox.Show(e.Error.Message);
-            return;
-        }
-
-        if (e.Result != null && e.Result.Length > 0) TVAddNodeFromJson("Module", e.Result);
-    }
-
-    public void webClient_TVAddNodeLinks(object sender, System.Net.DownloadDataCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            MessageBox.Show(e.Error.Message);
-            return;
-        }
-
-        if (e.Result != null && e.Result.Length > 0) TVAddLinkFromJson("Link", e.Result);
-    }
-
-    public void webClient_GetTokenCloud(object sender, System.Net.UploadValuesCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            MessageBox.Show(e.Error.Message);
-            return;
-        }
-        if (e.Result != null && e.Result.Length > 0)
-        {
-            string data = System.Text.Encoding.UTF8.GetString(e.Result);
-            dynamic json = JsonConvert.DeserializeObject(data);
-            result_CloudToken(json);
-
-        }
-    }
-
-    private void webClient_GetClusters(object sender, System.Net.DownloadDataCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            MessageBox.Show(e.Error.Message);
-            return;
-        }
-
-        if (e.Result != null && e.Result.Length > 0)
-        {
-            string data = System.Text.Encoding.UTF8.GetString(e.Result);
-        }
-    }
-
-    public void webClient_GetApplication(object sender, System.Net.DownloadDataCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            MessageBox.Show(e.Error.Message);
-            return;
-        }
-
-        if (e.Result != null && e.Result.Length > 0) TVAddNodeFromJson("Application", e.Result);
-    }
-
-
-    // -------------------------------------------- FIN -------------------------------------
-}
-
-public class cObj
-{
-    public string Guid { get; set; }
-    public string Name { get; set; }
-    public cObj This { get; set; }
-
-    public cObj(string sGuid, string sNom)
-    {
-        Name = sNom;
-        Guid = sGuid;
-        This = this;
-    }
-}
-
-public class Compte
-{
-    static string auth = "http://127.0.0.1:8080/auth/realms/Test";
-    static string api = "http://127.0.0.1:8080/auth/realms/Test/api";
-    static OidcClient oidcClient;
-    static HttpClient apiClient = new HttpClient { BaseAddress = new Uri(api) };
-
-    static string guidCompte, idCompte, emailCompte, nomCompte, prenomCompte;
-    static string identityToken, accessToken, refreshToken;
-    public static List<string> lstRoles = new List<string>();
-    public static List<string> lstCompteRigths = new List<string>();
-    static List<string[]> lstHabilitations = new List<string[]>();
-
-    public static string guid
-    {
-        get { return guidCompte; }
-        set { guidCompte = value; }
-    }
-
-    public static string id
-    {
-        get { return idCompte; }
-        set { idCompte = value; }
-    }
-
-    public static void InitCompteRights()
-    {
-        //string exist = lstRoles.Find(el => el == (string)o);
-        foreach (var elr in lstRoles)
-        {
-            List<string[]> lst = lstHabilitations.FindAll(el => el[0] == elr);
-            foreach (var elh in lst) lstCompteRigths.Add(elh[1]);
-        }
-    }
-    public static void InitHabilitations(CnxBase cnx)
-    {
-
-#if HABILITATION
-            string[] aHabitidation = new string[2];
-            aHabitidation[0] = "78201911-53be-4074-9d7a-6ff2cbf809aa";
-            aHabitidation[1] = "05915b4d-6eaf-4ed1-8c07-c31a4527a2b2";
-            lstHabilitations.Add(aHabitidation);
-            aHabitidation[1] = "5416a957-e669-4403-be06-6f7a71f616ce";
-            lstHabilitations.Add(aHabitidation);
-            aHabitidation[1] = "5fa9fa6e-2caa-42dc-975f-12f0aca7075d";
-            lstHabilitations.Add(aHabitidation);
-            aHabitidation[1] = "6db2c391-c05e-4cde-aec3-d7ed7a773de7";
-            lstHabilitations.Add(aHabitidation);
-            aHabitidation[0] = "b3d2b96b-36ad-4114-8ff7-29109d8c0144";
-            aHabitidation[1] = "37a0ca71-25a8-46e8-a605-aa14387c5b7c";
-            lstHabilitations.Add(aHabitidation);
-            aHabitidation[1] = "46883717-5f55-4789-a833-dc10f59385b8";
-            lstHabilitations.Add(aHabitidation);
-            aHabitidation[1] = "78fc4a02-cfc6-44ae-a59a-4a75952b2604";
-            lstHabilitations.Add(aHabitidation);
-            aHabitidation[1] = "bedef478-547e-47de-819b-4377a94e78c5";
-            lstHabilitations.Add(aHabitidation);
-#else
-
-        cnx.CBRecherche("Select GuidRole, GuidHabilitation From Habilitation Order By GuidRole");
-        while (cnx.Reader.Read())
-        {
-            string[] aHabitidation = new string[2];
-            aHabitidation[0] = cnx.Reader.GetString(0);
-            aHabitidation[1] = cnx.Reader.GetString(1);
-
-            lstHabilitations.Add(aHabitidation);
-        }
-        cnx.CBReaderClose();
-#endif
-    }
-    public static void loginOidc()
-    {
-        Login().GetAwaiter().GetResult();
-    }
-
-    public static async Task Login()
-    {
-
-        var browser = new SystemBrowser();
-        string redirectUri = string.Format($"http://127.0.0.1:9998");
-
-        var options = new OidcClientOptions
-        {
-            Authority = auth,
-            ClientId = "FatClientDrawTools",
-            RedirectUri = redirectUri,
-            //Scope = "openid roles profile api offline_access",
-            Scope = "openid roles",
-            ClientSecret = "0b91c43f-c94b-4b4e-9c2d-2a29a453b83b",
-            FilterClaims = false,
-            Policy = new Policy { RequireAccessTokenHash = false },
-            ResponseMode = OidcClientOptions.AuthorizeResponseMode.Redirect,
-            Flow = OidcClientOptions.AuthenticationFlow.AuthorizationCode,
-            Browser = browser,
-            RefreshTokenInnerHttpHandler = new HttpClientHandler()
-        };
-        var serilog = new LoggerConfiguration()
-            .MinimumLevel.Verbose()
-            .Enrich.FromLogContext()
-            .WriteTo.File("c:\\dat\\temp\\log.txt") // .LiterateConsole(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message}{NewLine}{Exception}{NewLine}")
-            .CreateLogger();
-
-        options.LoggerFactory.AddSerilog(serilog);
-
-        oidcClient = new OidcClient(options);
-        var result = await oidcClient.LoginAsync(new LoginRequest());
-
-        apiClient = new HttpClient(result.RefreshTokenHandler) { BaseAddress = new Uri(api) };
-
-        InitResult(result);
-        //await NextSteps(result);
-    }
-
-    static void InitResult(LoginResult result)
-    {
-        if (result.IsError)
-        {
-            MessageBox.Show("Error: " + result.Error);
-            return;
-        }
-
-        foreach (var claim in result.User.Claims)
-        {
-            switch (claim.Type)
+            else
             {
-                case "sub":
-                    guidCompte = claim.Value;
-                    break;
-                case "preferred_username":
-                    idCompte = claim.Value;
-                    break;
-                case "given_name":
-                    prenomCompte = claim.Value;
-                    break;
-                case "family_name":
-                    nomCompte = claim.Value;
-                    break;
-                case "email":
-                    emailCompte = claim.Value;
-                    break;
+                MessageBox.Show("No data was downloaded.");
             }
         }
-        identityToken = result.IdentityToken;
-        accessToken = result.AccessToken;
-        refreshToken = result?.RefreshToken ?? "none";
 
-        var handler = new JwtSecurityTokenHandler();
-        JwtSecurityToken tokenS = (JwtSecurityToken)handler.ReadToken(result.AccessToken);
-        dynamic json = JsonConvert.DeserializeObject(tokenS.Payload.SerializeToJson());
-
-        JArray ja = (JArray)json.realm_access.roles; // list des profils 
-
-        // mettre à jour le compte dans la table
-
-        // créer la liste des roles  en fonction de la liste dess profils transmise via le tableau JArray et la table profil
-
-        //lstRoles.Add("6eaf-4ed1-8c07-c31a4527a2b2");
-        //foreach (var el in ja) lstRoles.Add(el.ToString());
-
-    }
-
-    public static async void SetRight(Form f)
-    {
-        await SetRighttoForm(f);
-    }
-
-    public static bool GetRighttoObj(object o)
-    {
-        if (o != null)
+        public void webClient_GetVue(object sender, System.Net.DownloadDataCompletedEventArgs e)
         {
-            //MessageBox.Show((string)o);
-            string exist = lstCompteRigths.Find(el => el == (string)o);
-            if (exist != null) return true;
-        }
-        else return true;
-        return false;
-    }
-
-    static async Task SetRighttoForm(Form f)
-    {
-        foreach (Control ctrl in f.Controls)
-        {
-            if (!GetRighttoObj(ctrl.Tag))
-                ctrl.Enabled = false;
-            else ctrl.Enabled = true;
-            if (ctrl.GetType() == typeof(ToolBar))
+            if (e.Error != null)
             {
-                foreach (ToolBarButton bt in ((ToolBar)ctrl).Buttons)
-                    if (!GetRighttoObj(bt.Tag)) bt.Enabled = false;
+                MessageBox.Show(e.Error.Message);
+                return;
             }
-            await SetRighttoControl(ctrl);
-        }
-        if (f.Menu != null)
-        {
-            foreach (MenuItem mnu in f.Menu.MenuItems)
+
+            if (e.Result != null && e.Result.Length > 0)
             {
-                if (!GetRighttoObj(mnu.Tag)) mnu.Enabled = false;
-                await SetRighttoMnu(mnu);
-            }
-        }
-    }
+                //string data = System.Text.Encoding.Default.GetString(e.Result);
+                string data = System.Text.Encoding.UTF8.GetString(e.Result);
+                // do things with data here
+                AppData = JsonConvert.DeserializeObject<ApplicationResp>(data);
 
-    static async Task SetRighttoMnu(MenuItem m)
-    {
-        foreach (MenuItem mnu in m.MenuItems)
-        {
-            if (!GetRighttoObj(mnu.Tag)) mnu.Enabled = false;
-            await SetRighttoMnu(mnu);
-        }
-    }
+                lstVues = AppData.content;
 
-    static async Task SetRighttoControl(Control c)
-    {
-        foreach (Control ctrl in c.Controls)
-        {
-            if (!GetRighttoObj(ctrl.Tag)) ctrl.Enabled = false;
-            await SetRighttoControl(ctrl);
-        }
-    }
-
-}
-
-public class WorkApplication
-{
-    private Guid guidApplication;
-    private string sApplication;
-    private Guid guidVer;
-    private string sLayers;
-    private Form1 F;
-    private string sTadFile;
-    private Boolean bChgLayers;
-    private string sVersion;
-
-    public Guid Guid
-    {
-        get { return guidApplication; }
-    }
-
-    public Guid GuidAppVersion
-    {
-        get { return guidVer; }
-    }
-
-    public string Version
-    {
-        get { return sVersion; }
-    }
-
-    public string Layers
-    {
-        get { return sLayers; }
-    }
-
-    public string Application
-    {
-        get { return sApplication; }
-    }
-
-    public string TadFile
-    {
-        get { return sTadFile; }
-    }
-
-    public Boolean ChgLayers
-    {
-        get { return bChgLayers; }
-    }
-
-    public WorkApplication(Form1 f, string sGuid, string sName, string sGuidVer, string sV = "")
-    {
-        F = f;
-        guidApplication = new Guid(sGuid);
-        guidVer = new Guid(sGuidVer);
-        sApplication = sName;
-        sVersion = sV;
-        F.setCtrlEnabled(F.cbOpApp, true);
-        F.setCtrlEnabled(F.cbOpVue, true);
-        sLayers = InitLayers();
-        if (sApplication != null) sTadFile = F.GetFullPath(this) + @"\DAT\DAT_" + Application + ".docx";
-        else sTadFile = null;
-        bChgLayers = false;
-    }
-
-    public string InitLayers()
-    {
-        string sLayersTemp = " (null)";
-
-        if (F.oCnxBase.CBRecherche("SELECT GuidLayer, NomLayer FROM Layer Where GuidAppVersion ='" + guidApplication + "'"))
-        {
-            while (F.oCnxBase.Reader.Read())
-                sLayersTemp += ";" + F.oCnxBase.Reader.GetString(1) + "     (" + F.oCnxBase.Reader.GetString(0) + ")";
-        }
-        F.oCnxBase.CBReaderClose();
-        return sLayersTemp.Substring(1);
-    }
-
-    public void SetLayers()
-    {
-        FormChangeProp fcp = new FormChangeProp(F, null);
-
-        if (GuidAppVersion != null && sLayers != "")
-        {
-            DrawObject o = F.drawArea.GraphicsList.GetSelectedObject(0);
-
-            fcp.AddlSourceFromDB("SELECT GuidLayer, NomLayer FROM Layer Where GuidAppVersion='" + GuidAppVersion + "'", "Create");
-            fcp.AffCheckBoxDefaultLayer();
-            fcp.AddlDestinationFromValue(sLayers);
-            fcp.ShowDialog(F);
-            if (fcp.Valider)
-            {
-                sLayers = F.oCnxBase.CmdText;
-                if (!bChgLayers)
+                SaveTest("2cd09ef2-285e-4122-bb67-91aad6535cc0", lstVues);
+                if (lstVues.applications.Count > 0)
                 {
-                    MessageBox.Show("Le changement de la configuration des couches désactive la sauvegarde");
-                    bChgLayers = true;
+                    if (lstVues.applications[0].appVersions.Count > 0)
+                    {
+                        if (lstVues.applications[0].appVersions[0].vues.Count > 0)
+                        {
+                            clVue clVue = lstVues.applications[0].appVersions[0].vues[0];
+                            for (int i = 0; i < clVue.nodes.Count; i++)
+                            {
+                                clNode node = clVue.nodes[i];
+                                //Dictionary<string, object> free = node.free;
+                                switch (node.typeNode)
+                                {
+                                    case "module":
+                                        drawArea.tools[(int)DrawArea.DrawToolType.Module].CreatObjetFromJson(node.free);
+                                        break;
+                                    case "appuser":
+                                        drawArea.tools[(int)DrawArea.DrawToolType.AppUser].CreatObjetFromJson(node.free);
+                                        break;
+                                    case "application":
+                                        drawArea.tools[(int)DrawArea.DrawToolType.Application].CreatObjetFromJson(node.free);
+                                        break;
+                                    case "maincomposant":
+                                        drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].CreatObjetFromJson(node.free);
+                                        for (int j = 0; j < node.nodes.Count; j++)
+                                        {
+                                            clNode childNode = node.nodes[j];
+                                            switch (childNode.typeNode)
+                                            {
+                                                case "compfonc":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.CompFonc].CreatObjetFromJson(childNode.free);
+                                                    break;
+                                                case "composant":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.Composant].CreatObjetFromJson(childNode.free);
+                                                    break;
+                                                case "base":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.Base].CreatObjetFromJson(childNode.free);
+                                                    break;
+                                                case "interface":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.Interface].CreatObjetFromJson(childNode.free);
+                                                    break;
+                                                case "file":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.File].CreatObjetFromJson(childNode.free);
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                    case "server":
+                                        DrawServer ds = (DrawServer)drawArea.tools[(int)DrawArea.DrawToolType.Server].CreatObjetFromJson(node.free);
+                                        for (int j = 0; j < node.nodes.Count; j++)
+                                        {
+                                            clNode childNode = node.nodes[j];
+                                            switch (childNode.typeNode)
+                                            {
+                                                case "servertype":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.ServerType].CreatObjetFromJson(childNode.free);
+                                                    for (int k = 0; k < childNode.nodes.Count; k++)
+                                                    {
+                                                        clNode sschildNode = childNode.nodes[k];
+                                                        switch (sschildNode.typeNode)
+                                                        {
+                                                            case "techno":
+                                                                drawArea.tools[(int)DrawArea.DrawToolType.Techno].CreatObjetFromJson(sschildNode.free);
+                                                                break;
+                                                        }
+                                                    }
+                                                    break;
+                                                case "maincomposant":
+                                                    drawArea.tools[(int)DrawArea.DrawToolType.MainComposant].CreatObjetFromJson(childNode.free);
+                                                    for (int k = 0; k < childNode.nodes.Count; k++)
+                                                    {
+                                                        clNode sschildNode = childNode.nodes[k];
+                                                        switch (sschildNode.typeNode)
+                                                        {
+                                                            case "servmcomp":
+                                                                drawArea.tools[(int)DrawArea.DrawToolType.ServMComp].CreatObjetFromJson(sschildNode.free);
+                                                                break;
+                                                        }
+                                                    }
+                                                    break;
+                                            }
+                                        }
+                                        ds.AligneObjet();
+
+                                        break;
+                                }
+                            }
+                            for (int i = 0; i < clVue.links.Count; i++)
+                            {
+                                clLink link = clVue.links[i];
+
+                                switch (link.typeLink)
+                                {
+                                    case "link":
+                                        drawArea.tools[(int)DrawArea.DrawToolType.Link].CreatObjetFromJson(link.free);
+                                        break;
+                                    case "techlink":
+                                        drawArea.tools[(int)DrawArea.DrawToolType.TechLink].CreatObjetFromJson(link.free);
+                                        break;
+                                }
+                            }
+                        }
+                    }
                 }
+                drawArea.Refresh();
+            }
+            else
+            {
+                MessageBox.Show("No data was downloaded.");
             }
         }
-    }
 
-    public string GetWhereLayer()
-    {
-        string sWhereLayer = " and ( ";
-        int deb = 1;
-        bool bDebOr = false;
-
-        if (sLayers != "")
+        public void webClient_TVAddNodeLSApps(object sender, System.Net.DownloadDataCompletedEventArgs e)
         {
-            string[] aValue = sLayers.Split('(', ')');
-            if (aValue.Length > 1 && aValue[1] == "null")
+            if (e.Error != null)
             {
-                sWhereLayer = " and (GuidLayer is null ";
-                deb = 3;
-                bDebOr = true;
+                MessageBox.Show(e.Error.Message);
+                return;
             }
-            for (int i = deb; i < aValue.Length; i += 2)
+
+            if (e.Result != null && e.Result.Length > 0) TVAddNodeFromJson("LSApplication", e.Result);
+        }
+
+        public void webClient_TVAddNodeApps(object sender, System.Net.DownloadDataCompletedEventArgs e)
+        {
+            if (e.Error != null)
             {
-                sWhereLayer += (bDebOr ? "or " : " ") + "GuidLayer='" + aValue[i] + "' ";
-                bDebOr = true;
+                MessageBox.Show(e.Error.Message);
+                return;
+            }
+
+            if (e.Result != null && e.Result.Length > 0) TVAddNodeFromJson("Application", e.Result);
+        }
+
+        public void webClient_TVAddNodeMainComposants(object sender, System.Net.DownloadDataCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message);
+                return;
+            }
+
+            if (e.Result != null && e.Result.Length > 0) TVAddNodeFromJson("MainComposant", e.Result);
+        }
+
+        public void webClient_TVAddNodeUsers(object sender, System.Net.DownloadDataCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message);
+                return;
+            }
+
+            if (e.Result != null && e.Result.Length > 0) TVAddNodeFromJson("AppUser", e.Result);
+        }
+
+        public void webClient_TVAddNodeModules(object sender, System.Net.DownloadDataCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message);
+                return;
+            }
+
+            if (e.Result != null && e.Result.Length > 0) TVAddNodeFromJson("Module", e.Result);
+        }
+
+        public void webClient_TVAddNodeLinks(object sender, System.Net.DownloadDataCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message);
+                return;
+            }
+
+            if (e.Result != null && e.Result.Length > 0) TVAddLinkFromJson("Link", e.Result);
+        }
+
+        public void webClient_GetTokenCloud(object sender, System.Net.UploadValuesCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message);
+                return;
+            }
+            if (e.Result != null && e.Result.Length > 0)
+            {
+                string data = System.Text.Encoding.UTF8.GetString(e.Result);
+                dynamic json = JsonConvert.DeserializeObject(data);
+                result_CloudToken(json);
+
             }
         }
-        sWhereLayer += ")";
-        return sWhereLayer;
+
+        private void webClient_GetClusters(object sender, System.Net.DownloadDataCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message);
+                return;
+            }
+
+            if (e.Result != null && e.Result.Length > 0)
+            {
+                string data = System.Text.Encoding.UTF8.GetString(e.Result);
+            }
+        }
+
+        public void webClient_GetApplication(object sender, System.Net.DownloadDataCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message);
+                return;
+            }
+
+            if (e.Result != null && e.Result.Length > 0) TVAddNodeFromJson("Application", e.Result);
+        }
+
+
+        // -------------------------------------------- FIN -------------------------------------
     }
 }
-}
+
