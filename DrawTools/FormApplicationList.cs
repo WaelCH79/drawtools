@@ -40,7 +40,7 @@ namespace DrawTools
             //Master_BindData();
 
             // To bind the Detail data to List 
-           // Detail_BindData();
+            // Detail_BindData();
 
 
             MasterGrid_Initialize();
@@ -71,7 +71,7 @@ namespace DrawTools
         }
 
         private void Master_BindData()
-        {      
+        {
             DataSet ds = new DataSet();
 
             MySQLConnection con = new MySQLConnection(); //create connection
@@ -88,6 +88,7 @@ namespace DrawTools
         // to generate Master Datagridview with your coding
         public void MasterGrid_Initialize()
         {
+            Master_AppDGV.Columns.Clear();
             //First generate the grid Layout Design
             Helper.HierarchicalGridHelper.Layouts(Master_AppDGV, System.Drawing.Color.LightSteelBlue, System.Drawing.Color.AliceBlue, System.Drawing.Color.WhiteSmoke, false, System.Drawing.Color.SteelBlue, false, false, false);
 
@@ -117,13 +118,14 @@ namespace DrawTools
             Helper.HierarchicalGridHelper.Templatecolumn(Master_AppDGV, GridControlTypes.BoundColumn, "CodeAp", "Code application", "Code application", true, 120, DataGridViewTriState.True, DataGridViewContentAlignment.MiddleLeft, DataGridViewContentAlignment.MiddleCenter, System.Drawing.Color.Transparent, null, "", "", System.Drawing.Color.Black);
 
         }
-               
+
         // to generate Detail Datagridview with your coding
         public void DetailGrid_Initialize()
         {
+            Detail_VersionDGV.Columns.Clear();
 
             //First generate the grid Layout Design
-            HierarchicalGridHelper.Layouts(Detail_VersionDGV, System.Drawing.Color.White, System.Drawing.Color.AliceBlue,  System.Drawing.Color.WhiteSmoke, false, System.Drawing.Color.SteelBlue, false, false, false);
+            HierarchicalGridHelper.Layouts(Detail_VersionDGV, System.Drawing.Color.White, System.Drawing.Color.AliceBlue, System.Drawing.Color.WhiteSmoke, false, System.Drawing.Color.SteelBlue, false, false, false);
 
             //Set Height,width and add panel to your selected control
             HierarchicalGridHelper.Generategrid(Detail_VersionDGV, pDataGV, 150, 50, 5, 5);
@@ -198,9 +200,9 @@ namespace DrawTools
         }
 
         private void BtnNewApp_Click(object sender, EventArgs e)
-        {          
-                FormPropApp fpa = new FormPropApp(this, null);
-                fpa.ShowDialog(this);           
+        {
+            FormApplicationUpdatePopUp fpa = new FormApplicationUpdatePopUp(this);
+            fpa.ShowDialog(this);          
         }
     }
 

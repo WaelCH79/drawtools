@@ -1,8 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Configuration;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +15,9 @@ namespace DAL
 
         public MySqlConnection CreateConnection() //create mysql connection
         {
-            string connectionString = "Server=localhost;Database=drawtools;Uid=root;Pwd=Password!123;";
-            connection = new MySqlConnection(connectionString);
+
+
+            connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["DrawTools.Properties.Settings.ConnectionString"].ConnectionString);
 
             return connection;
         }
@@ -114,10 +115,7 @@ namespace DAL
 
                         foreach (KeyValuePair<string, string> item in Params)
                         {
-                            //Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
                             cmd.Parameters.AddWithValue("@" + item.Key, item.Value);
-
-
                         }
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                         {
@@ -134,7 +132,44 @@ namespace DAL
             {
                 throw ex;
             }
+        }
 
+        /// <summary>
+        /// Exécuter une transaction
+        /// </summary>
+        /// <param name="queryList">Liste des requetes</param>
+        public void ExucteTransaction(List<string> queryList)
+        {
+            MySqlConnection myConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["DrawTools.Properties.Settings.ConnectionString"].ConnectionString);
+            myConnection.Open();
+            MySqlCommand myCommand = myConnection.CreateCommand();
+            MySqlTransaction myTrans;
+            // Start a local transaction
+            myTrans = myConnection.BeginTransaction();
+            // Must assign both transaction object and connection
+            // to Command object for a pending local transaction
+            myCommand.Connection = myConnection;
+            myCommand.Transaction = myTrans;
+
+            try
+            {
+                foreach( string query in queryList)
+                {
+                    myCommand.CommandText = query;
+                    myCommand.ExecuteNonQuery();
+                }
+
+                myTrans.Commit();
+
+            }
+            catch (Exception e)
+            {
+                    myTrans.Rollback();               
+            }
+            finally
+            {
+                myConnection.Close();
+            }
         }
     }
 }
