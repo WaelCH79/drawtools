@@ -10,9 +10,9 @@ namespace DrawTools
 {
     public partial class FormApplicationUpdatePopUp : Form
     {
-        ApplicationRepo aRepo;
-        Form formeParent;
-        bool Validate;
+        private ApplicationRepo aRepo;
+        private Form formeParent;
+        private bool validate;
 
         public Guid GuidVue { get; private set; }
 
@@ -34,10 +34,10 @@ namespace DrawTools
 
         private void bOK_Click(object sender, EventArgs e)
         {
-            Validate = true;
+            validate = true;
             ValidateChildren(ValidationConstraints.Enabled);
             
-            if(Validate)
+            if(validate)
             {
                 this.Save();
                 DialogResult = DialogResult.Yes;
@@ -108,7 +108,7 @@ namespace DrawTools
                 e.Cancel = true;
                 tb.Focus();
                 ep.SetError(tb, "textbox should not be left blank!");
-                Validate = false;
+                validate = false;
             }
             else
             {
@@ -123,7 +123,7 @@ namespace DrawTools
             var guidApp = Guid.NewGuid().ToString();
             var guidAppVersion = Guid.NewGuid().ToString();
             var GuidVue = Guid.NewGuid().ToString();
-            queryList.Add($"INSERT INTO Application (GuidApplication, NomApplication, Trigramme,  GuidArborescence) VALUES ('{guidApp}','{tbNomAppli.Text}','{tbTrigramme.Text}','764079ad-621b-4c57-92be-9d1530fb20cb')");
+            queryList.Add($"INSERT INTO Application (GuidApplication, NomApplication, Trigramme,  GuidArborescence) VALUES ('{guidApp}','{tbNomAppli}','{tbTrigramme.Text}','764079ad-621b-4c57-92be-9d1530fb20cb')");
             queryList.Add($"INSERT INTO DansTypeVue (GuidTypeVue, GuidObjet, TypeObjet) VALUES ('49c88d3d-f32f-44fe-ad6c-35977c5b812e','{guidApp}','Application')");
             queryList.Add($"INSERT INTO AppVersion (GuidAppVersion, Version, GuidApplication) VALUES ('{guidAppVersion}','{tbLabelAppVersion.Text}','{guidApp}')");
             queryList.Add($"INSERT INTO Vue (GuidVue, NomVue, GuidGVue, GuidAppVersion, GuidTypeVue) VALUES ('{GuidVue.ToString()}','{tbPrefixNom.Text + "_" + TBLabelVue.Text}','{GuidVue.ToString()} ','{guidAppVersion}','{cbNomTypeVue.SelectedValue.ToString()}')");

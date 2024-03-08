@@ -1179,6 +1179,8 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Content Include="logs\Applog.txt" />
+    <Content Include="logs\archive\log.txt" />
     <Content Include="NLog.config">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

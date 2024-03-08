@@ -14,7 +14,7 @@ namespace DrawTools.Helper
             logger.Error(e.ExceptionObject.ToString());
             LogManager.Flush();
             // Display user-friendly message
-            MessageBox.Show("An error has occurred. Please try again later.");
+           // MessageBox.Show("An error has occurred. Please try again later.");
         }
     }
 }
