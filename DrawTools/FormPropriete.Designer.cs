@@ -43,34 +43,42 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 6);
+            this.label1.CausesValidation = false;
+            this.label1.Location = new System.Drawing.Point(13, 231);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(81, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Root Path";
+            this.label1.Visible = false;
             // 
             // tbRootPath
             // 
-            this.tbRootPath.Location = new System.Drawing.Point(12, 22);
+            this.tbRootPath.Location = new System.Drawing.Point(17, 256);
+            this.tbRootPath.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbRootPath.Name = "tbRootPath";
-            this.tbRootPath.Size = new System.Drawing.Size(241, 20);
+            this.tbRootPath.Size = new System.Drawing.Size(360, 26);
             this.tbRootPath.TabIndex = 1;
+            this.tbRootPath.Visible = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(253, 23);
+            this.button1.Location = new System.Drawing.Point(379, 257);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 19);
+            this.button1.Size = new System.Drawing.Size(39, 29);
             this.button1.TabIndex = 2;
             this.button1.Text = "...";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // bOK
             // 
-            this.bOK.Location = new System.Drawing.Point(15, 233);
+            this.bOK.Location = new System.Drawing.Point(22, 358);
+            this.bOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bOK.Name = "bOK";
-            this.bOK.Size = new System.Drawing.Size(55, 21);
+            this.bOK.Size = new System.Drawing.Size(82, 32);
             this.bOK.TabIndex = 3;
             this.bOK.Text = "OK";
             this.bOK.UseVisualStyleBackColor = true;
@@ -78,9 +86,10 @@
             // 
             // bAnnuler
             // 
-            this.bAnnuler.Location = new System.Drawing.Point(76, 233);
+            this.bAnnuler.Location = new System.Drawing.Point(114, 358);
+            this.bAnnuler.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bAnnuler.Name = "bAnnuler";
-            this.bAnnuler.Size = new System.Drawing.Size(55, 21);
+            this.bAnnuler.Size = new System.Drawing.Size(82, 32);
             this.bAnnuler.TabIndex = 4;
             this.bAnnuler.Text = "Annuler";
             this.bAnnuler.UseVisualStyleBackColor = true;
@@ -89,9 +98,10 @@
             // cbComposant
             // 
             this.cbComposant.AutoSize = true;
-            this.cbComposant.Location = new System.Drawing.Point(12, 53);
+            this.cbComposant.Location = new System.Drawing.Point(18, 32);
+            this.cbComposant.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbComposant.Name = "cbComposant";
-            this.cbComposant.Size = new System.Drawing.Size(274, 17);
+            this.cbComposant.Size = new System.Drawing.Size(410, 24);
             this.cbComposant.TabIndex = 5;
             this.cbComposant.Text = "Prise en compte uniquement des composants utilisés";
             this.cbComposant.UseVisualStyleBackColor = true;
@@ -99,9 +109,10 @@
             // cbppt
             // 
             this.cbppt.AutoSize = true;
-            this.cbppt.Location = new System.Drawing.Point(12, 76);
+            this.cbppt.Location = new System.Drawing.Point(18, 67);
+            this.cbppt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbppt.Name = "cbppt";
-            this.cbppt.Size = new System.Drawing.Size(163, 17);
+            this.cbppt.Size = new System.Drawing.Size(245, 24);
             this.cbppt.TabIndex = 6;
             this.cbppt.Text = "Schémas format présentation";
             this.cbppt.UseVisualStyleBackColor = true;
@@ -109,9 +120,10 @@
             // cbInstallee
             // 
             this.cbInstallee.AutoSize = true;
-            this.cbInstallee.Location = new System.Drawing.Point(12, 99);
+            this.cbInstallee.Location = new System.Drawing.Point(18, 102);
+            this.cbInstallee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbInstallee.Name = "cbInstallee";
-            this.cbInstallee.Size = new System.Drawing.Size(291, 17);
+            this.cbInstallee.Size = new System.Drawing.Size(433, 24);
             this.cbInstallee.TabIndex = 7;
             this.cbInstallee.Text = "Prise en Compte des applications installée en production";
             this.cbInstallee.UseVisualStyleBackColor = true;
@@ -119,18 +131,19 @@
             // cbToolTip
             // 
             this.cbToolTip.AutoSize = true;
-            this.cbToolTip.Location = new System.Drawing.Point(12, 122);
+            this.cbToolTip.Location = new System.Drawing.Point(18, 138);
+            this.cbToolTip.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbToolTip.Name = "cbToolTip";
-            this.cbToolTip.Size = new System.Drawing.Size(125, 17);
+            this.cbToolTip.Size = new System.Drawing.Size(183, 24);
             this.cbToolTip.TabIndex = 8;
             this.cbToolTip.Text = "Activer les info-bulles";
             this.cbToolTip.UseVisualStyleBackColor = true;
             // 
             // FormPropriete
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 266);
+            this.ClientSize = new System.Drawing.Size(450, 409);
             this.Controls.Add(this.cbToolTip);
             this.Controls.Add(this.cbInstallee);
             this.Controls.Add(this.cbppt);
@@ -140,6 +153,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbRootPath);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormPropriete";
             this.Text = "FormPropriete";
             this.ResumeLayout(false);
