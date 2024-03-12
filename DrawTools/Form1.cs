@@ -199,7 +199,7 @@ namespace DrawTools
         private Label label2;
         private MenuItem menuItem34;
         private MenuItem menuItem35;
-        private MenuItem menuItem31;
+        private MenuItem menuDefinitions;
         private MenuItem menuItem36;
         private MenuItem menuItem37;
         private MenuItem menuItem38;
@@ -531,7 +531,7 @@ namespace DrawTools
             this.menuDrawEllipse = new System.Windows.Forms.MenuItem();
             this.menuDrawLine = new System.Windows.Forms.MenuItem();
             this.menuDrawPolygon = new System.Windows.Forms.MenuItem();
-            this.menuItem31 = new System.Windows.Forms.MenuItem();
+            this.menuDefinitions = new System.Windows.Forms.MenuItem();
             this.menuItem51 = new System.Windows.Forms.MenuItem();
             this.menuItem36 = new System.Windows.Forms.MenuItem();
             this.menuItem37 = new System.Windows.Forms.MenuItem();
@@ -719,7 +719,7 @@ namespace DrawTools
             this.menuItem1,
             this.menuItem3,
             this.menuItem2,
-            this.menuItem31,
+            this.menuDefinitions,
             this.menuItem15,
             this.menuItem10});
             // 
@@ -947,13 +947,13 @@ namespace DrawTools
             this.menuDrawPolygon.Text = "Pencil";
             this.menuDrawPolygon.Click += new System.EventHandler(this.menuDrawPolygon_Click);
             // 
-            // menuItem31
+            // menuDefinitions
             // 
-            this.menuItem31.Index = 3;
-            this.menuItem31.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuDefinitions.Index = 3;
+            this.menuDefinitions.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItem51,
             this.menuItem36});
-            this.menuItem31.Text = "Create";
+            this.menuDefinitions.Text = "Definitions";
             // 
             // menuItem51
             // 
@@ -2038,7 +2038,7 @@ namespace DrawTools
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(919, 418);
+            this.splitContainer1.Size = new System.Drawing.Size(919, 294);
             this.splitContainer1.SplitterDistance = 35;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -2058,7 +2058,7 @@ namespace DrawTools
             // 
             this.splitContainer2.Panel2.AutoScroll = true;
             this.splitContainer2.Panel2.Controls.Add(this.drawArea);
-            this.splitContainer2.Size = new System.Drawing.Size(919, 379);
+            this.splitContainer2.Size = new System.Drawing.Size(919, 255);
             this.splitContainer2.SplitterDistance = 312;
             this.splitContainer2.TabIndex = 2;
             // 
@@ -2103,7 +2103,7 @@ namespace DrawTools
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.dataGrid);
-            this.splitContainer3.Size = new System.Drawing.Size(308, 375);
+            this.splitContainer3.Size = new System.Drawing.Size(308, 251);
             this.splitContainer3.SplitterDistance = 298;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -2437,7 +2437,7 @@ namespace DrawTools
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersVisible = false;
             this.dataGrid.RowHeadersWidth = 62;
-            this.dataGrid.Size = new System.Drawing.Size(308, 103);
+            this.dataGrid.Size = new System.Drawing.Size(308, 55);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
             this.dataGrid.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellValidated);
@@ -2495,7 +2495,7 @@ namespace DrawTools
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(8, 19);
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(919, 418);
+            this.ClientSize = new System.Drawing.Size(919, 294);
             this.ControlBox = false;
             this.Controls.Add(this.toolBar1);
             this.Controls.Add(this.splitContainer1);
