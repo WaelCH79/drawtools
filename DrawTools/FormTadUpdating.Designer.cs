@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cbApp = new System.Windows.Forms.ComboBox();
             this.bOK = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,26 +52,29 @@
             this.lChemin = new System.Windows.Forms.Label();
             this.tbPath = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.epCommentaire = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbTypeDoc.SuspendLayout();
             this.gbFormat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epCommentaire)).BeginInit();
             this.SuspendLayout();
             // 
             // cbApp
             // 
+            this.cbApp.CausesValidation = false;
             this.cbApp.FormattingEnabled = true;
-            this.cbApp.Location = new System.Drawing.Point(15, 137);
-            this.cbApp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbApp.Location = new System.Drawing.Point(17, 171);
+            this.cbApp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbApp.Name = "cbApp";
-            this.cbApp.Size = new System.Drawing.Size(480, 24);
+            this.cbApp.Size = new System.Drawing.Size(540, 28);
             this.cbApp.TabIndex = 0;
             this.cbApp.SelectedIndexChanged += new System.EventHandler(this.cbApp_SelectedIndexChanged);
             // 
             // bOK
             // 
-            this.bOK.Location = new System.Drawing.Point(20, 567);
-            this.bOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bOK.Location = new System.Drawing.Point(22, 709);
+            this.bOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bOK.Name = "bOK";
-            this.bOK.Size = new System.Drawing.Size(100, 28);
+            this.bOK.Size = new System.Drawing.Size(112, 35);
             this.bOK.TabIndex = 1;
             this.bOK.Text = "Execute";
             this.bOK.UseVisualStyleBackColor = true;
@@ -79,20 +83,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 116);
+            this.label1.Location = new System.Drawing.Point(14, 145);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.Size = new System.Drawing.Size(87, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Application";
             // 
             // chkTemplate
             // 
             this.chkTemplate.AutoSize = true;
-            this.chkTemplate.Location = new System.Drawing.Point(16, 290);
-            this.chkTemplate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkTemplate.CausesValidation = false;
+            this.chkTemplate.Location = new System.Drawing.Point(18, 362);
+            this.chkTemplate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkTemplate.Name = "chkTemplate";
-            this.chkTemplate.Size = new System.Drawing.Size(120, 21);
+            this.chkTemplate.Size = new System.Drawing.Size(138, 24);
             this.chkTemplate.TabIndex = 3;
             this.chkTemplate.Text = "From template";
             this.chkTemplate.UseVisualStyleBackColor = true;
@@ -100,30 +105,32 @@
             // 
             // lstTad
             // 
+            this.lstTad.CausesValidation = false;
             this.lstTad.FormattingEnabled = true;
-            this.lstTad.ItemHeight = 16;
-            this.lstTad.Location = new System.Drawing.Point(159, 313);
-            this.lstTad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstTad.ItemHeight = 20;
+            this.lstTad.Location = new System.Drawing.Point(179, 391);
+            this.lstTad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstTad.Name = "lstTad";
-            this.lstTad.Size = new System.Drawing.Size(336, 84);
+            this.lstTad.Size = new System.Drawing.Size(378, 104);
             this.lstTad.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(155, 290);
+            this.label2.Location = new System.Drawing.Point(174, 362);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 17);
+            this.label2.Size = new System.Drawing.Size(186, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "From existing documents";
             // 
             // bClose
             // 
-            this.bClose.Location = new System.Drawing.Point(327, 567);
-            this.bClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bClose.CausesValidation = false;
+            this.bClose.Location = new System.Drawing.Point(368, 709);
+            this.bClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bClose.Name = "bClose";
-            this.bClose.Size = new System.Drawing.Size(100, 28);
+            this.bClose.Size = new System.Drawing.Size(112, 35);
             this.bClose.TabIndex = 6;
             this.bClose.Text = "Quitter";
             this.bClose.UseVisualStyleBackColor = true;
@@ -133,11 +140,11 @@
             // 
             this.gbTypeDoc.Controls.Add(this.rbCatDoc);
             this.gbTypeDoc.Controls.Add(this.rbTadDoc);
-            this.gbTypeDoc.Location = new System.Drawing.Point(20, 15);
-            this.gbTypeDoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbTypeDoc.Location = new System.Drawing.Point(22, 19);
+            this.gbTypeDoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbTypeDoc.Name = "gbTypeDoc";
-            this.gbTypeDoc.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbTypeDoc.Size = new System.Drawing.Size(229, 90);
+            this.gbTypeDoc.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbTypeDoc.Size = new System.Drawing.Size(258, 112);
             this.gbTypeDoc.TabIndex = 7;
             this.gbTypeDoc.TabStop = false;
             this.gbTypeDoc.Text = "Type Document";
@@ -145,10 +152,10 @@
             // rbCatDoc
             // 
             this.rbCatDoc.AutoSize = true;
-            this.rbCatDoc.Location = new System.Drawing.Point(9, 52);
-            this.rbCatDoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbCatDoc.Location = new System.Drawing.Point(10, 65);
+            this.rbCatDoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbCatDoc.Name = "rbCatDoc";
-            this.rbCatDoc.Size = new System.Drawing.Size(124, 21);
+            this.rbCatDoc.Size = new System.Drawing.Size(143, 24);
             this.rbCatDoc.TabIndex = 1;
             this.rbCatDoc.TabStop = true;
             this.rbCatDoc.Text = "CAT Document";
@@ -158,10 +165,10 @@
             // rbTadDoc
             // 
             this.rbTadDoc.AutoSize = true;
-            this.rbTadDoc.Location = new System.Drawing.Point(8, 23);
-            this.rbTadDoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbTadDoc.Location = new System.Drawing.Point(9, 29);
+            this.rbTadDoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbTadDoc.Name = "rbTadDoc";
-            this.rbTadDoc.Size = new System.Drawing.Size(125, 21);
+            this.rbTadDoc.Size = new System.Drawing.Size(144, 24);
             this.rbTadDoc.TabIndex = 0;
             this.rbTadDoc.TabStop = true;
             this.rbTadDoc.Text = "TAD Document";
@@ -172,11 +179,11 @@
             // 
             this.gbFormat.Controls.Add(this.rbHtmlDoc);
             this.gbFormat.Controls.Add(this.rbDocDoc);
-            this.gbFormat.Location = new System.Drawing.Point(257, 15);
-            this.gbFormat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbFormat.Location = new System.Drawing.Point(289, 19);
+            this.gbFormat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbFormat.Name = "gbFormat";
-            this.gbFormat.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbFormat.Size = new System.Drawing.Size(239, 90);
+            this.gbFormat.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbFormat.Size = new System.Drawing.Size(269, 112);
             this.gbFormat.TabIndex = 8;
             this.gbFormat.TabStop = false;
             this.gbFormat.Text = "Format Document";
@@ -184,10 +191,10 @@
             // rbHtmlDoc
             // 
             this.rbHtmlDoc.AutoSize = true;
-            this.rbHtmlDoc.Location = new System.Drawing.Point(8, 52);
-            this.rbHtmlDoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbHtmlDoc.Location = new System.Drawing.Point(9, 65);
+            this.rbHtmlDoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbHtmlDoc.Name = "rbHtmlDoc";
-            this.rbHtmlDoc.Size = new System.Drawing.Size(125, 21);
+            this.rbHtmlDoc.Size = new System.Drawing.Size(145, 24);
             this.rbHtmlDoc.TabIndex = 1;
             this.rbHtmlDoc.TabStop = true;
             this.rbHtmlDoc.Text = "Html Document";
@@ -197,10 +204,10 @@
             // rbDocDoc
             // 
             this.rbDocDoc.AutoSize = true;
-            this.rbDocDoc.Location = new System.Drawing.Point(8, 23);
-            this.rbDocDoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbDocDoc.Location = new System.Drawing.Point(9, 29);
+            this.rbDocDoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbDocDoc.Name = "rbDocDoc";
-            this.rbDocDoc.Size = new System.Drawing.Size(122, 21);
+            this.rbDocDoc.Size = new System.Drawing.Size(141, 24);
             this.rbDocDoc.TabIndex = 0;
             this.rbDocDoc.TabStop = true;
             this.rbDocDoc.Text = "Doc Document";
@@ -210,27 +217,27 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 171);
+            this.label3.Location = new System.Drawing.Point(18, 214);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 17);
+            this.label3.Size = new System.Drawing.Size(145, 20);
             this.label3.TabIndex = 9;
             this.label3.Text = "Version Application";
             // 
             // tbVersion
             // 
-            this.tbVersion.Location = new System.Drawing.Point(363, 192);
-            this.tbVersion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbVersion.Location = new System.Drawing.Point(408, 240);
+            this.tbVersion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbVersion.Name = "tbVersion";
-            this.tbVersion.Size = new System.Drawing.Size(132, 22);
+            this.tbVersion.Size = new System.Drawing.Size(148, 26);
             this.tbVersion.TabIndex = 10;
             // 
             // bLayer
             // 
-            this.bLayer.Location = new System.Drawing.Point(301, 188);
-            this.bLayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bLayer.Location = new System.Drawing.Point(339, 235);
+            this.bLayer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bLayer.Name = "bLayer";
-            this.bLayer.Size = new System.Drawing.Size(37, 28);
+            this.bLayer.Size = new System.Drawing.Size(42, 35);
             this.bLayer.TabIndex = 11;
             this.bLayer.Text = "+";
             this.bLayer.UseVisualStyleBackColor = true;
@@ -238,78 +245,86 @@
             // 
             // cbGuid
             // 
+            this.cbGuid.CausesValidation = false;
             this.cbGuid.FormattingEnabled = true;
-            this.cbGuid.Location = new System.Drawing.Point(104, 122);
-            this.cbGuid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbGuid.Location = new System.Drawing.Point(117, 152);
+            this.cbGuid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbGuid.Name = "cbGuid";
-            this.cbGuid.Size = new System.Drawing.Size(167, 24);
+            this.cbGuid.Size = new System.Drawing.Size(187, 28);
             this.cbGuid.TabIndex = 12;
             this.cbGuid.Visible = false;
             // 
             // rtCommentaire
             // 
-            this.rtCommentaire.Location = new System.Drawing.Point(16, 428);
-            this.rtCommentaire.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.epCommentaire.SetError(this.rtCommentaire, "Le champs commentaire est obligatoire");
+            this.rtCommentaire.Location = new System.Drawing.Point(18, 535);
+            this.rtCommentaire.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rtCommentaire.Name = "rtCommentaire";
-            this.rtCommentaire.Size = new System.Drawing.Size(479, 120);
+            this.rtCommentaire.Size = new System.Drawing.Size(538, 149);
             this.rtCommentaire.TabIndex = 13;
             this.rtCommentaire.Text = "";
+            this.rtCommentaire.Validating += new System.ComponentModel.CancelEventHandler(this.rtCommentaire_Validating);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 406);
+            this.label4.Location = new System.Drawing.Point(18, 508);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 17);
+            this.label4.Size = new System.Drawing.Size(104, 20);
             this.label4.TabIndex = 14;
             this.label4.Text = "Commentaire";
             // 
             // cbVersion
             // 
+            this.cbVersion.CausesValidation = false;
             this.cbVersion.FormattingEnabled = true;
-            this.cbVersion.Location = new System.Drawing.Point(16, 191);
-            this.cbVersion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbVersion.Location = new System.Drawing.Point(18, 239);
+            this.cbVersion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbVersion.Name = "cbVersion";
-            this.cbVersion.Size = new System.Drawing.Size(281, 24);
+            this.cbVersion.Size = new System.Drawing.Size(316, 28);
             this.cbVersion.TabIndex = 15;
             this.cbVersion.SelectedIndexChanged += new System.EventHandler(this.cbVersion_SelectedIndexChanged);
             // 
             // lChemin
             // 
             this.lChemin.AutoSize = true;
-            this.lChemin.Location = new System.Drawing.Point(16, 229);
+            this.lChemin.Location = new System.Drawing.Point(18, 286);
             this.lChemin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lChemin.Name = "lChemin";
-            this.lChemin.Size = new System.Drawing.Size(37, 17);
+            this.lChemin.Size = new System.Drawing.Size(42, 20);
             this.lChemin.TabIndex = 16;
             this.lChemin.Text = "Path";
             // 
             // tbPath
             // 
             this.tbPath.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPath.Location = new System.Drawing.Point(15, 249);
-            this.tbPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPath.Location = new System.Drawing.Point(17, 311);
+            this.tbPath.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPath.Name = "tbPath";
             this.tbPath.ReadOnly = true;
-            this.tbPath.Size = new System.Drawing.Size(481, 15);
+            this.tbPath.Size = new System.Drawing.Size(541, 19);
             this.tbPath.TabIndex = 17;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(360, 171);
+            this.label5.Location = new System.Drawing.Point(405, 214);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 17);
+            this.label5.Size = new System.Drawing.Size(94, 20);
             this.label5.TabIndex = 18;
             this.label5.Text = "Version gen";
             // 
+            // epCommentaire
+            // 
+            this.epCommentaire.ContainerControl = this;
+            // 
             // FormTadUpdating
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 608);
+            this.ClientSize = new System.Drawing.Size(586, 760);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbPath);
             this.Controls.Add(this.lChemin);
@@ -329,13 +344,17 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bOK);
             this.Controls.Add(this.cbApp);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormTadUpdating";
-            this.Text = "FormTadUpdating";
+            this.Text = "Le champ commentaire est obligatoire";
             this.gbTypeDoc.ResumeLayout(false);
             this.gbTypeDoc.PerformLayout();
             this.gbFormat.ResumeLayout(false);
             this.gbFormat.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epCommentaire)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,5 +386,6 @@
         private System.Windows.Forms.Label lChemin;
         private System.Windows.Forms.TextBox tbPath;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ErrorProvider epCommentaire;
     }
 }

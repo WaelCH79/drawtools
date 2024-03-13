@@ -27,7 +27,8 @@ namespace DrawTools
         private string fullpath;
         private rbTypeDocument rbTypeDoc;
         private List<string[]> lstAppVersion;
-        
+        private bool validate;
+
         public new Form1 Parent
         {
             get { return parent; }
@@ -140,13 +141,18 @@ namespace DrawTools
 
         private void bOK_Click(object sender, EventArgs e)
         {
-            if (tbVersion.Text == "") MessageBox.Show("Le champ Version doit être renseigné");
-            else
+            ValidateChildren(ValidationConstraints.Enabled);
+            if (validate)
             {
-                if (rbTypeDoc == rbTypeDocument.Tad) CreatTad(); else CreatCat();
+                if (tbVersion.Text == "") MessageBox.Show("Le champ Version doit être renseigné");
+                else
+                {
+                    if (rbTypeDoc == rbTypeDocument.Tad) CreatTad(); else CreatCat();
+                }
+                Parent.initVarApp();
+                Close();
             }
-            Parent.initVarApp();
-            Close();
+           
         }
 
         private void CreatCat()
@@ -1715,6 +1721,22 @@ namespace DrawTools
         private void bLayer_Click(object sender, EventArgs e)
         {
             Parent.wkApp.SetLayers();
+        }
+
+        private void rtCommentaire_Validating(object sender, CancelEventArgs e)
+        {
+            validate = true;
+            if (string.IsNullOrWhiteSpace(rtCommentaire.Text))
+            {
+                e.Cancel = true;
+                rtCommentaire.Focus();
+                validate = false;
+            }
+            else
+            {
+                e.Cancel = false;
+                epCommentaire.SetError(rtCommentaire, "");
+            }
         }
     }
 }
