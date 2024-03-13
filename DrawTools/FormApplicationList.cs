@@ -87,6 +87,7 @@ namespace DrawTools
         // to generate Master Datagridview with your coding
         public void MasterGrid_Initialize()
         {
+            Master_AppDGV.AutoGenerateColumns = false;
             Master_AppDGV.Columns.Clear();
             //First generate the grid Layout Design
             Helper.HierarchicalGridHelper.Layouts(Master_AppDGV, System.Drawing.Color.LightSteelBlue, System.Drawing.Color.AliceBlue, System.Drawing.Color.WhiteSmoke, false, System.Drawing.Color.SteelBlue, false, false, false);

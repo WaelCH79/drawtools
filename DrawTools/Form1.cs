@@ -334,6 +334,7 @@ namespace DrawTools
         private MenuItem menuItem67;
         private ToolBarButton tbHome;
         private MenuItem menuVlan;
+        private MenuItem menuPort;
         public Color[] aColor =
         {
             Color.Blue,
@@ -538,6 +539,7 @@ namespace DrawTools
             this.menuItem37 = new System.Windows.Forms.MenuItem();
             this.menuItem38 = new System.Windows.Forms.MenuItem();
             this.menuItem39 = new System.Windows.Forms.MenuItem();
+            this.menuVlan = new System.Windows.Forms.MenuItem();
             this.menuItem15 = new System.Windows.Forms.MenuItem();
             this.menuItem11 = new System.Windows.Forms.MenuItem();
             this.menuItem12 = new System.Windows.Forms.MenuItem();
@@ -700,7 +702,7 @@ namespace DrawTools
             this.Pls = new System.Windows.Forms.DataGridViewButtonColumn();
             this.NonVisible = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drawArea = new DrawTools.DrawArea();
-            this.menuVlan = new System.Windows.Forms.MenuItem();
+            this.menuPort = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -955,7 +957,8 @@ namespace DrawTools
             this.menuDefinitions.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItem51,
             this.menuItem36,
-            this.menuVlan});
+            this.menuVlan,
+            this.menuPort});
             this.menuDefinitions.Text = "Definitions";
             // 
             // menuItem51
@@ -963,12 +966,6 @@ namespace DrawTools
             this.menuItem51.Index = 0;
             this.menuItem51.Text = "Layer Manager";
             this.menuItem51.Click += new System.EventHandler(this.menuCreateLayer_Click);
-            // 
-            // menuVLan
-            // 
-            this.menuVlan.Index = 0;
-            this.menuVlan.Text = "Layer Manager";
-            this.menuVlan.Click += new System.EventHandler(this.menuCreateVlan_Click);
             // 
             // menuItem36
             // 
@@ -996,6 +993,18 @@ namespace DrawTools
             this.menuItem39.Index = 2;
             this.menuItem39.Text = "Link Services-Ports";
             this.menuItem39.Click += new System.EventHandler(this.ServiceLink_Click);
+            // 
+            // menuVlan
+            // 
+            this.menuVlan.Index = 3;
+            this.menuVlan.Text = "VLAN";
+            this.menuVlan.Click += new System.EventHandler(this.menuCreateVlan_Click);
+            // 
+            // menuPort
+            // 
+            this.menuPort.Index = 3;
+            this.menuPort.Text = "VLAN";
+            this.menuPort.Click += new System.EventHandler(this.menuCreatePort_Click);
             // 
             // menuItem15
             // 
@@ -2500,10 +2509,10 @@ namespace DrawTools
             this.drawArea.Size = new System.Drawing.Size(6410, 5803);
             this.drawArea.TabIndex = 1;
             // 
-            // menuVlan
+            // menuPort
             // 
-            this.menuVlan.Index = 2;
-            this.menuVlan.Text = "VLAN";
+            this.menuPort.Index = 3;
+            this.menuPort.Text = "Ports";
             // 
             // Form1
             // 
@@ -8232,6 +8241,12 @@ namespace DrawTools
         private void menuCreateVlan_Click(object sender, System.EventArgs e)
         {
             FormVLan fp = new FormVLan(this);
+            fp.ShowDialog(this); ;
+        }
+
+        private void menuCreatePort_Click(object sender, System.EventArgs e)
+        {
+            FormPort fp = new FormPort(this);
             fp.ShowDialog(this); ;
         }
 
