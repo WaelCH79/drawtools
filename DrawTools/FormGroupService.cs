@@ -16,10 +16,10 @@ namespace DrawTools
         public new Form1 Parent
         {
             get { return parent; }
-            set { parent = value;}
+            set { parent = value; }
         }
 
-        
+
         void tbGroupServiceFiltre_TextChanged(object sender, System.EventArgs e)
         {
             lbGroupService.Items.Clear();
@@ -31,13 +31,18 @@ namespace DrawTools
 
         void lbGroupService_SelectedIndexChanged(object sender, System.EventArgs e)
         {
+            int idx = 0;
             if (Parent.oCnxBase.CBRecherche("Select NomGroupService, GuidFonctionService From GroupService Where GuidGroupService='" + Parent.oCnxBase.GetValueInStringNomGuid((string)lbGroupService.SelectedItem, 1) + "'"))
             {
                 tbNomGroupService.Text = Parent.oCnxBase.Reader.GetString(0);
-                if(!Parent.oCnxBase.Reader.IsDBNull(1))
+                if (!Parent.oCnxBase.Reader.IsDBNull(1))
                 {
-                    int idx = cbGuidFonctionService.FindString(Parent.oCnxBase.Reader.GetString(1));
+                    idx = cbGuidFonctionService.FindString(Parent.oCnxBase.Reader.GetString(1));
                     cbNomFonctionService.SelectedIndex = idx;
+                }
+                else
+                {
+                    cbNomFonctionService.SelectedIndex = -1;
                 }
             }
             Parent.oCnxBase.CBReaderClose();
@@ -67,7 +72,7 @@ namespace DrawTools
 
         private void bCreate_Click(object sender, EventArgs e)
         {
-            if (tbNomGroupService.Text != "") 
+            if (tbNomGroupService.Text != "")
             {
                 tbGroupServiceFiltre.Text = "xxxxxx";
                 Parent.oCnxBase.CBWrite("Insert Into GroupService (GuidGroupService, NomGroupService) Values ('" + Guid.NewGuid().ToString() + "','" + tbNomGroupService.Text + "')");
