@@ -30,7 +30,7 @@ namespace DrawTools
         {
             lbService.Items.Clear();
             if (tbServiceFiltre.Text != "")
-                Parent.oCnxBase.CBAddListBox("Select GuidService, NomService From Service Where NomService Like '" + tbServiceFiltre.Text + "%' Order by NomService", lbService);
+                Parent.oCnxBase.CBAddListBox("Select GuidService, NomService From Service Where NomService Like '%" + tbServiceFiltre.Text + "%' Order by NomService", lbService);
             else
                 Parent.oCnxBase.CBAddListBox("Select GuidService, NomService From Service Order by NomService", lbService);
         }

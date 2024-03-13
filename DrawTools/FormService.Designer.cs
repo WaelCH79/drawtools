@@ -52,9 +52,10 @@
             // 
             // bClose
             // 
-            this.bClose.Location = new System.Drawing.Point(435, 231);
+            this.bClose.Location = new System.Drawing.Point(652, 355);
+            this.bClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bClose.Name = "bClose";
-            this.bClose.Size = new System.Drawing.Size(62, 23);
+            this.bClose.Size = new System.Drawing.Size(93, 35);
             this.bClose.TabIndex = 13;
             this.bClose.Text = "Close";
             this.bClose.UseVisualStyleBackColor = true;
@@ -62,9 +63,10 @@
             // 
             // bDelete
             // 
-            this.bDelete.Location = new System.Drawing.Point(367, 231);
+            this.bDelete.Location = new System.Drawing.Point(550, 355);
+            this.bDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bDelete.Name = "bDelete";
-            this.bDelete.Size = new System.Drawing.Size(62, 23);
+            this.bDelete.Size = new System.Drawing.Size(93, 35);
             this.bDelete.TabIndex = 12;
             this.bDelete.Text = "Delete";
             this.bDelete.UseVisualStyleBackColor = true;
@@ -72,9 +74,10 @@
             // 
             // bModify
             // 
-            this.bModify.Location = new System.Drawing.Point(299, 231);
+            this.bModify.Location = new System.Drawing.Point(448, 355);
+            this.bModify.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bModify.Name = "bModify";
-            this.bModify.Size = new System.Drawing.Size(62, 23);
+            this.bModify.Size = new System.Drawing.Size(93, 35);
             this.bModify.TabIndex = 11;
             this.bModify.Text = "Modify";
             this.bModify.UseVisualStyleBackColor = true;
@@ -82,9 +85,10 @@
             // 
             // bCreate
             // 
-            this.bCreate.Location = new System.Drawing.Point(231, 231);
+            this.bCreate.Location = new System.Drawing.Point(346, 355);
+            this.bCreate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bCreate.Name = "bCreate";
-            this.bCreate.Size = new System.Drawing.Size(62, 23);
+            this.bCreate.Size = new System.Drawing.Size(93, 35);
             this.bCreate.TabIndex = 10;
             this.bCreate.Text = "Create";
             this.bCreate.UseVisualStyleBackColor = true;
@@ -102,90 +106,102 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.tbNomService);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(231, 12);
+            this.groupBox2.Location = new System.Drawing.Point(346, 18);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(266, 213);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(399, 328);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detail";
             // 
             // tbDescription
             // 
-            this.tbDescription.Location = new System.Drawing.Point(6, 183);
+            this.tbDescription.Location = new System.Drawing.Point(9, 282);
+            this.tbDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbDescription.Name = "tbDescription";
-            this.tbDescription.Size = new System.Drawing.Size(254, 20);
+            this.tbDescription.Size = new System.Drawing.Size(379, 26);
             this.tbDescription.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 168);
+            this.label5.Location = new System.Drawing.Point(9, 258);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.Size = new System.Drawing.Size(89, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "Description";
             // 
             // tbPorts
             // 
-            this.tbPorts.Location = new System.Drawing.Point(6, 144);
+            this.tbPorts.Location = new System.Drawing.Point(9, 222);
+            this.tbPorts.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPorts.Name = "tbPorts";
-            this.tbPorts.Size = new System.Drawing.Size(254, 20);
+            this.tbPorts.Size = new System.Drawing.Size(379, 26);
             this.tbPorts.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 129);
+            this.label4.Location = new System.Drawing.Point(9, 198);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.Size = new System.Drawing.Size(46, 20);
             this.label4.TabIndex = 10;
             this.label4.Text = "Ports";
             // 
             // tbProtocole
             // 
-            this.tbProtocole.Location = new System.Drawing.Point(6, 106);
+            this.tbProtocole.Location = new System.Drawing.Point(9, 163);
+            this.tbProtocole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbProtocole.Name = "tbProtocole";
-            this.tbProtocole.Size = new System.Drawing.Size(254, 20);
+            this.tbProtocole.Size = new System.Drawing.Size(379, 26);
             this.tbProtocole.TabIndex = 7;
             // 
             // Protocole
             // 
             this.Protocole.AutoSize = true;
-            this.Protocole.Location = new System.Drawing.Point(6, 91);
+            this.Protocole.Location = new System.Drawing.Point(9, 140);
+            this.Protocole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Protocole.Name = "Protocole";
-            this.Protocole.Size = new System.Drawing.Size(52, 13);
+            this.Protocole.Size = new System.Drawing.Size(76, 20);
             this.Protocole.TabIndex = 8;
             this.Protocole.Text = "Protocole";
             // 
             // tbInfoSup
             // 
-            this.tbInfoSup.Location = new System.Drawing.Point(6, 68);
+            this.tbInfoSup.Location = new System.Drawing.Point(9, 105);
+            this.tbInfoSup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbInfoSup.Name = "tbInfoSup";
-            this.tbInfoSup.Size = new System.Drawing.Size(254, 20);
+            this.tbInfoSup.Size = new System.Drawing.Size(379, 26);
             this.tbInfoSup.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 53);
+            this.label1.Location = new System.Drawing.Point(9, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 13);
+            this.label1.Size = new System.Drawing.Size(203, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Information supplémentaire";
             // 
             // tbNomService
             // 
-            this.tbNomService.Location = new System.Drawing.Point(6, 30);
+            this.tbNomService.Location = new System.Drawing.Point(9, 46);
+            this.tbNomService.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbNomService.Name = "tbNomService";
-            this.tbNomService.Size = new System.Drawing.Size(254, 20);
+            this.tbNomService.Size = new System.Drawing.Size(379, 26);
             this.tbNomService.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 15);
+            this.label2.Location = new System.Drawing.Point(9, 23);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nom Port";
             // 
@@ -193,9 +209,11 @@
             // 
             this.groupBox1.Controls.Add(this.lbService);
             this.groupBox1.Controls.Add(this.tbServiceFiltre);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(18, 18);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(213, 242);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(320, 372);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ports";
@@ -203,31 +221,35 @@
             // lbService
             // 
             this.lbService.FormattingEnabled = true;
-            this.lbService.Location = new System.Drawing.Point(6, 45);
+            this.lbService.ItemHeight = 20;
+            this.lbService.Location = new System.Drawing.Point(9, 69);
+            this.lbService.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lbService.Name = "lbService";
-            this.lbService.Size = new System.Drawing.Size(201, 186);
+            this.lbService.Size = new System.Drawing.Size(300, 284);
             this.lbService.TabIndex = 2;
-            this.lbService.SelectedIndexChanged +=lbService_SelectedIndexChanged;
             // 
             // tbServiceFiltre
             // 
-            this.tbServiceFiltre.Location = new System.Drawing.Point(6, 19);
+            this.tbServiceFiltre.Location = new System.Drawing.Point(9, 29);
+            this.tbServiceFiltre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbServiceFiltre.Name = "tbServiceFiltre";
-            this.tbServiceFiltre.Size = new System.Drawing.Size(201, 20);
+            this.tbServiceFiltre.Size = new System.Drawing.Size(300, 26);
             this.tbServiceFiltre.TabIndex = 2;
-            this.tbServiceFiltre.TextChanged +=tbServiceFiltre_TextChanged;
             // 
             // FormService
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 265);
+            this.ClientSize = new System.Drawing.Size(762, 408);
             this.Controls.Add(this.bClose);
             this.Controls.Add(this.bDelete);
             this.Controls.Add(this.bModify);
             this.Controls.Add(this.bCreate);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormService";
             this.Text = "FormService";
             this.groupBox2.ResumeLayout(false);

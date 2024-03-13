@@ -24,7 +24,7 @@ namespace DrawTools
         {
             lbGroupService.Items.Clear();
             if (tbGroupServiceFiltre.Text != "")
-                Parent.oCnxBase.CBAddListBox("Select GuidGroupService, NomGroupService From GroupService Where NomGroupService Like '" + tbGroupServiceFiltre.Text + "%' Order by NomGroupService", lbGroupService);
+                Parent.oCnxBase.CBAddListBox("Select GuidGroupService, NomGroupService From GroupService Where NomGroupService Like '%" + tbGroupServiceFiltre.Text + "%' Order by NomGroupService", lbGroupService);
             else
                 Parent.oCnxBase.CBAddListBox("Select GuidGroupService, NomGroupService From GroupService Order by NomGroupService", lbGroupService);
         }
