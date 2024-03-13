@@ -56,6 +56,14 @@ namespace DrawTools.Helper
 
         //Add your grid to your selected Control and set height,width,position of your grid.
         #region Variables
+
+        public static void Generategrid(DataGridView AppDGV, int width, int height, int xval, int yval)
+        {
+            AppDGV.Location = new Point(xval, yval);
+            AppDGV.Size = new Size(width, height);
+            AppDGV.ScrollBars = ScrollBars.Both;
+        }
+
         public static void Generategrid(DataGridView AppDGV, Control cntrlName, int width, int height, int xval, int yval)
         {
             AppDGV.Location = new Point(xval, yval);

@@ -29,8 +29,8 @@ namespace DrawTools
 
 
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(GlobalExceptionHandler.UnhandledException);
-            FormApplicationList form = new FormApplicationList();
-            Application.Run(new FormParent(new FormApplicationList()));
+            //Application.Run(new FormParent(new FormApplicationList()));
+            Application.Run(new FormParent(new Form1()));
 
         }
     }

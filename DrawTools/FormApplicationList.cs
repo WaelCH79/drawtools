@@ -20,7 +20,6 @@ namespace DrawTools
         // Declared for the Detail grid
         DataGridView Detail_VersionDGV = new DataGridView();
 
-        List<int> lstNumericTextBoxColumns;
 
         Helper.HierarchicalGridHelper hierchicalGridHelper = new Helper.HierarchicalGridHelper();
         public int ColumnIndex;

@@ -610,6 +610,9 @@
     <EmbeddedResource Include="FormVisu.resx">
       <DependentUpon>FormVisu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormVLan.resx">
+      <DependentUpon>FormVLan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_ModifField.resx">
       <DependentUpon>Form_ModifField.cs</DependentUpon>
     </EmbeddedResource>
@@ -1001,6 +1004,12 @@
     </Compile>
     <Compile Include="FormVisu.Designer.cs">
       <DependentUpon>FormVisu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVLan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVLan.Designer.cs">
+      <DependentUpon>FormVLan.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_ModifField.cs">
       <SubType>Form</SubType>

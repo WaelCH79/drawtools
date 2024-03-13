@@ -166,6 +166,25 @@ namespace DrawTools
             return lstCadreRef;
         }
 
+        public void PopulateDataGridFromQuery(string strSelect, DataGridView dgv)
+        {
+            dgv.DataSource = null;
+            SelectReader();
+            try
+            {
+                CmdText = strSelect;
+                if (sw != null)
+                    SWwriteLog(0, CmdText, false);
+                DataTable dt = new DataTable();
+                dt.Load(Cmd.ExecuteReader());
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public ArrayList getContextTechno(string guidCadreRef, List<string[]> lstcadreref)
         {
             ArrayList lstContext1 = new ArrayList(), lstContext = new ArrayList();
@@ -3997,5 +4016,6 @@ namespace DrawTools
             }
             else CBReaderClose();
         }
+
     }
 }

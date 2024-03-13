@@ -333,6 +333,7 @@ namespace DrawTools
         private MenuItem menuItem66;
         private MenuItem menuItem67;
         private ToolBarButton tbHome;
+        private MenuItem menuVlan;
         public Color[] aColor =
         {
             Color.Blue,
@@ -699,6 +700,7 @@ namespace DrawTools
             this.Pls = new System.Windows.Forms.DataGridViewButtonColumn();
             this.NonVisible = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drawArea = new DrawTools.DrawArea();
+            this.menuVlan = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -952,7 +954,8 @@ namespace DrawTools
             this.menuDefinitions.Index = 3;
             this.menuDefinitions.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItem51,
-            this.menuItem36});
+            this.menuItem36,
+            this.menuVlan});
             this.menuDefinitions.Text = "Definitions";
             // 
             // menuItem51
@@ -960,6 +963,12 @@ namespace DrawTools
             this.menuItem51.Index = 0;
             this.menuItem51.Text = "Layer Manager";
             this.menuItem51.Click += new System.EventHandler(this.menuCreateLayer_Click);
+            // 
+            // menuVLan
+            // 
+            this.menuVlan.Index = 0;
+            this.menuVlan.Text = "Layer Manager";
+            this.menuVlan.Click += new System.EventHandler(this.menuCreateVlan_Click);
             // 
             // menuItem36
             // 
@@ -2104,7 +2113,7 @@ namespace DrawTools
             // 
             this.splitContainer3.Panel2.Controls.Add(this.dataGrid);
             this.splitContainer3.Size = new System.Drawing.Size(308, 251);
-            this.splitContainer3.SplitterDistance = 298;
+            this.splitContainer3.SplitterDistance = 222;
             this.splitContainer3.TabIndex = 0;
             // 
             // bDescriptionVue
@@ -2490,6 +2499,11 @@ namespace DrawTools
             this.drawArea.Owner = null;
             this.drawArea.Size = new System.Drawing.Size(6410, 5803);
             this.drawArea.TabIndex = 1;
+            // 
+            // menuVlan
+            // 
+            this.menuVlan.Index = 2;
+            this.menuVlan.Text = "VLAN";
             // 
             // Form1
             // 
@@ -8213,6 +8227,12 @@ namespace DrawTools
         {
             FormLayer fl = new FormLayer(this);
             fl.init();
+        }
+
+        private void menuCreateVlan_Click(object sender, System.EventArgs e)
+        {
+            FormVLan fp = new FormVLan(this);
+            fp.ShowDialog(this); ;
         }
 
         private void menuSelectLayer_Click(object sender, System.EventArgs e)
