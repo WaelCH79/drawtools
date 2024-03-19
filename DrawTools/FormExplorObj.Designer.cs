@@ -57,8 +57,8 @@
             // 
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(2, 45);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
+            this.splitContainer1.Location = new System.Drawing.Point(2, 56);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -68,24 +68,25 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1018, 613);
+            this.splitContainer1.Size = new System.Drawing.Size(1145, 766);
             this.splitContainer1.SplitterDistance = 394;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
             // 
             // tvObj
             // 
             this.tvObj.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvObj.Location = new System.Drawing.Point(0, 0);
-            this.tvObj.Margin = new System.Windows.Forms.Padding(4);
+            this.tvObj.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tvObj.Name = "tvObj";
-            this.tvObj.Size = new System.Drawing.Size(390, 609);
+            this.tvObj.Size = new System.Drawing.Size(390, 762);
             this.tvObj.TabIndex = 0;
             // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -96,8 +97,9 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dgvExpObj);
-            this.splitContainer2.Size = new System.Drawing.Size(615, 609);
-            this.splitContainer2.SplitterDistance = 202;
+            this.splitContainer2.Size = new System.Drawing.Size(741, 762);
+            this.splitContainer2.SplitterDistance = 252;
+            this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 2;
             // 
             // dgProp
@@ -114,22 +116,25 @@
             this.Value});
             this.dgProp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgProp.Location = new System.Drawing.Point(0, 0);
-            this.dgProp.Margin = new System.Windows.Forms.Padding(4);
+            this.dgProp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgProp.Name = "dgProp";
             this.dgProp.RowHeadersVisible = false;
+            this.dgProp.RowHeadersWidth = 62;
             this.dgProp.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgProp.Size = new System.Drawing.Size(615, 202);
+            this.dgProp.Size = new System.Drawing.Size(741, 252);
             this.dgProp.TabIndex = 0;
             // 
             // Property
             // 
             this.Property.HeaderText = "Property";
+            this.Property.MinimumWidth = 8;
             this.Property.Name = "Property";
             this.Property.Width = 140;
             // 
             // Value
             // 
             this.Value.HeaderText = "Value";
+            this.Value.MinimumWidth = 8;
             this.Value.Name = "Value";
             this.Value.Width = 140;
             // 
@@ -149,66 +154,77 @@
             this.ExpObjNomVisible});
             this.dgvExpObj.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvExpObj.Location = new System.Drawing.Point(0, 0);
-            this.dgvExpObj.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvExpObj.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvExpObj.Name = "dgvExpObj";
             this.dgvExpObj.RowHeadersVisible = false;
+            this.dgvExpObj.RowHeadersWidth = 62;
             this.dgvExpObj.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvExpObj.Size = new System.Drawing.Size(615, 403);
+            this.dgvExpObj.Size = new System.Drawing.Size(741, 505);
             this.dgvExpObj.TabIndex = 1;
             this.dgvExpObj.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
             // 
             // ExpObjPropriete
             // 
             this.ExpObjPropriete.HeaderText = "Propritete";
+            this.ExpObjPropriete.MinimumWidth = 8;
             this.ExpObjPropriete.Name = "ExpObjPropriete";
             this.ExpObjPropriete.Width = 140;
             // 
             // ExpObjValeur
             // 
             this.ExpObjValeur.HeaderText = "Valeur";
+            this.ExpObjValeur.MinimumWidth = 8;
             this.ExpObjValeur.Name = "ExpObjValeur";
             this.ExpObjValeur.Width = 140;
             // 
             // ExpObjPls
             // 
             this.ExpObjPls.HeaderText = "";
+            this.ExpObjPls.MinimumWidth = 8;
             this.ExpObjPls.Name = "ExpObjPls";
             this.ExpObjPls.Width = 15;
             // 
             // ExpObjNomVisible
             // 
             this.ExpObjNomVisible.HeaderText = "NomVisible";
+            this.ExpObjNomVisible.MinimumWidth = 8;
             this.ExpObjNomVisible.Name = "ExpObjNomVisible";
             this.ExpObjNomVisible.Visible = false;
+            this.ExpObjNomVisible.Width = 150;
             // 
             // checkbAllVersions
             // 
             this.checkbAllVersions.AutoSize = true;
-            this.checkbAllVersions.Location = new System.Drawing.Point(12, 12);
+            this.checkbAllVersions.Location = new System.Drawing.Point(14, 15);
+            this.checkbAllVersions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkbAllVersions.Name = "checkbAllVersions";
-            this.checkbAllVersions.Size = new System.Drawing.Size(238, 21);
+            this.checkbAllVersions.Size = new System.Drawing.Size(266, 24);
             this.checkbAllVersions.TabIndex = 1;
             this.checkbAllVersions.Text = "Recherche sur toute les versions";
             this.checkbAllVersions.UseVisualStyleBackColor = true;
             // 
             // bExport
             // 
-            this.bExport.Location = new System.Drawing.Point(283, 10);
+            this.bExport.Location = new System.Drawing.Point(318, 12);
+            this.bExport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bExport.Name = "bExport";
-            this.bExport.Size = new System.Drawing.Size(75, 23);
+            this.bExport.Size = new System.Drawing.Size(84, 29);
             this.bExport.TabIndex = 2;
             this.bExport.Text = "Exporter";
             this.bExport.UseVisualStyleBackColor = true;
             // 
             // FormExplorObj
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 661);
+            this.ClientSize = new System.Drawing.Size(1148, 826);
             this.Controls.Add(this.bExport);
             this.Controls.Add(this.checkbAllVersions);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormExplorObj";
             this.Text = "FormExplorObj";
             this.splitContainer1.Panel1.ResumeLayout(false);

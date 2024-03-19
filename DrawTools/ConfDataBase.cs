@@ -1965,7 +1965,7 @@ namespace DrawTools
         {
             t.LstField.Add(new Field("NomApplication", LibNom, 's', 1, 0, FieldOption.InterneBD | FieldOption.Select));
             t.LstField.Add(new Field("Trigramme", "Trigramme", 's', 0, 0, FieldOption.InterneBD | FieldOption.Select));
-            t.LstField.Add(new Field("CodeAp", "Code AP", 's', 0, 0, FieldOption.InterneBD | FieldOption.Select));
+            t.LstField.Add(new Field("CodeAp", "Code AP (AUID)", 's', 0, 0, FieldOption.InterneBD | FieldOption.Select));
         }
 
         public void FieldApplication2(Table t)
@@ -1985,12 +1985,12 @@ namespace DrawTools
             //t.LstField.Add(new Field("GuidAppVersion", "Version", 's', 0, 0, FieldOption.InterneBD | FieldOption.ReadOnly | FieldOption.Select)); // | FieldOption.ExternKeyTable, FindTable("AppVersion")));
             t.LstField.Add(new Field("GuidAppVersion", "GuidAppVersion", 's', 0, 0, FieldOption.InterneBD | FieldOption.ReadOnly | FieldOption.Select | FieldOption.NonVisible | FieldOption.TabNonVisible));
             t.LstField.Add(new Field("Version", "Version Ref", 's', 0, 0, FieldOption.ReadOnly | FieldOption.Select | FieldOption.CacheVal | FieldOption.NomCourt, "GuidAppVersion"));
-            t.LstField.Add(new Field("GuidLabel", "Label", 's', 0, 0, FieldOption.ReadOnly | FieldOption.CacheVal | FieldOption.NomCourt | FieldOption.TabNonVisible));
+            t.LstField.Add(new Field("GuidLabel", "Libellé", 's', 0, 0, FieldOption.ReadOnly | FieldOption.CacheVal | FieldOption.NomCourt | FieldOption.TabNonVisible));
             t.LstField.Add(new Field("GuidApplicationType", "Application Type", 's', 0, 0, FieldOption.InterneBD | FieldOption.ReadOnly | FieldOption.Select | FieldOption.NonVisible | FieldOption.TabNonVisible | FieldOption.ExternKeyTable, FindTable("ApplicationType")));
             t.LstField.Add(new Field("ApplicationType", "Type", 's', 0, 0, FieldOption.NonVisible | FieldOption.ExternProperty));
             t.LstField.Add(new Field("GuidApplicationClass", "Application Class", 's', 0, 0, FieldOption.InterneBD | FieldOption.ReadOnly | FieldOption.Select | FieldOption.NonVisible | FieldOption.TabNonVisible | FieldOption.ExternKeyTable, FindTable("ApplicationClass")));
             t.LstField.Add(new Field("ApplicationClass", "Classe", 's', 0, 0, FieldOption.NonVisible | FieldOption.ExternProperty));
-            t.LstField.Add(new Field("TypeIb", "Icon Inf", 'i', 0, 0, FieldOption.InterneBD | FieldOption.Select | FieldOption.TabNonVisible));
+            t.LstField.Add(new Field("TypeIb", "Icon Inf (1=tech/2=bus)", 'i', 0, 0, FieldOption.InterneBD | FieldOption.Select | FieldOption.TabNonVisible));
             t.LstField.Add(new Field("Image", "Image", 's', 0, 0, FieldOption.InterneBD | FieldOption.Select | FieldOption.TabNonVisible));
             t.LstField.Add(new Field("Installee", "App Installee (0/1)", 'i', 0, 0, FieldOption.InterneBD | FieldOption.Select | FieldOption.TabNonVisible));
             FieldApplication2(t);
