@@ -235,6 +235,7 @@
             this.tbServiceFiltre.Name = "tbServiceFiltre";
             this.tbServiceFiltre.Size = new System.Drawing.Size(300, 26);
             this.tbServiceFiltre.TabIndex = 2;
+            this.tbServiceFiltre.TextChanged += new System.EventHandler(this.tbServiceFiltre_TextChanged);
             // 
             // FormService
             // 
