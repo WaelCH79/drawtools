@@ -8597,7 +8597,7 @@ namespace DrawTools
             docXml.LoadXml("<ListPtNiveau></ListPtNiveau>");
             XmlElement root = docXml.DocumentElement;
             List<String[]> lstApplication = new List<string[]>();
-
+            string guidApp, guidVer;
             lstApplication = oCnxBase.GetLstAppWithSoftsarePackage();
 
             for (int i = 0; i < drawArea.GraphicsList.Count; i++)
@@ -8643,9 +8643,20 @@ namespace DrawTools
                     root.AppendChild(elrow);
                 }
             }
-            WorkApplication wkTemp = new WorkApplication(this, "3337bb33-7447-4101-ad3a-a3d2f1002f3f", "STA", "3337bb33-7447-4101-ad3a-a3d2f1002f3f");
+            //WorkApplication wkTemp = new WorkApplication(this, "3337bb33-7447-4101-ad3a-a3d2f1002f3f", "STA", "3337bb33-7447-4101-ad3a-a3d2f1002f3f");
+            oCnxBase.CBRecherche("Select GuidApplication, appversion.GuidAppVersion  From  appversion " +
+                " inner join vue on appversion.GuidAppVersion = vue.GuidAppVersion" +
+                " Where GuidVue='" + GuidGVue + "'");
+            guidApp = oCnxBase.Reader.GetString(0);
+            guidVer = oCnxBase.Reader.GetString(1);
+            oCnxBase.CBReaderClose();
+            WorkApplication wkTemp = new WorkApplication(this,guidApp , "STA", guidVer);
+
+
             docXml.Save(GetFullPath(wkTemp) + "\\ListPtNiveau.xml");
             docXml.RemoveAll();
+
+            MessageBox.Show("Le message a été enregistré sous le nom : \n" + GetFullPath(wkTemp) + "\\ListPtNiveau.xml","Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void CommandCompFonc()
