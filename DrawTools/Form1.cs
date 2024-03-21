@@ -3034,6 +3034,11 @@ namespace DrawTools
 
         public void cbVue_Validated(object sender, EventArgs e)
         {
+            LoadCBView();
+        }
+
+        private void LoadCBView()
+        {
             ClearVue(false);
             if (cbVue.Text != "")
             {
@@ -3043,7 +3048,7 @@ namespace DrawTools
                 cbVue.Text = cbVue.SelectedItem.ToString();
                 if (!wkApp.ChgLayers) setCtrlEnabled(bSave, true); else setCtrlEnabled(bSave, false);
 
-                GuidVue = new Guid((string)(this.cbGuidVue.Items[this   .cbVue.SelectedIndex]));
+                GuidVue = new Guid((string)(this.cbGuidVue.Items[this.cbVue.SelectedIndex]));
 #if APIREADY
                 clVue clV = lstApps.applications[cbApplication.SelectedIndex].appVersions[cbVersion.SelectedIndex].vues[cbVue.SelectedIndex];
                 if(clV.guidGVue!=null)
@@ -9596,7 +9601,8 @@ namespace DrawTools
 
         private void bSave_Click(object sender, EventArgs e)
         {
-            string sGuidOldGVue, sGuidEnvironnement = null;
+            string sGuidOldGVue, sOldGVue, sGuidEnvironnement = null;
+            sOldGVue = this.cbVue.Text;
             if (!wkApp.ChgLayers)
             {
                 /*
@@ -9660,8 +9666,8 @@ namespace DrawTools
                     //InitCbApplication();
                     //oCnxBase.CBAddComboBox("SELECT NomVue FROM Vue Where GuidApplication='" + GuidApplication + "' ORDER BY NomVue", this.cbVue1);
                     oCnxBase.CBAddComboBox("SELECT GuidVue, NomVue FROM Vue Where GuidAppVersion='" + wkApp.GuidAppVersion + "' ORDER BY NomVue", this.cbGuidVue, this.cbVue);
-
-
+                    cbVue.SelectedItem = sOldGVue;
+                    this.LoadCBView();
                     /*drawArea.GraphicsList.Clear();
                     ChangeTreeViewObjet();
                     LoadVue(); */
