@@ -540,6 +540,7 @@ namespace DrawTools
             this.menuItem38 = new System.Windows.Forms.MenuItem();
             this.menuItem39 = new System.Windows.Forms.MenuItem();
             this.menuVlan = new System.Windows.Forms.MenuItem();
+            this.menuPort = new System.Windows.Forms.MenuItem();
             this.menuItem15 = new System.Windows.Forms.MenuItem();
             this.menuItem11 = new System.Windows.Forms.MenuItem();
             this.menuItem12 = new System.Windows.Forms.MenuItem();
@@ -702,7 +703,6 @@ namespace DrawTools
             this.Pls = new System.Windows.Forms.DataGridViewButtonColumn();
             this.NonVisible = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drawArea = new DrawTools.DrawArea();
-            this.menuPort = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -996,14 +996,14 @@ namespace DrawTools
             // 
             // menuVlan
             // 
-            this.menuVlan.Index = 3;
+            this.menuVlan.Index = 2;
             this.menuVlan.Text = "VLAN";
             this.menuVlan.Click += new System.EventHandler(this.menuCreateVlan_Click);
             // 
             // menuPort
             // 
             this.menuPort.Index = 3;
-            this.menuPort.Text = "VLAN";
+            this.menuPort.Text = "Ports";
             this.menuPort.Click += new System.EventHandler(this.menuCreatePort_Click);
             // 
             // menuItem15
@@ -1444,7 +1444,7 @@ namespace DrawTools
             this.toolBar1.Location = new System.Drawing.Point(0, 0);
             this.toolBar1.Name = "toolBar1";
             this.toolBar1.ShowToolTips = true;
-            this.toolBar1.Size = new System.Drawing.Size(919, 44);
+            this.toolBar1.Size = new System.Drawing.Size(920, 44);
             this.toolBar1.TabIndex = 0;
             this.toolBar1.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);
             // 
@@ -2056,7 +2056,7 @@ namespace DrawTools
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(919, 294);
+            this.splitContainer1.Size = new System.Drawing.Size(920, 562);
             this.splitContainer1.SplitterDistance = 35;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -2076,7 +2076,7 @@ namespace DrawTools
             // 
             this.splitContainer2.Panel2.AutoScroll = true;
             this.splitContainer2.Panel2.Controls.Add(this.drawArea);
-            this.splitContainer2.Size = new System.Drawing.Size(919, 255);
+            this.splitContainer2.Size = new System.Drawing.Size(920, 523);
             this.splitContainer2.SplitterDistance = 312;
             this.splitContainer2.TabIndex = 2;
             // 
@@ -2121,8 +2121,8 @@ namespace DrawTools
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.dataGrid);
-            this.splitContainer3.Size = new System.Drawing.Size(308, 251);
-            this.splitContainer3.SplitterDistance = 222;
+            this.splitContainer3.Size = new System.Drawing.Size(308, 519);
+            this.splitContainer3.SplitterDistance = 298;
             this.splitContainer3.TabIndex = 0;
             // 
             // bDescriptionVue
@@ -2352,10 +2352,10 @@ namespace DrawTools
             // 
             // tvObjet
             // 
-            this.tvObjet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tvObjet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tvObjet.Location = new System.Drawing.Point(10, 241);
+            this.tvObjet.Location = new System.Drawing.Point(9, 241);
             this.tvObjet.Name = "tvObjet";
             this.tvObjet.Size = new System.Drawing.Size(296, 55);
             this.tvObjet.TabIndex = 14;
@@ -2401,7 +2401,6 @@ namespace DrawTools
             // 
             // bSave
             // 
-            this.bSave.Enabled = false;
             this.bSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSave.Location = new System.Drawing.Point(253, 6);
             this.bSave.Margin = new System.Windows.Forms.Padding(0);
@@ -2441,21 +2440,18 @@ namespace DrawTools
             // 
             this.dataGrid.AllowUserToAddRows = false;
             this.dataGrid.AllowUserToDeleteRows = false;
-            this.dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Propriete,
             this.Valeur,
             this.Pls,
             this.NonVisible});
+            this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid.Location = new System.Drawing.Point(0, 0);
-            this.dataGrid.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersVisible = false;
             this.dataGrid.RowHeadersWidth = 62;
-            this.dataGrid.Size = new System.Drawing.Size(308, 55);
+            this.dataGrid.Size = new System.Drawing.Size(308, 138);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
             this.dataGrid.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellValidated);
@@ -2509,16 +2505,11 @@ namespace DrawTools
             this.drawArea.Size = new System.Drawing.Size(6410, 5803);
             this.drawArea.TabIndex = 1;
             // 
-            // menuPort
-            // 
-            this.menuPort.Index = 3;
-            this.menuPort.Text = "Ports";
-            // 
             // Form1
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(8, 19);
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(919, 294);
+            this.ClientSize = new System.Drawing.Size(920, 562);
             this.ControlBox = false;
             this.Controls.Add(this.toolBar1);
             this.Controls.Add(this.splitContainer1);
@@ -3052,8 +3043,7 @@ namespace DrawTools
                 cbVue.Text = cbVue.SelectedItem.ToString();
                 if (!wkApp.ChgLayers) setCtrlEnabled(bSave, true); else setCtrlEnabled(bSave, false);
 
-
-                GuidVue = new Guid((string)(this.cbGuidVue.Items[this.cbVue.SelectedIndex]));
+                GuidVue = new Guid((string)(this.cbGuidVue.Items[this   .cbVue.SelectedIndex]));
 #if APIREADY
                 clVue clV = lstApps.applications[cbApplication.SelectedIndex].appVersions[cbVersion.SelectedIndex].vues[cbVue.SelectedIndex];
                 if(clV.guidGVue!=null)
@@ -3094,7 +3084,7 @@ namespace DrawTools
 #endif
             }
             else ClearVue(true);
-
+            bSave.Enabled = true;
         }
 
         private void menuEditCopy_Click(object sender, EventArgs e)
@@ -6581,7 +6571,7 @@ namespace DrawTools
                         ActiveObjetsVueFonctionnelle(true);
 
                         tvObjet.Nodes.Add("AppUser", "User");
-                        tvObjet.Nodes.Add("Application", "Application");
+                        tvObjet.Nodes.Add("Application", "Toutes les Applications");
 
                         oCnxBase.CBAddNode("SELECT GuidAppUser, NomAppUser FROM AppUser ORDER BY NomAppUser", tvObjet.Nodes[0].Nodes);
                         oCnxBase.CBAddNode("SELECT GuidApplication, NomApplication FROM Application ORDER BY NomApplication", tvObjet.Nodes[1].Nodes);
@@ -6639,9 +6629,9 @@ namespace DrawTools
                         }
 #else
                         tvObjet.Nodes.Add("AppUser", "User");
-                        tvObjet.Nodes.Add("Application", "Application");
+                        tvObjet.Nodes.Add("Application", "Toutes les Applications");
                         tvObjet.Nodes.Add("Module", "Module");
-                        tvObjet.Nodes.Add("Link", "Link");
+                        //tvObjet.Nodes.Add("Link", "Link");
                         tvObjet.Nodes.Add("Patterns", "Patterns");
 
                         oCnxBase.CBAddNode("SELECT GuidApplication, NomApplication FROM Application ORDER BY NomApplication", tvObjet.Nodes[1].Nodes);
@@ -6650,7 +6640,7 @@ namespace DrawTools
                         {
                             oCnxBase.CBAddNode("SELECT AppUser.GuidAppUser, NomAppUser FROM AppUser, Vue, DansVue, GAppUser WHERE Vue.GuidVue='" + sGuidVueInf + "' AND Vue.GuidGVue=DansVue.GuidGVue AND GuidObjet=GuidGAppUser And GAppUser.GuidAppUser=AppUser.GuidAppUser Order By NomAppUser", tvObjet.Nodes[0].Nodes);
                             oCnxBase.CBAddNode("SELECT Module.GuidModule, NomModule FROM Module, Vue, DansVue, GModule WHERE Vue.GuidVue='" + sGuidVueInf + "' AND Vue.GuidGVue=DansVue.GuidGVue AND GuidObjet=GuidGModule And GModule.GuidModule=Module.GuidModule Order By NomModule", tvObjet.Nodes[2].Nodes);
-                            oCnxBase.CBAddNode("SELECT Link.GuidLink, NomLink FROM Link, Vue, DansVue, GLink WHERE Vue.GuidVue='" + sGuidVueInf + "' AND Vue.GuidGVue=DansVue.GuidGVue AND GuidObjet=GuidGLink And GLink.GuidLink=Link.GuidLink  Order By NomLink", tvObjet.Nodes[3].Nodes);
+                           // oCnxBase.CBAddNode("SELECT Link.GuidLink, NomLink FROM Link, Vue, DansVue, GLink WHERE Vue.GuidVue='" + sGuidVueInf + "' AND Vue.GuidGVue=DansVue.GuidGVue AND GuidObjet=GuidGLink And GLink.GuidLink=Link.GuidLink  Order By NomLink", tvObjet.Nodes[3].Nodes);
                         }
 
 #endif
@@ -6762,10 +6752,10 @@ namespace DrawTools
 #else
 
                         tvObjet.Nodes.Add("User", "User");
+                        tvObjet.Nodes.Add("Composant", "Containers");
                         tvObjet.Nodes.Add("Application", "Application");
                         tvObjet.Nodes.Add("LSApplication", "LS Application");
-                        tvObjet.Nodes.Add("Composant", "Composant");
-                        tvObjet.Nodes.Add("Link", "Link");
+                        //tvObjet.Nodes.Add("Link", "Link");
                         tvObjet.Nodes.Add("FonctionServer", "FonctionServer");
                         tvObjet.Nodes.Add("6ManagedService", "Services Cloud");
                         tvObjet.Nodes.Add("7Container", "Container");
@@ -6776,41 +6766,40 @@ namespace DrawTools
                         tvObjet.Nodes.Add("bPattern", "Pattern");
 
 
-                        oCnxBase.CBAddNode("SELECT GuidApplication, NomApplication FROM Application ORDER BY NomApplication", tvObjet.Nodes[2].Nodes);
+                        oCnxBase.CBAddNode("SELECT GuidApplication, NomApplication FROM Application ORDER BY NomApplication", tvObjet.Nodes[3].Nodes);
                         if (sGuidVueInf != null)
                         {
                             oCnxBase.CBAddNode("SELECT AppUser.GuidAppUser, NomAppUser FROM AppUser, Vue, DansVue, GAppUser WHERE Vue.GuidVue='" + sGuidVueInf + "' AND Vue.GuidGVue=DansVue.GuidGVue AND GuidObjet=GuidGAppUser And GAppUser.GuidAppUser=AppUser.GuidAppUser Order By NomAppUser", tvObjet.Nodes[0].Nodes);
-                            oCnxBase.CBAddNode("SELECT Application.GuidApplication, NomApplication FROM Application, Vue, DansVue, GApplication WHERE Vue.GuidVue='" + sGuidVueInf + "' AND Vue.GuidGVue=DansVue.GuidGVue AND GuidObjet=GuidGApplication And GApplication.GuidApplication=Application.GuidApplication  Order By NomApplication", tvObjet.Nodes[1].Nodes);
-                            oCnxBase.CBAddNode("SELECT MainComposant.GuidMainComposant, NomMainComposant FROM MainComposant, Vue, DansVue, GMainComposant WHERE Vue.GuidVue='" + sGuidVueInf + "' AND Vue.GuidGVue=DansVue.GuidGVue AND GuidObjet=GuidGMaincomposant And GMainComposant.GuidMainComposant=MainComposant.GuidMainComposant  Order By NomMainComposant", tvObjet.Nodes[3].Nodes);
-                            oCnxBase.CBAddNode("SELECT Link.GuidLink, NomLink FROM Link, Vue, DansVue, GLink WHERE Vue.GuidVue='" + sGuidVueInf + "' AND Vue.GuidGVue=DansVue.GuidGVue AND GuidObjet=GuidGLink And GLink.GuidLink=Link.GuidLink AND TypeLink='E'  Order By NomLink", tvObjet.Nodes[4].Nodes);
+                            oCnxBase.CBAddNode("SELECT MainComposant.GuidMainComposant, NomMainComposant FROM MainComposant, Vue, DansVue, GMainComposant WHERE Vue.GuidVue='" + sGuidVueInf + "' AND Vue.GuidGVue=DansVue.GuidGVue AND GuidObjet=GuidGMaincomposant And GMainComposant.GuidMainComposant=MainComposant.GuidMainComposant  Order By NomMainComposant", tvObjet.Nodes[1].Nodes);
+                            oCnxBase.CBAddNode("SELECT Application.GuidApplication, NomApplication FROM Application, Vue, DansVue, GApplication WHERE Vue.GuidVue='" + sGuidVueInf + "' AND Vue.GuidGVue=DansVue.GuidGVue AND GuidObjet=GuidGApplication And GApplication.GuidApplication=Application.GuidApplication  Order By NomApplication", tvObjet.Nodes[2].Nodes);
                         }
                         else oCnxBase.CBReaderClose();
 
 
-                        oCnxBase.CBAddNode("SELECT GuidFonction, NomFonction FROM Fonction ORDER BY NomFonction", tvObjet.Nodes[5].Nodes);
+                        oCnxBase.CBAddNode("SELECT GuidFonction, NomFonction FROM Fonction ORDER BY NomFonction", tvObjet.Nodes[4].Nodes);
 
-                        for (int i = 0; i < tvObjet.Nodes[5].Nodes.Count; i++)
+                        for (int i = 0; i < tvObjet.Nodes[4].Nodes.Count; i++)
                         {
-                            oCnxBase.CBAddNode("SELECT DISTINCT GuidServerType, NomServerType FROM ServerType Where GuidFonction='" + tvObjet.Nodes[5].Nodes[i].Name + "' ORDER BY NomServerType", tvObjet.Nodes[5].Nodes[i].Nodes);
+                            oCnxBase.CBAddNode("SELECT DISTINCT GuidServerType, NomServerType FROM ServerType Where GuidFonction='" + tvObjet.Nodes[4].Nodes[i].Name + "' ORDER BY NomServerType", tvObjet.Nodes[4].Nodes[i].Nodes);
                         }
 
-                        oCnxBase.CBAddNode("SELECT GuidManagedsvc, NomManagedsvc FROM Managedsvc ORDER BY NomManagedsvc", tvObjet.Nodes[6].Nodes);
-                        oCnxBase.CBAddNode("SELECT GuidContainer, NomContainer FROM Container ORDER BY NomContainer", tvObjet.Nodes[7].Nodes);
+                        oCnxBase.CBAddNode("SELECT GuidManagedsvc, NomManagedsvc FROM Managedsvc ORDER BY NomManagedsvc", tvObjet.Nodes[5].Nodes);
+                        oCnxBase.CBAddNode("SELECT GuidContainer, NomContainer FROM Container ORDER BY NomContainer", tvObjet.Nodes[6].Nodes);
 
 
                         if (oCnxBase.CBRecherche("Select GuidCadreRefApp FROM CadreRefApp WHERE GuidParentApp='Root'"))
                         {
                             string sGuidRoot = oCnxBase.Reader.GetString(0);
                             oCnxBase.CBReaderClose();
-                            InitPackagesApp(tvObjet.Nodes[8].Nodes, sGuidRoot);
+                            InitPackagesApp(tvObjet.Nodes[7].Nodes, sGuidRoot);
                         }
                         oCnxBase.CBReaderClose();
 
                         //oCnxBase.CBAddNode("SELECT DISTINCT GuidMainComposantRef, NomMainComposantRef FROM MainComposantRef, ProduitApp, CadreRefApp WHERE MainComposantRef.GuidProduitApp=ProduitApp.GuidProduitApp AND ProduitApp.GuidCadreRefApp=CadreRefApp.GuidCadreRefApp ORDER BY NomMainComposantRef ", tvObjet.Nodes[6].Nodes);
 
-                        oCnxBase.CBAddNode("SELECT DISTINCT GuidTechnoRef, NomTechnoRef, IndexImgOS FROM TechnoRef, Produit, CadreRef WHERE TechnoRef.GuidProduit=Produit.GuidProduit AND Produit.GuidCadreRef=CadreRef.GuidCadreRef AND(TypeCadreRef IS NULL OR TypeCadreRef='S') ORDER BY NomTechnoRef ", tvObjet.Nodes[9].Nodes);
-                        oCnxBase.CBAddNode("SELECT GuidGroupService, NomGroupService FROM GroupService ORDER BY NomGroupService", tvObjet.Nodes[10].Nodes);
-                        oCnxBase.CBAddNode("SELECT GuidPattern, NomPattern FROM Pattern, Vue, TypeVue WHERE Pattern.GuidVue=Vue.GuidVue and Vue.GuidTypeVue=TypeVue.GuidTypeVue and Vue.GuidTypeVue='d5b533a9-06ac-4f8c-a5ab-e345b0212542' order by NomPattern", tvObjet.Nodes[11].Nodes);
+                        oCnxBase.CBAddNode("SELECT DISTINCT GuidTechnoRef, NomTechnoRef, IndexImgOS FROM TechnoRef, Produit, CadreRef WHERE TechnoRef.GuidProduit=Produit.GuidProduit AND Produit.GuidCadreRef=CadreRef.GuidCadreRef AND(TypeCadreRef IS NULL OR TypeCadreRef='S') ORDER BY NomTechnoRef ", tvObjet.Nodes[8].Nodes);
+                        oCnxBase.CBAddNode("SELECT GuidGroupService, NomGroupService FROM GroupService ORDER BY NomGroupService", tvObjet.Nodes[9].Nodes);
+                        oCnxBase.CBAddNode("SELECT GuidPattern, NomPattern FROM Pattern, Vue, TypeVue WHERE Pattern.GuidVue=Vue.GuidVue and Vue.GuidTypeVue=TypeVue.GuidTypeVue and Vue.GuidTypeVue='d5b533a9-06ac-4f8c-a5ab-e345b0212542' order by NomPattern", tvObjet.Nodes[10].Nodes);
 
 #endif
 
@@ -8154,7 +8143,7 @@ namespace DrawTools
         {
             drawArea.GraphicsList.Clear();
             drawArea.MajObjets();
-            setCtrlEnabled(bSave, false);
+            setCtrlEnabled(bSave, true);
             setCtrlEnabled(bOpVue, false);
             tbVueInf.Text = "";
             //cbVueInf.Text = ""; cbVueInf.SelectedIndex = -1;cbVueInf.Items.Clear();
