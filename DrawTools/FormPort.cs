@@ -20,11 +20,12 @@ namespace DrawTools
         {
 
             dgVLan.Columns.Clear();
-            this.InitGVColumn("NumeLigne", "N°", "N°", true, 50, DataGridViewTriState.True);
+            this.InitGVColumn("NumeLigne", "N°", "N°", true, 40, DataGridViewTriState.True);
             this.InitGVColumn("NomService", "Nom", "Nom du Service", true, 150, DataGridViewTriState.True);
-            this.InitGVColumn("Protocole", "Protocole", "Protocole", true, 150, DataGridViewTriState.True);
-            this.InitGVColumn("Ports", "Ports", "Ports", true, 50, DataGridViewTriState.True);
+            this.InitGVColumn("Protocole", "Protocole", "Protocole", true, 70, DataGridViewTriState.True);
+            this.InitGVColumn("Ports", "Ports", "Ports", true, 120, DataGridViewTriState.True);
             this.InitGVColumn("Description", "Description", "Description", true, 250, DataGridViewTriState.True);
+            this.InitGVColumn("NomGroupServices", "Services", "Services", true, 200, DataGridViewTriState.True);
 
         }
 
@@ -41,18 +42,33 @@ namespace DrawTools
             dgvbound.SortMode = DataGridViewColumnSortMode.Automatic;
             dgvbound.Resizable = Resizable;
             dgvbound.ReadOnly = true;
+            dgvbound.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgVLan.Columns.Add(dgvbound);
         }
 
         private void VLanGrid_Load()
         {
-            FParent.oCnxBase.PopulateDataGridFromQuery("SELECT GuidService, row_number() over (order by GuidService desc) AS NumeLigne, NomService, InfoSup, Protocole, Ports, Description FROM drawtools.service", dgVLan);
+            FParent.oCnxBase.PopulateDataGridFromQuery("select GuidService, row_number() over (order by GuidService desc) AS NumeLigne, " +
+                                                        " NomService, InfoSup, Protocole, Ports, Description, NomGroupServices  from (select distinct service.*, (select  GROUP_CONCAT(distinct NomGroupService SEPARATOR ', ') from servicelink "+
+                                                        " LEFT JOIN groupservice ON servicelink.GuidGroupService = groupservice.GuidGroupService "+
+                                                        " where service.GuidService = servicelink.GuidService) as NomGroupServices " +
+                                                        " from service " +
+                                                        " LEFT JOIN servicelink ON service.GuidService = servicelink.GuidService " +
+                                                        " LEFT JOIN groupservice ON servicelink.GuidGroupService = groupservice.GuidGroupService " +
+                                                        " order by NomService) as tmp", dgVLan);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string queryFind = "SELECT GuidService, row_number() over (order by GuidService desc) AS NumeLigne, NomService, InfoSup, Protocole, Ports, Description " +
-                " FROM drawtools.service WHERE 1 = 1 ";
+            string queryFind = "Select GuidService, row_number() over (order by GuidService desc) AS NumeLigne,  NomService, InfoSup,  " +
+                                " Protocole, Ports, Description, NomGroupServices   " +
+                                " from (select distinct service.*,  " +
+                                " (select  GROUP_CONCAT(distinct NomGroupService SEPARATOR ', ') from servicelink  " +
+                                " LEFT JOIN groupservice ON servicelink.GuidGroupService = groupservice.GuidGroupService " +
+                                "  where service.GuidService = servicelink.GuidService) as NomGroupServices  from service "+
+                                "  LEFT JOIN servicelink ON service.GuidService = servicelink.GuidService " +
+                                "  LEFT JOIN groupservice ON servicelink.GuidGroupService = groupservice.GuidGroupService  order by NomService) as tmp " +
+                                "  WHERE 1 = 1 ";
 
             if(! string.IsNullOrEmpty(TBNomS.Text.Trim()))
             {
@@ -65,6 +81,11 @@ namespace DrawTools
             if (!string.IsNullOrEmpty(TBPort.Text.Trim()))
             {
                 queryFind += $" And Ports Like '%{TBPort.Text.Trim()}%'";
+            }
+
+            if (!string.IsNullOrEmpty(TBService.Text.Trim()))
+            {
+                queryFind += $" And NomGroupServices Like '%{TBService.Text.Trim()}%'";
             }
 
             FParent.oCnxBase.PopulateDataGridFromQuery(queryFind, dgVLan);
