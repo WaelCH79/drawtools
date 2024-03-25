@@ -48,26 +48,26 @@ namespace DrawTools
 
         private void VLanGrid_Load()
         {
-            FParent.oCnxBase.PopulateDataGridFromQuery("select GuidService, row_number() over (order by GuidService desc) AS NumeLigne, " +
+            FParent.oCnxBase.PopulateDataGridFromQuery("select GuidService, row_number() over (order by NomService ) AS NumeLigne, " +
                                                         " NomService, InfoSup, Protocole, Ports, Description, NomGroupServices  from (select distinct service.*, (select  GROUP_CONCAT(distinct NomGroupService SEPARATOR ', ') from servicelink "+
                                                         " LEFT JOIN groupservice ON servicelink.GuidGroupService = groupservice.GuidGroupService "+
                                                         " where service.GuidService = servicelink.GuidService) as NomGroupServices " +
                                                         " from service " +
                                                         " LEFT JOIN servicelink ON service.GuidService = servicelink.GuidService " +
                                                         " LEFT JOIN groupservice ON servicelink.GuidGroupService = groupservice.GuidGroupService " +
-                                                        " order by NomService) as tmp", dgVLan);
+                                                        " ) as tmp order by NomService", dgVLan);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string queryFind = "Select GuidService, row_number() over (order by GuidService desc) AS NumeLigne,  NomService, InfoSup,  " +
+            string queryFind = "Select GuidService, row_number() over (order by NomService ) AS NumeLigne,  NomService, InfoSup,  " +
                                 " Protocole, Ports, Description, NomGroupServices   " +
                                 " from (select distinct service.*,  " +
                                 " (select  GROUP_CONCAT(distinct NomGroupService SEPARATOR ', ') from servicelink  " +
                                 " LEFT JOIN groupservice ON servicelink.GuidGroupService = groupservice.GuidGroupService " +
                                 "  where service.GuidService = servicelink.GuidService) as NomGroupServices  from service "+
                                 "  LEFT JOIN servicelink ON service.GuidService = servicelink.GuidService " +
-                                "  LEFT JOIN groupservice ON servicelink.GuidGroupService = groupservice.GuidGroupService  order by NomService) as tmp " +
+                                "  LEFT JOIN groupservice ON servicelink.GuidGroupService = groupservice.GuidGroupService  ) as tmp " +
                                 "  WHERE 1 = 1 ";
 
             if(! string.IsNullOrEmpty(TBNomS.Text.Trim()))
@@ -88,6 +88,7 @@ namespace DrawTools
                 queryFind += $" And NomGroupServices Like '%{TBService.Text.Trim()}%'";
             }
 
+            queryFind += "order by NomService";
             FParent.oCnxBase.PopulateDataGridFromQuery(queryFind, dgVLan);
 
         }

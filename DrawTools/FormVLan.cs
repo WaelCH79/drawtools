@@ -54,12 +54,12 @@ namespace DrawTools
 
         private void VLanGrid_Load()
         {
-            FParent.oCnxBase.PopulateDataGridFromQuery("SELECT GuidVlan, row_number() over (order by GuidVlan desc) AS \"NumeLigne\", NomVlan, NumVlan, NomReseau, Passerelle, CodePays FROM drawtools.vlan", dgVLan);
+            FParent.oCnxBase.PopulateDataGridFromQuery("SELECT GuidVlan, row_number() over (order by NomVlan ) AS \"NumeLigne\", NomVlan, NumVlan, NomReseau, Passerelle, CodePays FROM drawtools.vlan order by NomVlan", dgVLan);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string queryFind = "SELECT GuidVlan, row_number() over (order by GuidVlan desc) AS \"NumeLigne\", NomVlan, NumVlan, NomReseau, Passerelle, CodePays" +
+            string queryFind = "SELECT GuidVlan, row_number() over (order by NomVlan ) AS \"NumeLigne\", NomVlan, NumVlan, NomReseau, Passerelle, CodePays" +
                 " FROM drawtools.vlan WHERE 1 = 1 ";
 
             if(! string.IsNullOrEmpty(TBNomVL.Text.Trim()))
@@ -82,6 +82,8 @@ namespace DrawTools
             {
                 queryFind += $" And CodePays Like '%{TBCodePays.Text.Trim()}%'";
             }
+
+            queryFind += " order by NomVlan ";
 
             FParent.oCnxBase.PopulateDataGridFromQuery(queryFind, dgVLan);
 
