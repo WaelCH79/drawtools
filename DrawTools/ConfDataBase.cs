@@ -1985,7 +1985,7 @@ namespace DrawTools
             //t.LstField.Add(new Field("GuidAppVersion", "Version", 's', 0, 0, FieldOption.InterneBD | FieldOption.ReadOnly | FieldOption.Select)); // | FieldOption.ExternKeyTable, FindTable("AppVersion")));
             t.LstField.Add(new Field("GuidAppVersion", "GuidAppVersion", 's', 0, 0, FieldOption.InterneBD | FieldOption.ReadOnly | FieldOption.Select | FieldOption.NonVisible | FieldOption.TabNonVisible));
             t.LstField.Add(new Field("Version", "Version Ref", 's', 0, 0, FieldOption.ReadOnly | FieldOption.Select | FieldOption.CacheVal | FieldOption.NomCourt, "GuidAppVersion"));
-            t.LstField.Add(new Field("GuidLabel", "Libellé", 's', 0, 0, FieldOption.ReadOnly | FieldOption.CacheVal | FieldOption.NomCourt | FieldOption.TabNonVisible));
+            t.LstField.Add(new Field("GuidLabel", "Label", 's', 0, 0, FieldOption.ReadOnly | FieldOption.CacheVal | FieldOption.NomCourt | FieldOption.TabNonVisible));
             t.LstField.Add(new Field("GuidApplicationType", "Application Type", 's', 0, 0, FieldOption.InterneBD | FieldOption.ReadOnly | FieldOption.Select | FieldOption.NonVisible | FieldOption.TabNonVisible | FieldOption.ExternKeyTable, FindTable("ApplicationType")));
             t.LstField.Add(new Field("ApplicationType", "Type", 's', 0, 0, FieldOption.NonVisible | FieldOption.ExternProperty));
             t.LstField.Add(new Field("GuidApplicationClass", "Application Class", 's', 0, 0, FieldOption.InterneBD | FieldOption.ReadOnly | FieldOption.Select | FieldOption.NonVisible | FieldOption.TabNonVisible | FieldOption.ExternKeyTable, FindTable("ApplicationClass")));

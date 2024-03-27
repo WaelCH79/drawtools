@@ -35,12 +35,12 @@
             this.Property = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvExpObj = new System.Windows.Forms.DataGridView();
+            this.checkbAllVersions = new System.Windows.Forms.CheckBox();
+            this.bExport = new System.Windows.Forms.Button();
             this.ExpObjPropriete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExpObjValeur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExpObjPls = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ExpObjNomVisible = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkbAllVersions = new System.Windows.Forms.CheckBox();
-            this.bExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -163,9 +163,30 @@
             this.dgvExpObj.TabIndex = 1;
             this.dgvExpObj.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
             // 
+            // checkbAllVersions
+            // 
+            this.checkbAllVersions.AutoSize = true;
+            this.checkbAllVersions.Location = new System.Drawing.Point(14, 15);
+            this.checkbAllVersions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkbAllVersions.Name = "checkbAllVersions";
+            this.checkbAllVersions.Size = new System.Drawing.Size(266, 24);
+            this.checkbAllVersions.TabIndex = 1;
+            this.checkbAllVersions.Text = "Recherche sur toute les versions";
+            this.checkbAllVersions.UseVisualStyleBackColor = true;
+            // 
+            // bExport
+            // 
+            this.bExport.Location = new System.Drawing.Point(318, 12);
+            this.bExport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bExport.Name = "bExport";
+            this.bExport.Size = new System.Drawing.Size(84, 29);
+            this.bExport.TabIndex = 2;
+            this.bExport.Text = "Exporter";
+            this.bExport.UseVisualStyleBackColor = true;
+            // 
             // ExpObjPropriete
             // 
-            this.ExpObjPropriete.HeaderText = "Propritete";
+            this.ExpObjPropriete.HeaderText = "Properties";
             this.ExpObjPropriete.MinimumWidth = 8;
             this.ExpObjPropriete.Name = "ExpObjPropriete";
             this.ExpObjPropriete.Width = 140;
@@ -191,27 +212,6 @@
             this.ExpObjNomVisible.Name = "ExpObjNomVisible";
             this.ExpObjNomVisible.Visible = false;
             this.ExpObjNomVisible.Width = 150;
-            // 
-            // checkbAllVersions
-            // 
-            this.checkbAllVersions.AutoSize = true;
-            this.checkbAllVersions.Location = new System.Drawing.Point(14, 15);
-            this.checkbAllVersions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkbAllVersions.Name = "checkbAllVersions";
-            this.checkbAllVersions.Size = new System.Drawing.Size(266, 24);
-            this.checkbAllVersions.TabIndex = 1;
-            this.checkbAllVersions.Text = "Recherche sur toute les versions";
-            this.checkbAllVersions.UseVisualStyleBackColor = true;
-            // 
-            // bExport
-            // 
-            this.bExport.Location = new System.Drawing.Point(318, 12);
-            this.bExport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bExport.Name = "bExport";
-            this.bExport.Size = new System.Drawing.Size(84, 29);
-            this.bExport.TabIndex = 2;
-            this.bExport.Text = "Exporter";
-            this.bExport.UseVisualStyleBackColor = true;
             // 
             // FormExplorObj
             // 
@@ -253,12 +253,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Property;
         private System.Windows.Forms.DataGridViewTextBoxColumn Value;
         public System.Windows.Forms.DataGridView dgvExpObj;
+        private System.Windows.Forms.CheckBox checkbAllVersions;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.Button bExport;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExpObjPropriete;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExpObjValeur;
         private System.Windows.Forms.DataGridViewButtonColumn ExpObjPls;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExpObjNomVisible;
-        private System.Windows.Forms.CheckBox checkbAllVersions;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button bExport;
     }
 }
