@@ -6757,9 +6757,9 @@ namespace DrawTools
 #else
 
                         tvObjet.Nodes.Add("User", "User");
-                        tvObjet.Nodes.Add("Composant", "Containers");
-                        tvObjet.Nodes.Add("Application", "Application");
-                        tvObjet.Nodes.Add("LSApplication", "LS Application");
+                        tvObjet.Nodes.Add("Composant", "Composants");
+                        tvObjet.Nodes.Add("Application", "Applications");
+                        tvObjet.Nodes.Add("LSApplication", "Toutes les applications");
                         //tvObjet.Nodes.Add("Link", "Link");
                         tvObjet.Nodes.Add("FonctionServer", "FonctionServer");
                         tvObjet.Nodes.Add("6ManagedService", "Services Cloud");
