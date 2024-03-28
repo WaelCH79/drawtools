@@ -34,6 +34,8 @@ namespace DrawTools
                 int i = Owner.GraphicsList.FindObjet(0, (string)Owner.Owner.tvObjet.SelectedNode.Name);
                 dtu = (DrawTechUser)Owner.GraphicsList[i];
                 dtu.rectangle.X = e.X; dtu.rectangle.Y = e.Y;
+                TreeNode[] ArrayTreeNode = Owner.Owner.tvObjet.Nodes.Find((string)Owner.Owner.tvObjet.SelectedNode.Name, true);
+                if (ArrayTreeNode.Length == 1) ArrayTreeNode[0].Remove();
                 dtu.Normalize();
                 //AddNewObject(drawArea, new DrawTechUser(drawArea.Owner, e.X, e.Y, 1, 1, (string)Owner.Owner.tvObjet.SelectedNode.Name, Owner.Owner.tvObjet.SelectedNode.Text, drawArea.GraphicsList.Count), true);
             }
@@ -67,7 +69,6 @@ namespace DrawTools
                 AddNewObject(Owner.Owner.drawArea, dst, false);
             }
             AddNewObject(Owner.Owner.drawArea, dtu, true);
-            //base.CreatObjetFromBD(From1 f, LstValue, LstValueG);
         }
 
 	}
