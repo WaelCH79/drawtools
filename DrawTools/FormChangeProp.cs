@@ -599,5 +599,10 @@ namespace DrawTools
                 }
             }
         }
+
+        private void tbProp_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

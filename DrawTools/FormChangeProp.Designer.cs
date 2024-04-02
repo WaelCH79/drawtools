@@ -46,25 +46,30 @@
             // lLinkApp
             // 
             this.lLinkApp.FormattingEnabled = true;
-            this.lLinkApp.Location = new System.Drawing.Point(12, 38);
+            this.lLinkApp.ItemHeight = 20;
+            this.lLinkApp.Location = new System.Drawing.Point(18, 58);
+            this.lLinkApp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lLinkApp.Name = "lLinkApp";
-            this.lLinkApp.Size = new System.Drawing.Size(162, 225);
+            this.lLinkApp.Size = new System.Drawing.Size(333, 344);
             this.lLinkApp.TabIndex = 0;
             // 
             // lLinkAppAdd
             // 
             this.lLinkAppAdd.FormattingEnabled = true;
-            this.lLinkAppAdd.Location = new System.Drawing.Point(241, 38);
+            this.lLinkAppAdd.ItemHeight = 20;
+            this.lLinkAppAdd.Location = new System.Drawing.Point(509, 58);
+            this.lLinkAppAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lLinkAppAdd.Name = "lLinkAppAdd";
-            this.lLinkAppAdd.Size = new System.Drawing.Size(162, 225);
+            this.lLinkAppAdd.Size = new System.Drawing.Size(353, 344);
             this.lLinkAppAdd.TabIndex = 1;
             this.lLinkAppAdd.SelectedIndexChanged += new System.EventHandler(this.lLinkAppAdd_SelectedIndexChanged);
             // 
             // OK
             // 
-            this.OK.Location = new System.Drawing.Point(241, 274);
+            this.OK.Location = new System.Drawing.Point(637, 425);
+            this.OK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(66, 23);
+            this.OK.Size = new System.Drawing.Size(99, 35);
             this.OK.TabIndex = 2;
             this.OK.Text = "OK";
             this.OK.UseVisualStyleBackColor = true;
@@ -72,9 +77,10 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(337, 274);
+            this.Cancel.Location = new System.Drawing.Point(750, 425);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(66, 23);
+            this.Cancel.Size = new System.Drawing.Size(99, 35);
             this.Cancel.TabIndex = 3;
             this.Cancel.Text = "Annuler";
             this.Cancel.UseVisualStyleBackColor = true;
@@ -82,9 +88,10 @@
             // 
             // bAdd
             // 
-            this.bAdd.Location = new System.Drawing.Point(180, 83);
+            this.bAdd.Location = new System.Drawing.Point(393, 128);
+            this.bAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bAdd.Name = "bAdd";
-            this.bAdd.Size = new System.Drawing.Size(55, 23);
+            this.bAdd.Size = new System.Drawing.Size(82, 35);
             this.bAdd.TabIndex = 4;
             this.bAdd.Text = ">>";
             this.bAdd.UseVisualStyleBackColor = true;
@@ -92,9 +99,10 @@
             // 
             // bSup
             // 
-            this.bSup.Location = new System.Drawing.Point(180, 112);
+            this.bSup.Location = new System.Drawing.Point(393, 172);
+            this.bSup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bSup.Name = "bSup";
-            this.bSup.Size = new System.Drawing.Size(55, 23);
+            this.bSup.Size = new System.Drawing.Size(82, 35);
             this.bSup.TabIndex = 5;
             this.bSup.Text = "<<";
             this.bSup.UseVisualStyleBackColor = true;
@@ -102,18 +110,20 @@
             // 
             // tbProp
             // 
-            this.tbProp.Enabled = false;
-            this.tbProp.Location = new System.Drawing.Point(12, 12);
+            this.tbProp.Location = new System.Drawing.Point(18, 18);
+            this.tbProp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbProp.Name = "tbProp";
-            this.tbProp.Size = new System.Drawing.Size(113, 20);
+            this.tbProp.Size = new System.Drawing.Size(168, 26);
             this.tbProp.TabIndex = 6;
+            this.tbProp.TextChanged += new System.EventHandler(this.tbProp_TextChanged);
             // 
             // bAddProp
             // 
             this.bAddProp.Enabled = false;
-            this.bAddProp.Location = new System.Drawing.Point(131, 10);
+            this.bAddProp.Location = new System.Drawing.Point(196, 15);
+            this.bAddProp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bAddProp.Name = "bAddProp";
-            this.bAddProp.Size = new System.Drawing.Size(22, 23);
+            this.bAddProp.Size = new System.Drawing.Size(33, 35);
             this.bAddProp.TabIndex = 7;
             this.bAddProp.Text = "+";
             this.bAddProp.UseVisualStyleBackColor = true;
@@ -122,9 +132,10 @@
             // bDelProp
             // 
             this.bDelProp.Enabled = false;
-            this.bDelProp.Location = new System.Drawing.Point(152, 10);
+            this.bDelProp.Location = new System.Drawing.Point(228, 15);
+            this.bDelProp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bDelProp.Name = "bDelProp";
-            this.bDelProp.Size = new System.Drawing.Size(22, 23);
+            this.bDelProp.Size = new System.Drawing.Size(33, 35);
             this.bDelProp.TabIndex = 8;
             this.bDelProp.Text = "-";
             this.bDelProp.UseVisualStyleBackColor = true;
@@ -133,35 +144,39 @@
             // cbAlias
             // 
             this.cbAlias.FormattingEnabled = true;
-            this.cbAlias.Location = new System.Drawing.Point(13, 11);
+            this.cbAlias.Location = new System.Drawing.Point(30, 26);
+            this.cbAlias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbAlias.Name = "cbAlias";
-            this.cbAlias.Size = new System.Drawing.Size(161, 21);
+            this.cbAlias.Size = new System.Drawing.Size(240, 28);
             this.cbAlias.TabIndex = 9;
             this.cbAlias.Visible = false;
             // 
             // cbGuidAlias
             // 
             this.cbGuidAlias.FormattingEnabled = true;
-            this.cbGuidAlias.Location = new System.Drawing.Point(181, 11);
+            this.cbGuidAlias.Location = new System.Drawing.Point(272, 17);
+            this.cbGuidAlias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbGuidAlias.Name = "cbGuidAlias";
-            this.cbGuidAlias.Size = new System.Drawing.Size(54, 21);
+            this.cbGuidAlias.Size = new System.Drawing.Size(79, 28);
             this.cbGuidAlias.TabIndex = 10;
             this.cbGuidAlias.Visible = false;
             // 
             // tvCadreRef
             // 
-            this.tvCadreRef.Location = new System.Drawing.Point(13, 12);
+            this.tvCadreRef.Location = new System.Drawing.Point(20, 18);
+            this.tvCadreRef.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tvCadreRef.Name = "tvCadreRef";
-            this.tvCadreRef.Size = new System.Drawing.Size(222, 251);
+            this.tvCadreRef.Size = new System.Drawing.Size(331, 384);
             this.tvCadreRef.TabIndex = 11;
             this.tvCadreRef.Visible = false;
             // 
             // ckbDefaultLayer
             // 
             this.ckbDefaultLayer.AutoSize = true;
-            this.ckbDefaultLayer.Location = new System.Drawing.Point(242, 13);
+            this.ckbDefaultLayer.Location = new System.Drawing.Point(529, 20);
+            this.ckbDefaultLayer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ckbDefaultLayer.Name = "ckbDefaultLayer";
-            this.ckbDefaultLayer.Size = new System.Drawing.Size(89, 17);
+            this.ckbDefaultLayer.Size = new System.Drawing.Size(130, 24);
             this.ckbDefaultLayer.TabIndex = 12;
             this.ckbDefaultLayer.Text = "Default Layer";
             this.ckbDefaultLayer.UseVisualStyleBackColor = true;
@@ -169,9 +184,9 @@
             // 
             // FormChangeProp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 304);
+            this.ClientSize = new System.Drawing.Size(910, 477);
             this.Controls.Add(this.ckbDefaultLayer);
             this.Controls.Add(this.cbGuidAlias);
             this.Controls.Add(this.cbAlias);
@@ -185,6 +200,10 @@
             this.Controls.Add(this.lLinkAppAdd);
             this.Controls.Add(this.lLinkApp);
             this.Controls.Add(this.tvCadreRef);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormChangeProp";
             this.Text = "LinkApp";
             this.ResumeLayout(false);

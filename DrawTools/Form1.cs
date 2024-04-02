@@ -3090,6 +3090,7 @@ namespace DrawTools
             }
             else ClearVue(true);
             bSave.Enabled = true;
+            cbOpVue.Enabled = true;
         }
 
         private void menuEditCopy_Click(object sender, EventArgs e)
